@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qiModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="qiModelStoreContainer">
+    <EntitySet Name="company" EntityType="qiModel.Store.company" store:Type="Tables" Schema="qi" />
+  </EntityContainer>
+  <EntityType Name="company">
+    <Key>
+      <PropertyRef Name="PrimaryCode" />
+      <PropertyRef Name="Pseudo" />
+      <PropertyRef Name="SecondaryCode" />
+    </Key>
+    <Property Name="PrimaryCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Pseudo" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="SecondaryCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="AddressCode" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="PhoneCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MacroCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MailCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Language" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="Region" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="PageCode" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="HeaderFooterCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CostCentreCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CountryCode" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="AccessCode" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Name2" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Eticket" Type="uint" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Invoice" Type="uint" />
+    <Property Name="CreditNote" Type="uint" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="255" />
+    <Property Name="Itinerary" Type="uint" Nullable="false" />
+    <Property Name="D2C" Type="uint" Nullable="false" />
+  </EntityType>
+</Schema>

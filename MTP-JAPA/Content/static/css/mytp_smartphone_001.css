@@ -1,0 +1,560 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: arial, sans-serif;
+    background-color: #000000;
+}
+
+
+
+/* mytravelplans header */
+body > header {
+    background: url(../graphics/mtp_header_bg.jpg) no-repeat 0 0;
+    border-top: 9px solid #000000;
+}
+body > header img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+	border: none;
+}
+body > header select {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+}
+body > header a#menu {
+    display: block;
+    margin-top: 95px;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #8899aa;
+    border-left: 266px solid #b5b8b7;
+}
+body > header h1 {
+    margin: 0;
+    height: 30px;
+    padding: 3px 0 2px 25px;
+    line-height: 30px;
+    color: #ffffff;
+    background-color: #247cbc;
+}
+body > header h2 {
+    display: none;
+}
+
+
+
+/* mytravelplans footer */
+body > footer {
+    position: relative;
+    padding: 0 0 10px 0;
+    color: #ccccdd;
+    background-color: #66798a;
+}
+body > footer a#travelbytes {
+    display: block;
+    padding: 20px 35% 20px 5px;
+    height: 40px;
+    line-height: 50px;
+    text-align: right;
+    font-size: 8pt;
+    text-decoration: none;
+    vertical-align: top;
+    color: #99999a;
+/*    background: url(../graphics/tb_texture.png); */
+	background-color: #2f3C44;
+}
+body > footer p {
+    padding: 10px 15px;
+    font-size: 10pt;
+}
+body > footer p#footer_links {
+    margin: 0;
+    padding-bottom: 12px;
+    font-size: 10pt;
+    text-align: center;
+    color: #ffffff;
+/*    background: url(../graphics/tb_texture.png); */
+	background-color: #2f3C44;
+}
+body > footer p#footer_links a {
+    display: inline-block;
+    width: 46%;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #ffffff;
+/*    background-image: url(../graphics/tb_btn_texture.png); */
+	background-color: #4f5C64;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+form,
+a.btn {
+    font-size: 1em;
+}
+#base {
+	padding: 0;
+    background-color: #dce1e5;
+}
+#base ul.tabs {
+	display: block;
+    margin: 0;
+    padding: 11px 20px;
+    list-style-type: none;
+    background-color: #8899aa;
+    border-top: #667788;
+}
+#base ul.tabs li {
+    display: block;
+    width: auto;
+	margin: 12px 0;
+}
+#base ul.tabs li a {
+    display: block;
+    padding: 8px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    background-color: #bcc9d6;
+	border-bottom: none;
+}
+#base ul.tabs li.here a {
+    background-color: #dce1e5;
+}
+
+
+#base form {
+    margin: 0 auto;
+/*    width: 256px;  */
+}
+#base form:after {
+    content: ".";
+    display: block;
+    height: 0;
+    font-size: 1pt;
+    clear: both;
+    visibility: hidden;
+}
+h1 {
+    margin: 10px 0 10px 0;
+    font-size: 1.2em;
+    color: #247cbc;
+}
+label,
+input[type="text"],
+input[type="password"],
+select {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 6px 0;
+    font-size: 1em;
+}
+label {
+    margin: 20px 0 0 0;
+    color: #585858;
+}
+input[type="text"],
+input[type="password"] {
+    color: #777777;
+    border: 1px solid #b2c2d2;
+    width: 96%;
+    margin-bottom: 20px;
+    padding: 6px 2%;
+}
+label.radio {
+    display: inline-block;
+    margin-top: 0;
+    width: auto;
+}
+.form_footer {
+    padding-top: 20px;
+    color: #585858;
+    border-top: 1px dashed #92a2b2;
+}
+.form_footer p,
+.form_footer a.btn,
+.form_footer a.sample {
+    margin: 20px auto;
+    width: 256px;
+}
+
+a.btn,
+input[type="submit"] {
+    clear: both;
+    display: block;
+    margin-top: 20px;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #247cbc !important;
+    border: 1px solid #b2c2d2;
+}
+input[type="submit"] {
+    float: right;
+    margin: 20px 0 30px 0;
+    font-size: 1.2em;
+}
+a {
+    color: #247cbc;
+}
+a.sample {
+    display: block;
+    margin-top: 20px;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #92a2b2;
+    border: 1px solid #b2c2d2;
+}
+
+
+/* Home page */
+#base div.booking_search {
+	min-height: 414px;
+	padding: 20px 25px 5px 25px;
+	display:none;
+	}
+
+#base div.booking_search #country_select {
+	position: absolute;
+	visibility: hidden;
+	}
+#base div.booking_search input[type="submit"] {
+    width: 100%;
+	}
+
+#base div.email_login {
+	min-height: 300px;
+	padding: 20px 25px 5px 25px;
+	display:none;
+	}
+#base div.email_login input[type="submit"] {
+    width: 100%;
+	}
+#base div.email_login a.btn {
+    width: 100%;
+	}
+
+#base div.active{
+	display:block !important;
+	}
+
+
+
+
+
+
+
+
+table.dnlContent {
+	margin-bottom: 20px;
+	}
+table.dnlContent .label {
+	font-size: 10pt;
+	font-weight: normal;
+	width: 450px;
+	margin: 1px 0 0 !important;
+	padding: 1px 0 0 !important;
+	font-weight: bold;
+	font-size: 15px !important;
+	color: #585858 !important;
+	}
+table.dnlContent .labelb {
+	font-size: 10pt; /*font-weight: bold;*/
+	width: 550px !important;
+	margin: 1px 0 0 !important;
+	padding: 1px 0 0 !important;
+	font-weight: bold;
+	font-size: 15px !important;
+	color: #585858 !important;
+	}
+table.dnlContent .labelH {
+	font-weight: bold;
+	font-size: large !important;
+	margin: 1px 0 10px !important;
+	padding: 1px 0 0 !important;
+	color: #585858 !important;
+	}
+table.dnlContent .small {
+	font-size: 10px;
+	}
+table.dnlContent a.link {
+	color: #0066cc;
+	font-size: 10pt;
+	font-weight: normal;
+	width: 50px;
+	}
+
+table.dnlContent tr td {
+	width: 500px;
+	}
+
+.InvoiceSummaryHeader {
+	text-align: left;
+	padding: 0 20px 0 0;
+	font-weight: bold;
+	color: #247CBC;
+	border: none;
+	border-bottom: 1px solid #cccccc;
+	}
+
+.InvoiceHeading {
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 10px;
+	color: #585858;
+	}
+.InvoiceText {
+	color: #585858;
+	}
+.InvoiceSummary {
+	width: auto;
+	text-align: left;
+	margin-top: 10px;
+	padding: 0 20px 0 0;
+	color: #585858;
+	background-color: #ffffff;
+	font-weight: 500;
+	border: none !important;
+	}
+
+a.InvoiceSummary:link {
+	color: #000000;
+	}
+a.InvoiceSummary:hover {
+	color: #000000;
+	}
+
+.notegrey {
+	width: 800px;
+	font-size: 11px !important;
+	color: #585858;
+	font-family: Arial;
+	text-align: left;
+	line-height: normal;
+	}
+
+.ItinPrint {
+	font-size: 1px;
+	}
+
+.bluebackground {
+	background-color: #247CBC;
+	color: #ffffff;
+	border: none;
+	background-position: left center;
+	vertical-align: middle;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+a.bluebackground:hover {
+	/*background-color: #000000;*/
+	text-decoration: underline;
+	}
+
+
+ul#help_toc {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	}
+ul#help_toc li a {
+	display: block;
+	padding: 4px 8px;
+	text-decoration: none;
+	}
+#help_content {
+	padding: 15px;
+	}
+#help_content h1 {
+	margin: 18pt 0 6pt 0;
+	font-size: 1.5em;
+	color: #247cbc;
+	}
+#help_content h2 {
+	margin-bottom: 6pt;
+	}
+#help_content p {
+	margin-top: 6pt;
+	}
+
+
+
+
+
+
+
+
+
+
+
+/* Login / registration pages */
+
+#base div.booking_search,
+#base div.email_login,
+#base div.register,
+#base div.registration_confirmation,
+#base div.enter_new_password,
+#base div.reset_password,
+#base div.new_password_confirmed,
+#base div.reset_password_confirmation,
+#base div.change_password,
+#base div.privacy {
+	padding: 10px 25px 10px 25px;
+	background-color: #e4e8ec;
+	}
+#base div.booking_search form,
+#base div.email_login form,
+#base div.register form,
+#base div.registration_confirmation form,
+#base div.enter_new_password form,
+#base div.reset_password form,
+#base div.new_password_confirmed form,
+#base div.change_password form,
+#base div.booking_search #status_message,
+#base div.email_login #status_message,
+#base div.register #status_message,
+#base div.registration_confirmation #status_message,
+#base div.enter_new_password #status_message,
+#base div.renew_password #status_message,
+#base div.new_password_confirmed #status_message,
+#base div.change_password #status_message {
+	width: 100%;
+	}
+#base #status_message p {
+	margin: 0;
+	}
+
+/* Booking Search page */
+#base div.booking_search {
+	}
+#base div.booking_search #country_select {
+	position: absolute;
+	visibility: hidden;
+	}
+
+/* Email Login page */
+div.email_login {
+	}
+
+/* Renew Password page */
+#base div.renew_password {
+	}
+
+
+
+
+
+
+
+
+/* My Bookings page */
+div.mybookings {
+	position: relative;
+	padding: 10px 50px 20px 0;
+	}
+div.mybookings h1 {
+	}
+ul#mybookings_list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	border-top: 1px dashed #889ca8;
+	}
+ul#mybookings_list li {
+	border-bottom: 1px dashed #889ca8;
+	}
+ul#mybookings_list li a {
+	display: inline-block;
+	padding: 8px;
+	width: 100px;
+	text-decoration: none;
+	letter-spacing: .9pt;
+	}
+ul#mybookings_list li .booking_date {
+	display: inline-block;
+	padding: 8px;
+	width: 30%;
+	text-align: right;
+	font-style: italic;
+	color: #483c48;
+	}
+
+div.mybookings .booking_search_admin {
+	margin-top: 30px;
+	border-top: 1px dashed #889ca8;
+	}
+div.mybookings .booking_search_admin a.btn {
+	display: block;
+	width: 100%;
+	}
+div.mybookings .booking_search_admin h2 {
+	margin: 0;
+	}
+div.mybookings .booking_search_admin ul {
+	margin: 8px 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	border-top: 1px solid #dddddd;
+	}
+div.mybookings .booking_search_admin ul li {
+	border-bottom: 1px solid #dddddd;
+	}
+div.mybookings .booking_search_admin ul li a {
+	display: block;
+	padding: 8px 8px 8px 0;
+	text-decoration: none;
+	color: #247cbc;
+	}
+
+
+/* D2C page */
+#base div.d2c {
+	position: relative;
+	padding: 10px 25px 10px 25px;
+	background-color: #ffffff;
+	}
+
+/* Message page */
+#base div.message {
+	position: relative;
+	padding: 10px 25px 10px 25px;
+	background-color: #ffffff;
+	}
+#base div.message #centre {
+	text-align: left;
+	}
+
+/* Error page */
+#base div.error {
+	position: relative;
+	padding: 10px 25px 10px 25px;
+	background-color: #ffffff;
+	}
+#base div.error #centre {
+	text-align: left;
+	}

@@ -1,0 +1,136 @@
+2012-04-20 18:00:48.7257 TravelPlans Retrieving \\203.19.215.74\FILESTORE\QIETKS\OCT2011\OFQMOG.PDF
+2012-04-20 18:01:28.4107 TravelPlans Retrieving \\203.19.215.74\FILESTORE\QIETKS\OCT2011\OFQMOG.PDF
+2012-04-20 18:01:49.5226 TravelPlans Itinerary: Mailrecords found : 1
+2012-04-20 18:01:49.5226 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-04-20 18:01:49.5226 TravelPlans CreateDisplayFile debug point 01
+2012-04-20 18:01:49.5226 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:01:55.3142 TravelPlans File copied
+2012-04-20 18:01:55.3152 TravelPlans Decrypting file
+2012-04-20 18:01:55.3152 TravelPlans FileDecrypt: Debug point 01
+2012-04-20 18:01:55.3318 TravelPlans FileDecrypt: Debug point 02
+2012-04-20 18:01:55.3318 TravelPlans Decrypt : c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.doc
+2012-04-20 18:01:56.0007 TravelPlans Decrypted : 
+2012-04-20 18:01:56.0007 TravelPlans Decrypted file
+2012-04-20 18:01:56.0027 TravelPlans Deleted c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:01:56.0027 TravelPlans Returning
+2012-04-20 18:01:56.0183 TravelPlans Retrieving c:\temp\jpuwvempdrb4m5eq2jel5uxp.htm
+2012-04-20 18:01:56.0183 TravelPlans Fixing HTML
+2012-04-20 18:02:08.8866 TravelPlans Retrieving \\203.19.215.74\FILESTORE\QIETKS\OCT2011\OFQMOG.PDF
+2012-04-20 18:04:26.1024 TravelPlans Enter : debug point 1
+2012-04-20 18:04:26.2391 TravelPlans Enter : debug point 2
+2012-04-20 18:04:26.2391 TravelPlans Starting Search Threads
+2012-04-20 18:04:26.2889 TravelPlans Disk Search Invoice started
+2012-04-20 18:04:26.2909 TravelPlans Disk Search Invoice in way
+2012-04-20 18:04:26.2909 TravelPlans Disk Search Invoice finished
+2012-04-20 18:04:26.3075 TravelPlans Disk Search Itinerary finished
+2012-04-20 18:04:26.3221 TravelPlans m_RLOC : JKJXQ5
+2012-04-20 18:04:26.3221 TravelPlans Surname Check started
+2012-04-20 18:04:26.3221 TravelPlans m_RLOC : JKJXQ5
+2012-04-20 18:04:26.3221 TravelPlans ending Search Threads
+2012-04-20 18:04:26.3368 TravelPlans Trip Summary Finished
+2012-04-20 18:04:29.7204 TravelPlans No records found in mailrecords table matching criteria
+2012-04-20 18:04:29.7204 TravelPlans Enter : debug point 3
+2012-04-20 18:04:29.7204 TravelPlans Invoices in database / found on disk Database records DS was null
+2012-04-20 18:04:29.7428 TravelPlans Surname Check Finished
+2012-04-20 18:17:09.6209 TravelPlans Itinerary: Mailrecords found : 16
+2012-04-20 18:17:09.7264 TravelPlans Retrieving \\192.168.1.12\ITINERARIES\ITINERARIES\NOV\Z\S\R\Z\N\ZSRZNO~4.TXT
+2012-04-20 18:17:09.7420 TravelPlans CreateDisplayFile debug point 01
+2012-04-20 18:17:09.8065 TravelPlans Copying \\192.168.1.12\itineraries\itineraries\nov\z\s\r\z\n\zsrzno~4.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:17:53.4775 TravelPlans File copied
+2012-04-20 18:17:53.4775 TravelPlans Decrypting file
+2012-04-20 18:17:53.4882 TravelPlans FileDecrypt: Debug point 01
+2012-04-20 18:17:53.6601 TravelPlans FileDecrypt: Debug point 02
+2012-04-20 18:17:53.6874 TravelPlans Decrypt : c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.doc
+2012-04-20 18:17:54.6425 TravelPlans Decrypted : 
+2012-04-20 18:17:54.6425 TravelPlans Decrypted file
+2012-04-20 18:17:54.6444 TravelPlans Deleted c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:17:54.6444 TravelPlans Returning
+2012-04-20 18:17:54.8846 TravelPlans Retrieving c:\temp\jpuwvempdrb4m5eq2jel5uxp.htm
+2012-04-20 18:17:54.8846 TravelPlans Fixing HTML
+2012-04-20 18:18:43.7126 TravelPlans Download: qicalendar found : 2
+2012-04-20 18:19:31.1412 TravelPlans Itinerary: Mailrecords found : 16
+2012-04-20 18:19:31.1412 TravelPlans Retrieving \\192.168.1.12\ITINERARIES\ITINERARIES\NOV\Z\S\R\Z\N\ZSRZNO~4.TXT
+2012-04-20 18:19:31.1412 TravelPlans CreateDisplayFile debug point 01
+2012-04-20 18:19:31.1412 TravelPlans Copying \\192.168.1.12\itineraries\itineraries\nov\z\s\r\z\n\zsrzno~4.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:20:02.7661 TravelPlans File copied
+2012-04-20 18:20:02.7661 TravelPlans Decrypting file
+2012-04-20 18:20:02.7661 TravelPlans FileDecrypt: Debug point 01
+2012-04-20 18:20:02.7661 TravelPlans FileDecrypt: Debug point 02
+2012-04-20 18:20:02.7768 TravelPlans Decrypt : c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.doc
+2012-04-20 18:20:03.8227 TravelPlans Decrypted : 
+2012-04-20 18:20:03.8246 TravelPlans Decrypted file
+2012-04-20 18:20:03.8246 TravelPlans Deleted c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:20:03.8246 TravelPlans Returning
+2012-04-20 18:20:03.8422 TravelPlans Retrieving c:\temp\jpuwvempdrb4m5eq2jel5uxp.htm
+2012-04-20 18:20:03.8422 TravelPlans Fixing HTML
+2012-04-20 18:20:19.3275 TravelPlans Download: qicalendar found : 2
+2012-04-20 18:20:57.6298 TravelPlans Download: qicalendar found : 2
+2012-04-20 18:21:05.7777 TravelPlans Download: qicalendar found : 2
+2012-04-20 18:21:12.9120 TravelPlans Download-to-calendar: qicalendar found : 1
+2012-04-20 18:21:12.9374 TravelPlans Insert record to mailrecord
+2012-04-20 18:21:26.0030 TravelPlans Download-to-calendar: qicalendar found : 1
+2012-04-20 18:21:26.0059 TravelPlans Insert record to mailrecord
+2012-04-20 18:29:08.6403 TravelPlans Itinerary: Mailrecords found : 19
+2012-04-20 18:29:08.6403 TravelPlans Retrieving \\192.168.1.12\ITINERARIES\ITINERARIES\APR\2\G\4\B\W\2G4BWZ~2.TXT
+2012-04-20 18:29:08.6403 TravelPlans CreateDisplayFile debug point 01
+2012-04-20 18:29:08.6521 TravelPlans Copying \\192.168.1.12\itineraries\itineraries\apr\2\g\4\b\w\2g4bwz~2.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:29:41.6060 TravelPlans File copied
+2012-04-20 18:29:41.6060 TravelPlans Decrypting file
+2012-04-20 18:29:41.6060 TravelPlans FileDecrypt: Debug point 01
+2012-04-20 18:29:41.6236 TravelPlans FileDecrypt: Debug point 02
+2012-04-20 18:29:41.6236 TravelPlans Decrypt : c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.doc
+2012-04-20 18:29:42.5952 TravelPlans Decrypted : 
+2012-04-20 18:29:42.5952 TravelPlans Decrypted file
+2012-04-20 18:29:42.5952 TravelPlans Deleted c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:29:42.5991 TravelPlans Returning
+2012-04-20 18:29:44.8079 TravelPlans Itinerary: Mailrecords found : 19
+2012-04-20 18:29:44.8079 TravelPlans Retrieving \\192.168.1.12\ITINERARIES\ITINERARIES\APR\2\G\4\B\W\2G4BWZ~2.TXT
+2012-04-20 18:29:44.8079 TravelPlans CreateDisplayFile debug point 01
+2012-04-20 18:29:44.8226 TravelPlans Copying \\192.168.1.12\itineraries\itineraries\apr\2\g\4\b\w\2g4bwz~2.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:30:18.8019 TravelPlans File copied
+2012-04-20 18:30:18.8019 TravelPlans Decrypting file
+2012-04-20 18:30:18.8019 TravelPlans FileDecrypt: Debug point 01
+2012-04-20 18:30:18.8214 TravelPlans FileDecrypt: Debug point 02
+2012-04-20 18:30:18.8214 TravelPlans Decrypt : c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.doc
+2012-04-20 18:30:19.7071 TravelPlans Decrypted : 
+2012-04-20 18:30:19.7071 TravelPlans Decrypted file
+2012-04-20 18:30:19.7071 TravelPlans Deleted c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:30:19.7071 TravelPlans Returning
+2012-04-20 18:30:19.7295 TravelPlans Retrieving c:\temp\jpuwvempdrb4m5eq2jel5uxp.htm
+2012-04-20 18:30:19.7295 TravelPlans Fixing HTML
+2012-04-20 18:30:25.5358 TravelPlans Download: qicalendar found : 4
+2012-04-20 18:30:28.8276 TravelPlans Download-to-calendar: qicalendar found : 1
+2012-04-20 18:30:28.8305 TravelPlans Insert record to mailrecord
+2012-04-20 18:31:13.5864 TravelPlans Download: qicalendar found : 4
+2012-04-20 18:31:19.6915 TravelPlans Download: qicalendar found : 4
+2012-04-20 18:31:24.9265 TravelPlans Download: qicalendar found : 4
+2012-04-20 18:31:31.5414 TravelPlans Download: qicalendar found : 4
+2012-04-20 18:32:07.1787 TravelPlans Download-to-calendar: qicalendar found : 1
+2012-04-20 18:32:07.1787 TravelPlans Insert record to mailrecord
+2012-04-20 18:33:32.9389 TravelPlans Download: qicalendar found : 4
+2012-04-20 18:34:32.0171 TravelPlans Download-to-calendar: qicalendar found : 1
+2012-04-20 18:34:48.0864 TravelPlans Insert record to mailrecord
+2012-04-20 18:41:27.5550 TravelPlans Itinerary: Mailrecords found : 19
+2012-04-20 18:41:28.8918 TravelPlans Retrieving \\192.168.1.12\ITINERARIES\ITINERARIES\APR\2\G\4\B\W\2G4BWZ~2.TXT
+2012-04-20 18:41:28.9035 TravelPlans CreateDisplayFile debug point 01
+2012-04-20 18:41:28.9680 TravelPlans Copying \\192.168.1.12\itineraries\itineraries\apr\2\g\4\b\w\2g4bwz~2.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:42:05.0789 TravelPlans File copied
+2012-04-20 18:42:05.0828 TravelPlans Decrypting file
+2012-04-20 18:42:05.0828 TravelPlans FileDecrypt: Debug point 01
+2012-04-20 18:42:05.2830 TravelPlans FileDecrypt: Debug point 02
+2012-04-20 18:42:05.3045 TravelPlans Decrypt : c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.doc
+2012-04-20 18:42:06.4753 TravelPlans Decrypted : 
+2012-04-20 18:42:06.4753 TravelPlans Decrypted file
+2012-04-20 18:42:06.4753 TravelPlans Deleted c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:42:06.4753 TravelPlans Returning
+2012-04-20 18:42:06.6716 TravelPlans Retrieving c:\temp\jpuwvempdrb4m5eq2jel5uxp.htm
+2012-04-20 18:42:06.6716 TravelPlans Fixing HTML
+2012-04-20 18:42:17.1905 TravelPlans Download: qicalendar found : 4
+2012-04-20 18:42:24.2252 TravelPlans Download-to-calendar: qicalendar found : 1
+2012-04-20 18:42:24.2252 TravelPlans Insert record to mailrecord
+2012-04-20 18:53:15.2265 TravelPlans Itinerary: Mailrecords found : 19
+2012-04-20 18:53:16.4315 TravelPlans Retrieving \\192.168.1.12\ITINERARIES\ITINERARIES\APR\2\G\4\B\W\2G4BWZ~2.TXT
+2012-04-20 18:53:16.4315 TravelPlans CreateDisplayFile debug point 01
+2012-04-20 18:53:16.4500 TravelPlans Copying \\192.168.1.12\itineraries\itineraries\apr\2\g\4\b\w\2g4bwz~2.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 18:54:02.4422 TravelPlans File copied
+2012-04-20 18:54:02.4432 TravelPlans Decrypting file

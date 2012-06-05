@@ -1,0 +1,296 @@
+@page {
+	margin: 42px 12mm 82px 12mm;
+	margin: 42px 8mm 82px 8mm;
+	size: 100%;
+	font-size: 8pt;
+	counter-increment: page;
+	font-family: arial, sans-serif;
+	@top-right {
+		width: 80px;
+		height: 40px;
+		padding-bottom: 2px;
+		vertical-align: bottom;
+		content: "Page " counter(page) " of " counter(pages);
+		}
+	@bottom-center {
+		width: 100%;
+		height: 82px;
+		padding: 0;
+		content: flow(printfooter);
+		color: #000000;
+		}
+	}
+@page:first {
+	margin: 62px 12mm 82px 12mm;
+	margin: 62px 8mm 82px 8mm;
+	@top-left {
+		height: 42px;
+		padding: 0;
+		content: flow(header);
+		color: #000000;
+		}
+	@top-right {
+		padding-bottom: 22px;
+		}
+	}
+
+
+
+.outline {
+	display: none !important;
+	}
+
+#print_wrapper {
+	max-width: auto;
+	padding: 0;
+	background-color: #ffffff;
+	background-image: none;
+	}
+
+#print_wrapper > header {
+	flow: static(header);
+	}
+#print_wrapper > header {
+	padding: 20px 0 0 0;
+	margin: 0;
+	height: 42px;
+	width: 100% !important;
+	}
+#print_wrapper > header p {
+	margin: 7px 0 0 0;
+	width: auto !important;
+	}
+#print_wrapper > header > p.datestamp {
+	float: right;
+	margin: 5pt 0 0 0;
+	padding: 0;
+	width: 100px;
+	text-align: right;
+	line-height: 1.3em;
+	color: #000000;
+	}
+#print_wrapper > header img {
+	display: block;
+	margin: 0;
+	width: 187px;
+	height: 42px;
+	}
+
+
+
+#print_wrapper > footer {
+	display: block !important;
+	padding: 0;
+	margin: 0;
+	height: 82px;
+	width: 100%;
+	}
+#print_wrapper > footer {
+	flow: static(printfooter);
+	}
+#print_wrapper > footer img {
+	float: right;
+	display: block;
+	margin: 0;
+	width: 320px;
+	height: 48px;
+	}
+#print_wrapper > footer p {
+	margin: 0;
+	clear: both;
+	}
+
+
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, span, div {
+	font-size: 9pt !important;
+	}
+
+
+
+
+#booking_information {
+	width: 100% !important;
+	}
+#booking_reference {
+	width: 30% !important;
+	}
+#booking_reference h1 {
+	display: inline-block;
+	width: 60%;
+	margin: 0;
+	padding: 0;
+	}
+#booking_reference p.reference {
+	display: inline-block;
+	width: 30%;
+	margin: 0;
+	padding: 0;
+	font-size: 10pt !important;
+	}
+
+
+#travellers {
+	float: left;
+	width: 100%;
+	padding: 7pt 0 3em 0;
+	letter-spacing: normal;
+	}
+#travellers h2.passenger_name {
+	display: block;
+	margin: 0 0 2pt 12em;
+	font-size: 15pt !important;
+	line-height: 1.5em;
+	padding: 0;
+	font-weight: normal;
+	color: #000000;
+	}
+#travellers h2.passenger_name .name_first {
+	margin-right: 10px;
+	text-transform: capitalize;
+	
+	}
+#travellers div.label > span {
+	display: inline-block;
+	width: auto;
+	margin: 0 0 2pt 0;
+	font-size: 15pt !important;
+	line-height: 1.5em;
+	}
+
+#passenger_contact_details {
+	width: 60% !important;
+	}
+#passenger_contact_details h1 {
+	margin: 0 10% 6pt 0;
+	}
+#passenger_contact_details h1 a {
+	text-decoration: none;
+	}
+#passenger_contact_details p.label span {
+	width: 50% !important;
+	}
+
+	
+#agent_details {
+	width: 30% !important;
+	}
+#agent_details h1 a {
+	text-decoration: none;
+	}
+#agent_details p.label span {
+	width: auto !important;
+	margin-right: 2pt;
+	}
+
+
+#adwrapper #segments {
+	margin-right: 170px;
+	}
+section.date {
+	margin: 30px 0 0 0;
+	}
+section.date > h1 {
+	width: 60% !important;
+	margin-bottom: 6pt;
+	line-height: 1.4em;
+	}
+section.date > h1 span {
+	width: 30% !important;
+	font-size: 1.4em !important;
+	line-height: 1.0em;
+	}
+	
+	
+
+
+article.segment {
+	margin-bottom: 10pt;
+	}
+article.segment div.seg_main {
+	width: 60% !important;
+	}
+article.segment header {
+	width: auto !important;
+	}
+article.segment header h2,
+article.segment header h3 {
+	}
+article.segment header h2 span,
+article.segment header h3 span {
+	width: 30% !important;
+	}
+article.segment h4 {
+	display: none;
+	}
+article.segment .seg_main header p {
+	display: none;
+	}
+article.segment div.seg_main p.label span {
+	width: 30% !important;
+	}
+
+article.segment div.seg_details {
+	width: 40% !important;
+	}
+article.segment div.seg_details p.label span {
+	width: 35% !important;
+	}
+
+article.segment div.seg_notes,
+article.segment div.hotel_details {
+	width: 100% !important;
+	}
+article.segment .seg_notes p.label span,
+article.segment .hotel_details p.label span {
+	width: 18% !important;
+	}
+
+section#airline_record h1 {
+	width: 100% !important;
+	font-size: inherit;
+	}
+section#airline_record p span {
+	width: 18% !important;
+	margin-right: 0;
+	}
+section#compliance h1 {
+	font-size: inherit;
+	}
+
+section#compliance ul {
+	margin-left: .8em;
+	line-height: 1.1em;
+	list-style-image: url(../graphics/bullet_print.gif);
+	}
+section#compliance ul li {
+	margin-bottom: 3pt;
+	}
+
+
+/* advertisements */
+#ad_wrapper {
+	clear: left;
+	position: relative;
+	}
+#ad_column2 {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 160px;
+	min-height: 160px;
+	padding-top: 20px;
+	background: white;
+	}
+#ad_column2 img {
+	display: block;
+	clear: right;
+	margin: 0 0 10px 0;
+	}
+#ad_column2 img.ad3 {
+	display: none;
+	}
+#ad_column {
+	display: none;
+	}

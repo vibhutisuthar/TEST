@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Travel Plans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="@Url.Content("~/Content/static/css/smartphone.css")" rel="stylesheet" media="screen and (min-device-width:320px)"/>
+    <style type="text/css">@@media only screen and (orientation: portrait) { * { }}</style>
+    <link type="text/css" href="@Url.Content("~/Content/static/css/desktop.css")" rel="stylesheet" media="screen and (min-device-width:980px) and (min-width:980px), print, projection"/>
+    <link type="text/css" href="@Url.Content("~/Content/static/css/print.css")" rel="stylesheet" media="print"/>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic' rel='stylesheet'
+        type='text/css' />
+    <script src="../../Scripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <header>    
+		@*<img src="http://staging.loco.com.au/tb7mtp/static/graphics/aebt_sq_logo.png" alt="American Express Business Travel Logo" width="246" height="124" />*@
+        @*<a href="@Url.Action("Index", "User")"></a>*@
+        <img src="@Url.Content("~/Content/images/aebt_sq_logo.png")" alt="American Express Business Travel Logo" width="246" height="124" />
+		<select id="language" size="1" name="select">
+			<option>English
+		</select>
+		<a href="#">Help</a>
+		<hgroup>
+			<h1>My Travel Plans</h1>
+			<h2>Welcome to My Travel Plans, your complete travel documentation centre</h2>
+		</hgroup>
+	</header>
+    <div id="base">
+        <ul class="tabs" id="ultabs">
+            <li id="liBookingLogin"><a href="@Url.Action("Index", "User")" id="hrefBookingLogin" class="clsBookingLogin" 
+                title="Use information from a specific booking to retrieve the documents associated with that booking.">
+                Booking Login</a> </li>
+            <li id="liEmailLogin"><a href="@Url.Action("EmailLogin", "User")" id="hrefEmailLogin" class="clsEmailLogin" 
+                title="Use your email address and password to access all of your bookings.">Email
+                Login</a> </li>
+            <input type="hidden" name="theHiddenTabIndex" id="theHiddenTabIndex" value="@ViewBag.theHiddenTabIndex" />
+        </ul>
+        @RenderBody()
+        <div class="form_footer" style="display: none" id="form_footer_detail">
+            <a class="btn" href="@Url.Action("Register", "User")">Register</a> <a class="btn" href="@Url.Action("RenewPassword", "User")">
+                Renew password</a>
+        </div>
+    </div>
+    <footer>    
+		@*<a id="travelbytes" href="http://www.travelbytes.com.au/">site powered by <img src="http://staging.loco.com.au/tb7mtp/static/graphics/tb_logo.png" width="106" height="36" alt="Travel Bytes" title="Travel Bytes" /></a>*@
+        <a id="travelbytes" href="http://www.travelbytes.com.au/">site powered by <img src="@Url.Content("~/Content/images/tb_logo.png")"106" height="36" alt="Travel Bytes" title="Travel Bytes" /></a>
+		<p id="footer_links">
+			<a href="#">Privacy Statement</a> <a href="#">Site Feedback</a>
+		</p>
+		<p>Copyright &copy; 1996-2012 All Rights Reserved Worldwide. (R) is a registered trademark of American Express Company. Users of this site agree to be bound by the terms of the American Express Web Site Rules and Regulations View Corporate Entities and Important Disclosures, Trademarks and License Numbers.</p>
+	</footer>
+</body>
+</html>
+<script type="text/javascript" language="javascript">
+
+    $(document).ready(function () {
+        SetTab();
+    })
+
+    function SetTab() {
+        var selectedTab = $("#theHiddenTabIndex").val();
+        if (selectedTab == "0") {
+            $('#liBookingLogin').addClass('here');
+            $('#liEmailLogin').removeClass('here');
+            $('#form_footer_detail').hide();
+        }
+        if (selectedTab == "1") {
+            $('#form_footer_detail').show();
+            $('#liBookingLogin').removeClass('here');
+            $('#liEmailLogin').addClass('here');
+        }
+    }
+
+</script>

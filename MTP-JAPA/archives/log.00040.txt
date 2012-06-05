@@ -1,0 +1,142 @@
+2012-04-20 11:57:03.0330 TravelPlans Itinerary: Mailrecords found : 10
+2012-04-20 11:57:04.1022 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 11:57:06.0972 TravelPlans Debug Point 2
+2012-04-20 11:57:17.8484 GalileoDecoder Address Details Company: CREDITSUISSESG
+2012-04-20 11:57:17.8484 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 11:57:17.8484 GalileoDecoder Address Details Team: CREDITSUISSESG
+2012-04-20 11:57:27.2687 GalileoDecoder Didn't Find, trying Address Details Company: CREDITSUISSESG
+2012-04-20 11:57:27.2687 GalileoDecoder Didn't Find, trying Address Details Formname: AXQIITNONLINE
+2012-04-20 11:57:27.2687 GalileoDecoder Didn't Find, trying Address Details Team: CREDITSUISSESG
+2012-04-20 11:57:35.9977 GalileoDecoder Didn't Find, trying Address Details Company: <blank>
+2012-04-20 11:57:35.9977 GalileoDecoder Didn't Find, trying Address Details Formname: AXQIITNONLINE
+2012-04-20 11:57:35.9977 GalileoDecoder Didn't Find, trying Address Details Team: CREDITSUISSESG
+2012-04-20 11:57:44.8184 GalileoDecoder Didn't Find, trying Address Details Company: <blank> 
+2012-04-20 11:57:44.8184 GalileoDecoder Didn't Find, trying Address Details Formname: AXQIITNONLINEAUD
+2012-04-20 11:57:44.8213 GalileoDecoder Didn't Find, trying Address Details Team: <blank>
+2012-04-20 11:57:55.0043 GalileoDecoder Address DSN: American Express International Inc.<br/>233 Collins Street<br/>Melbourne VIC Australia 3000<br/>Email:  servicecentre-melbourne@aexp.com<br/>Telephone: +61 3 9633 6333<br/>Facsimile: +61 3 9633 6301<br/>ABN No 15 000 618 208 	 AFS No 237996<br/>
+2012-04-20 11:58:17.5350 TravelPlans Debug Point 3
+2012-04-20 11:58:59.9220 TravelPlans Debug Point 5
+2012-04-20 12:00:03.0312 TravelPlans Enter : debug point 1
+2012-04-20 12:00:03.1572 TravelPlans Enter : debug point 2
+2012-04-20 12:00:03.1572 TravelPlans Starting Search Threads
+2012-04-20 12:00:03.1572 TravelPlans Disk Search Invoice started
+2012-04-20 12:00:03.1572 TravelPlans Disk Search Invoice in way
+2012-04-20 12:00:03.1894 TravelPlans Disk Search Invoice finished
+2012-04-20 12:00:03.1894 TravelPlans m_RLOC : JKJXQ5
+2012-04-20 12:00:03.2050 TravelPlans ending Search Threads
+2012-04-20 12:00:03.2050 TravelPlans Surname Check started
+2012-04-20 12:00:03.2050 TravelPlans m_RLOC : JKJXQ5
+2012-04-20 12:00:03.2509 TravelPlans Disk Search Itinerary finished
+2012-04-20 12:00:03.2861 TravelPlans Trip Summary Finished
+2012-04-20 12:00:04.3124 TravelPlans No records found in mailrecords table matching criteria
+2012-04-20 12:00:04.3124 TravelPlans Enter : debug point 3
+2012-04-20 12:00:04.3124 TravelPlans Invoices in database / found on disk Database records DS was null
+2012-04-20 12:00:04.3290 TravelPlans Surname Check Finished
+2012-04-20 12:00:41.3383 TravelPlans Enter : debug point 1
+2012-04-20 12:00:41.3383 TravelPlans Enter : debug point 2
+2012-04-20 12:00:41.3383 TravelPlans Starting Search Threads
+2012-04-20 12:00:41.3413 TravelPlans Disk Search Invoice started
+2012-04-20 12:00:41.3413 TravelPlans Disk Search Invoice in way
+2012-04-20 12:00:41.3686 TravelPlans Disk Search Invoice finished
+2012-04-20 12:00:41.3686 TravelPlans m_RLOC : Q2CVC0
+2012-04-20 12:00:41.3764 TravelPlans ending Search Threads
+2012-04-20 12:00:41.3764 TravelPlans Disk Search Itinerary finished
+2012-04-20 12:00:41.4018 TravelPlans Surname Check started
+2012-04-20 12:00:41.4018 TravelPlans m_RLOC : Q2CVC0
+2012-04-20 12:00:41.4047 TravelPlans Trip Summary Finished
+2012-04-20 12:00:43.2660 TravelPlans Mailrecords found : 46
+2012-04-20 12:00:43.2660 TravelPlans Records found for Invoice in DB: zero
+2012-04-20 12:00:43.2660 TravelPlans Enter : debug point 3
+2012-04-20 12:00:43.2660 TravelPlans Surname Check Finished
+2012-04-20 12:00:43.2660 TravelPlans Invoices in database / found on disk Database records DS was null
+2012-04-20 12:00:56.8549 TravelPlans Itinerary: Mailrecords found : 1
+2012-04-20 12:00:56.8559 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-04-20 12:00:56.8559 TravelPlans CreateDisplayFile debug point 01
+2012-04-20 12:00:56.8559 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 12:01:02.3458 TravelPlans File copied
+2012-04-20 12:01:02.3458 TravelPlans Decrypting file
+2012-04-20 12:01:02.3458 TravelPlans FileDecrypt: Debug point 01
+2012-04-20 12:01:02.4727 TravelPlans FileDecrypt: Debug point 02
+2012-04-20 12:01:02.4727 TravelPlans Decrypt : c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.doc
+2012-04-20 12:01:03.9678 TravelPlans Decrypted : 
+2012-04-20 12:01:03.9678 TravelPlans Decrypted file
+2012-04-20 12:01:03.9678 TravelPlans Deleted c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 12:01:03.9678 TravelPlans Returning
+2012-04-20 12:01:04.1728 TravelPlans Retrieving c:\temp\jpuwvempdrb4m5eq2jel5uxp.htm
+2012-04-20 12:01:04.1845 TravelPlans Fixing HTML
+2012-04-20 12:01:25.2545 TravelPlans Enter : debug point 1
+2012-04-20 12:01:25.2545 TravelPlans Enter : debug point 2
+2012-04-20 12:01:25.2545 TravelPlans Starting Search Threads
+2012-04-20 12:01:25.2633 TravelPlans Disk Search Invoice started
+2012-04-20 12:01:25.2633 TravelPlans Disk Search Invoice in way
+2012-04-20 12:01:25.2994 TravelPlans Disk Search Invoice finished
+2012-04-20 12:01:25.3101 TravelPlans Surname Check started
+2012-04-20 12:01:25.3101 TravelPlans m_RLOC : OFQMOG
+2012-04-20 12:01:25.3336 TravelPlans m_RLOC : OFQMOG
+2012-04-20 12:01:25.3336 TravelPlans ending Search Threads
+2012-04-20 12:01:25.3336 TravelPlans Disk Search Itinerary finished
+2012-04-20 12:01:25.3404 TravelPlans Trip Summary Finished
+2012-04-20 12:01:26.2486 TravelPlans Mailrecords found : 6
+2012-04-20 12:01:26.2769 TravelPlans Records found for Invoice in DB: 1
+2012-04-20 12:01:26.2769 TravelPlans Enter : debug point 3
+2012-04-20 12:01:26.2769 TravelPlans DbRecs : 1
+2012-04-20 12:01:26.3062 TravelPlans Surname Check Finished
+2012-04-20 12:01:26.3999 TravelPlans Enter : debug point 4
+2012-04-20 12:01:26.4009 TravelPlans m_RLOC : OFQMOG
+2012-04-20 12:01:39.8297 TravelPlans Decrypting c:\temp\jpuwvempdrb4m5eq2jel5uxp.pdf.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.pdf
+2012-04-20 12:01:39.8297 TravelPlans should be Processing as woz
+2012-04-20 12:01:43.3354 TravelPlans redirecting to D:\Projects\TravelBytes\MTP-New-MVC\MTP-JAPA\MTP-JAPA\Temp\jpuwvempdrb4m5eq2jel5uxp.pdf.pdf
+2012-04-20 12:02:23.8884 TravelPlans Retrieving \\203.19.215.74\FILESTORE\QIETKS\OCT2011\OFQMOG.PDF
+2012-04-20 12:13:26.1214 TravelPlans Enter : debug point 1
+2012-04-20 12:13:26.1722 TravelPlans Enter : debug point 2
+2012-04-20 12:13:26.1722 TravelPlans Starting Search Threads
+2012-04-20 12:13:26.1722 TravelPlans Disk Search Invoice started
+2012-04-20 12:13:26.1722 TravelPlans Disk Search Invoice in way
+2012-04-20 12:13:26.1839 TravelPlans Disk Search Invoice finished
+2012-04-20 12:13:26.1986 TravelPlans m_RLOC : Q2CVC0
+2012-04-20 12:13:26.1986 TravelPlans ending Search Threads
+2012-04-20 12:13:26.1986 TravelPlans Disk Search Itinerary finished
+2012-04-20 12:13:26.2347 TravelPlans Surname Check started
+2012-04-20 12:13:26.2347 TravelPlans m_RLOC : Q2CVC0
+2012-04-20 12:13:26.2347 TravelPlans Trip Summary Finished
+2012-04-20 12:13:32.8563 TravelPlans Mailrecords found : 46
+2012-04-20 12:13:32.8563 TravelPlans Records found for Invoice in DB: zero
+2012-04-20 12:13:32.8563 TravelPlans Enter : debug point 3
+2012-04-20 12:13:32.8563 TravelPlans Invoices in database / found on disk Database records DS was null
+2012-04-20 12:13:32.8563 TravelPlans Surname Check Finished
+2012-04-20 12:13:47.7763 TravelPlans Itinerary: Mailrecords found : 1
+2012-04-20 12:13:47.7763 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-04-20 12:13:47.7763 TravelPlans CreateDisplayFile debug point 01
+2012-04-20 12:13:47.7763 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 12:13:55.3881 TravelPlans File copied
+2012-04-20 12:13:55.3881 TravelPlans Decrypting file
+2012-04-20 12:13:55.3881 TravelPlans FileDecrypt: Debug point 01
+2012-04-20 12:13:55.5395 TravelPlans FileDecrypt: Debug point 02
+2012-04-20 12:13:55.5424 TravelPlans Decrypt : c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.doc
+2012-04-20 12:13:57.1536 TravelPlans Decrypted : 
+2012-04-20 12:13:57.1536 TravelPlans Decrypted file
+2012-04-20 12:13:57.1536 TravelPlans Deleted c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 12:13:57.1536 TravelPlans Returning
+2012-04-20 12:13:57.1810 TravelPlans Retrieving c:\temp\jpuwvempdrb4m5eq2jel5uxp.htm
+2012-04-20 12:13:57.1810 TravelPlans Fixing HTML
+2012-04-20 12:14:03.9774 TravelPlans Enter : debug point 1
+2012-04-20 12:14:03.9774 TravelPlans Enter : debug point 2
+2012-04-20 12:14:03.9774 TravelPlans Starting Search Threads
+2012-04-20 12:14:03.9774 TravelPlans Disk Search Invoice started
+2012-04-20 12:14:03.9774 TravelPlans Disk Search Invoice in way
+2012-04-20 12:14:04.0087 TravelPlans Disk Search Invoice finished
+2012-04-20 12:14:04.0087 TravelPlans Surname Check started
+2012-04-20 12:14:04.0087 TravelPlans m_RLOC : OFQMOG
+2012-04-20 12:14:04.0087 TravelPlans m_RLOC : OFQMOG
+2012-04-20 12:14:04.0438 TravelPlans ending Search Threads
+2012-04-20 12:14:04.0438 TravelPlans Trip Summary Finished
+2012-04-20 12:14:04.0682 TravelPlans Disk Search Itinerary finished
+2012-04-20 12:14:04.9285 TravelPlans Mailrecords found : 6
+2012-04-20 12:14:04.9285 TravelPlans Records found for Invoice in DB: 1
+2012-04-20 12:14:04.9305 TravelPlans Enter : debug point 3
+2012-04-20 12:14:04.9305 TravelPlans DbRecs : 1
+2012-04-20 12:14:04.9305 TravelPlans Enter : debug point 4
+2012-04-20 12:14:04.9305 TravelPlans m_RLOC : OFQMOG
+2012-04-20 12:14:04.9305 TravelPlans Surname Check Finished
+2012-04-20 12:14:08.0641 TravelPlans Retrieving \\203.19.215.74\FILESTORE\QIETKS\OCT2011\OFQMOG.PDF
+2012-04-20 12:14:32.9580 TravelPlans Itinerary: No records found in mailrecords table matching criteria

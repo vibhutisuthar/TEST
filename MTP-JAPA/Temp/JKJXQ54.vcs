@@ -1,0 +1,62 @@
+BEGIN:VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+DCREATED: 20120420T083544Z
+DTSTART: 20121008T192000Z
+DTEND: 20121009T061000Z
+PRIORITY: 0
+SUMMARY: 08Oct QF 2 Dep SIN 19:20 T1 to SYD 06:10
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Travel DetailsMonday=A008 Oct 2012=
+=A0=A0Flight InformationAirlineQantas AirwaysConfirmed=A0FlightQF 2Flying Time=
+07Hrs 50MinsOriginsingapore (SIN)No Of StopsNon-StopDestinationsydney (SYD)=
+=A0=A0Departing19:20MealsDinner + RefreshmentsArriving06:10=A0/=A009 Oct 20=
+12AircraftAirbus A380-800=A0Departure TerminalTerminal 1=A0=A0Arrival Termi=
+nalTerminal 1=A0=A0ClassEconomy (Y)=A0=A0=A0
+
+LOCATION:Booking Reference: JKJXQ5
+X-ALT-DESC;FMTTYPE=text/html;ENCODING=QUOTED-PRINTABLE:<html><head><title><=
+/title></head><body>=0D=0A<table class=3D"SegmentTable" ID=3D"Table1" borde=
+r=3D"0" xmlns=3D"http://www.w3.org/1999/xhtml"><span id=3D"DateLine"><tr><t=
+d class=3D"headerCol1"><p><span class=3D"AmexSegment">Travel Details</span>=
+</p></td><td class=3D"headerCol2"><span class=3D"Date"><Day>Monday</Day>&nb=
+sp;<Date>08 Oct 2012</Date></span></td></tr></span><tr><td class=3D"SegCol1=
+">&nbsp;</td><td align=3D"right">&nbsp;<Calendar /></td></tr><tr><td class=
+=3D"FlightInfo" colspan=3D"2"><b>Flight Information</b></td></tr><tr><td colsp=
+an=3D"2"><table class=3D"SubSegment" ID=3D"Table2"><tr><td class=3D"SegCol1=
+">Airline</td><td class=3D"SegCol2"><span class=3D"Airline"><Airline>Qantas=
+ Airways</Airline></span></td><td class=3D"SegCol3"><span class=3D"status">=
+<Status>Confirmed</Status></span></td><td class=3D"SegCol4">&nbsp;</td></tr=
+><tr><td class=3D"SegCol1">Flight</td><td class=3D"SegCol2"><span class=3D"=
+FlightNumber"><FlightNumber>QF 2</FlightNumber></span></td><td class=3D"Seg=
+Col3">Flying Time</td><td class=3D"SegCol4"><Duration>07Hrs 50Mins</Duratio=
+n></td></tr><tr><td class=3D"SegCol1">Origin</td><td class=3D"SegCol2"><spa=
+n class=3D"City"><Departs>singapore (SIN)</Departs></span></td><td class=
+=3D"SegCol3">No Of Stops</td><td class=3D"SegCol4"><Stops>Non-Stop</Stops></td=
+></tr><tr><td class=3D"SegCol1">Destination</td><td class=3D"SegCol2"><span=
+ class=3D"City"><Arrive>sydney (SYD)</Arrive></span></td><span id=3D"Transi=
+tSection"><td class=3D"SegCol3">&nbsp;</td><td class=3D"SegCol4">&nbsp;</td=
+></span></tr><tr><td class=3D"SegCol1" valign=3D"top">Departing</td><td cla=
+ss=3D"SegCol2" valign=3D"top"><DepTime>19:20</DepTime></td><span id=3D"Meal=
+Section"><td class=3D"SegCol3" valign=3D"top">Meals</td><td class=3D"SegCol=
+4" valign=3D"top"><Meals>Dinner + Refreshments</Meals></td></span></tr><tr>=
+<td class=3D"SegCol1" valign=3D"top">Arriving</td><td class=3D"SegCol2" val=
+ign=3D"top"><ArrTime>06:10</ArrTime>&nbsp;/&nbsp;<ADate>09 Oct 2012</ADate>=
+</td><span id=3D"EquipmentSection"><td class=3D"SegCol3" valign=3D"top">Air=
+craft</td><td class=3D"SegCol4" valign=3D"top"><Equip>Airbus A380-800</Equi=
+p></td></span></tr><tr><td class=3D"SegCol1" colspan=3D"4">&nbsp;</td></tr>=
+<span id=3D"OperatedBySection"></span><span id=3D"DepartureTerminalSection"=
+><tr><td class=3D"SegCol1">Departure Terminal</td><td class=3D"SegCol2"><DT=
+erm>Terminal 1</DTerm></td><td class=3D"SegCol3">&nbsp;</td><td class=3D"Se=
+gCol4">&nbsp;</td></tr></span><span id=3D"ArrivalTerminalSection"><tr><td c=
+lass=3D"SegCol1">Arrival Terminal</td><td class=3D"SegCol2"><ATerm>Terminal=
+ 1</ATerm></td><td class=3D"SegCol3">&nbsp;</td><td class=3D"SegCol4">&nbsp=
+;</td></tr></span><span id=3D"SeatSection"></span><span id=3D"ClassSection"=
+><tr><td class=3D"SegCol1">Class</td><td class=3D"SegCol2"><Class>Economy (=
+Y)</Class></td><td class=3D"SegCol3">&nbsp;</td><td class=3D"SegCol4">&nbsp=
+;</td></tr></span><span id=3D"SpecialRequests"></span><tr><Remarks></Remark=
+s></tr><tr><td class=3D"SegCol1" colspan=3D"4">&nbsp;</td></tr></table></td=
+></tr></table>=0D=0A</body></html>
+
+CLASS:PUBLIC
+END:VEVENT
+END:VCALENDAR

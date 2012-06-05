@@ -1,0 +1,205 @@
+body, table, div, TR, TD 
+{
+	margin-left:5; margin-right:5; margin-bottom:0; margin-top:0;
+	background-color:white;
+	font-family:Arial;
+	font-size: 9pt;
+}
+IMG
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+Table.SubSegment
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-top: 0px;
+}
+Table.SegmentTable, Table.Detail
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-top: 0px;
+	width:700
+}
+Table.ItineraryTable
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-top: 0px;
+	width:700px;
+}
+td.MenuCol
+{
+	width:250px;
+}
+TD.RLOCHeadingCol
+{
+	width:100px;
+	font-weight:bold; 
+
+}
+TD.headerCol1
+{
+	width:350px;
+}
+TD.headerCol2
+{
+	width:350px;
+}
+TD.RLOCCol
+{
+	width:300px;
+}
+TD.SegCol1
+{
+	width:150px;
+}
+TD.SegCol2
+{
+	width:250px;
+}
+TD.SegCol3
+{
+	width:100px;
+}
+TD.SegCol4
+{
+	width:250px;
+}
+H1
+{
+    FONT-SIZE: 16pt
+}
+H2
+{
+    FONT-SIZE: 14pt;
+    COLOR: red
+}
+H3
+{
+    FONT-SIZE: 12pt;
+    COLOR: red;
+    PADDING-TOP: 1px
+}
+H4
+{
+    BORDER-TOP: thick;
+    BORDER-LEFT: thick;
+    COLOR: black;
+    PADDING-TOP: 18px;
+    BORDER-BOTTOM: thick
+}
+H5
+{
+    FONT-SIZE: 7pt;
+    COLOR: red
+}
+input 
+{
+	 font-size:8pt
+}
+.heading, .errorHeading 
+{
+	font-size:14pt; 
+	font-weight:bold
+}
+.subhead 
+{
+	font-size:12pt; 
+	font-weight:bold; 
+	padding-bottom:5px
+}
+.error
+{
+	font-weight: bold;
+	font-size: 12pt;
+	padding-bottom: 5px;
+	color: red;
+}
+.entry
+{
+	text-transform: uppercase;
+}
+.note
+{
+	padding-top: 50px;
+	font-size: 8pt;
+	font-family: Arial;
+	text-align: left;
+}
+.padding
+{
+	padding-top: 50px;
+}
+.SummaryHeading
+{
+	font-size:12pt; 
+	font-weight:bold; 
+}
+.AirSegment
+{
+	font-size: 9pt;
+}
+.AmexSegment, .RLOC, .HotelSegment, .CarSegment
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: #007eb0;
+	font-family: Arial;
+}
+.FlightInfo, .HotelInfo, .CarInfo
+{
+	font-weight: bold;
+	font-size: 9pt;
+	width: 700px;
+	border-bottom: #808080 1px solid;
+	font-family: Arial;
+}
+.status, 
+{
+	font-weight: bold;
+	font-size: 9pt;
+	font-family: Arial;
+}
+ .Airline, .FlightNumber
+{
+	font-weight: bold;
+	font-size: 9pt;
+	font-family: Arial;
+	text-transform: uppercase;
+}
+
+.TravelArrangements, .Pax
+{
+	font-weight: bold;
+	font-size: 14pt;
+	font-family: Arial;
+}
+.AgentID
+{
+	font-weight: bold;
+	font-size: 9pt;
+	border-bottom: #808080 1px solid;
+	font-family: Arial;
+}
+.footer
+{
+	vertical-align:top;
+	
+}
+.City
+{
+	font-size: 9pt;
+	font-family: Arial;
+	text-transform: lowercase;
+}

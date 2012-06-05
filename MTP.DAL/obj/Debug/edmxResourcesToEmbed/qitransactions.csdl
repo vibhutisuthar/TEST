@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qitransactionsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="qitransactionsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="qicalevents" EntityType="qitransactionsModel.qicalevent" />
+    <EntitySet Name="qicalendars" EntityType="qitransactionsModel.qicalendar" />
+    <EntitySet Name="qimailrecords" EntityType="qitransactionsModel.qimailrecord" />
+  </EntityContainer>
+  <EntityType Name="qicalevent">
+    <Key>
+      <PropertyRef Name="GDS" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="PaxName" />
+      <PropertyRef Name="SegNumber" />
+    </Key>
+    <Property Name="GDS" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="PaxName" Type="String" Nullable="false" />
+    <Property Name="SegNumber" Type="Int32" Nullable="false" />
+    <Property Name="SegType" Type="String" />
+    <Property Name="DTStart" Type="String" />
+    <Property Name="DTEnd" Type="String" />
+    <Property Name="DCreated" Type="String" />
+    <Property Name="UID" Type="String" />
+    <Property Name="Subject" Type="String" />
+    <Property Name="Location" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="AltDescription" Type="String" />
+    <Property Name="EventText" Type="String" />
+    <Property Name="Stamp" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="qicalendar">
+    <Key>
+      <PropertyRef Name="GDS" />
+      <PropertyRef Name="RLoc" />
+    </Key>
+    <Property Type="String" Name="GDS" Nullable="false" />
+    <Property Type="String" Name="RLoc" Nullable="false" />
+    <Property Type="String" Name="PaxName" />
+    <Property Type="String" Name="Language" />
+    <Property Type="String" Name="FileLocation" />
+    <Property Type="DateTime" Name="Stamp" Nullable="false" />
+  </EntityType>
+  <EntityType Name="qimailrecord">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RLOC" />
+    <Property Type="String" Name="Subject" />
+    <Property Type="String" Name="FromName" />
+    <Property Type="String" Name="SenderName" />
+    <Property Type="String" Name="ToName" />
+    <Property Type="DateTime" Name="Received" />
+    <Property Type="String" Name="DeliveryTime" />
+    <Property Type="String" Name="Contents" />
+    <Property Type="String" Name="Agent" />
+    <Property Type="String" Name="Method" />
+    <Property Type="Int32" Name="Processor" />
+    <Property Type="String" Name="ProcessorName" />
+    <Property Type="String" Name="FormName" />
+    <Property Type="DateTime" Name="Created" />
+    <Property Type="Int32" Name="PreprocStatus" />
+    <Property Type="String" Name="TicketNumber" />
+    <Property Type="String" Name="DocumentNumber" />
+    <Property Type="String" Name="OrderNumber" />
+    <Property Type="String" Name="CustomerReference" />
+    <Property Type="Int32" Name="Processed" Nullable="false" />
+    <Property Type="String" Name="Company" />
+    <Property Type="String" Name="Category" />
+    <Property Type="Int32" Name="ItinType" Nullable="false" />
+    <Property Type="DateTime" Name="time_stamp" Nullable="false" />
+    <Property Type="String" Name="TripRequest" />
+    <Property Type="String" Name="FileName" />
+    <Property Type="String" Name="Pseudo" Nullable="false" />
+    <Property Type="String" Name="Team" />
+    <Property Type="Int32" Name="BounceEmailId" />
+  </EntityType>
+</Schema>

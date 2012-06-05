@@ -1,0 +1,54 @@
+2012-04-25 21:52:06.9599 TravelPlans ending Search Threads
+2012-04-25 21:52:06.9736 TravelPlans Disk Search Itinerary finished
+2012-04-25 21:52:06.9599 TravelPlans Surname Check started
+2012-04-25 21:52:07.0419 TravelPlans Disk Search Invoice finished
+2012-04-25 21:52:07.1318 TravelPlans m_RLOC : OFQMOG
+2012-04-25 21:52:07.3642 TravelPlans Trip Summary Finished
+2012-04-25 21:52:08.7100 TravelPlans Mailrecords found : 6
+2012-04-25 21:52:08.7100 TravelPlans Records found for Invoice in DB: 1
+2012-04-25 21:52:08.7266 TravelPlans Enter : debug point 3
+2012-04-25 21:52:08.7266 TravelPlans DbRecs : 1
+2012-04-25 21:52:08.7461 TravelPlans Surname Check Finished
+2012-04-25 21:52:08.8428 TravelPlans Enter : debug point 4
+2012-04-25 21:52:08.8428 TravelPlans m_RLOC : OFQMOG
+2012-04-25 21:52:27.7341 TravelPlans Decrypting c:\temp\bwvs3l0b44i3teuqfdmgydos.pdf.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.pdf
+2012-04-25 21:52:27.7341 TravelPlans should be Processing as woz
+2012-04-25 21:52:33.7695 TravelPlans redirecting to D:\Projects\TravelBytes\MTP-New-MVC\MTP-JAPA\MTP-JAPA\Temp\bwvs3l0b44i3teuqfdmgydos.pdf.pdf
+2012-04-25 21:52:36.4815 TravelPlans Retrieving \\203.19.215.74\FILESTORE\QIETKS\OCT2011\OFQMOG.PDF
+2012-04-25 21:53:03.3537 TravelPlans Itinerary: Mailrecords found : 1
+2012-04-25 21:53:03.3537 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-04-25 21:53:03.3537 TravelPlans CreateDisplayFile debug point 01
+2012-04-25 21:53:03.3839 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 21:53:12.3735 TravelPlans File copied
+2012-04-25 21:53:12.3735 TravelPlans Decrypting file
+2012-04-25 21:53:12.3735 TravelPlans FileDecrypt: Debug point 01
+2012-04-25 21:53:12.3892 TravelPlans FileDecrypt: Debug point 02
+2012-04-25 21:53:12.3950 TravelPlans Decrypt : c:\temp\bwvs3l0b44i3teuqfdmgydos.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.doc
+2012-04-25 21:53:13.8521 TravelPlans Decrypted : 
+2012-04-25 21:53:13.8521 TravelPlans Decrypted file
+2012-04-25 21:53:13.8521 TravelPlans Deleted c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 21:53:13.8521 TravelPlans Returning
+2012-04-25 21:53:13.8912 TravelPlans Retrieving c:\temp\bwvs3l0b44i3teuqfdmgydos.htm
+2012-04-25 21:53:13.8912 TravelPlans Fixing HTML
+2012-04-25 21:53:48.6904 TravelPlans Enter : debug point 1
+2012-04-25 21:53:48.6904 TravelPlans Enter : debug point 2
+2012-04-25 21:53:48.6933 TravelPlans Starting Search Threads
+2012-04-25 21:53:48.7216 TravelPlans Disk Search Invoice started
+2012-04-25 21:53:48.7216 TravelPlans Disk Search Invoice in way
+2012-04-25 21:53:48.7245 TravelPlans Disk Search Invoice finished
+2012-04-25 21:53:48.7607 TravelPlans Surname Check started
+2012-04-25 21:53:48.7607 TravelPlans m_RLOC : JKJXQ5
+2012-04-25 21:53:48.7607 TravelPlans Disk Search Itinerary finished
+2012-04-25 21:53:48.7607 TravelPlans m_RLOC : JKJXQ5
+2012-04-25 21:53:48.7734 TravelPlans ending Search Threads
+2012-04-25 21:53:48.8095 TravelPlans Trip Summary Finished
+2012-04-25 21:53:49.6924 TravelPlans No records found in mailrecords table matching criteria
+2012-04-25 21:53:49.6943 TravelPlans Enter : debug point 3
+2012-04-25 21:53:49.6943 TravelPlans Invoices in database / found on disk Database records DS was null
+2012-04-25 21:53:49.6943 TravelPlans Surname Check Finished
+2012-04-25 21:55:11.3107 TravelPlans Invoice/Ticket found : 1
+2012-04-25 21:55:11.3107 TravelPlans Records found for TKT/Invoice in DB: 1
+2012-04-25 21:55:26.2693 TravelPlans Decrypting c:\temp\bwvs3l0b44i3teuqfdmgydos.pdf.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.pdf
+2012-04-25 21:55:26.2693 TravelPlans should be Processing as woz
+2012-04-25 21:55:33.1280 TravelPlans redirecting to D:\Projects\TravelBytes\MTP-New-MVC\MTP-JAPA\MTP-JAPA\Temp\bwvs3l0b44i3teuqfdmgydos.pdf.pdf
+2012-04-25 21:55:58.3926 TravelPlans Retrieving \\203.19.215.74\FILESTORE\QIETKS\OCT2011\OFQMOG.PDF

@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Invoice";
+
+    string strLayout = "~/Views/Shared/MyTP.cshtml";   
+    //if (Request.QueryString["Lt"] != null)
+    //{
+    //    strLayout = "~/Views/Shared/StoredItin.cshtml";
+    //}
+    //else
+    //{
+    //    strLayout = "~/Views/Shared/MyTP.cshtml";
+    //}
+    Layout = strLayout;
+}
+<div class="invoice">
+	<h1>View and Download copies of your Travel Invoices</h1>
+	<p>View and download exact copies of your invoice in PDF format. Click the "View/Download" link next to the invoice you want to view, print or save to your computer.</p>
+	<div id="outError" align="left">
+		@Html.Raw(@ViewBag.OutError)
+	</div>
+	<div id="Results" class="body" align="left">
+		@Html.Raw(@ViewBag.Results)
+	</div>
+	<div id="Adobe" width="500" style="margin-top:20px;color:#585858"
+		@if (@ViewBag.Adobe == true)
+		{
+			<text>style="display:block"</text>
+		}
+		else if (@ViewBag.Adobe == false)
+		{
+			<text>style="display:none"</text>
+		}        
+		>
+		<h2>Need Adobe&reg; Reader</h2>
+		<p>To view a PDF copy of statement only, you must have Acrobat&reg; Reader&reg; installed on your computer. You can download the free software from the <a href="http://www.pacific.adobe.com/products/acrobat/readstep2.html?c=au" target="_new">Adobe site</a>.</p>
+	</div>
+	<h2>Order Past Invoices</h2>
+	<p>If your Travel Invoice does not appear and you would like a paper copy please contact your Travel Team. Please note: A fee may apply for invoice reprints.</p>
+</div>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="qiModelStoreContainer" CdmEntityContainer="qiEntities">
+    <EntitySetMapping Name="qi_company">
+      <EntityTypeMapping TypeName="qiModel.qi_company">
+        <MappingFragment StoreEntitySet="company">
+          <ScalarProperty Name="PrimaryCode" ColumnName="PrimaryCode" />
+          <ScalarProperty Name="Pseudo" ColumnName="Pseudo" />
+          <ScalarProperty Name="SecondaryCode" ColumnName="SecondaryCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AddressCode" ColumnName="AddressCode" />
+          <ScalarProperty Name="PhoneCode" ColumnName="PhoneCode" />
+          <ScalarProperty Name="MacroCode" ColumnName="MacroCode" />
+          <ScalarProperty Name="MailCode" ColumnName="MailCode" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="PageCode" ColumnName="PageCode" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          <ScalarProperty Name="HeaderFooterCode" ColumnName="HeaderFooterCode" />
+          <ScalarProperty Name="CostCentreCode" ColumnName="CostCentreCode" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="AccessCode" ColumnName="AccessCode" />
+          <ScalarProperty Name="Name2" ColumnName="Name2" />
+          <ScalarProperty Name="Eticket" ColumnName="Eticket" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Invoice" ColumnName="Invoice" />
+          <ScalarProperty Name="CreditNote" ColumnName="CreditNote" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Itinerary" ColumnName="Itinerary" />
+          <ScalarProperty Name="D2C" ColumnName="D2C" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

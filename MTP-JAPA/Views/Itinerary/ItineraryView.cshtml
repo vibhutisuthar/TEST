@@ -1,0 +1,123 @@
+﻿@{
+    ViewBag.Title = "Itinerary";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+    //Layout = "~/Views/Shared/StoredItin.cshtml";    
+}
+@{
+    bool bPrintViewBag = Convert.ToBoolean(ViewBag.bPrint);    
+}
+<div class="itinerary">
+    @using (Html.BeginForm("ItineraryView", "Itinerary", FormMethod.Post, new { id = "frmItineraryView", name = "frmItineraryView" }))
+    {        
+        <div class="MainDocument" id="MainDocument" align="left">          
+            <table cellspacing="0" cellpadding="0" width="720" border="0">
+                @if (!bPrintViewBag)
+                { }
+                <tr>
+                    <td valign="top" align="left">
+                        @*<site:siteheader runat="server" reference='<%=base.GetReference%>' travellername='<%=base.GetName%>'
+                    id="SiteHeader"></site:siteheader>*@
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table border="0">
+                            <tr>
+                                <td class="MenuCol">
+                                    <!--menu-->
+                                    <br>
+                                </td>
+                            </tr>
+                            @*<%}%>*@
+                            <tr>
+                                <td>
+                                    <table class="ItineraryTable" border="0">
+                                        <tr>
+                                            <td align="left">
+                                                <img src="@Url.Content("~/Content/images/AmexFooter.gif")" border="0" width="264" height="58">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table>
+                                                    <tr>
+                                                        <td valign="top">
+                                                            <div class="TravelArrangements">
+                                                                Travel Arrangements for
+                                                            </div>
+                                                        </td>
+                                                        <td valign="bottom">
+                                                            <div id="Pax" class="Pax">
+                                                                @ViewBag.RLOC
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table class="Detail" width="100%" border="0">
+                                                    <tr>
+                                                        <td class="RLOCHeadingCol">
+                                                            Booking Reference
+                                                        </td>
+                                                        <td class="RLOCCol">
+                                                            <div class="RLOC" id="RLOC">
+                                                            </div>
+                                                        </td>
+                                                        <td class="AgentID">
+                                                            Agent Id&nbsp;<span id="Agent">@ViewBag.Agent</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            &nbsp;
+                                                        </td>
+                                                        <td valign="top">
+                                                            <span class="Address"><span id="ClientAddress">@ViewBag.ClientAddress</span></span>&nbsp;
+                                                        </td>
+                                                        <td valign="top">
+                                                            <span class="Address"><span id="AgencyAddress">@ViewBag.AgencyAddress</span></span>&nbsp;
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div id="results">
+                                                    @Html.Raw(@ViewBag.results)
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            @if (bPrintViewBag)
+                                                            { //Response.Write("Printed " + DateTime.Now.ToString()); }
+                                                            }
+                                                            else
+                                                            {
+                                                                //Response.Write("&nbsp;");
+                                                            }
+                                                        </td>
+                                                        <td align="right">
+                                                            <img src="@Url.Content("~/Content/images/AmexFooter.gif")" border="0" width="250" height="37">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    }
+</div>

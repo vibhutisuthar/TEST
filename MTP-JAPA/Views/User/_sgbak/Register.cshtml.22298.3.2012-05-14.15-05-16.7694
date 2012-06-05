@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+}
+<div class="register">
+    @using (Html.BeginForm("Register", "User", FormMethod.Post, new { id = "frmRegister", name = "frmRegister" }))
+    {
+    
+        <script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=your_public_key">
+        </script>
+        <noscript>
+            <iframe src="http://www.google.com/recaptcha/api/noscript?k=your_public_key" height="300"
+                width="500" frameborder="0"></iframe>
+            <br>
+            <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+     </textarea>
+            <input type="hidden" name="recaptcha_response_field" value="manual_challenge">
+        </noscript>
+        
+        
+        <h1>
+            Register</h1>
+@* <label for="username">
+        User name:</label>
+    @Html.TextBox("username", "", new { @maxlength = "24", id = "txtUserName" })*@
+        <label for="email">
+            Email address:</label>
+        @Html.TextBox("email", "", new { @maxlength = "24", id = "txtEmail" })
+        <label for="password">
+            Password <em>(minimum 6 characters)</em>:</label>
+        <input type="password" name="password" size="24" id="txtPassword" />
+        <label for="password2">
+            Confirm password:</label>
+        <input type="password" name="confirmpassword" size="24" id="txtConfirmPassword" />
+        <input type="submit" id="btnSubmit" name="btnSubmit" title="btnSubmit" value="GO" />
+
+    }
+</div>

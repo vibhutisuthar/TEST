@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "RegistrationConfirmation";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+}
+<h1>
+    Registration Confirmed</h1>
+<div class="registrationconfirmation">
+    @using (Html.BeginForm("RegistrationConfirmation", "User", FormMethod.Post, new { id = "frmRegistrationConfirmation", name = "frmRegistrationConfirmation" }))
+    {   
+        <label for="email">
+            Email Address:</label>
+        @Html.TextBox("email", null, new { @maxlength = "24", id = "txtEmail", title = "Email Address", @Value = "Email Address" })
+        <label for="password">
+            Password:</label>
+@*@Html.PasswordFor(t => t.Password, new { id = "txtPassWord", @maxlength = "24" })*@
+        <input type="password" name="password" size="24" id="password" value="password" title="password" />
+        <input type="submit" id="btnSubmit" name="btnSubmit" title="btnSubmit" value="GO" />
+        
+        <div id="form_footer_detail" class="form_footer">
+            Thankyou for confirming your registration. You may now login to My Travel Plans
+            to review all of your bookings with American Express Business Travel.
+        </div> 
+
+    }
+</div>

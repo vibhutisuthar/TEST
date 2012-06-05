@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="qilive_onlineModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="qilive_onlineModelStoreContainer">
+          <EntitySet Name="address" EntityType="qilive_onlineModel.Store.address" store:Type="Tables" Schema="qilive_online" />
+          <EntitySet Name="association" EntityType="qilive_onlineModel.Store.association" store:Type="Tables" Schema="qilive_online" />
+          <EntitySet Name="contact" EntityType="qilive_onlineModel.Store.contact" store:Type="Tables" Schema="qilive_online" />
+          <EntitySet Name="email" EntityType="qilive_onlineModel.Store.email" store:Type="Tables" Schema="qilive_online" />
+          <EntitySet Name="history" EntityType="qilive_onlineModel.Store.history" store:Type="Tables" Schema="qilive_online" />
+          <EntitySet Name="layout" EntityType="qilive_onlineModel.Store.layout" store:Type="Tables" Schema="qilive_online" />
+          <EntitySet Name="module" EntityType="qilive_onlineModel.Store.module" store:Type="Tables" Schema="qilive_online" />
+          <EntitySet Name="pageasset" EntityType="qilive_onlineModel.Store.pageasset" store:Type="Tables" Schema="qilive_online" />
+          <EntitySet Name="product" EntityType="qilive_onlineModel.Store.product" store:Type="Tables" Schema="qilive_online" />
+          <EntitySet Name="transcode" EntityType="qilive_onlineModel.Store.transcode" store:Type="Tables" Schema="qilive_online" />
+        </EntityContainer>
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="address_code" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="address1" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="address2" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="address3" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="city" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="state" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="country" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="postcode" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="web" Type="varchar" MaxLength="256" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="access_criteria" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="owner_market" Type="varchar" MaxLength="256" />
+          <Property Name="owner_region" Type="varchar" MaxLength="256" />
+          <Property Name="deployment" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="association">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="form_name" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="company_name" Type="varchar" MaxLength="45" />
+          <Property Name="team_name" Type="varchar" MaxLength="45" />
+          <Property Name="address_code" Type="varchar" MaxLength="45" />
+          <Property Name="contact_code" Type="varchar" MaxLength="45" />
+          <Property Name="pageasset_code" Type="varchar" MaxLength="45" />
+          <Property Name="module_code" Type="varchar" MaxLength="45" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="access_criteria" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="layout_code" Type="varchar" MaxLength="45" />
+          <Property Name="transcode_code" Type="varchar" MaxLength="45" />
+          <Property Name="email_code" Type="varchar" MaxLength="45" />
+          <Property Name="owner_market" Type="varchar" MaxLength="256" />
+          <Property Name="owner_region" Type="varchar" MaxLength="256" />
+          <Property Name="deployment" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="contact_code" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="contact_type" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="seq" Type="int" Nullable="false" />
+          <Property Name="content" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="label" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="access_criteria" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="owner_market" Type="varchar" MaxLength="256" />
+          <Property Name="owner_region" Type="varchar" MaxLength="256" />
+          <Property Name="deployment" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="email">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="email_code" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="email_type" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="seq" Type="int" Nullable="false" />
+          <Property Name="from_address" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="from_name" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="cc" Type="longtext" />
+          <Property Name="bcc" Type="longtext" />
+          <Property Name="subject" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="access_criteria" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="owner_market" Type="varchar" MaxLength="256" />
+          <Property Name="owner_region" Type="varchar" MaxLength="256" />
+          <Property Name="deployment" Type="varchar" MaxLength="45" />
+          <Property Name="txt_xslt_file" Type="longtext" />
+          <Property Name="html_xslt_file" Type="longtext" />
+        </EntityType>
+        <EntityType Name="history">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="table" Type="varchar" MaxLength="45" />
+          <Property Name="user" Type="varchar" MaxLength="255" />
+          <Property Name="stamp" Type="datetime" />
+          <Property Name="notes" Type="longtext" />
+          <Property Name="link" Type="varchar" />
+          <Property Name="owner_market" Type="varchar" MaxLength="256" />
+          <Property Name="owner_region" Type="varchar" MaxLength="256" />
+          <Property Name="deployment" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="layout">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="layout_code" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="layout_type" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="seq" Type="int" Nullable="false" />
+          <Property Name="content" Type="longtext" />
+          <Property Name="rel" Type="varchar" MaxLength="45" />
+          <Property Name="media" Type="varchar" MaxLength="256" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="access_criteria" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="owner_market" Type="varchar" MaxLength="256" />
+          <Property Name="owner_region" Type="varchar" MaxLength="256" />
+          <Property Name="deployment" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="module">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="module_code" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="module_type" Type="int" Nullable="false" />
+          <Property Name="seq" Type="int" />
+          <Property Name="module_name" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="post_validation" Type="bool" Nullable="false" />
+          <Property Name="post_validation_folder" Type="varchar" MaxLength="256" />
+          <Property Name="log_level" Type="int" Nullable="false" />
+          <Property Name="log_file" Type="varchar" MaxLength="256" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="access_criteria" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="owner_market" Type="varchar" MaxLength="256" />
+          <Property Name="owner_region" Type="varchar" MaxLength="256" />
+          <Property Name="deployment" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="pageasset">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="page_code" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="page_type" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="seq" Type="int" Nullable="false" />
+          <Property Name="content" Type="longtext" />
+          <Property Name="insert_point" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="insert_element" Type="varchar" MaxLength="256" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="access_criteria" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="owner_market" Type="varchar" MaxLength="256" />
+          <Property Name="owner_region" Type="varchar" MaxLength="256" />
+          <Property Name="deployment" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="product_code" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="product_type" Type="int" Nullable="false" />
+          <Property Name="content" Type="longtext" />
+          <Property Name="insert_point" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="insert_element" Type="varchar" MaxLength="256" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="access_criteria" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="owner_market" Type="varchar" MaxLength="256" />
+          <Property Name="owner_region" Type="varchar" MaxLength="256" />
+          <Property Name="deployment" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="transcode">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="transcode_code" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="transcode_type" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="seq" Type="int" Nullable="false" />
+          <Property Name="xslt_file" Type="longtext" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="access_criteria" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="owner_market" Type="varchar" MaxLength="256" />
+          <Property Name="owner_region" Type="varchar" MaxLength="256" />
+          <Property Name="deployment" Type="varchar" MaxLength="45" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="qilive_onlineModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="qilive_onlineEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="addresses" EntityType="qilive_onlineModel.address" />
+          <EntitySet Name="associations" EntityType="qilive_onlineModel.association" />
+          <EntitySet Name="contacts" EntityType="qilive_onlineModel.contact" />
+          <EntitySet Name="emails" EntityType="qilive_onlineModel.email" />
+          <EntitySet Name="histories" EntityType="qilive_onlineModel.history" />
+          <EntitySet Name="layouts" EntityType="qilive_onlineModel.layout" />
+          <EntitySet Name="modules" EntityType="qilive_onlineModel.module" />
+          <EntitySet Name="pageassets" EntityType="qilive_onlineModel.pageasset" />
+          <EntitySet Name="products" EntityType="qilive_onlineModel.product" />
+          <EntitySet Name="transcodes" EntityType="qilive_onlineModel.transcode" />
+        </EntityContainer>
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="address_code" Type="String" Nullable="false" />
+          <Property Name="address1" Type="String" Nullable="false" />
+          <Property Name="address2" Type="String" Nullable="false" />
+          <Property Name="address3" Type="String" Nullable="false" />
+          <Property Name="city" Type="String" Nullable="false" />
+          <Property Name="state" Type="String" Nullable="false" />
+          <Property Name="country" Type="String" Nullable="false" />
+          <Property Name="postcode" Type="String" Nullable="false" />
+          <Property Name="web" Type="String" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="access_criteria" Type="String" Nullable="false" />
+          <Property Name="owner_market" Type="String" />
+          <Property Name="owner_region" Type="String" />
+          <Property Name="deployment" Type="String" />
+        </EntityType>
+        <EntityType Name="association">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="form_name" Type="String" Nullable="false" />
+          <Property Name="company_name" Type="String" />
+          <Property Name="team_name" Type="String" />
+          <Property Name="address_code" Type="String" />
+          <Property Name="contact_code" Type="String" />
+          <Property Name="pageasset_code" Type="String" />
+          <Property Name="module_code" Type="String" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="access_criteria" Type="String" Nullable="false" />
+          <Property Name="layout_code" Type="String" />
+          <Property Name="transcode_code" Type="String" />
+          <Property Name="email_code" Type="String" />
+          <Property Name="owner_market" Type="String" />
+          <Property Name="owner_region" Type="String" />
+          <Property Name="deployment" Type="String" />
+        </EntityType>
+        <EntityType Name="contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="contact_code" Type="String" Nullable="false" />
+          <Property Name="contact_type" Type="String" Nullable="false" />
+          <Property Name="seq" Type="Int32" Nullable="false" />
+          <Property Name="content" Type="String" Nullable="false" />
+          <Property Name="label" Type="String" Nullable="false" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="access_criteria" Type="String" Nullable="false" />
+          <Property Name="owner_market" Type="String" />
+          <Property Name="owner_region" Type="String" />
+          <Property Name="deployment" Type="String" />
+        </EntityType>
+        <EntityType Name="email">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email_code" Type="String" Nullable="false" />
+          <Property Name="email_type" Type="String" Nullable="false" />
+          <Property Name="seq" Type="Int32" Nullable="false" />
+          <Property Name="from_address" Type="String" Nullable="false" />
+          <Property Name="from_name" Type="String" Nullable="false" />
+          <Property Name="cc" Type="String" />
+          <Property Name="bcc" Type="String" />
+          <Property Name="subject" Type="String" Nullable="false" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="access_criteria" Type="String" Nullable="false" />
+          <Property Name="owner_market" Type="String" />
+          <Property Name="owner_region" Type="String" />
+          <Property Name="deployment" Type="String" />
+          <Property Name="txt_xslt_file" Type="String" />
+          <Property Name="html_xslt_file" Type="String" />
+        </EntityType>
+        <EntityType Name="history">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="table" Type="String" />
+          <Property Name="user" Type="String" />
+          <Property Name="stamp" Type="DateTime" />
+          <Property Name="notes" Type="String" />
+          <Property Name="link" Type="String" />
+          <Property Name="owner_market" Type="String" />
+          <Property Name="owner_region" Type="String" />
+          <Property Name="deployment" Type="String" />
+        </EntityType>
+        <EntityType Name="layout">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="layout_code" Type="String" Nullable="false" />
+          <Property Name="layout_type" Type="String" Nullable="false" />
+          <Property Name="seq" Type="Int32" Nullable="false" />
+          <Property Name="content" Type="String" />
+          <Property Name="rel" Type="String" />
+          <Property Name="media" Type="String" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="access_criteria" Type="String" Nullable="false" />
+          <Property Name="owner_market" Type="String" />
+          <Property Name="owner_region" Type="String" />
+          <Property Name="deployment" Type="String" />
+        </EntityType>
+        <EntityType Name="module">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="module_code" Type="String" Nullable="false" />
+          <Property Name="module_type" Type="Int32" Nullable="false" />
+          <Property Name="seq" Type="Int32" />
+          <Property Name="module_name" Type="String" Nullable="false" />
+          <Property Name="post_validation" Type="Boolean" Nullable="false" />
+          <Property Name="post_validation_folder" Type="String" />
+          <Property Name="log_level" Type="Int32" Nullable="false" />
+          <Property Name="log_file" Type="String" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="access_criteria" Type="String" Nullable="false" />
+          <Property Name="owner_market" Type="String" />
+          <Property Name="owner_region" Type="String" />
+          <Property Name="deployment" Type="String" />
+        </EntityType>
+        <EntityType Name="pageasset">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="page_code" Type="String" Nullable="false" />
+          <Property Name="page_type" Type="String" Nullable="false" />
+          <Property Name="seq" Type="Int32" Nullable="false" />
+          <Property Name="content" Type="String" />
+          <Property Name="insert_point" Type="String" Nullable="false" />
+          <Property Name="insert_element" Type="String" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="access_criteria" Type="String" Nullable="false" />
+          <Property Name="owner_market" Type="String" />
+          <Property Name="owner_region" Type="String" />
+          <Property Name="deployment" Type="String" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="product_code" Type="String" Nullable="false" />
+          <Property Name="product_type" Type="Int32" Nullable="false" />
+          <Property Name="content" Type="String" />
+          <Property Name="insert_point" Type="String" Nullable="false" />
+          <Property Name="insert_element" Type="String" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="access_criteria" Type="String" Nullable="false" />
+          <Property Name="owner_market" Type="String" />
+          <Property Name="owner_region" Type="String" />
+          <Property Name="deployment" Type="String" />
+        </EntityType>
+        <EntityType Name="transcode">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="transcode_code" Type="String" Nullable="false" />
+          <Property Name="transcode_type" Type="String" Nullable="false" />
+          <Property Name="seq" Type="Int32" Nullable="false" />
+          <Property Name="xslt_file" Type="String" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="access_criteria" Type="String" Nullable="false" />
+          <Property Name="owner_market" Type="String" />
+          <Property Name="owner_region" Type="String" />
+          <Property Name="deployment" Type="String" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="qilive_onlineModelStoreContainer" CdmEntityContainer="qilive_onlineEntities">
+          <EntitySetMapping Name="addresses"><EntityTypeMapping TypeName="qilive_onlineModel.address"><MappingFragment StoreEntitySet="address">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="address_code" ColumnName="address_code" />
+            <ScalarProperty Name="address1" ColumnName="address1" />
+            <ScalarProperty Name="address2" ColumnName="address2" />
+            <ScalarProperty Name="address3" ColumnName="address3" />
+            <ScalarProperty Name="city" ColumnName="city" />
+            <ScalarProperty Name="state" ColumnName="state" />
+            <ScalarProperty Name="country" ColumnName="country" />
+            <ScalarProperty Name="postcode" ColumnName="postcode" />
+            <ScalarProperty Name="web" ColumnName="web" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+            <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+            <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+            <ScalarProperty Name="deployment" ColumnName="deployment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="associations"><EntityTypeMapping TypeName="qilive_onlineModel.association"><MappingFragment StoreEntitySet="association">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="form_name" ColumnName="form_name" />
+            <ScalarProperty Name="company_name" ColumnName="company_name" />
+            <ScalarProperty Name="team_name" ColumnName="team_name" />
+            <ScalarProperty Name="address_code" ColumnName="address_code" />
+            <ScalarProperty Name="contact_code" ColumnName="contact_code" />
+            <ScalarProperty Name="pageasset_code" ColumnName="pageasset_code" />
+            <ScalarProperty Name="module_code" ColumnName="module_code" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+            <ScalarProperty Name="layout_code" ColumnName="layout_code" />
+            <ScalarProperty Name="transcode_code" ColumnName="transcode_code" />
+            <ScalarProperty Name="email_code" ColumnName="email_code" />
+            <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+            <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+            <ScalarProperty Name="deployment" ColumnName="deployment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="contacts"><EntityTypeMapping TypeName="qilive_onlineModel.contact"><MappingFragment StoreEntitySet="contact">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="contact_code" ColumnName="contact_code" />
+            <ScalarProperty Name="contact_type" ColumnName="contact_type" />
+            <ScalarProperty Name="seq" ColumnName="seq" />
+            <ScalarProperty Name="content" ColumnName="content" />
+            <ScalarProperty Name="label" ColumnName="label" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+            <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+            <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+            <ScalarProperty Name="deployment" ColumnName="deployment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="emails"><EntityTypeMapping TypeName="qilive_onlineModel.email"><MappingFragment StoreEntitySet="email">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="email_code" ColumnName="email_code" />
+            <ScalarProperty Name="email_type" ColumnName="email_type" />
+            <ScalarProperty Name="seq" ColumnName="seq" />
+            <ScalarProperty Name="from_address" ColumnName="from_address" />
+            <ScalarProperty Name="from_name" ColumnName="from_name" />
+            <ScalarProperty Name="cc" ColumnName="cc" />
+            <ScalarProperty Name="bcc" ColumnName="bcc" />
+            <ScalarProperty Name="subject" ColumnName="subject" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+            <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+            <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+            <ScalarProperty Name="deployment" ColumnName="deployment" />
+            <ScalarProperty Name="txt_xslt_file" ColumnName="txt_xslt_file" />
+            <ScalarProperty Name="html_xslt_file" ColumnName="html_xslt_file" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="histories"><EntityTypeMapping TypeName="qilive_onlineModel.history"><MappingFragment StoreEntitySet="history">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="table" ColumnName="table" />
+            <ScalarProperty Name="user" ColumnName="user" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="notes" ColumnName="notes" />
+            <ScalarProperty Name="link" ColumnName="link" />
+            <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+            <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+            <ScalarProperty Name="deployment" ColumnName="deployment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="layouts"><EntityTypeMapping TypeName="qilive_onlineModel.layout"><MappingFragment StoreEntitySet="layout">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="layout_code" ColumnName="layout_code" />
+            <ScalarProperty Name="layout_type" ColumnName="layout_type" />
+            <ScalarProperty Name="seq" ColumnName="seq" />
+            <ScalarProperty Name="content" ColumnName="content" />
+            <ScalarProperty Name="rel" ColumnName="rel" />
+            <ScalarProperty Name="media" ColumnName="media" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+            <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+            <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+            <ScalarProperty Name="deployment" ColumnName="deployment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="modules"><EntityTypeMapping TypeName="qilive_onlineModel.module"><MappingFragment StoreEntitySet="module">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="module_code" ColumnName="module_code" />
+            <ScalarProperty Name="module_type" ColumnName="module_type" />
+            <ScalarProperty Name="seq" ColumnName="seq" />
+            <ScalarProperty Name="module_name" ColumnName="module_name" />
+            <ScalarProperty Name="post_validation" ColumnName="post_validation" />
+            <ScalarProperty Name="post_validation_folder" ColumnName="post_validation_folder" />
+            <ScalarProperty Name="log_level" ColumnName="log_level" />
+            <ScalarProperty Name="log_file" ColumnName="log_file" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+            <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+            <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+            <ScalarProperty Name="deployment" ColumnName="deployment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="pageassets"><EntityTypeMapping TypeName="qilive_onlineModel.pageasset"><MappingFragment StoreEntitySet="pageasset">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="page_code" ColumnName="page_code" />
+            <ScalarProperty Name="page_type" ColumnName="page_type" />
+            <ScalarProperty Name="seq" ColumnName="seq" />
+            <ScalarProperty Name="content" ColumnName="content" />
+            <ScalarProperty Name="insert_point" ColumnName="insert_point" />
+            <ScalarProperty Name="insert_element" ColumnName="insert_element" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+            <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+            <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+            <ScalarProperty Name="deployment" ColumnName="deployment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="products"><EntityTypeMapping TypeName="qilive_onlineModel.product"><MappingFragment StoreEntitySet="product">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="product_code" ColumnName="product_code" />
+            <ScalarProperty Name="product_type" ColumnName="product_type" />
+            <ScalarProperty Name="content" ColumnName="content" />
+            <ScalarProperty Name="insert_point" ColumnName="insert_point" />
+            <ScalarProperty Name="insert_element" ColumnName="insert_element" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+            <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+            <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+            <ScalarProperty Name="deployment" ColumnName="deployment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="transcodes"><EntityTypeMapping TypeName="qilive_onlineModel.transcode"><MappingFragment StoreEntitySet="transcode">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="transcode_code" ColumnName="transcode_code" />
+            <ScalarProperty Name="transcode_type" ColumnName="transcode_type" />
+            <ScalarProperty Name="seq" ColumnName="seq" />
+            <ScalarProperty Name="xslt_file" ColumnName="xslt_file" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+            <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+            <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+            <ScalarProperty Name="deployment" ColumnName="deployment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="qilive_online">
+        <EntityTypeShape EntityType="qilive_onlineModel.address" Width="1.5" PointX="0.75" PointY="0.75" Height="3.9033007812499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="qilive_onlineModel.association" Width="1.5" PointX="2.75" PointY="0.75" Height="4.0956022135416656" IsExpanded="true" />
+        <EntityTypeShape EntityType="qilive_onlineModel.contact" Width="1.5" PointX="4.75" PointY="0.75" Height="3.1340950520833335" IsExpanded="true" />
+        <EntityTypeShape EntityType="qilive_onlineModel.email" Width="1.5" PointX="4.75" PointY="4.75" Height="4.0956022135416656" IsExpanded="true" />
+        <EntityTypeShape EntityType="qilive_onlineModel.history" Width="1.5" PointX="0.75" PointY="5.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="qilive_onlineModel.layout" Width="1.5" PointX="6.75" PointY="0.75" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="qilive_onlineModel.module" Width="1.5" PointX="6.75" PointY="5.75" Height="3.7109993489583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="qilive_onlineModel.pageasset" Width="1.5" PointX="8.75" PointY="0.75" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="qilive_onlineModel.product" Width="1.5" PointX="8.75" PointY="5.75" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="qilive_onlineModel.transcode" Width="1.5" PointX="0.75" PointY="9.75" Height="2.9417936197916674" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

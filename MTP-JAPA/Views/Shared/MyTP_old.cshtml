@@ -1,0 +1,318 @@
+﻿@{
+    Layout = null;
+}
+@{
+               
+    bool bPrint = Convert.ToBoolean(ViewBag.bPrint);
+    bool TabDisplay = Convert.ToBoolean(ViewBag.TabDisplay);
+
+    string on = "on";
+
+    string InvoiceTab = System.Web.Configuration.WebConfigurationManager.AppSettings["InvoiceTab"];
+    ViewBag.InvoiceTabDisplay = InvoiceTab.ToLower();
+
+    string EticketDisplayTab = System.Web.Configuration.WebConfigurationManager.AppSettings["EticketDisplayTab"];
+    ViewBag.EticketDisplayTab = EticketDisplayTab.ToLower();
+
+    string D2CTab = System.Web.Configuration.WebConfigurationManager.AppSettings["D2CTab"];
+    ViewBag.D2CTabDisplay = D2CTab.ToLower();
+            
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Travel Plans - MyTP - test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <style type="text/css">@@media only screen and (orientation: portrait) { * { }};</style>
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/static/css/mytp_smartphone.css")" media="screen and (min-device-width:320px) and (max-width:599px)" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/static/css/mytp_tablet_portrait.css")" media="screen and (min-device-width:600px) and (min-width:600px) and (max-width:1001px)" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/static/css/mytp_desktop.css")" media="screen and (min-device-width:600px) and (min-width:1002px), print, projection" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/static/css/mytp_print.css")" media="print" />
+    <!--[if lt IE 9]>
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/static/css/mytp_desktop.css")" media="screen, print, projection" />
+    <link type="text/css" rel="stylesheet" href="http://qionlinetest1.travelbytes.com.au/Content/static/css/mytp_desktop_ie.css")" media="screen, print, projection" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/static/css/itin_desktop.css")" media="screen, print, projection" />
+    <link type="text/css" rel="stylesheet" href="http://qionlinetest1.travelbytes.com.au/Content/static/css/itin_desktop_ie.css")" media="screen, print, projection" />
+    <script>  
+        document.createElement("header" );  
+        document.createElement("footer" );  
+        document.createElement("section");   
+        document.createElement("aside"  );  
+        document.createElement("nav"    );  
+        document.createElement("article");   
+        document.createElement("hgroup" );   
+        document.createElement("time"   );  
+    </script>  
+    <noscript>
+        <strong>Warning !</strong>  
+        Because your browser does not support HTML5, some elements are simulated using JScript.  
+        Unfortunately your browser has disabled scripting. Please enable it in order to display this page.  
+    </noscript>  
+<![endif]-->
+    @if (@ViewData["HeaderData"] != null)
+    {
+        @ViewData["HeaderData"]
+
+    }
+    else
+    { 
+        <script type="text/javascript" src="http://qionlinetest1.travelbytes.com.au/Content/static/js/libs/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="http://qionlinetest1.travelbytes.com.au/Content/static/js/expand-collapse.js"></script>
+    }
+</head>
+<body>
+    <header>
+        <a href="@Url.Action("Index", "User")"><img src="@Url.Content("~/Content/images/aebt_sq_logo.png")" alt="American Express Business Travel Logo" title="back to login" width="246" height="124" /></a>
+        <a id="menu" href="#" class="hide">Menu</a>
+        @*<a id="menu" href="#">Menu</a>*@
+        <hgroup>
+            <h1>My Travel Plans</h1>
+            <h2>Welcome to My Travel Plans <em style="white-space: nowrap;"> your complete travel documentation centre</em></h2>
+        </hgroup>
+    </header>
+    <div id="base">
+        <input type="hidden" name="thePrint" id="thePrint" value="@ViewBag.bPrint" />
+        @if (bPrint != true && TabDisplay == true)
+        {          
+            <ul id="ultabs" class="tabs">
+                <li id="liBookingLogin"><a href="@Url.Action("Index", "User")" id="hrefBookingLogin" class="clsBookingLogin" 
+                title="Use information from a specific booking to retrieve the documents associated with that booking.">
+                    Booking Search</a> </li>
+                <li id="liEmailLogin"><a id="hrefEmailLogin" class="clsEmailLogin" title="Use your email address and password to access all of your bookings."
+                    href="/User/index?p=login">Email Login</a>
+                    <input id="theHiddenTabIndex" type="hidden" value="@ViewBag.theHiddenTabIndex" name="theHiddenTabIndex"/>
+                </li>
+                <li id="liItinerary" class="here"><a href="@Url.Action("ItineraryView", "Itinerary", new { T = "I" })" >
+                    Itinerary</a> </li>
+                @if (Convert.ToString(@ViewBag.InvoiceTabDisplay) == on)
+                {
+                    <li id="liInvoice"><a href="@Url.Action("InvoiceView", "Invoice", new { T = "V", LT = 1 })" >
+                        @*LT=Layout (Master page change)*@ Invoice</a> </li>
+                }
+                @if (Convert.ToString(@ViewBag.EticketDisplayTab) == on)
+                {
+                    <li id="liEticket"><a href="@Url.Action("EticketView", "Eticket", new { T = "E" })" >
+                        eTicket Display</a> </li>
+                }
+                <input type="hidden" name="ViewDownloadToCalendarMenu" id="ViewDownloadToCalendarMenu" value="@ViewBag.D2CTabDisplay" />
+                @if (Convert.ToString(@ViewBag.D2CTabDisplay) == on)
+                {
+                    <li id="liDownloadCalendar"><a href="@Url.Action("Download", "Calendar")" >Download
+                        To Calendar</a> </li>
+                }
+@*  <li id="liPrint"><a href="@Url.Action("ItineraryView", "Itinerary", new { T = "I", L = "P" })"  target="_new">Print</a> </li>*@
+                <li id="liHelp"><a href="@Url.Action("HelpView", "Help")" >Help</a></li>
+                <input type="hidden" name="theGoClick" id="theGoClick" value="@ViewBag.theGoClick" />
+            </ul>
+        }
+@*else if (bPrint == true)
+        {         
+                 <div class="printview">
+                            <div class="bluebackground" id="PrintLayer" align="right">
+                                <a onclick="javascript:window.close();" class="bluebackground" href="#top" style="color: white !important">
+                                    &nbsp;&nbsp;Close&nbsp;&nbsp;</a> | <a class="bluebackground" onclick="PrintIt();"
+                                        href="#top" style="color: white !important">&nbsp;&nbsp;Print&nbsp;&nbsp;</a>&nbsp;&nbsp;
+                            </div>
+                        </div>
+        }*@
+        <!-- inserted content -->
+        @RenderBody()
+        <!-- / inserted content -->
+    </div>
+    <footer>            
+        <a id="travelbytes" href="http://www.travelbytes.com.au/">site powered by <img src="@Url.Content("~/Content/images/tb_logo.png")"106" height="36" alt="Travel Bytes" title="Travel Bytes" /></a>
+        <p id="footer_links">
+            <a  href="@Url.Action("Privacy", "User")">Privacy Statement</a> <a href="mailto:feedback@mytravelplans.com.au">Site Feedback</a>
+        </p>
+        <p>Copyright &copy; 1996-2012 All Rights Reserved Worldwide. (R) is a registered trademark of American Express Company. Users of this site agree to be bound by the terms of the American Express Web Site Rules and Regulations View Corporate Entities and Important Disclosures, Trademarks and License Numbers.</p>
+    </footer>
+</body>
+</html>
+<script type="text/javascript" language="javascript">
+
+    $(document).ready(function () {
+        debugger;
+        SetTab();
+        SetView();
+    })
+
+    function SetTab() {
+        var selectedTab = $("#theHiddenTabIndex").val();
+        //var formfooterdetail = $("#theformfooterdetail").val();
+
+        if ($('#divBooking_Search').length == 0 && $('#divemail_login').length == 0) {
+
+            $('#liBookingLogin').find('a:first').attr('href', '/');
+            $('#liEmailLogin').find('a:first').attr('href', '/User/index?p=login');
+
+            if (selectedTab == "0") {
+                $('#liBookingLogin').addClass('here');
+                $('#liEmailLogin').removeClass('here');
+                $('#liItinerary').hide();
+                $('#liInvoice').hide();
+                $('#liEticket').hide();
+                $('#liHelp').hide();
+                $('#liHome').hide();
+                $('#liDownloadCalendar').hide();
+                // $('#form_footer_detail').hide();
+                //            if (formfooterdetail == 0) {
+                //                $('#form_footer_detail').hide();
+                //            }
+            }
+            if (selectedTab == "1") {
+                // $('#form_footer_detail').show();
+                $('#liEmailLogin').addClass('here');
+                $('#liBookingLogin').removeClass('here');
+                $('#liItinerary').hide();
+                $('#liInvoice').hide();
+                $('#liEticket').hide();
+                $('#liHelp').hide();
+                $('#liHome').hide();
+                $('#liDownloadCalendar').hide();
+                //            if (formfooterdetail == 0) {
+                //                $('#form_footer_detail').hide();
+                //            }
+            }
+
+            if (selectedTab == "2") {
+                $('#liBookingLogin').removeClass('here');
+                $('#liEmailLogin').removeClass('here');
+                //                $('#liItinerary').hide();
+                //                $('#liInvoice').hide();
+                //                $('#liEticket').hide();
+                //                $('#liHelp').hide();
+                //                $('#liHome').hide();
+                //                $('#liDownloadCalendar').hide();
+            }
+            if (selectedTab == "5") {
+                $('#liBookingLogin').removeClass('here');
+                $('#liEmailLogin').removeClass('here');
+                $('#liItinerary').hide();
+                $('#liInvoice').hide();
+                $('#liEticket').hide();
+                $('#liHelp').hide();
+                $('#liHome').hide();
+                $('#liDownloadCalendar').hide();
+            }
+
+        }
+        else {
+
+            $('#liBookingLogin').find('a:first').attr('href', '#');
+            $('#liEmailLogin').find('a:first').attr('href', '#');
+            $('#liItinerary').hide();
+            $('#liInvoice').hide();
+            $('#liEticket').hide();
+            $('#liHelp').hide();
+            $('#liHome').hide();
+            $('#liDownloadCalendar').hide();
+        }
+    }
+
+    function SetView() {
+
+        var GoClick = $("#theGoClick").val();
+        var bPrint = $("#thePrint").val();
+        var DownloadToCalendarMenuVisible = $('#ViewDownloadToCalendarMenu').val();
+        if (GoClick == "0") {
+            $('#liBookingLogin').addClass('here');
+            $('#liEmailLogin').hide();
+            $('#liBookingLogin').hide();
+            $('#liItinerary').removeClass('here');
+            $('#liInvoice').removeClass('here');
+            $('#liEticket').removeClass('here');
+            $('#liHelp').removeClass('here');
+            $('#liDownloadCalendar').removeClass('here');
+        }
+        if (GoClick == "1") {
+            //$('#liEmailLogin').hide();
+            //$('#liBookingLogin').hide();
+            $('#liBookingLogin').removeClass('here');
+            $('#liItinerary').addClass('here');
+            $('#liInvoice').removeClass('here');
+            $('#liEticket').removeClass('here');
+            $('#liHelp').removeClass('here');
+            $('#liDownloadCalendar').removeClass('here');
+        }
+        if (GoClick == "2") {
+            //$('#liEmailLogin').hide();
+            //$('#liBookingLogin').hide();
+            $('#liBookingLogin').removeClass('here');
+            $('#liEmailLogin').removeClass('here');
+            $('#liItinerary').removeClass('here');
+            $('#liInvoice').addClass('here');
+            $('#liEticket').removeClass('here');
+            $('#liHelp').removeClass('here');
+            $('#liDownloadCalendar').removeClass('here');
+        }
+        if (GoClick == "3") {
+            //$('#liEmailLogin').hide();
+            //$('#liBookingLogin').hide();
+            $('#liEmailLogin').removeClass('here');
+            $('#liBookingLogin').removeClass('here');
+            $('#liItinerary').removeClass('here');
+            $('#liInvoice').removeClass('here');
+            $('#liEticket').addClass('here');
+            $('#liHelp').removeClass('here');
+            $('#liDownloadCalendar').removeClass('here');
+        }
+        if (GoClick == "100") {
+            //$('#liEmailLogin').hide();
+            //$('#liBookingLogin').hide();
+            $('#liEmailLogin').removeClass('here');
+            $('#liBookingLogin').removeClass('here');
+            $('#liItinerary').removeClass('here');
+            $('#liInvoice').removeClass('here');
+            $('#liEticket').removeClass('here');
+            $('#liHelp').addClass('here');
+            $('#liDownloadCalendar').removeClass('here');
+        }
+        //        if (GoClick == "404") {
+        //            $('#liBookingLogin').removeClass('here');
+        //            $('#liItinerary').removeClass('here');
+        //            $('#liInvoice').removeClass('here');
+        //            $('#liEticket').removeClass('here');
+        //            $('#liHelp').removeClass('here');
+        //        }
+        //        if (DownloadToCalendarMenuVisible == "on") { }
+        if (GoClick == "4") {
+            //$('#liEmailLogin').hide();
+            //$('#liBookingLogin').hide();
+            $('#liEmailLogin').removeClass('here');
+            $('#liBookingLogin').removeClass('here');
+            $('#liItinerary').removeClass('here');
+            $('#liInvoice').removeClass('here');
+            $('#liEticket').removeClass('here');
+            $('#liDownloadCalendar').addClass('here');
+            $('#liHelp').removeClass('here');
+        }
+
+        if (bPrint == "True") {
+            $('#liEmailLogin').hide();
+            $('#liBookingLogin').hide();
+            $('#liBookingLogin').removeClass('here');
+            $('#liItinerary').removeClass('here');
+            $('#liInvoice').removeClass('here');
+            $('#liEticket').removeClass('here');
+            $('#liDownloadCalendar').removeClass('here');
+            $('#liPrint').addClass('here');
+            $('#liHelp').removeClass('here');
+        }
+    }
+
+
+    //    function PrintIt() {
+
+    //        //reloads the window if Nav4 resized
+    //        var xbox;
+    //        xbox = document.getElementById('PrintLayer');
+    //        xbox.style.visibility = "hidden";
+    //        window.print();
+    //        return 1;
+    //    }
+
+</script>

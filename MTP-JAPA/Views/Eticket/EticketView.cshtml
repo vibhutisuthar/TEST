@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Eticket";
+
+    string strLayout = "~/Views/Shared/MyTP.cshtml";
+    Layout = strLayout;
+
+        //string strLayout = "~/Views/Shared/StoredItin.cshtml";
+        //string strLayout = "~/Views/Shared/MyTP.cshtml";
+        //if (Request.QueryString["Lt"] != null)
+        //{
+        //    strLayout = "~/Views/Shared/StoredItin.cshtml";
+        //}
+        //else
+        //{
+        //    strLayout = "~/Views/Shared/MyTP.cshtml";
+        //}    
+}
+<div class="eticketview">
+    @using (Html.BeginForm("EticketView", "Eticket", FormMethod.Post, new { id = "frmEticketView", name = "frmEticketView", style = "margin: 0;" }))
+    {
+ 
+		
+        <div id="outError" align="center" runat="server">
+        </div>
+        <div class="body" id="Results" align="center">
+            <input type="hidden" id="JumpURL" name="JumpURL" value="@ViewBag.m_Jump" />
+        </div>
+
+        <h1>Please select an eTicket:</h1>
+
+                                                               if (ViewData["ETicket"] != null)
+                                                               { 
+        @Html.DropDownList("ddlETicket", (SelectList)ViewData["ETicket"], new { style = "margin-bottom: 5px !important" })
+                                                               }
+                                                               else
+                                                               {                                 
+        <text>No records found.</text>
+                                                               }
+
+        <p>
+            <input id="Submit1" tabindex="0" type="submit" value="Go" name="Submit1" class="hyperbutton"
+                style="margin: 12px 0 15px" /></p>
+    }
+</div>
+<script language="javascript">
+<!--
+    xbox = document.getElementById('JumpURL');
+
+    if (xbox.value != "")
+        window.open(xbox.value, "_blank");
+-->
+</script>

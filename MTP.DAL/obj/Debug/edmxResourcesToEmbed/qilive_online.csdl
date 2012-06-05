@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qilive_onlineModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="qilive_onlineEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="addresses" EntityType="qilive_onlineModel.address" />
+    <EntitySet Name="associations" EntityType="qilive_onlineModel.association" />
+    <EntitySet Name="contacts" EntityType="qilive_onlineModel.contact" />
+    <EntitySet Name="emails" EntityType="qilive_onlineModel.email" />
+    <EntitySet Name="histories" EntityType="qilive_onlineModel.history" />
+    <EntitySet Name="layouts" EntityType="qilive_onlineModel.layout" />
+    <EntitySet Name="modules" EntityType="qilive_onlineModel.module" />
+    <EntitySet Name="pageassets" EntityType="qilive_onlineModel.pageasset" />
+    <EntitySet Name="products" EntityType="qilive_onlineModel.product" />
+    <EntitySet Name="transcodes" EntityType="qilive_onlineModel.transcode" />
+  </EntityContainer>
+  <EntityType Name="address">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="address_code" Type="String" Nullable="false" />
+    <Property Name="address1" Type="String" Nullable="false" />
+    <Property Name="address2" Type="String" Nullable="false" />
+    <Property Name="address3" Type="String" Nullable="false" />
+    <Property Name="city" Type="String" Nullable="false" />
+    <Property Name="state" Type="String" Nullable="false" />
+    <Property Name="country" Type="String" Nullable="false" />
+    <Property Name="postcode" Type="String" Nullable="false" />
+    <Property Name="web" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="access_criteria" Type="String" Nullable="false" />
+    <Property Name="owner_market" Type="String" />
+    <Property Name="owner_region" Type="String" />
+    <Property Name="deployment" Type="String" />
+  </EntityType>
+  <EntityType Name="association">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="form_name" Type="String" Nullable="false" />
+    <Property Name="company_name" Type="String" />
+    <Property Name="team_name" Type="String" />
+    <Property Name="address_code" Type="String" />
+    <Property Name="contact_code" Type="String" />
+    <Property Name="pageasset_code" Type="String" />
+    <Property Name="module_code" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="access_criteria" Type="String" Nullable="false" />
+    <Property Name="layout_code" Type="String" />
+    <Property Name="transcode_code" Type="String" />
+    <Property Name="email_code" Type="String" />
+    <Property Name="owner_market" Type="String" />
+    <Property Name="owner_region" Type="String" />
+    <Property Name="deployment" Type="String" />
+  </EntityType>
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="contact_code" Type="String" Nullable="false" />
+    <Property Name="contact_type" Type="String" Nullable="false" />
+    <Property Name="seq" Type="Int32" Nullable="false" />
+    <Property Name="content" Type="String" Nullable="false" />
+    <Property Name="label" Type="String" Nullable="false" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="access_criteria" Type="String" Nullable="false" />
+    <Property Name="owner_market" Type="String" />
+    <Property Name="owner_region" Type="String" />
+    <Property Name="deployment" Type="String" />
+  </EntityType>
+  <EntityType Name="email">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email_code" Type="String" Nullable="false" />
+    <Property Name="email_type" Type="String" Nullable="false" />
+    <Property Name="seq" Type="Int32" Nullable="false" />
+    <Property Name="from_address" Type="String" Nullable="false" />
+    <Property Name="from_name" Type="String" Nullable="false" />
+    <Property Name="cc" Type="String" />
+    <Property Name="bcc" Type="String" />
+    <Property Name="subject" Type="String" Nullable="false" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="access_criteria" Type="String" Nullable="false" />
+    <Property Name="owner_market" Type="String" />
+    <Property Name="owner_region" Type="String" />
+    <Property Name="deployment" Type="String" />
+    <Property Name="txt_xslt_file" Type="String" />
+    <Property Name="html_xslt_file" Type="String" />
+  </EntityType>
+  <EntityType Name="history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="table" Type="String" />
+    <Property Name="user" Type="String" />
+    <Property Name="stamp" Type="DateTime" />
+    <Property Name="notes" Type="String" />
+    <Property Name="link" Type="String" />
+    <Property Name="owner_market" Type="String" />
+    <Property Name="owner_region" Type="String" />
+    <Property Name="deployment" Type="String" />
+  </EntityType>
+  <EntityType Name="layout">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="layout_code" Type="String" Nullable="false" />
+    <Property Name="layout_type" Type="String" Nullable="false" />
+    <Property Name="seq" Type="Int32" Nullable="false" />
+    <Property Name="content" Type="String" />
+    <Property Name="rel" Type="String" />
+    <Property Name="media" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="access_criteria" Type="String" Nullable="false" />
+    <Property Name="owner_market" Type="String" />
+    <Property Name="owner_region" Type="String" />
+    <Property Name="deployment" Type="String" />
+  </EntityType>
+  <EntityType Name="module">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="module_code" Type="String" Nullable="false" />
+    <Property Name="module_type" Type="Int32" Nullable="false" />
+    <Property Name="seq" Type="Int32" />
+    <Property Name="module_name" Type="String" Nullable="false" />
+    <Property Name="post_validation" Type="Boolean" Nullable="false" />
+    <Property Name="post_validation_folder" Type="String" />
+    <Property Name="log_level" Type="Int32" Nullable="false" />
+    <Property Name="log_file" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="access_criteria" Type="String" Nullable="false" />
+    <Property Name="owner_market" Type="String" />
+    <Property Name="owner_region" Type="String" />
+    <Property Name="deployment" Type="String" />
+  </EntityType>
+  <EntityType Name="pageasset">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="page_code" Type="String" Nullable="false" />
+    <Property Name="page_type" Type="String" Nullable="false" />
+    <Property Name="seq" Type="Int32" Nullable="false" />
+    <Property Name="content" Type="String" />
+    <Property Name="insert_point" Type="String" Nullable="false" />
+    <Property Name="insert_element" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="access_criteria" Type="String" Nullable="false" />
+    <Property Name="owner_market" Type="String" />
+    <Property Name="owner_region" Type="String" />
+    <Property Name="deployment" Type="String" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_code" Type="String" Nullable="false" />
+    <Property Name="product_type" Type="Int32" Nullable="false" />
+    <Property Name="content" Type="String" />
+    <Property Name="insert_point" Type="String" Nullable="false" />
+    <Property Name="insert_element" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="access_criteria" Type="String" Nullable="false" />
+    <Property Name="owner_market" Type="String" />
+    <Property Name="owner_region" Type="String" />
+    <Property Name="deployment" Type="String" />
+  </EntityType>
+  <EntityType Name="transcode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="transcode_code" Type="String" Nullable="false" />
+    <Property Name="transcode_type" Type="String" Nullable="false" />
+    <Property Name="seq" Type="Int32" Nullable="false" />
+    <Property Name="xslt_file" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="access_criteria" Type="String" Nullable="false" />
+    <Property Name="owner_market" Type="String" />
+    <Property Name="owner_region" Type="String" />
+    <Property Name="deployment" Type="String" />
+  </EntityType>
+</Schema>

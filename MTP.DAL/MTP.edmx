@@ -1,0 +1,2458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="wozModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="wozModelStoreContainer">
+          <EntitySet Name="company" EntityType="wozModel.Store.company" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="consultant" EntityType="wozModel.Store.consultant" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="costcentre" EntityType="wozModel.Store.costcentre" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="countries" EntityType="wozModel.Store.countries" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="countries_old" EntityType="wozModel.Store.countries_old" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="dktable" EntityType="wozModel.Store.dktable" store:Type="Tables" store:Schema="woz" store:Name="dktable">
+            <DefiningQuery>SELECT
+      `dktable`.`DKNumber`, 
+      `dktable`.`Description`, 
+      `dktable`.`TMR_ID`, 
+      `dktable`.`Stamp`
+      FROM `dktable` AS `dktable`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="dktable_old" EntityType="wozModel.Store.dktable_old" store:Type="Tables" store:Schema="woz" store:Name="dktable_old">
+            <DefiningQuery>SELECT
+      `dktable_old`.`DKNumber`, 
+      `dktable_old`.`Description`, 
+      `dktable_old`.`TMR_ID`, 
+      `dktable_old`.`Stamp`
+      FROM `dktable_old` AS `dktable_old`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="emailaddresses" EntityType="wozModel.Store.emailaddresses" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="eticket" EntityType="wozModel.Store.eticket" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="etickettest" EntityType="wozModel.Store.etickettest" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="gmax" EntityType="wozModel.Store.gmax" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="gmaxlog" EntityType="wozModel.Store.gmaxlog" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="jobnumber" EntityType="wozModel.Store.jobnumber" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="mailinglist" EntityType="wozModel.Store.mailinglist" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="mailrecords" EntityType="wozModel.Store.mailrecords" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="optout" EntityType="wozModel.Store.optout" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="premailrecords" EntityType="wozModel.Store.premailrecords" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="processorcountry" EntityType="wozModel.Store.processorcountry" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="processorname" EntityType="wozModel.Store.processorname" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="qisegments" EntityType="wozModel.Store.qisegments" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="queueforwardlog" EntityType="wozModel.Store.queueforwardlog" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="queueforwardlog_deleted" EntityType="wozModel.Store.queueforwardlog_deleted" store:Type="Tables" store:Schema="woz" store:Name="queueforwardlog_deleted">
+            <DefiningQuery>SELECT
+      `queueforwardlog_deleted`.`RLOC`, 
+      `queueforwardlog_deleted`.`QueueKey`, 
+      `queueforwardlog_deleted`.`Stamp`, 
+      `queueforwardlog_deleted`.`ProcessorSummaryName`, 
+      `queueforwardlog_deleted`.`ErrorMessage`
+      FROM `queueforwardlog_deleted` AS `queueforwardlog_deleted`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="rates" EntityType="wozModel.Store.rates" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="rloccomp" EntityType="wozModel.Store.rloccomp" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="rlocs" EntityType="wozModel.Store.rlocs" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="roles" EntityType="wozModel.Store.roles" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="segment" EntityType="wozModel.Store.segment" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="segmentformat" EntityType="wozModel.Store.segmentformat" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="sessionsearch" EntityType="wozModel.Store.sessionsearch" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="sgeticket" EntityType="wozModel.Store.sgeticket" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_emailaddress" EntityType="wozModel.Store.tb_emailaddress" store:Type="Tables" store:Schema="woz" store:Name="tb_emailaddress">
+            <DefiningQuery>SELECT
+      `tb_emailaddress`.`Profile`, 
+      `tb_emailaddress`.`RLOC`, 
+      `tb_emailaddress`.`CreationDate`, 
+      `tb_emailaddress`.`EmailAddress`, 
+      `tb_emailaddress`.`Stamp`
+      FROM `tb_emailaddress` AS `tb_emailaddress`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tb_header" EntityType="wozModel.Store.tb_header" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_history" EntityType="wozModel.Store.tb_history" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_history_cost" EntityType="wozModel.Store.tb_history_cost" store:Type="Tables" store:Schema="woz" store:Name="tb_history_cost">
+            <DefiningQuery>SELECT
+      `tb_history_cost`.`CompanyCode`, 
+      `tb_history_cost`.`HistoryCode`, 
+      `tb_history_cost`.`Cost`, 
+      `tb_history_cost`.`Stamp`
+      FROM `tb_history_cost` AS `tb_history_cost`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tb_history_header" EntityType="wozModel.Store.tb_history_header" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_history_item" EntityType="wozModel.Store.tb_history_item" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_history_types" EntityType="wozModel.Store.tb_history_types" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_passenger" EntityType="wozModel.Store.tb_passenger" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_pnr_segment" EntityType="wozModel.Store.tb_pnr_segment" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_ticket" EntityType="wozModel.Store.tb_ticket" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_ticket_fop" EntityType="wozModel.Store.tb_ticket_fop" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_ticket_pnr" EntityType="wozModel.Store.tb_ticket_pnr" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_ticket_segment" EntityType="wozModel.Store.tb_ticket_segment" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_ticket_text" EntityType="wozModel.Store.tb_ticket_text" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tb_ticket_textdata" EntityType="wozModel.Store.tb_ticket_textdata" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="tddt" EntityType="wozModel.Store.tddt" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="ticket" EntityType="wozModel.Store.ticket" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="toursegmentexception" EntityType="wozModel.Store.toursegmentexception" store:Type="Tables" Schema="woz" />
+          <EntitySet Name="users" EntityType="wozModel.Store.users" store:Type="Tables" Schema="woz" />
+        </EntityContainer>
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ReturnEmailAddress" Type="varchar" MaxLength="100" />
+          <Property Name="ProcessDataFlag" Type="int" Nullable="false" />
+          <Property Name="D2C" Type="uint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="consultant">
+          <Key>
+            <PropertyRef Name="WEB_PROFILE" />
+            <PropertyRef Name="BRANCH_CODE" />
+            <PropertyRef Name="CONSULTANT_CODE" />
+          </Key>
+          <Property Name="WEB_PROFILE" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="BRANCH_CODE" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="CONSULTANT_CODE" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="FAMILY_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="GIVEN_NAME" Type="varchar" MaxLength="20" />
+          <Property Name="TITLE" Type="varchar" MaxLength="10" />
+          <Property Name="CONSULTANT_QUEUE_NUMBER" Type="char" MaxLength="2" />
+          <Property Name="PHONE_NUMBER" Type="varchar" MaxLength="20" />
+          <Property Name="FAX_NUMBER" Type="varchar" MaxLength="20" />
+          <Property Name="EMAIL_ADDRESS" Type="varchar" MaxLength="50" />
+          <Property Name="STATUS_OK" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="costcentre">
+          <Key>
+            <PropertyRef Name="CostCentreName" />
+            <PropertyRef Name="CostCentre" />
+          </Key>
+          <Property Name="CostCentreName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CostCentre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PCC" Type="varchar" MaxLength="50" />
+          <Property Name="PCCType" Type="varchar" MaxLength="50" />
+          <Property Name="Business" Type="varchar" MaxLength="50" />
+          <Property Name="Company" Type="varchar" MaxLength="50" />
+          <Property Name="GDS" Type="varchar" MaxLength="10" />
+          <Property Name="BranchCode" Type="varchar" MaxLength="20" />
+          <Property Name="CountryCode" Type="varchar" MaxLength="10" />
+          <Property Name="GST" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="countries">
+          <Key>
+            <PropertyRef Name="CountryName" />
+            <PropertyRef Name="CountryCode" />
+          </Key>
+          <Property Name="CountryName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="CountryCode" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="Malaria" Type="uint" />
+          <Property Name="Region" Type="char" MaxLength="3" />
+          <Property Name="TLCC" Type="char" MaxLength="4" />
+          <Property Name="TDCC" Type="char" MaxLength="4" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="255" />
+          <Property Name="StateCode" Type="char" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="countries_old">
+          <Key>
+            <PropertyRef Name="CountryName" />
+            <PropertyRef Name="CountryCode" />
+          </Key>
+          <Property Name="CountryName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="CountryCode" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="Malaria" Type="uint" />
+          <Property Name="Region" Type="char" MaxLength="3" />
+          <Property Name="TLCC" Type="char" MaxLength="4" />
+          <Property Name="TDCC" Type="char" MaxLength="4" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="255" />
+          <Property Name="StateCode" Type="char" MaxLength="3" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'woz.dktable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="dktable">
+          <Key>
+            <PropertyRef Name="DKNumber" />
+            <PropertyRef Name="Description" />
+            <PropertyRef Name="TMR_ID" />
+            <PropertyRef Name="Stamp" />
+          </Key>
+          <Property Name="DKNumber" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TMR_ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'woz.dktable_old' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="dktable_old">
+          <Key>
+            <PropertyRef Name="DKNumber" />
+            <PropertyRef Name="Description" />
+            <PropertyRef Name="TMR_ID" />
+            <PropertyRef Name="Stamp" />
+          </Key>
+          <Property Name="DKNumber" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TMR_ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="emailaddresses">
+          <Key>
+            <PropertyRef Name="CostCentre" />
+            <PropertyRef Name="EmailAddress" />
+          </Key>
+          <Property Name="CostCentre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BranchName" Type="varchar" MaxLength="50" />
+          <Property Name="EmailAddress" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="100" />
+          <Property Name="Security" Type="int" />
+          <Property Name="LastLogin" Type="date" />
+          <Property Name="LastTransaction" Type="date" />
+          <Property Name="Time_Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="eticket">
+          <Key>
+            <PropertyRef Name="WebProfile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="WebProfile" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+          <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Location" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="Processed" Type="uint" Nullable="false" />
+          <Property Name="Company" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Team" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProcessTime" Type="datetime" Nullable="false" />
+          <Property Name="RetryCount" Type="uint" Nullable="false" />
+          <Property Name="ProcessorName" Type="varchar" MaxLength="45" />
+          <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="etickettest">
+          <Key>
+            <PropertyRef Name="WebProfile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="WebProfile" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+          <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Location" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="Processed" Type="uint" Nullable="false" />
+          <Property Name="Company" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Team" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProcessTime" Type="datetime" Nullable="false" />
+          <Property Name="RetryCount" Type="uint" Nullable="false" />
+          <Property Name="ProcessorName" Type="varchar" MaxLength="45" />
+          <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="gmax">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="DateRun" Type="datetime" Nullable="false" />
+          <Property Name="SiftDate" Type="datetime" Nullable="false" />
+          <Property Name="FileName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="FileSize" Type="uint" Nullable="false" />
+          <Property Name="Transactions" Type="uint" Nullable="false" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="Successful" Type="uint" Nullable="false" />
+          <Property Name="Sent" Type="uint" Nullable="false" />
+          <Property Name="CreditNotes" Type="uint" Nullable="false" />
+          <Property Name="Errors" Type="uint" Nullable="false" />
+          <Property Name="Notes" Type="varchar" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="gmaxlog">
+          <Key>
+            <PropertyRef Name="BatchName" />
+            <PropertyRef Name="DateRun" />
+          </Key>
+          <Property Name="BatchName" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="DateRun" Type="datetime" Nullable="false" />
+          <Property Name="SiftDate" Type="datetime" Nullable="false" />
+          <Property Name="FileName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="FileSize" Type="uint" Nullable="false" />
+          <Property Name="Transactions" Type="uint" Nullable="false" />
+          <Property Name="Queued" Type="uint" Nullable="false" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="Successful" Type="uint" Nullable="false" />
+          <Property Name="Invoices" Type="uint" Nullable="false" />
+          <Property Name="CreditNotes" Type="uint" Nullable="false" />
+          <Property Name="Errors" Type="uint" Nullable="false" />
+          <Property Name="Notes" Type="varchar" MaxLength="255" />
+          <Property Name="SenttoCRS" Type="int" Nullable="false" />
+          <Property Name="SequenceNumber" Type="int" />
+        </EntityType>
+        <EntityType Name="jobnumber">
+          <Key>
+            <PropertyRef Name="JobNumber" />
+          </Key>
+          <Property Name="JobNumber" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="nStatus" Type="int" Nullable="false" />
+          <Property Name="EmailAddress" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="mailinglist">
+          <Key>
+            <PropertyRef Name="EmailAddress" />
+          </Key>
+          <Property Name="EmailAddress" Type="char" Nullable="false" MaxLength="50" />
+          <Property Name="BlockSending" Type="int" />
+          <Property Name="ChangeDate" Type="date" />
+        </EntityType>
+        <EntityType Name="mailrecords">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RLOC" Type="varchar" MaxLength="7" />
+          <Property Name="Subject" Type="varchar" MaxLength="100" />
+          <Property Name="FromName" Type="varchar" MaxLength="50" />
+          <Property Name="SenderName" Type="varchar" MaxLength="50" />
+          <Property Name="ToName" Type="varchar" MaxLength="100" />
+          <Property Name="Received" Type="datetime" />
+          <Property Name="DeliveryTime" Type="varchar" MaxLength="20" />
+          <Property Name="Contents" Type="varchar" MaxLength="30" />
+          <Property Name="Agent" Type="varchar" MaxLength="50" />
+          <Property Name="Method" Type="varchar" MaxLength="10" />
+          <Property Name="Processor" Type="int" />
+          <Property Name="ProcessorName" Type="varchar" MaxLength="30" />
+          <Property Name="FormName" Type="varchar" MaxLength="30" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="PreprocStatus" Type="int" />
+          <Property Name="TicketNumber" Type="varchar" MaxLength="20" />
+          <Property Name="DocumentNumber" Type="varchar" MaxLength="20" />
+          <Property Name="OrderNumber" Type="varchar" MaxLength="100" />
+          <Property Name="CustomerReference" Type="varchar" MaxLength="20" />
+          <Property Name="Processed" Type="int" Nullable="false" />
+          <Property Name="Company" Type="varchar" MaxLength="65" />
+          <Property Name="Category" Type="varchar" MaxLength="20" />
+          <Property Name="ItinType" Type="int" Nullable="false" />
+          <Property Name="time_stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="TripRequest" Type="varchar" MaxLength="20" />
+          <Property Name="FileName" Type="varchar" MaxLength="255" />
+          <Property Name="Pseudo" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="Team" Type="varchar" MaxLength="65" />
+          <Property Name="BounceEmailID" Type="uint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="optout">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="254" />
+          <Property Name="Code" Type="varchar" MaxLength="31" />
+          <Property Name="DateCode" Type="varchar" MaxLength="21" />
+          <Property Name="space" Type="char" MaxLength="1" />
+          <Property Name="txt" Type="varchar" MaxLength="2" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="premailrecords">
+          <Key>
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="Surname" />
+          </Key>
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Company" Type="varchar" MaxLength="45" />
+          <Property Name="Team" Type="varchar" MaxLength="45" />
+          <Property Name="GDS" Type="varchar" MaxLength="5" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="IVMail" Type="varchar" MaxLength="255" />
+          <Property Name="ReplyEmail" Type="varchar" MaxLength="45" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="45" />
+          <Property Name="Address1" Type="varchar" MaxLength="45" />
+          <Property Name="Address2" Type="varchar" MaxLength="45" />
+          <Property Name="CityStatePostCode" Type="varchar" MaxLength="45" />
+          <Property Name="Country" Type="varchar" MaxLength="45" />
+          <Property Name="DKNumber" Type="varchar" MaxLength="45" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="AirlineLoc1" Type="varchar" MaxLength="45" />
+          <Property Name="AirlineLoc2" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="processorcountry">
+          <Key>
+            <PropertyRef Name="ProcessorName" />
+          </Key>
+          <Property Name="ProcessorName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Country" Type="varchar" Nullable="false" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="processorname">
+          <Key>
+            <PropertyRef Name="ProcessorName" />
+          </Key>
+          <Property Name="ProcessorName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Country" Type="varchar" Nullable="false" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="qisegments">
+          <Key>
+            <PropertyRef Name="GDS" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="SegmentNumber" />
+          </Key>
+          <Property Name="GDS" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="SegmentNumber" Type="uint" Nullable="false" />
+          <Property Name="FileLocation" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="queueforwardlog">
+          <Key>
+            <PropertyRef Name="RLOC" />
+          </Key>
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="QueueKey" Type="varchar" MaxLength="45" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="ProcessorSummaryName" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="ErrorMessage" Type="varchar" Nullable="false" MaxLength="80" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'woz.queueforwardlog_deleted' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="queueforwardlog_deleted">
+          <Key>
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="Stamp" />
+            <PropertyRef Name="ProcessorSummaryName" />
+            <PropertyRef Name="ErrorMessage" />
+          </Key>
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="QueueKey" Type="varchar" MaxLength="45" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="ProcessorSummaryName" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="ErrorMessage" Type="varchar" Nullable="false" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="rates">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="Rate" Type="char" MaxLength="30" />
+          <Property Name="value" Type="int" />
+          <Property Name="Admin" Type="char" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="rloccomp">
+          <Key>
+            <PropertyRef Name="rlocid" />
+          </Key>
+          <Property Name="rlocid" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="rloc" Type="varchar" Nullable="false" MaxLength="8" />
+        </EntityType>
+        <EntityType Name="rlocs">
+          <Key>
+            <PropertyRef Name="RLOC" />
+          </Key>
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Processed" Type="uint" Nullable="false" />
+          <Property Name="PSEUDO" Type="varchar" MaxLength="10" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="roles">
+          <Key>
+            <PropertyRef Name="User" />
+            <PropertyRef Name="Role" />
+          </Key>
+          <Property Name="User" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Role" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="segment">
+          <Key>
+            <PropertyRef Name="CRS" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="Lang" />
+            <PropertyRef Name="SegNum" />
+          </Key>
+          <Property Name="CRS" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Lang" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="SegNum" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="SegmentSequence" Type="int" Nullable="false" />
+          <Property Name="Supplier" Type="varchar" MaxLength="50" />
+          <Property Name="FltNo" Type="varchar" MaxLength="10" />
+          <Property Name="Status" Type="char" MaxLength="50" />
+          <Property Name="DateDep" Type="datetime" />
+          <Property Name="DepCity" Type="varchar" MaxLength="50" />
+          <Property Name="DateArr" Type="datetime" />
+          <Property Name="ArrCity" Type="varchar" MaxLength="50" />
+          <Property Name="CabinClass" Type="varchar" MaxLength="20" />
+          <Property Name="SegmentType" Type="varchar" MaxLength="10" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="segmentformat">
+          <Key>
+            <PropertyRef Name="CRS" />
+            <PropertyRef Name="TokenType" />
+            <PropertyRef Name="Lang" />
+            <PropertyRef Name="token" />
+          </Key>
+          <Property Name="CRS" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="TokenType" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Lang" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="token" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Header" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="CodeSnip" Type="varchar" MaxLength="45" />
+          <Property Name="HasData" Type="bool" Nullable="false" />
+          <Property Name="User" Type="varchar" MaxLength="50" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="sessionsearch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SessionID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RLOC" Type="varchar" MaxLength="7" />
+          <Property Name="Subject" Type="varchar" MaxLength="255" />
+          <Property Name="FromName" Type="varchar" MaxLength="50" />
+          <Property Name="SenderName" Type="varchar" MaxLength="50" />
+          <Property Name="ToName" Type="varchar" MaxLength="100" />
+          <Property Name="Received" Type="datetime" />
+          <Property Name="DeliveryTime" Type="varchar" MaxLength="20" />
+          <Property Name="Contents" Type="varchar" MaxLength="30" />
+          <Property Name="Agent" Type="varchar" MaxLength="50" />
+          <Property Name="Method" Type="varchar" MaxLength="10" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Time_Stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="Processor" Type="int" />
+          <Property Name="ProcessorName" Type="varchar" MaxLength="30" />
+          <Property Name="FormName" Type="varchar" MaxLength="30" />
+          <Property Name="PreprocStatus" Type="int" />
+          <Property Name="TicketNumber" Type="varchar" MaxLength="20" />
+          <Property Name="DocumentNumber" Type="varchar" MaxLength="20" />
+          <Property Name="OrderNumber" Type="varchar" MaxLength="20" />
+          <Property Name="TripRequest" Type="varchar" MaxLength="20" />
+          <Property Name="Company" Type="varchar" MaxLength="100" />
+          <Property Name="Category" Type="varchar" MaxLength="100" />
+          <Property Name="ItinType" Type="int" />
+          <Property Name="CustomerReference" Type="varchar" MaxLength="20" />
+          <Property Name="FileName" Type="varchar" MaxLength="255" />
+          <Property Name="nID" Type="uint" />
+        </EntityType>
+        <EntityType Name="sgeticket">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+          </Key>
+          <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Date" Type="varchar" Nullable="false" MaxLength="45" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'woz.tb_emailaddress' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="tb_emailaddress">
+          <Key>
+            <PropertyRef Name="Profile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="Stamp" />
+          </Key>
+          <Property Name="Profile" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_header">
+          <Key>
+            <PropertyRef Name="Profile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+          </Key>
+          <Property Name="Profile" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="PaxName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Pseudo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ParsedDate" Type="datetime" />
+          <Property Name="ScheduleDate" Type="datetime" />
+          <Property Name="DepartureDate" Type="datetime" />
+          <Property Name="ReturnDate" Type="datetime" />
+          <Property Name="ItinSummary" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Parsed" Type="int" />
+          <Property Name="CostCentre" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="TotalUnitCost" Type="double" />
+          <Property Name="AgentSign" Type="varchar" MaxLength="20" />
+          <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepartmentCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Amount" Type="double" />
+          <Property Name="FareBasis" Type="varchar" MaxLength="20" />
+          <Property Name="ClientNumber" Type="varchar" MaxLength="20" />
+          <Property Name="Supplier" Type="varchar" MaxLength="20" />
+          <Property Name="PurchaseOrder" Type="varchar" MaxLength="20" />
+          <Property Name="RefNo" Type="varchar" MaxLength="20" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="20" />
+          <Property Name="NoOfPax" Type="int" />
+          <Property Name="EmailTo" Type="varchar" MaxLength="20" />
+          <Property Name="DateCreated" Type="datetime" />
+          <Property Name="Domestic" Type="bool" />
+          <Property Name="SegmentCount" Type="int" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="EmailCount" Type="int" />
+          <Property Name="StatusEmail" Type="varchar" MaxLength="100" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_history">
+          <Key>
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="HistoryDate" />
+          </Key>
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="HistoryDate" Type="datetime" Nullable="false" />
+          <Property Name="ReceivedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ChangedBy" Type="varchar" MaxLength="50" />
+          <Property Name="NumberItems" Type="int" />
+          <Property Name="Cost" Type="double" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'woz.tb_history_cost' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="tb_history_cost">
+          <Key>
+            <PropertyRef Name="CompanyCode" />
+            <PropertyRef Name="HistoryCode" />
+            <PropertyRef Name="Cost" />
+            <PropertyRef Name="Stamp" />
+          </Key>
+          <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="HistoryCode" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Cost" Type="double" Nullable="false" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_history_header">
+          <Key>
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+          </Key>
+          <Property Name="Profile" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="PaxName" Type="varchar" MaxLength="50" />
+          <Property Name="Pseudo" Type="varchar" MaxLength="10" />
+          <Property Name="ParsedDate" Type="datetime" />
+          <Property Name="ScheduleDate" Type="datetime" />
+          <Property Name="Parsed" Type="int" />
+          <Property Name="CostCentre" Type="varchar" MaxLength="20" />
+          <Property Name="TotalUnitCost" Type="double" />
+          <Property Name="AgentSign" Type="varchar" MaxLength="20" />
+          <Property Name="CompanyCode" Type="varchar" MaxLength="50" />
+          <Property Name="DepartureDate" Type="datetime" />
+          <Property Name="ItinSummary" Type="varchar" MaxLength="100" />
+          <Property Name="DepartmentCode" Type="varchar" MaxLength="20" />
+          <Property Name="Domestic" Type="bool" />
+          <Property Name="ReturnDate" Type="datetime" />
+          <Property Name="NoOfPax" Type="int" Nullable="false" />
+          <Property Name="TKT_Date" Type="datetime" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="TICKETED" Type="int" Nullable="false" />
+          <Property Name="SegmentCount" Type="int" Nullable="false" />
+          <Property Name="AirSegmentCount" Type="int" Nullable="false" />
+          <Property Name="HotelSegmentCount" Type="int" Nullable="false" />
+          <Property Name="CarSegmentCount" Type="int" Nullable="false" />
+          <Property Name="GDS" Type="varchar" MaxLength="5" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Fax" Type="varchar" MaxLength="20" />
+          <Property Name="Phone" Type="varchar" MaxLength="20" />
+          <Property Name="BookerEmail" Type="varchar" MaxLength="50" />
+          <Property Name="TKTIssued" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="varchar" MaxLength="12" />
+          <Property Name="ClientNumber" Type="varchar" MaxLength="30" />
+          <Property Name="FareBasis" Type="varchar" MaxLength="10" />
+          <Property Name="PurchaseOrder" Type="varchar" MaxLength="30" />
+          <Property Name="RefNo" Type="varchar" MaxLength="20" />
+          <Property Name="Supplier" Type="varchar" MaxLength="30" />
+          <Property Name="Sent" Type="int" Nullable="false" />
+          <Property Name="DepartureCity" Type="varchar" MaxLength="4" />
+          <Property Name="DestinationCity" Type="varchar" MaxLength="4" />
+          <Property Name="AirlineSummary" Type="varchar" MaxLength="50" />
+          <Property Name="EmailSent" Type="char" MaxLength="1" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="Online" Type="char" MaxLength="1" />
+          <Property Name="Touch" Type="char" MaxLength="1" />
+          <Property Name="G3" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="Team" Type="varchar" Nullable="false" MaxLength="65" />
+        </EntityType>
+        <EntityType Name="tb_history_item">
+          <Key>
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="HistoryDate" />
+            <PropertyRef Name="HistoryID" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="HistoryDate" Type="datetime" Nullable="false" />
+          <Property Name="HistoryID" Type="uint" Nullable="false" />
+          <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HistoryType" Type="varchar" MaxLength="10" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="Data" Type="varchar" MaxLength="100" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_history_types">
+          <Key>
+            <PropertyRef Name="HistoryType" />
+          </Key>
+          <Property Name="HistoryType" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="amount" Type="decimal" Nullable="false" />
+          <Property Name="Use" Type="int" Nullable="false" />
+          <Property Name="description" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_passenger">
+          <Key>
+            <PropertyRef Name="Profile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="PaxNum" />
+          </Key>
+          <Property Name="Profile" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="PaxNum" Type="int" Nullable="false" />
+          <Property Name="PaxName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tb_pnr_segment">
+          <Key>
+            <PropertyRef Name="Profile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="SegNum" />
+          </Key>
+          <Property Name="Profile" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SegNum" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="SegmentSequence" Type="int" Nullable="false" />
+          <Property Name="Supplier" Type="varchar" MaxLength="10" />
+          <Property Name="NoOfPax" Type="char" MaxLength="2" />
+          <Property Name="FltNo" Type="varchar" MaxLength="10" />
+          <Property Name="Status" Type="char" MaxLength="2" />
+          <Property Name="DateDep" Type="datetime" />
+          <Property Name="DepCity" Type="char" MaxLength="3" />
+          <Property Name="DateArr" Type="datetime" />
+          <Property Name="ArrCity" Type="char" MaxLength="3" />
+          <Property Name="CabinClass" Type="varchar" MaxLength="5" />
+          <Property Name="SegmentType" Type="varchar" MaxLength="10" />
+          <Property Name="CityCode" Type="varchar" MaxLength="5" />
+          <Property Name="Rate" Type="decimal" />
+          <Property Name="Currency" Type="varchar" MaxLength="5" />
+          <Property Name="VendorName" Type="varchar" MaxLength="50" />
+          <Property Name="VoucherCurrency" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="VoucherRate" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_ticket">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+          </Key>
+          <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="CreationDate" Type="varchar" MaxLength="12" />
+          <Property Name="TicketType" Type="varchar" MaxLength="10" />
+          <Property Name="Amount" Type="double" />
+          <Property Name="Currency" Type="varchar" MaxLength="4" />
+          <Property Name="TKTDate" Type="datetime" />
+          <Property Name="ETKTCarrier" Type="varchar" MaxLength="12" />
+          <Property Name="FreeFlow" Type="varchar" MaxLength="99" />
+          <Property Name="IATANo" Type="varchar" MaxLength="12" />
+          <Property Name="Pseudo" Type="varchar" MaxLength="10" />
+          <Property Name="TravelAgentID" Type="varchar" MaxLength="10" />
+          <Property Name="PassengerName" Type="varchar" MaxLength="50" />
+          <Property Name="PassengerType" Type="varchar" MaxLength="12" />
+          <Property Name="PassengerAge" Type="varchar" MaxLength="10" />
+          <Property Name="ConjunctedTicketNo" Type="varchar" MaxLength="20" />
+          <Property Name="TKTStatus" Type="uint" />
+          <Property Name="FareConstruction" Type="varchar" MaxLength="100" />
+          <Property Name="TKTData" Type="mediumtext" />
+          <Property Name="Commission" Type="int" Nullable="false" />
+          <Property Name="Airline" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_ticket_fop">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Currency" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Amount" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="ExpDate" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Vendor" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="AccountNumber" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_ticket_pnr">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+          </Key>
+          <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_ticket_segment">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+            <PropertyRef Name="SegmentNumber" />
+          </Key>
+          <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SegmentNumber" Type="int" Nullable="false" />
+          <Property Name="CouponStatus" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Vendor" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="FlightNumber" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Cabin" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="SegDate" Type="datetime" Nullable="false" />
+          <Property Name="StartAirport" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="EndAirport" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Status" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="FareBasis" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="CouponNumber" Type="int" Nullable="false" />
+          <Property Name="Currency" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Fare" Type="double" Nullable="false" />
+          <Property Name="Allowance" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="AllowanceType" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="NotValidBefore" Type="date" Nullable="false" />
+          <Property Name="NotValidAfter" Type="date" Nullable="false" />
+          <Property Name="StopOverIndicator" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_ticket_text">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+            <PropertyRef Name="RefNo" />
+          </Key>
+          <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TextType" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="InfoType" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Status" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="RefNo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_ticket_textdata">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+            <PropertyRef Name="TextNumber" />
+            <PropertyRef Name="RefNumber" />
+          </Key>
+          <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TextNumber" Type="int" Nullable="false" />
+          <Property Name="Text" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="RefNumber" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tddt">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="FirstSight" Type="datetime" />
+          <Property Name="SmartMailProc" Type="datetime" />
+          <Property Name="QIServerSight" Type="datetime" />
+          <Property Name="QIServerMail" Type="datetime" />
+          <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="ticket">
+          <Key>
+            <PropertyRef Name="WebProfile" />
+            <PropertyRef Name="TripID" />
+            <PropertyRef Name="TicketNumber" />
+          </Key>
+          <Property Name="WebProfile" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="TripID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Amount" Type="decimal" Scale="2" />
+          <Property Name="Tax" Type="varchar" MaxLength="20" />
+          <Property Name="GST" Type="char" MaxLength="3" />
+          <Property Name="BookingReference" Type="varchar" MaxLength="10" />
+          <Property Name="PlatingCarrier" Type="varchar" MaxLength="20" />
+          <Property Name="DomInt" Type="char" MaxLength="3" />
+          <Property Name="DRCR" Type="char" MaxLength="3" />
+          <Property Name="SalesType" Type="varchar" MaxLength="8" />
+          <Property Name="OriginalTicketNumber" Type="varchar" MaxLength="20" />
+          <Property Name="ExchangeTicketNumber" Type="varchar" MaxLength="20" />
+          <Property Name="ConjuctiionTicket" Type="varchar" MaxLength="20" />
+          <Property Name="PaxName" Type="varchar" MaxLength="20" />
+          <Property Name="Commission" Type="char" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="toursegmentexception">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="AccessCode" Type="varchar" Nullable="false" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="user" />
+          </Key>
+          <Property Name="user" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="passcode" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="security" Type="int" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="wozModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="wozEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="companies" EntityType="wozModel.company" />
+          <EntitySet Name="consultants" EntityType="wozModel.consultant" />
+          <EntitySet Name="costcentres" EntityType="wozModel.costcentre" />
+          <EntitySet Name="countries" EntityType="wozModel.country" />
+          <EntitySet Name="countries_old" EntityType="wozModel.countries_old" />
+          <EntitySet Name="dktables" EntityType="wozModel.dktable" />
+          <EntitySet Name="dktable_old" EntityType="wozModel.dktable_old" />
+          <EntitySet Name="emailaddresses" EntityType="wozModel.emailaddress" />
+          <EntitySet Name="etickets" EntityType="wozModel.eticket" />
+          <EntitySet Name="etickettests" EntityType="wozModel.etickettest" />
+          <EntitySet Name="gmaxes" EntityType="wozModel.gmax" />
+          <EntitySet Name="gmaxlogs" EntityType="wozModel.gmaxlog" />
+          <EntitySet Name="jobnumbers" EntityType="wozModel.jobnumber" />
+          <EntitySet Name="mailinglists" EntityType="wozModel.mailinglist" />
+          <EntitySet Name="mailrecords" EntityType="wozModel.mailrecord" />
+          <EntitySet Name="optouts" EntityType="wozModel.optout" />
+          <EntitySet Name="premailrecords" EntityType="wozModel.premailrecord" />
+          <EntitySet Name="processorcountries" EntityType="wozModel.processorcountry" />
+          <EntitySet Name="processornames" EntityType="wozModel.processorname" />
+          <EntitySet Name="qisegments" EntityType="wozModel.qisegment" />
+          <EntitySet Name="queueforwardlogs" EntityType="wozModel.queueforwardlog" />
+          <EntitySet Name="queueforwardlog_deleted" EntityType="wozModel.queueforwardlog_deleted" />
+          <EntitySet Name="rates" EntityType="wozModel.rate" />
+          <EntitySet Name="rloccomps" EntityType="wozModel.rloccomp" />
+          <EntitySet Name="rlocs" EntityType="wozModel.rloc" />
+          <EntitySet Name="roles" EntityType="wozModel.role" />
+          <EntitySet Name="segments" EntityType="wozModel.segment" />
+          <EntitySet Name="segmentformats" EntityType="wozModel.segmentformat" />
+          <EntitySet Name="sessionsearches" EntityType="wozModel.sessionsearch" />
+          <EntitySet Name="sgetickets" EntityType="wozModel.sgeticket" />
+          <EntitySet Name="tb_emailaddress" EntityType="wozModel.tb_emailaddress" />
+          <EntitySet Name="tb_header" EntityType="wozModel.tb_header" />
+          <EntitySet Name="tb_history" EntityType="wozModel.tb_history" />
+          <EntitySet Name="tb_history_cost" EntityType="wozModel.tb_history_cost" />
+          <EntitySet Name="tb_history_header" EntityType="wozModel.tb_history_header" />
+          <EntitySet Name="tb_history_item" EntityType="wozModel.tb_history_item" />
+          <EntitySet Name="tb_history_types" EntityType="wozModel.tb_history_types" />
+          <EntitySet Name="tb_passenger" EntityType="wozModel.tb_passenger" />
+          <EntitySet Name="tb_pnr_segment" EntityType="wozModel.tb_pnr_segment" />
+          <EntitySet Name="tb_ticket" EntityType="wozModel.tb_ticket" />
+          <EntitySet Name="tb_ticket_fop" EntityType="wozModel.tb_ticket_fop" />
+          <EntitySet Name="tb_ticket_pnr" EntityType="wozModel.tb_ticket_pnr" />
+          <EntitySet Name="tb_ticket_segment" EntityType="wozModel.tb_ticket_segment" />
+          <EntitySet Name="tb_ticket_text" EntityType="wozModel.tb_ticket_text" />
+          <EntitySet Name="tb_ticket_textdata" EntityType="wozModel.tb_ticket_textdata" />
+          <EntitySet Name="tddts" EntityType="wozModel.tddt" />
+          <EntitySet Name="tickets" EntityType="wozModel.ticket" />
+          <EntitySet Name="toursegmentexceptions" EntityType="wozModel.toursegmentexception" />
+          <EntitySet Name="users" EntityType="wozModel.user" />
+        </EntityContainer>
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" Nullable="false" />
+          <Property Name="CompanyCode" Type="String" Nullable="false" />
+          <Property Name="ReturnEmailAddress" Type="String" />
+          <Property Name="ProcessDataFlag" Type="Int32" Nullable="false" />
+          <Property Name="D2C" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="consultant">
+          <Key>
+            <PropertyRef Name="WEB_PROFILE" />
+            <PropertyRef Name="BRANCH_CODE" />
+            <PropertyRef Name="CONSULTANT_CODE" />
+          </Key>
+          <Property Name="WEB_PROFILE" Type="String" Nullable="false" />
+          <Property Name="BRANCH_CODE" Type="String" Nullable="false" />
+          <Property Name="CONSULTANT_CODE" Type="String" Nullable="false" />
+          <Property Name="FAMILY_NAME" Type="String" />
+          <Property Name="GIVEN_NAME" Type="String" />
+          <Property Name="TITLE" Type="String" />
+          <Property Name="CONSULTANT_QUEUE_NUMBER" Type="String" />
+          <Property Name="PHONE_NUMBER" Type="String" />
+          <Property Name="FAX_NUMBER" Type="String" />
+          <Property Name="EMAIL_ADDRESS" Type="String" />
+          <Property Name="STATUS_OK" Type="SByte" />
+        </EntityType>
+        <EntityType Name="costcentre">
+          <Key>
+            <PropertyRef Name="CostCentreName" />
+            <PropertyRef Name="CostCentre1" />
+          </Key>
+          <Property Name="CostCentreName" Type="String" Nullable="false" />
+          <Property Name="CostCentre1" Type="String" Nullable="false" />
+          <Property Name="PCC" Type="String" />
+          <Property Name="PCCType" Type="String" />
+          <Property Name="Business" Type="String" />
+          <Property Name="Company" Type="String" />
+          <Property Name="GDS" Type="String" />
+          <Property Name="BranchCode" Type="String" />
+          <Property Name="CountryCode" Type="String" />
+          <Property Name="GST" Type="String" />
+        </EntityType>
+        <EntityType Name="country">
+          <Key>
+            <PropertyRef Name="CountryName" />
+            <PropertyRef Name="CountryCode" />
+          </Key>
+          <Property Name="CountryName" Type="String" Nullable="false" />
+          <Property Name="CountryCode" Type="String" Nullable="false" />
+          <Property Name="Malaria" Type="Int64" />
+          <Property Name="Region" Type="String" />
+          <Property Name="TLCC" Type="String" />
+          <Property Name="TDCC" Type="String" />
+          <Property Name="DESCRIPTION" Type="String" />
+          <Property Name="StateCode" Type="String" />
+        </EntityType>
+        <EntityType Name="countries_old">
+          <Key>
+            <PropertyRef Name="CountryName" />
+            <PropertyRef Name="CountryCode" />
+          </Key>
+          <Property Name="CountryName" Type="String" Nullable="false" />
+          <Property Name="CountryCode" Type="String" Nullable="false" />
+          <Property Name="Malaria" Type="Int64" />
+          <Property Name="Region" Type="String" />
+          <Property Name="TLCC" Type="String" />
+          <Property Name="TDCC" Type="String" />
+          <Property Name="DESCRIPTION" Type="String" />
+          <Property Name="StateCode" Type="String" />
+        </EntityType>
+        <EntityType Name="dktable">
+          <Key>
+            <PropertyRef Name="DKNumber" />
+            <PropertyRef Name="Description" />
+            <PropertyRef Name="TMR_ID" />
+            <PropertyRef Name="Stamp" />
+          </Key>
+          <Property Name="DKNumber" Type="String" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <Property Name="TMR_ID" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dktable_old">
+          <Key>
+            <PropertyRef Name="DKNumber" />
+            <PropertyRef Name="Description" />
+            <PropertyRef Name="TMR_ID" />
+            <PropertyRef Name="Stamp" />
+          </Key>
+          <Property Name="DKNumber" Type="String" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <Property Name="TMR_ID" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="emailaddress">
+          <Key>
+            <PropertyRef Name="CostCentre" />
+            <PropertyRef Name="EmailAddress1" />
+          </Key>
+          <Property Name="CostCentre" Type="String" Nullable="false" />
+          <Property Name="BranchName" Type="String" />
+          <Property Name="EmailAddress1" Type="String" Nullable="false" />
+          <Property Name="Password" Type="String" />
+          <Property Name="Security" Type="Int32" />
+          <Property Name="LastLogin" Type="DateTime" />
+          <Property Name="LastTransaction" Type="DateTime" />
+          <Property Name="Time_Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="eticket">
+          <Key>
+            <PropertyRef Name="WebProfile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="WebProfile" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransactionDate" Type="DateTime" Nullable="false" />
+          <Property Name="TicketNumber" Type="String" Nullable="false" />
+          <Property Name="Location" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+          <Property Name="Processed" Type="Int64" Nullable="false" />
+          <Property Name="Company" Type="String" Nullable="false" />
+          <Property Name="Team" Type="String" Nullable="false" />
+          <Property Name="ProcessTime" Type="DateTime" Nullable="false" />
+          <Property Name="RetryCount" Type="Int64" Nullable="false" />
+          <Property Name="ProcessorName" Type="String" />
+          <Property Name="Surname" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="etickettest">
+          <Key>
+            <PropertyRef Name="WebProfile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="WebProfile" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransactionDate" Type="DateTime" Nullable="false" />
+          <Property Name="TicketNumber" Type="String" Nullable="false" />
+          <Property Name="Location" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+          <Property Name="Processed" Type="Int64" Nullable="false" />
+          <Property Name="Company" Type="String" Nullable="false" />
+          <Property Name="Team" Type="String" Nullable="false" />
+          <Property Name="ProcessTime" Type="DateTime" Nullable="false" />
+          <Property Name="RetryCount" Type="Int64" Nullable="false" />
+          <Property Name="ProcessorName" Type="String" />
+          <Property Name="Surname" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="gmax">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="DateRun" Type="DateTime" Nullable="false" />
+          <Property Name="SiftDate" Type="DateTime" Nullable="false" />
+          <Property Name="FileName" Type="String" Nullable="false" />
+          <Property Name="FileSize" Type="Int64" Nullable="false" />
+          <Property Name="Transactions" Type="Int64" Nullable="false" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="Successful" Type="Int64" Nullable="false" />
+          <Property Name="Sent" Type="Int64" Nullable="false" />
+          <Property Name="CreditNotes" Type="Int64" Nullable="false" />
+          <Property Name="Errors" Type="Int64" Nullable="false" />
+          <Property Name="Notes" Type="String" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="gmaxlog">
+          <Key>
+            <PropertyRef Name="BatchName" />
+            <PropertyRef Name="DateRun" />
+          </Key>
+          <Property Name="BatchName" Type="String" Nullable="false" />
+          <Property Name="ID" Type="String" Nullable="false" />
+          <Property Name="DateRun" Type="DateTime" Nullable="false" />
+          <Property Name="SiftDate" Type="DateTime" Nullable="false" />
+          <Property Name="FileName" Type="String" Nullable="false" />
+          <Property Name="FileSize" Type="Int64" Nullable="false" />
+          <Property Name="Transactions" Type="Int64" Nullable="false" />
+          <Property Name="Queued" Type="Int64" Nullable="false" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="Successful" Type="Int64" Nullable="false" />
+          <Property Name="Invoices" Type="Int64" Nullable="false" />
+          <Property Name="CreditNotes" Type="Int64" Nullable="false" />
+          <Property Name="Errors" Type="Int64" Nullable="false" />
+          <Property Name="Notes" Type="String" />
+          <Property Name="SenttoCRS" Type="Int32" Nullable="false" />
+          <Property Name="SequenceNumber" Type="Int32" />
+        </EntityType>
+        <EntityType Name="jobnumber">
+          <Key>
+            <PropertyRef Name="JobNumber1" />
+          </Key>
+          <Property Name="JobNumber1" Type="String" Nullable="false" />
+          <Property Name="nStatus" Type="Int32" Nullable="false" />
+          <Property Name="EmailAddress" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mailinglist">
+          <Key>
+            <PropertyRef Name="EmailAddress" />
+          </Key>
+          <Property Name="EmailAddress" Type="String" Nullable="false" />
+          <Property Name="BlockSending" Type="Int32" />
+          <Property Name="ChangeDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="mailrecord">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RLOC" Type="String" />
+          <Property Name="Subject" Type="String" />
+          <Property Name="FromName" Type="String" />
+          <Property Name="SenderName" Type="String" />
+          <Property Name="ToName" Type="String" />
+          <Property Name="Received" Type="DateTime" />
+          <Property Name="DeliveryTime" Type="String" />
+          <Property Name="Contents" Type="String" />
+          <Property Name="Agent" Type="String" />
+          <Property Name="Method" Type="String" />
+          <Property Name="Processor" Type="Int32" />
+          <Property Name="ProcessorName" Type="String" />
+          <Property Name="FormName" Type="String" />
+          <Property Name="Created" Type="DateTime" />
+          <Property Name="PreprocStatus" Type="Int32" />
+          <Property Name="TicketNumber" Type="String" />
+          <Property Name="DocumentNumber" Type="String" />
+          <Property Name="OrderNumber" Type="String" />
+          <Property Name="CustomerReference" Type="String" />
+          <Property Name="Processed" Type="Int32" Nullable="false" />
+          <Property Name="Company" Type="String" />
+          <Property Name="Category" Type="String" />
+          <Property Name="ItinType" Type="Int32" Nullable="false" />
+          <Property Name="time_stamp" Type="DateTime" Nullable="false" />
+          <Property Name="TripRequest" Type="String" />
+          <Property Name="FileName" Type="String" />
+          <Property Name="Pseudo" Type="String" Nullable="false" />
+          <Property Name="Team" Type="String" />
+          <Property Name="BounceEmailID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="optout">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" Nullable="false" />
+          <Property Name="Code" Type="String" />
+          <Property Name="DateCode" Type="String" />
+          <Property Name="space" Type="String" />
+          <Property Name="txt" Type="String" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="premailrecord">
+          <Key>
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="Surname" />
+          </Key>
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="Surname" Type="String" Nullable="false" />
+          <Property Name="Company" Type="String" />
+          <Property Name="Team" Type="String" />
+          <Property Name="GDS" Type="String" />
+          <Property Name="Email" Type="String" />
+          <Property Name="IVMail" Type="String" />
+          <Property Name="ReplyEmail" Type="String" />
+          <Property Name="CompanyName" Type="String" />
+          <Property Name="Address1" Type="String" />
+          <Property Name="Address2" Type="String" />
+          <Property Name="CityStatePostCode" Type="String" />
+          <Property Name="Country" Type="String" />
+          <Property Name="DKNumber" Type="String" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+          <Property Name="AirlineLoc1" Type="String" />
+          <Property Name="AirlineLoc2" Type="String" />
+        </EntityType>
+        <EntityType Name="processorcountry">
+          <Key>
+            <PropertyRef Name="ProcessorName" />
+          </Key>
+          <Property Name="ProcessorName" Type="String" Nullable="false" />
+          <Property Name="Country" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="processorname">
+          <Key>
+            <PropertyRef Name="ProcessorName1" />
+          </Key>
+          <Property Name="ProcessorName1" Type="String" Nullable="false" />
+          <Property Name="Country" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="qisegment">
+          <Key>
+            <PropertyRef Name="GDS" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="SegmentNumber" />
+          </Key>
+          <Property Name="GDS" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="SegmentNumber" Type="Int64" Nullable="false" />
+          <Property Name="FileLocation" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="queueforwardlog">
+          <Key>
+            <PropertyRef Name="RLOC" />
+          </Key>
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="QueueKey" Type="String" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+          <Property Name="ProcessorSummaryName" Type="String" Nullable="false" />
+          <Property Name="ErrorMessage" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="queueforwardlog_deleted">
+          <Key>
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="Stamp" />
+            <PropertyRef Name="ProcessorSummaryName" />
+            <PropertyRef Name="ErrorMessage" />
+          </Key>
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="QueueKey" Type="String" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+          <Property Name="ProcessorSummaryName" Type="String" Nullable="false" />
+          <Property Name="ErrorMessage" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" />
+          <Property Name="Rate1" Type="String" />
+          <Property Name="value" Type="Int32" />
+          <Property Name="Admin" Type="String" />
+        </EntityType>
+        <EntityType Name="rloccomp">
+          <Key>
+            <PropertyRef Name="rlocid" />
+          </Key>
+          <Property Name="rlocid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rloc" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rloc">
+          <Key>
+            <PropertyRef Name="RLOC1" />
+          </Key>
+          <Property Name="RLOC1" Type="String" Nullable="false" />
+          <Property Name="Processed" Type="Int64" Nullable="false" />
+          <Property Name="PSEUDO" Type="String" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="role">
+          <Key>
+            <PropertyRef Name="User" />
+            <PropertyRef Name="Role1" />
+          </Key>
+          <Property Name="User" Type="String" Nullable="false" />
+          <Property Name="Role1" Type="String" Nullable="false" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="segment">
+          <Key>
+            <PropertyRef Name="CRS" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="Lang" />
+            <PropertyRef Name="SegNum" />
+          </Key>
+          <Property Name="CRS" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="Lang" Type="String" Nullable="false" />
+          <Property Name="SegNum" Type="String" Nullable="false" />
+          <Property Name="SegmentSequence" Type="Int32" Nullable="false" />
+          <Property Name="Supplier" Type="String" />
+          <Property Name="FltNo" Type="String" />
+          <Property Name="Status" Type="String" />
+          <Property Name="DateDep" Type="DateTime" />
+          <Property Name="DepCity" Type="String" />
+          <Property Name="DateArr" Type="DateTime" />
+          <Property Name="ArrCity" Type="String" />
+          <Property Name="CabinClass" Type="String" />
+          <Property Name="SegmentType" Type="String" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="segmentformat">
+          <Key>
+            <PropertyRef Name="CRS" />
+            <PropertyRef Name="TokenType" />
+            <PropertyRef Name="Lang" />
+            <PropertyRef Name="token" />
+          </Key>
+          <Property Name="CRS" Type="String" Nullable="false" />
+          <Property Name="TokenType" Type="String" Nullable="false" />
+          <Property Name="Lang" Type="String" Nullable="false" />
+          <Property Name="token" Type="String" Nullable="false" />
+          <Property Name="Header" Type="String" Nullable="false" />
+          <Property Name="CodeSnip" Type="String" />
+          <Property Name="HasData" Type="Boolean" Nullable="false" />
+          <Property Name="User" Type="String" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sessionsearch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SessionID" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" />
+          <Property Name="Subject" Type="String" />
+          <Property Name="FromName" Type="String" />
+          <Property Name="SenderName" Type="String" />
+          <Property Name="ToName" Type="String" />
+          <Property Name="Received" Type="DateTime" />
+          <Property Name="DeliveryTime" Type="String" />
+          <Property Name="Contents" Type="String" />
+          <Property Name="Agent" Type="String" />
+          <Property Name="Method" Type="String" />
+          <Property Name="Created" Type="DateTime" />
+          <Property Name="Time_Stamp" Type="DateTime" Nullable="false" />
+          <Property Name="Processor" Type="Int32" />
+          <Property Name="ProcessorName" Type="String" />
+          <Property Name="FormName" Type="String" />
+          <Property Name="PreprocStatus" Type="Int32" />
+          <Property Name="TicketNumber" Type="String" />
+          <Property Name="DocumentNumber" Type="String" />
+          <Property Name="OrderNumber" Type="String" />
+          <Property Name="TripRequest" Type="String" />
+          <Property Name="Company" Type="String" />
+          <Property Name="Category" Type="String" />
+          <Property Name="ItinType" Type="Int32" />
+          <Property Name="CustomerReference" Type="String" />
+          <Property Name="FileName" Type="String" />
+          <Property Name="nID" Type="Int64" />
+        </EntityType>
+        <EntityType Name="sgeticket">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+          </Key>
+          <Property Name="TicketNumber" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Date" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_emailaddress">
+          <Key>
+            <PropertyRef Name="Profile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="Stamp" />
+          </Key>
+          <Property Name="Profile" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="CreationDate" Type="String" Nullable="false" />
+          <Property Name="EmailAddress" Type="String" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_header">
+          <Key>
+            <PropertyRef Name="Profile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+          </Key>
+          <Property Name="Profile" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="CreationDate" Type="String" Nullable="false" />
+          <Property Name="PaxName" Type="String" Nullable="false" />
+          <Property Name="Pseudo" Type="String" Nullable="false" />
+          <Property Name="ParsedDate" Type="DateTime" />
+          <Property Name="ScheduleDate" Type="DateTime" />
+          <Property Name="DepartureDate" Type="DateTime" />
+          <Property Name="ReturnDate" Type="DateTime" />
+          <Property Name="ItinSummary" Type="String" Nullable="false" />
+          <Property Name="Parsed" Type="Int32" />
+          <Property Name="CostCentre" Type="String" Nullable="false" />
+          <Property Name="TotalUnitCost" Type="Double" />
+          <Property Name="AgentSign" Type="String" />
+          <Property Name="CompanyCode" Type="String" Nullable="false" />
+          <Property Name="DepartmentCode" Type="String" Nullable="false" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="FareBasis" Type="String" />
+          <Property Name="ClientNumber" Type="String" />
+          <Property Name="Supplier" Type="String" />
+          <Property Name="PurchaseOrder" Type="String" />
+          <Property Name="RefNo" Type="String" />
+          <Property Name="ProductCode" Type="String" />
+          <Property Name="NoOfPax" Type="Int32" />
+          <Property Name="EmailTo" Type="String" />
+          <Property Name="DateCreated" Type="DateTime" />
+          <Property Name="Domestic" Type="Boolean" />
+          <Property Name="SegmentCount" Type="Int32" />
+          <Property Name="Email" Type="String" />
+          <Property Name="EmailCount" Type="Int32" />
+          <Property Name="StatusEmail" Type="String" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_history">
+          <Key>
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="HistoryDate" />
+          </Key>
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="CreationDate" Type="String" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="HistoryDate" Type="DateTime" Nullable="false" />
+          <Property Name="ReceivedBy" Type="String" />
+          <Property Name="ChangedBy" Type="String" />
+          <Property Name="NumberItems" Type="Int32" />
+          <Property Name="Cost" Type="Double" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_history_cost">
+          <Key>
+            <PropertyRef Name="CompanyCode" />
+            <PropertyRef Name="HistoryCode" />
+            <PropertyRef Name="Cost" />
+            <PropertyRef Name="Stamp" />
+          </Key>
+          <Property Name="CompanyCode" Type="String" Nullable="false" />
+          <Property Name="HistoryCode" Type="String" Nullable="false" />
+          <Property Name="Cost" Type="Double" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_history_header">
+          <Key>
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+          </Key>
+          <Property Name="Profile" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="CreationDate" Type="String" Nullable="false" />
+          <Property Name="PaxName" Type="String" />
+          <Property Name="Pseudo" Type="String" />
+          <Property Name="ParsedDate" Type="DateTime" />
+          <Property Name="ScheduleDate" Type="DateTime" />
+          <Property Name="Parsed" Type="Int32" />
+          <Property Name="CostCentre" Type="String" />
+          <Property Name="TotalUnitCost" Type="Double" />
+          <Property Name="AgentSign" Type="String" />
+          <Property Name="CompanyCode" Type="String" />
+          <Property Name="DepartureDate" Type="DateTime" />
+          <Property Name="ItinSummary" Type="String" />
+          <Property Name="DepartmentCode" Type="String" />
+          <Property Name="Domestic" Type="Boolean" />
+          <Property Name="ReturnDate" Type="DateTime" />
+          <Property Name="NoOfPax" Type="Int32" Nullable="false" />
+          <Property Name="TKT_Date" Type="DateTime" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+          <Property Name="TICKETED" Type="Int32" Nullable="false" />
+          <Property Name="SegmentCount" Type="Int32" Nullable="false" />
+          <Property Name="AirSegmentCount" Type="Int32" Nullable="false" />
+          <Property Name="HotelSegmentCount" Type="Int32" Nullable="false" />
+          <Property Name="CarSegmentCount" Type="Int32" Nullable="false" />
+          <Property Name="GDS" Type="String" />
+          <Property Name="Email" Type="String" />
+          <Property Name="Fax" Type="String" />
+          <Property Name="Phone" Type="String" />
+          <Property Name="BookerEmail" Type="String" />
+          <Property Name="TKTIssued" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="String" />
+          <Property Name="ClientNumber" Type="String" />
+          <Property Name="FareBasis" Type="String" />
+          <Property Name="PurchaseOrder" Type="String" />
+          <Property Name="RefNo" Type="String" />
+          <Property Name="Supplier" Type="String" />
+          <Property Name="Sent" Type="Int32" Nullable="false" />
+          <Property Name="DepartureCity" Type="String" />
+          <Property Name="DestinationCity" Type="String" />
+          <Property Name="AirlineSummary" Type="String" />
+          <Property Name="EmailSent" Type="String" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+          <Property Name="Online" Type="String" />
+          <Property Name="Touch" Type="String" />
+          <Property Name="G3" Type="String" Nullable="false" />
+          <Property Name="Team" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_history_item">
+          <Key>
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="HistoryDate" />
+            <PropertyRef Name="HistoryID" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="CreationDate" Type="String" Nullable="false" />
+          <Property Name="HistoryDate" Type="DateTime" Nullable="false" />
+          <Property Name="HistoryID" Type="Int64" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HistoryType" Type="String" />
+          <Property Name="Description" Type="String" />
+          <Property Name="Data" Type="String" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_history_types">
+          <Key>
+            <PropertyRef Name="HistoryType" />
+          </Key>
+          <Property Name="HistoryType" Type="String" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Nullable="false" />
+          <Property Name="Use" Type="Int32" Nullable="false" />
+          <Property Name="description" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_passenger">
+          <Key>
+            <PropertyRef Name="Profile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="PaxNum" />
+          </Key>
+          <Property Name="Profile" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="CreationDate" Type="String" Nullable="false" />
+          <Property Name="PaxNum" Type="Int32" Nullable="false" />
+          <Property Name="PaxName" Type="String" />
+        </EntityType>
+        <EntityType Name="tb_pnr_segment">
+          <Key>
+            <PropertyRef Name="Profile" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="SegNum" />
+          </Key>
+          <Property Name="Profile" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="CreationDate" Type="String" Nullable="false" />
+          <Property Name="SegNum" Type="String" Nullable="false" />
+          <Property Name="SegmentSequence" Type="Int32" Nullable="false" />
+          <Property Name="Supplier" Type="String" />
+          <Property Name="NoOfPax" Type="String" />
+          <Property Name="FltNo" Type="String" />
+          <Property Name="Status" Type="String" />
+          <Property Name="DateDep" Type="DateTime" />
+          <Property Name="DepCity" Type="String" />
+          <Property Name="DateArr" Type="DateTime" />
+          <Property Name="ArrCity" Type="String" />
+          <Property Name="CabinClass" Type="String" />
+          <Property Name="SegmentType" Type="String" />
+          <Property Name="CityCode" Type="String" />
+          <Property Name="Rate" Type="Decimal" />
+          <Property Name="Currency" Type="String" />
+          <Property Name="VendorName" Type="String" />
+          <Property Name="VoucherCurrency" Type="String" Nullable="false" />
+          <Property Name="VoucherRate" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_ticket">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+          </Key>
+          <Property Name="TicketNumber" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="CreationDate" Type="String" />
+          <Property Name="TicketType" Type="String" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="Currency" Type="String" />
+          <Property Name="TKTDate" Type="DateTime" />
+          <Property Name="ETKTCarrier" Type="String" />
+          <Property Name="FreeFlow" Type="String" />
+          <Property Name="IATANo" Type="String" />
+          <Property Name="Pseudo" Type="String" />
+          <Property Name="TravelAgentID" Type="String" />
+          <Property Name="PassengerName" Type="String" />
+          <Property Name="PassengerType" Type="String" />
+          <Property Name="PassengerAge" Type="String" />
+          <Property Name="ConjunctedTicketNo" Type="String" />
+          <Property Name="TKTStatus" Type="Int64" />
+          <Property Name="FareConstruction" Type="String" />
+          <Property Name="TKTData" Type="String" />
+          <Property Name="Commission" Type="Int32" Nullable="false" />
+          <Property Name="Airline" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_ticket_fop">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="TicketNumber" Type="String" Nullable="false" />
+          <Property Name="ID" Type="String" Nullable="false" />
+          <Property Name="Type" Type="String" Nullable="false" />
+          <Property Name="Currency" Type="String" Nullable="false" />
+          <Property Name="Amount" Type="String" Nullable="false" />
+          <Property Name="ExpDate" Type="String" Nullable="false" />
+          <Property Name="Vendor" Type="String" Nullable="false" />
+          <Property Name="AccountNumber" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_ticket_pnr">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+            <PropertyRef Name="RLOC" />
+            <PropertyRef Name="CreationDate" />
+          </Key>
+          <Property Name="TicketNumber" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="CreationDate" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_ticket_segment">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+            <PropertyRef Name="SegmentNumber" />
+          </Key>
+          <Property Name="TicketNumber" Type="String" Nullable="false" />
+          <Property Name="SegmentNumber" Type="Int32" Nullable="false" />
+          <Property Name="CouponStatus" Type="String" Nullable="false" />
+          <Property Name="Vendor" Type="String" Nullable="false" />
+          <Property Name="FlightNumber" Type="String" Nullable="false" />
+          <Property Name="Cabin" Type="String" Nullable="false" />
+          <Property Name="SegDate" Type="DateTime" Nullable="false" />
+          <Property Name="StartAirport" Type="String" Nullable="false" />
+          <Property Name="EndAirport" Type="String" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" />
+          <Property Name="FareBasis" Type="String" Nullable="false" />
+          <Property Name="CouponNumber" Type="Int32" Nullable="false" />
+          <Property Name="Currency" Type="String" Nullable="false" />
+          <Property Name="Fare" Type="Double" Nullable="false" />
+          <Property Name="Allowance" Type="String" Nullable="false" />
+          <Property Name="AllowanceType" Type="String" Nullable="false" />
+          <Property Name="NotValidBefore" Type="DateTime" Nullable="false" />
+          <Property Name="NotValidAfter" Type="DateTime" Nullable="false" />
+          <Property Name="StopOverIndicator" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_ticket_text">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+            <PropertyRef Name="RefNo" />
+          </Key>
+          <Property Name="TicketNumber" Type="String" Nullable="false" />
+          <Property Name="TextType" Type="String" Nullable="false" />
+          <Property Name="InfoType" Type="String" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" />
+          <Property Name="RefNo" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_ticket_textdata">
+          <Key>
+            <PropertyRef Name="TicketNumber" />
+            <PropertyRef Name="TextNumber" />
+            <PropertyRef Name="RefNumber" />
+          </Key>
+          <Property Name="TicketNumber" Type="String" Nullable="false" />
+          <Property Name="TextNumber" Type="Int32" Nullable="false" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="RefNumber" Type="String" Nullable="false" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tddt">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" />
+          <Property Name="RLOC" Type="String" Nullable="false" />
+          <Property Name="FirstSight" Type="DateTime" />
+          <Property Name="SmartMailProc" Type="DateTime" />
+          <Property Name="QIServerSight" Type="DateTime" />
+          <Property Name="QIServerMail" Type="DateTime" />
+          <Property Name="Stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ticket">
+          <Key>
+            <PropertyRef Name="WebProfile" />
+            <PropertyRef Name="TripID" />
+            <PropertyRef Name="TicketNumber" />
+          </Key>
+          <Property Name="WebProfile" Type="String" Nullable="false" />
+          <Property Name="TripID" Type="String" Nullable="false" />
+          <Property Name="TicketNumber" Type="String" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" />
+          <Property Name="Tax" Type="String" />
+          <Property Name="GST" Type="String" />
+          <Property Name="BookingReference" Type="String" />
+          <Property Name="PlatingCarrier" Type="String" />
+          <Property Name="DomInt" Type="String" />
+          <Property Name="DRCR" Type="String" />
+          <Property Name="SalesType" Type="String" />
+          <Property Name="OriginalTicketNumber" Type="String" />
+          <Property Name="ExchangeTicketNumber" Type="String" />
+          <Property Name="ConjuctiionTicket" Type="String" />
+          <Property Name="PaxName" Type="String" />
+          <Property Name="Commission" Type="String" />
+        </EntityType>
+        <EntityType Name="toursegmentexception">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+          <Property Name="AccessCode" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="user1" />
+          </Key>
+          <Property Name="user1" Type="String" Nullable="false" />
+          <Property Name="passcode" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Surname" Type="String" Nullable="false" />
+          <Property Name="security" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="wozModelStoreContainer" CdmEntityContainer="wozEntities">
+          <EntitySetMapping Name="companies"><EntityTypeMapping TypeName="wozModel.company"><MappingFragment StoreEntitySet="company">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+            <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+            <ScalarProperty Name="ReturnEmailAddress" ColumnName="ReturnEmailAddress" />
+            <ScalarProperty Name="ProcessDataFlag" ColumnName="ProcessDataFlag" />
+            <ScalarProperty Name="D2C" ColumnName="D2C" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="consultants"><EntityTypeMapping TypeName="wozModel.consultant"><MappingFragment StoreEntitySet="consultant">
+            <ScalarProperty Name="WEB_PROFILE" ColumnName="WEB_PROFILE" />
+            <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
+            <ScalarProperty Name="CONSULTANT_CODE" ColumnName="CONSULTANT_CODE" />
+            <ScalarProperty Name="FAMILY_NAME" ColumnName="FAMILY_NAME" />
+            <ScalarProperty Name="GIVEN_NAME" ColumnName="GIVEN_NAME" />
+            <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+            <ScalarProperty Name="CONSULTANT_QUEUE_NUMBER" ColumnName="CONSULTANT_QUEUE_NUMBER" />
+            <ScalarProperty Name="PHONE_NUMBER" ColumnName="PHONE_NUMBER" />
+            <ScalarProperty Name="FAX_NUMBER" ColumnName="FAX_NUMBER" />
+            <ScalarProperty Name="EMAIL_ADDRESS" ColumnName="EMAIL_ADDRESS" />
+            <ScalarProperty Name="STATUS_OK" ColumnName="STATUS_OK" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="costcentres"><EntityTypeMapping TypeName="wozModel.costcentre"><MappingFragment StoreEntitySet="costcentre">
+            <ScalarProperty Name="CostCentreName" ColumnName="CostCentreName" />
+            <ScalarProperty Name="CostCentre1" ColumnName="CostCentre" />
+            <ScalarProperty Name="PCC" ColumnName="PCC" />
+            <ScalarProperty Name="PCCType" ColumnName="PCCType" />
+            <ScalarProperty Name="Business" ColumnName="Business" />
+            <ScalarProperty Name="Company" ColumnName="Company" />
+            <ScalarProperty Name="GDS" ColumnName="GDS" />
+            <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+            <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+            <ScalarProperty Name="GST" ColumnName="GST" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="countries"><EntityTypeMapping TypeName="wozModel.country"><MappingFragment StoreEntitySet="countries">
+            <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+            <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+            <ScalarProperty Name="Malaria" ColumnName="Malaria" />
+            <ScalarProperty Name="Region" ColumnName="Region" />
+            <ScalarProperty Name="TLCC" ColumnName="TLCC" />
+            <ScalarProperty Name="TDCC" ColumnName="TDCC" />
+            <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+            <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="countries_old"><EntityTypeMapping TypeName="wozModel.countries_old"><MappingFragment StoreEntitySet="countries_old">
+            <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+            <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+            <ScalarProperty Name="Malaria" ColumnName="Malaria" />
+            <ScalarProperty Name="Region" ColumnName="Region" />
+            <ScalarProperty Name="TLCC" ColumnName="TLCC" />
+            <ScalarProperty Name="TDCC" ColumnName="TDCC" />
+            <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+            <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="dktables"><EntityTypeMapping TypeName="wozModel.dktable"><MappingFragment StoreEntitySet="dktable">
+            <ScalarProperty Name="DKNumber" ColumnName="DKNumber" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="TMR_ID" ColumnName="TMR_ID" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="dktable_old"><EntityTypeMapping TypeName="wozModel.dktable_old"><MappingFragment StoreEntitySet="dktable_old">
+            <ScalarProperty Name="DKNumber" ColumnName="DKNumber" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="TMR_ID" ColumnName="TMR_ID" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="emailaddresses"><EntityTypeMapping TypeName="wozModel.emailaddress"><MappingFragment StoreEntitySet="emailaddresses">
+            <ScalarProperty Name="CostCentre" ColumnName="CostCentre" />
+            <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+            <ScalarProperty Name="EmailAddress1" ColumnName="EmailAddress" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="Security" ColumnName="Security" />
+            <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+            <ScalarProperty Name="LastTransaction" ColumnName="LastTransaction" />
+            <ScalarProperty Name="Time_Stamp" ColumnName="Time_Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="etickets"><EntityTypeMapping TypeName="wozModel.eticket"><MappingFragment StoreEntitySet="eticket">
+            <ScalarProperty Name="WebProfile" ColumnName="WebProfile" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="Location" ColumnName="Location" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+            <ScalarProperty Name="Processed" ColumnName="Processed" />
+            <ScalarProperty Name="Company" ColumnName="Company" />
+            <ScalarProperty Name="Team" ColumnName="Team" />
+            <ScalarProperty Name="ProcessTime" ColumnName="ProcessTime" />
+            <ScalarProperty Name="RetryCount" ColumnName="RetryCount" />
+            <ScalarProperty Name="ProcessorName" ColumnName="ProcessorName" />
+            <ScalarProperty Name="Surname" ColumnName="Surname" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="etickettests"><EntityTypeMapping TypeName="wozModel.etickettest"><MappingFragment StoreEntitySet="etickettest">
+            <ScalarProperty Name="WebProfile" ColumnName="WebProfile" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="Location" ColumnName="Location" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+            <ScalarProperty Name="Processed" ColumnName="Processed" />
+            <ScalarProperty Name="Company" ColumnName="Company" />
+            <ScalarProperty Name="Team" ColumnName="Team" />
+            <ScalarProperty Name="ProcessTime" ColumnName="ProcessTime" />
+            <ScalarProperty Name="RetryCount" ColumnName="RetryCount" />
+            <ScalarProperty Name="ProcessorName" ColumnName="ProcessorName" />
+            <ScalarProperty Name="Surname" ColumnName="Surname" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="gmaxes"><EntityTypeMapping TypeName="wozModel.gmax"><MappingFragment StoreEntitySet="gmax">
+            <ScalarProperty Name="DateRun" ColumnName="DateRun" />
+            <ScalarProperty Name="SiftDate" ColumnName="SiftDate" />
+            <ScalarProperty Name="FileName" ColumnName="FileName" />
+            <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+            <ScalarProperty Name="Transactions" ColumnName="Transactions" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="Successful" ColumnName="Successful" />
+            <ScalarProperty Name="Sent" ColumnName="Sent" />
+            <ScalarProperty Name="CreditNotes" ColumnName="CreditNotes" />
+            <ScalarProperty Name="Errors" ColumnName="Errors" />
+            <ScalarProperty Name="Notes" ColumnName="Notes" />
+            <ScalarProperty Name="ID" ColumnName="ID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="gmaxlogs"><EntityTypeMapping TypeName="wozModel.gmaxlog"><MappingFragment StoreEntitySet="gmaxlog">
+            <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="DateRun" ColumnName="DateRun" />
+            <ScalarProperty Name="SiftDate" ColumnName="SiftDate" />
+            <ScalarProperty Name="FileName" ColumnName="FileName" />
+            <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+            <ScalarProperty Name="Transactions" ColumnName="Transactions" />
+            <ScalarProperty Name="Queued" ColumnName="Queued" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="Successful" ColumnName="Successful" />
+            <ScalarProperty Name="Invoices" ColumnName="Invoices" />
+            <ScalarProperty Name="CreditNotes" ColumnName="CreditNotes" />
+            <ScalarProperty Name="Errors" ColumnName="Errors" />
+            <ScalarProperty Name="Notes" ColumnName="Notes" />
+            <ScalarProperty Name="SenttoCRS" ColumnName="SenttoCRS" />
+            <ScalarProperty Name="SequenceNumber" ColumnName="SequenceNumber" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="jobnumbers"><EntityTypeMapping TypeName="wozModel.jobnumber"><MappingFragment StoreEntitySet="jobnumber">
+            <ScalarProperty Name="JobNumber1" ColumnName="JobNumber" />
+            <ScalarProperty Name="nStatus" ColumnName="nStatus" />
+            <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mailinglists"><EntityTypeMapping TypeName="wozModel.mailinglist"><MappingFragment StoreEntitySet="mailinglist">
+            <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+            <ScalarProperty Name="BlockSending" ColumnName="BlockSending" />
+            <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mailrecords"><EntityTypeMapping TypeName="wozModel.mailrecord"><MappingFragment StoreEntitySet="mailrecords">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="Subject" ColumnName="Subject" />
+            <ScalarProperty Name="FromName" ColumnName="FromName" />
+            <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+            <ScalarProperty Name="ToName" ColumnName="ToName" />
+            <ScalarProperty Name="Received" ColumnName="Received" />
+            <ScalarProperty Name="DeliveryTime" ColumnName="DeliveryTime" />
+            <ScalarProperty Name="Contents" ColumnName="Contents" />
+            <ScalarProperty Name="Agent" ColumnName="Agent" />
+            <ScalarProperty Name="Method" ColumnName="Method" />
+            <ScalarProperty Name="Processor" ColumnName="Processor" />
+            <ScalarProperty Name="ProcessorName" ColumnName="ProcessorName" />
+            <ScalarProperty Name="FormName" ColumnName="FormName" />
+            <ScalarProperty Name="Created" ColumnName="Created" />
+            <ScalarProperty Name="PreprocStatus" ColumnName="PreprocStatus" />
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+            <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+            <ScalarProperty Name="CustomerReference" ColumnName="CustomerReference" />
+            <ScalarProperty Name="Processed" ColumnName="Processed" />
+            <ScalarProperty Name="Company" ColumnName="Company" />
+            <ScalarProperty Name="Category" ColumnName="Category" />
+            <ScalarProperty Name="ItinType" ColumnName="ItinType" />
+            <ScalarProperty Name="time_stamp" ColumnName="time_stamp" />
+            <ScalarProperty Name="TripRequest" ColumnName="TripRequest" />
+            <ScalarProperty Name="FileName" ColumnName="FileName" />
+            <ScalarProperty Name="Pseudo" ColumnName="Pseudo" />
+            <ScalarProperty Name="Team" ColumnName="Team" />
+            <ScalarProperty Name="BounceEmailID" ColumnName="BounceEmailID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="optouts"><EntityTypeMapping TypeName="wozModel.optout"><MappingFragment StoreEntitySet="optout">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="Code" ColumnName="Code" />
+            <ScalarProperty Name="DateCode" ColumnName="DateCode" />
+            <ScalarProperty Name="space" ColumnName="space" />
+            <ScalarProperty Name="txt" ColumnName="txt" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="premailrecords"><EntityTypeMapping TypeName="wozModel.premailrecord"><MappingFragment StoreEntitySet="premailrecords">
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="Surname" ColumnName="Surname" />
+            <ScalarProperty Name="Company" ColumnName="Company" />
+            <ScalarProperty Name="Team" ColumnName="Team" />
+            <ScalarProperty Name="GDS" ColumnName="GDS" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="IVMail" ColumnName="IVMail" />
+            <ScalarProperty Name="ReplyEmail" ColumnName="ReplyEmail" />
+            <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+            <ScalarProperty Name="Address1" ColumnName="Address1" />
+            <ScalarProperty Name="Address2" ColumnName="Address2" />
+            <ScalarProperty Name="CityStatePostCode" ColumnName="CityStatePostCode" />
+            <ScalarProperty Name="Country" ColumnName="Country" />
+            <ScalarProperty Name="DKNumber" ColumnName="DKNumber" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+            <ScalarProperty Name="AirlineLoc1" ColumnName="AirlineLoc1" />
+            <ScalarProperty Name="AirlineLoc2" ColumnName="AirlineLoc2" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="processorcountries"><EntityTypeMapping TypeName="wozModel.processorcountry"><MappingFragment StoreEntitySet="processorcountry">
+            <ScalarProperty Name="ProcessorName" ColumnName="ProcessorName" />
+            <ScalarProperty Name="Country" ColumnName="Country" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="processornames"><EntityTypeMapping TypeName="wozModel.processorname"><MappingFragment StoreEntitySet="processorname">
+            <ScalarProperty Name="ProcessorName1" ColumnName="ProcessorName" />
+            <ScalarProperty Name="Country" ColumnName="Country" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="qisegments"><EntityTypeMapping TypeName="wozModel.qisegment"><MappingFragment StoreEntitySet="qisegments">
+            <ScalarProperty Name="GDS" ColumnName="GDS" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="SegmentNumber" ColumnName="SegmentNumber" />
+            <ScalarProperty Name="FileLocation" ColumnName="FileLocation" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="queueforwardlogs"><EntityTypeMapping TypeName="wozModel.queueforwardlog"><MappingFragment StoreEntitySet="queueforwardlog">
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="QueueKey" ColumnName="QueueKey" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+            <ScalarProperty Name="ProcessorSummaryName" ColumnName="ProcessorSummaryName" />
+            <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="queueforwardlog_deleted"><EntityTypeMapping TypeName="wozModel.queueforwardlog_deleted"><MappingFragment StoreEntitySet="queueforwardlog_deleted">
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="QueueKey" ColumnName="QueueKey" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+            <ScalarProperty Name="ProcessorSummaryName" ColumnName="ProcessorSummaryName" />
+            <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="rates"><EntityTypeMapping TypeName="wozModel.rate"><MappingFragment StoreEntitySet="rates">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Rate1" ColumnName="Rate" />
+            <ScalarProperty Name="value" ColumnName="value" />
+            <ScalarProperty Name="Admin" ColumnName="Admin" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="rloccomps"><EntityTypeMapping TypeName="wozModel.rloccomp"><MappingFragment StoreEntitySet="rloccomp">
+            <ScalarProperty Name="rlocid" ColumnName="rlocid" />
+            <ScalarProperty Name="rloc" ColumnName="rloc" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="rlocs"><EntityTypeMapping TypeName="wozModel.rloc"><MappingFragment StoreEntitySet="rlocs">
+            <ScalarProperty Name="RLOC1" ColumnName="RLOC" />
+            <ScalarProperty Name="Processed" ColumnName="Processed" />
+            <ScalarProperty Name="PSEUDO" ColumnName="PSEUDO" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="roles"><EntityTypeMapping TypeName="wozModel.role"><MappingFragment StoreEntitySet="roles">
+            <ScalarProperty Name="User" ColumnName="User" />
+            <ScalarProperty Name="Role1" ColumnName="Role" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="segments"><EntityTypeMapping TypeName="wozModel.segment"><MappingFragment StoreEntitySet="segment">
+            <ScalarProperty Name="CRS" ColumnName="CRS" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="Lang" ColumnName="Lang" />
+            <ScalarProperty Name="SegNum" ColumnName="SegNum" />
+            <ScalarProperty Name="SegmentSequence" ColumnName="SegmentSequence" />
+            <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+            <ScalarProperty Name="FltNo" ColumnName="FltNo" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="DateDep" ColumnName="DateDep" />
+            <ScalarProperty Name="DepCity" ColumnName="DepCity" />
+            <ScalarProperty Name="DateArr" ColumnName="DateArr" />
+            <ScalarProperty Name="ArrCity" ColumnName="ArrCity" />
+            <ScalarProperty Name="CabinClass" ColumnName="CabinClass" />
+            <ScalarProperty Name="SegmentType" ColumnName="SegmentType" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="segmentformats"><EntityTypeMapping TypeName="wozModel.segmentformat"><MappingFragment StoreEntitySet="segmentformat">
+            <ScalarProperty Name="CRS" ColumnName="CRS" />
+            <ScalarProperty Name="TokenType" ColumnName="TokenType" />
+            <ScalarProperty Name="Lang" ColumnName="Lang" />
+            <ScalarProperty Name="token" ColumnName="token" />
+            <ScalarProperty Name="Header" ColumnName="Header" />
+            <ScalarProperty Name="CodeSnip" ColumnName="CodeSnip" />
+            <ScalarProperty Name="HasData" ColumnName="HasData" />
+            <ScalarProperty Name="User" ColumnName="User" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="sessionsearches"><EntityTypeMapping TypeName="wozModel.sessionsearch"><MappingFragment StoreEntitySet="sessionsearch">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="Subject" ColumnName="Subject" />
+            <ScalarProperty Name="FromName" ColumnName="FromName" />
+            <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+            <ScalarProperty Name="ToName" ColumnName="ToName" />
+            <ScalarProperty Name="Received" ColumnName="Received" />
+            <ScalarProperty Name="DeliveryTime" ColumnName="DeliveryTime" />
+            <ScalarProperty Name="Contents" ColumnName="Contents" />
+            <ScalarProperty Name="Agent" ColumnName="Agent" />
+            <ScalarProperty Name="Method" ColumnName="Method" />
+            <ScalarProperty Name="Created" ColumnName="Created" />
+            <ScalarProperty Name="Time_Stamp" ColumnName="Time_Stamp" />
+            <ScalarProperty Name="Processor" ColumnName="Processor" />
+            <ScalarProperty Name="ProcessorName" ColumnName="ProcessorName" />
+            <ScalarProperty Name="FormName" ColumnName="FormName" />
+            <ScalarProperty Name="PreprocStatus" ColumnName="PreprocStatus" />
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+            <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+            <ScalarProperty Name="TripRequest" ColumnName="TripRequest" />
+            <ScalarProperty Name="Company" ColumnName="Company" />
+            <ScalarProperty Name="Category" ColumnName="Category" />
+            <ScalarProperty Name="ItinType" ColumnName="ItinType" />
+            <ScalarProperty Name="CustomerReference" ColumnName="CustomerReference" />
+            <ScalarProperty Name="FileName" ColumnName="FileName" />
+            <ScalarProperty Name="nID" ColumnName="nID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="sgetickets"><EntityTypeMapping TypeName="wozModel.sgeticket"><MappingFragment StoreEntitySet="sgeticket">
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_emailaddress"><EntityTypeMapping TypeName="wozModel.tb_emailaddress"><MappingFragment StoreEntitySet="tb_emailaddress">
+            <ScalarProperty Name="Profile" ColumnName="Profile" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_header"><EntityTypeMapping TypeName="wozModel.tb_header"><MappingFragment StoreEntitySet="tb_header">
+            <ScalarProperty Name="Profile" ColumnName="Profile" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="PaxName" ColumnName="PaxName" />
+            <ScalarProperty Name="Pseudo" ColumnName="Pseudo" />
+            <ScalarProperty Name="ParsedDate" ColumnName="ParsedDate" />
+            <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+            <ScalarProperty Name="DepartureDate" ColumnName="DepartureDate" />
+            <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+            <ScalarProperty Name="ItinSummary" ColumnName="ItinSummary" />
+            <ScalarProperty Name="Parsed" ColumnName="Parsed" />
+            <ScalarProperty Name="CostCentre" ColumnName="CostCentre" />
+            <ScalarProperty Name="TotalUnitCost" ColumnName="TotalUnitCost" />
+            <ScalarProperty Name="AgentSign" ColumnName="AgentSign" />
+            <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+            <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+            <ScalarProperty Name="Amount" ColumnName="Amount" />
+            <ScalarProperty Name="FareBasis" ColumnName="FareBasis" />
+            <ScalarProperty Name="ClientNumber" ColumnName="ClientNumber" />
+            <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+            <ScalarProperty Name="PurchaseOrder" ColumnName="PurchaseOrder" />
+            <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+            <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+            <ScalarProperty Name="NoOfPax" ColumnName="NoOfPax" />
+            <ScalarProperty Name="EmailTo" ColumnName="EmailTo" />
+            <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+            <ScalarProperty Name="Domestic" ColumnName="Domestic" />
+            <ScalarProperty Name="SegmentCount" ColumnName="SegmentCount" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="EmailCount" ColumnName="EmailCount" />
+            <ScalarProperty Name="StatusEmail" ColumnName="StatusEmail" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_history"><EntityTypeMapping TypeName="wozModel.tb_history"><MappingFragment StoreEntitySet="tb_history">
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="HistoryDate" ColumnName="HistoryDate" />
+            <ScalarProperty Name="ReceivedBy" ColumnName="ReceivedBy" />
+            <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+            <ScalarProperty Name="NumberItems" ColumnName="NumberItems" />
+            <ScalarProperty Name="Cost" ColumnName="Cost" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_history_cost"><EntityTypeMapping TypeName="wozModel.tb_history_cost"><MappingFragment StoreEntitySet="tb_history_cost">
+            <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+            <ScalarProperty Name="HistoryCode" ColumnName="HistoryCode" />
+            <ScalarProperty Name="Cost" ColumnName="Cost" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_history_header"><EntityTypeMapping TypeName="wozModel.tb_history_header"><MappingFragment StoreEntitySet="tb_history_header">
+            <ScalarProperty Name="Profile" ColumnName="Profile" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="PaxName" ColumnName="PaxName" />
+            <ScalarProperty Name="Pseudo" ColumnName="Pseudo" />
+            <ScalarProperty Name="ParsedDate" ColumnName="ParsedDate" />
+            <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+            <ScalarProperty Name="Parsed" ColumnName="Parsed" />
+            <ScalarProperty Name="CostCentre" ColumnName="CostCentre" />
+            <ScalarProperty Name="TotalUnitCost" ColumnName="TotalUnitCost" />
+            <ScalarProperty Name="AgentSign" ColumnName="AgentSign" />
+            <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+            <ScalarProperty Name="DepartureDate" ColumnName="DepartureDate" />
+            <ScalarProperty Name="ItinSummary" ColumnName="ItinSummary" />
+            <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+            <ScalarProperty Name="Domestic" ColumnName="Domestic" />
+            <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+            <ScalarProperty Name="NoOfPax" ColumnName="NoOfPax" />
+            <ScalarProperty Name="TKT_Date" ColumnName="TKT_Date" />
+            <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+            <ScalarProperty Name="TICKETED" ColumnName="TICKETED" />
+            <ScalarProperty Name="SegmentCount" ColumnName="SegmentCount" />
+            <ScalarProperty Name="AirSegmentCount" ColumnName="AirSegmentCount" />
+            <ScalarProperty Name="HotelSegmentCount" ColumnName="HotelSegmentCount" />
+            <ScalarProperty Name="CarSegmentCount" ColumnName="CarSegmentCount" />
+            <ScalarProperty Name="GDS" ColumnName="GDS" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="Fax" ColumnName="Fax" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="BookerEmail" ColumnName="BookerEmail" />
+            <ScalarProperty Name="TKTIssued" ColumnName="TKTIssued" />
+            <ScalarProperty Name="Amount" ColumnName="Amount" />
+            <ScalarProperty Name="ClientNumber" ColumnName="ClientNumber" />
+            <ScalarProperty Name="FareBasis" ColumnName="FareBasis" />
+            <ScalarProperty Name="PurchaseOrder" ColumnName="PurchaseOrder" />
+            <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+            <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+            <ScalarProperty Name="Sent" ColumnName="Sent" />
+            <ScalarProperty Name="DepartureCity" ColumnName="DepartureCity" />
+            <ScalarProperty Name="DestinationCity" ColumnName="DestinationCity" />
+            <ScalarProperty Name="AirlineSummary" ColumnName="AirlineSummary" />
+            <ScalarProperty Name="EmailSent" ColumnName="EmailSent" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+            <ScalarProperty Name="Online" ColumnName="Online" />
+            <ScalarProperty Name="Touch" ColumnName="Touch" />
+            <ScalarProperty Name="G3" ColumnName="G3" />
+            <ScalarProperty Name="Team" ColumnName="Team" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_history_item"><EntityTypeMapping TypeName="wozModel.tb_history_item"><MappingFragment StoreEntitySet="tb_history_item">
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="HistoryDate" ColumnName="HistoryDate" />
+            <ScalarProperty Name="HistoryID" ColumnName="HistoryID" />
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="HistoryType" ColumnName="HistoryType" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Data" ColumnName="Data" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_history_types"><EntityTypeMapping TypeName="wozModel.tb_history_types"><MappingFragment StoreEntitySet="tb_history_types">
+            <ScalarProperty Name="HistoryType" ColumnName="HistoryType" />
+            <ScalarProperty Name="amount" ColumnName="amount" />
+            <ScalarProperty Name="Use" ColumnName="Use" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_passenger"><EntityTypeMapping TypeName="wozModel.tb_passenger"><MappingFragment StoreEntitySet="tb_passenger">
+            <ScalarProperty Name="Profile" ColumnName="Profile" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="PaxNum" ColumnName="PaxNum" />
+            <ScalarProperty Name="PaxName" ColumnName="PaxName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_pnr_segment"><EntityTypeMapping TypeName="wozModel.tb_pnr_segment"><MappingFragment StoreEntitySet="tb_pnr_segment">
+            <ScalarProperty Name="Profile" ColumnName="Profile" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="SegNum" ColumnName="SegNum" />
+            <ScalarProperty Name="SegmentSequence" ColumnName="SegmentSequence" />
+            <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+            <ScalarProperty Name="NoOfPax" ColumnName="NoOfPax" />
+            <ScalarProperty Name="FltNo" ColumnName="FltNo" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="DateDep" ColumnName="DateDep" />
+            <ScalarProperty Name="DepCity" ColumnName="DepCity" />
+            <ScalarProperty Name="DateArr" ColumnName="DateArr" />
+            <ScalarProperty Name="ArrCity" ColumnName="ArrCity" />
+            <ScalarProperty Name="CabinClass" ColumnName="CabinClass" />
+            <ScalarProperty Name="SegmentType" ColumnName="SegmentType" />
+            <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+            <ScalarProperty Name="Rate" ColumnName="Rate" />
+            <ScalarProperty Name="Currency" ColumnName="Currency" />
+            <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+            <ScalarProperty Name="VoucherCurrency" ColumnName="VoucherCurrency" />
+            <ScalarProperty Name="VoucherRate" ColumnName="VoucherRate" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_ticket"><EntityTypeMapping TypeName="wozModel.tb_ticket"><MappingFragment StoreEntitySet="tb_ticket">
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="TicketType" ColumnName="TicketType" />
+            <ScalarProperty Name="Amount" ColumnName="Amount" />
+            <ScalarProperty Name="Currency" ColumnName="Currency" />
+            <ScalarProperty Name="TKTDate" ColumnName="TKTDate" />
+            <ScalarProperty Name="ETKTCarrier" ColumnName="ETKTCarrier" />
+            <ScalarProperty Name="FreeFlow" ColumnName="FreeFlow" />
+            <ScalarProperty Name="IATANo" ColumnName="IATANo" />
+            <ScalarProperty Name="Pseudo" ColumnName="Pseudo" />
+            <ScalarProperty Name="TravelAgentID" ColumnName="TravelAgentID" />
+            <ScalarProperty Name="PassengerName" ColumnName="PassengerName" />
+            <ScalarProperty Name="PassengerType" ColumnName="PassengerType" />
+            <ScalarProperty Name="PassengerAge" ColumnName="PassengerAge" />
+            <ScalarProperty Name="ConjunctedTicketNo" ColumnName="ConjunctedTicketNo" />
+            <ScalarProperty Name="TKTStatus" ColumnName="TKTStatus" />
+            <ScalarProperty Name="FareConstruction" ColumnName="FareConstruction" />
+            <ScalarProperty Name="TKTData" ColumnName="TKTData" />
+            <ScalarProperty Name="Commission" ColumnName="Commission" />
+            <ScalarProperty Name="Airline" ColumnName="Airline" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_ticket_fop"><EntityTypeMapping TypeName="wozModel.tb_ticket_fop"><MappingFragment StoreEntitySet="tb_ticket_fop">
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Type" ColumnName="Type" />
+            <ScalarProperty Name="Currency" ColumnName="Currency" />
+            <ScalarProperty Name="Amount" ColumnName="Amount" />
+            <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+            <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+            <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_ticket_pnr"><EntityTypeMapping TypeName="wozModel.tb_ticket_pnr"><MappingFragment StoreEntitySet="tb_ticket_pnr">
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_ticket_segment"><EntityTypeMapping TypeName="wozModel.tb_ticket_segment"><MappingFragment StoreEntitySet="tb_ticket_segment">
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="SegmentNumber" ColumnName="SegmentNumber" />
+            <ScalarProperty Name="CouponStatus" ColumnName="CouponStatus" />
+            <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+            <ScalarProperty Name="FlightNumber" ColumnName="FlightNumber" />
+            <ScalarProperty Name="Cabin" ColumnName="Cabin" />
+            <ScalarProperty Name="SegDate" ColumnName="SegDate" />
+            <ScalarProperty Name="StartAirport" ColumnName="StartAirport" />
+            <ScalarProperty Name="EndAirport" ColumnName="EndAirport" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="FareBasis" ColumnName="FareBasis" />
+            <ScalarProperty Name="CouponNumber" ColumnName="CouponNumber" />
+            <ScalarProperty Name="Currency" ColumnName="Currency" />
+            <ScalarProperty Name="Fare" ColumnName="Fare" />
+            <ScalarProperty Name="Allowance" ColumnName="Allowance" />
+            <ScalarProperty Name="AllowanceType" ColumnName="AllowanceType" />
+            <ScalarProperty Name="NotValidBefore" ColumnName="NotValidBefore" />
+            <ScalarProperty Name="NotValidAfter" ColumnName="NotValidAfter" />
+            <ScalarProperty Name="StopOverIndicator" ColumnName="StopOverIndicator" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_ticket_text"><EntityTypeMapping TypeName="wozModel.tb_ticket_text"><MappingFragment StoreEntitySet="tb_ticket_text">
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="TextType" ColumnName="TextType" />
+            <ScalarProperty Name="InfoType" ColumnName="InfoType" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tb_ticket_textdata"><EntityTypeMapping TypeName="wozModel.tb_ticket_textdata"><MappingFragment StoreEntitySet="tb_ticket_textdata">
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="TextNumber" ColumnName="TextNumber" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="RefNumber" ColumnName="RefNumber" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tddts"><EntityTypeMapping TypeName="wozModel.tddt"><MappingFragment StoreEntitySet="tddt">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+            <ScalarProperty Name="FirstSight" ColumnName="FirstSight" />
+            <ScalarProperty Name="SmartMailProc" ColumnName="SmartMailProc" />
+            <ScalarProperty Name="QIServerSight" ColumnName="QIServerSight" />
+            <ScalarProperty Name="QIServerMail" ColumnName="QIServerMail" />
+            <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tickets"><EntityTypeMapping TypeName="wozModel.ticket"><MappingFragment StoreEntitySet="ticket">
+            <ScalarProperty Name="WebProfile" ColumnName="WebProfile" />
+            <ScalarProperty Name="TripID" ColumnName="TripID" />
+            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+            <ScalarProperty Name="Amount" ColumnName="Amount" />
+            <ScalarProperty Name="Tax" ColumnName="Tax" />
+            <ScalarProperty Name="GST" ColumnName="GST" />
+            <ScalarProperty Name="BookingReference" ColumnName="BookingReference" />
+            <ScalarProperty Name="PlatingCarrier" ColumnName="PlatingCarrier" />
+            <ScalarProperty Name="DomInt" ColumnName="DomInt" />
+            <ScalarProperty Name="DRCR" ColumnName="DRCR" />
+            <ScalarProperty Name="SalesType" ColumnName="SalesType" />
+            <ScalarProperty Name="OriginalTicketNumber" ColumnName="OriginalTicketNumber" />
+            <ScalarProperty Name="ExchangeTicketNumber" ColumnName="ExchangeTicketNumber" />
+            <ScalarProperty Name="ConjuctiionTicket" ColumnName="ConjuctiionTicket" />
+            <ScalarProperty Name="PaxName" ColumnName="PaxName" />
+            <ScalarProperty Name="Commission" ColumnName="Commission" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="toursegmentexceptions"><EntityTypeMapping TypeName="wozModel.toursegmentexception"><MappingFragment StoreEntitySet="toursegmentexception">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+            <ScalarProperty Name="AccessCode" ColumnName="AccessCode" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="users"><EntityTypeMapping TypeName="wozModel.user"><MappingFragment StoreEntitySet="users">
+            <ScalarProperty Name="user1" ColumnName="user" />
+            <ScalarProperty Name="passcode" ColumnName="passcode" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Surname" ColumnName="Surname" />
+            <ScalarProperty Name="security" ColumnName="security" />
+            <ScalarProperty Name="status" ColumnName="status" />
+            <ScalarProperty Name="stamp" ColumnName="stamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="MTP">
+        <EntityTypeShape EntityType="wozModel.company" Width="1.5" PointX="0.75" PointY="0.75" Height="2.172587890625" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.consultant" Width="1.5" PointX="2.75" PointY="0.75" Height="3.1340950520833326" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.costcentre" Width="1.5" PointX="4.75" PointY="0.75" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.country" Width="1.5" PointX="0.75" PointY="4.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.countries_old" Width="1.5" PointX="2.75" PointY="4.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.dktable" Width="1.5" PointX="4.75" PointY="4.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.dktable_old" Width="1.5" PointX="6.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.emailaddress" Width="1.5" PointX="6.75" PointY="3.75" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.eticket" Width="1.5" PointX="4.75" PointY="7.75" Height="3.7109993489583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.etickettest" Width="1.5" PointX="6.75" PointY="7.75" Height="3.7109993489583353" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.gmax" Width="1.5" PointX="8.75" PointY="0.75" Height="3.3263964843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.gmaxlog" Width="1.5" PointX="0.75" PointY="8.75" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.jobnumber" Width="1.5" PointX="8.75" PointY="5.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.mailinglist" Width="1.5" PointX="8.75" PointY="8.75" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.mailrecord" Width="1.5" PointX="10.75" PointY="0.75" Height="6.7878222656250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.optout" Width="1.5" PointX="10.75" PointY="8.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.premailrecord" Width="1.5" PointX="12.75" PointY="0.75" Height="4.2879036458333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.processorcountry" Width="1.5" PointX="2.75" PointY="12.75" Height="1.4033821614583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.processorname" Width="1.5" PointX="4.75" PointY="12.75" Height="1.4033821614583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.qisegment" Width="1.5" PointX="6.75" PointY="12.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.queueforwardlog" Width="1.5" PointX="8.75" PointY="12.75" Height="1.9802864583333282" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.queueforwardlog_deleted" Width="1.5" PointX="12.75" PointY="9.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.rate" Width="1.5" PointX="10.75" PointY="12.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.rloccomp" Width="1.5" PointX="12.75" PointY="12.75" Height="1.4033821614583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.rloc" Width="1.5" PointX="14.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.role" Width="1.5" PointX="14.75" PointY="3.75" Height="1.5956835937500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.segment" Width="1.5" PointX="14.75" PointY="6.75" Height="3.9033007812500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.segmentformat" Width="1.5" PointX="14.75" PointY="11.75" Height="2.7494921875000102" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.sessionsearch" Width="1.5" PointX="0.75" PointY="15.75" Height="6.4032194010416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.sgeticket" Width="1.5" PointX="2.75" PointY="15.75" Height="1.5956835937500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_emailaddress" Width="1.5" PointX="4.75" PointY="15.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_header" Width="1.5" PointX="6.75" PointY="15.75" Height="7.1724251302083246" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_history" Width="1.5" PointX="8.75" PointY="15.75" Height="2.7494921875000102" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_history_cost" Width="1.5" PointX="10.75" PointY="15.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_history_header" Width="1.5" PointX="12.75" PointY="15.75" Height="10.056946614583325" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_history_item" Width="1.5" PointX="14.75" PointY="15.75" Height="2.7494921875000102" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_history_types" Width="1.5" PointX="16.75" PointY="0.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_passenger" Width="1.5" PointX="16.75" PointY="3.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_pnr_segment" Width="1.5" PointX="16.75" PointY="6.75" Height="5.2494108072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_ticket" Width="1.5" PointX="16.75" PointY="12.75" Height="5.2494108072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_ticket_fop" Width="1.5" PointX="18.75" PointY="0.75" Height="2.749492187499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_ticket_pnr" Width="1.5" PointX="2.75" PointY="18.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_ticket_segment" Width="1.5" PointX="18.75" PointY="4.75" Height="4.8648079427083246" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_ticket_text" Width="1.5" PointX="18.75" PointY="10.75" Height="2.1725878906249818" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tb_ticket_textdata" Width="1.5" PointX="18.75" PointY="13.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.tddt" Width="1.5" PointX="18.75" PointY="16.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.ticket" Width="1.5" PointX="8.75" PointY="19.75" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.toursegmentexception" Width="1.5" PointX="14.75" PointY="19.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="wozModel.user" Width="1.5" PointX="20.75" PointY="0.75" Height="2.3648893229166674" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

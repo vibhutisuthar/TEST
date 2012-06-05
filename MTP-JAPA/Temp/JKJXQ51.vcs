@@ -1,0 +1,65 @@
+BEGIN:VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+DCREATED: 20120420T083533Z
+DTSTART: 20121003T154500Z
+DTEND: 20121003T214500Z
+PRIORITY: 0
+SUMMARY: 03Oct QF 319 Dep SYD 15:45 T1 to SIN 21:45
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Travel DetailsWednesday=A003 Oct 2012=
+=A0=A0Flight InformationAirlineQantas AirwaysConfirmed=A0FlightQF 319Flying=
+ Time08Hrs 00MinsOriginsydney (SYD)No Of StopsNon-StopDestinationsingapore =
+(SIN)=A0=A0Departing15:45MealsMealArriving21:45=A0/=A003 Oct 2012AircraftBo=
+eing 747-400=A0Operated bybritish airways=A0=A0Departure TerminalTerminal 1=
+=A0=A0Arrival TerminalTerminal 1=A0=A0ClassEconomy (Y)=A0=A0=A0
+
+LOCATION:Booking Reference: JKJXQ5
+X-ALT-DESC;FMTTYPE=text/html;ENCODING=QUOTED-PRINTABLE:<html><head><title><=
+/title></head><body>=0D=0A<table class=3D"SegmentTable" ID=3D"Table1" borde=
+r=3D"0" xmlns=3D"http://www.w3.org/1999/xhtml"><span id=3D"DateLine"><tr><t=
+d class=3D"headerCol1"><p><span class=3D"AmexSegment">Travel Details</span>=
+</p></td><td class=3D"headerCol2"><span class=3D"Date"><Day>Wednesday</Day>=
+&nbsp;<Date>03 Oct 2012</Date></span></td></tr></span><tr><td class=3D"SegC=
+ol1">&nbsp;</td><td align=3D"right">&nbsp;<Calendar /></td></tr><tr><td cla=
+ss=3D"FlightInfo" colspan=3D"2"><b>Flight Information</b></td></tr><tr><td =
+colspan=3D"2"><table class=3D"SubSegment" ID=3D"Table2"><tr><td class=3D"Se=
+gCol1">Airline</td><td class=3D"SegCol2"><span class=3D"Airline"><Airline>Q=
+antas Airways</Airline></span></td><td class=3D"SegCol3"><span class=3D"sta=
+tus"><Status>Confirmed</Status></span></td><td class=3D"SegCol4">&nbsp;</td=
+></tr><tr><td class=3D"SegCol1">Flight</td><td class=3D"SegCol2"><span clas=
+s=3D"FlightNumber"><FlightNumber>QF 319</FlightNumber></span></td><td class=
+=3D"SegCol3">Flying Time</td><td class=3D"SegCol4"><Duration>08Hrs 00Mins</=
+Duration></td></tr><tr><td class=3D"SegCol1">Origin</td><td class=3D"SegCol=
+2"><span class=3D"City"><Departs>sydney (SYD)</Departs></span></td><td clas=
+s=3D"SegCol3">No Of Stops</td><td class=3D"SegCol4"><Stops>Non-Stop</Stops>=
+</td></tr><tr><td class=3D"SegCol1">Destination</td><td class=3D"SegCol2"><=
+span class=3D"City"><Arrive>singapore (SIN)</Arrive></span></td><span id=
+=3D"TransitSection"><td class=3D"SegCol3">&nbsp;</td><td class=3D"SegCol4">&nb=
+sp;</td></span></tr><tr><td class=3D"SegCol1" valign=3D"top">Departing</td>=
+<td class=3D"SegCol2" valign=3D"top"><DepTime>15:45</DepTime></td><span id=
+=3D"MealSection"><td class=3D"SegCol3" valign=3D"top">Meals</td><td class=3D"S=
+egCol4" valign=3D"top"><Meals>Meal</Meals></td></span></tr><tr><td class=
+=3D"SegCol1" valign=3D"top">Arriving</td><td class=3D"SegCol2" valign=3D"top">=
+<ArrTime>21:45</ArrTime>&nbsp;/&nbsp;<ADate>03 Oct 2012</ADate></td><span i=
+d=3D"EquipmentSection"><td class=3D"SegCol3" valign=3D"top">Aircraft</td><t=
+d class=3D"SegCol4" valign=3D"top"><Equip>Boeing 747-400</Equip></td></span=
+></tr><tr><td class=3D"SegCol1" colspan=3D"4">&nbsp;</td></tr><span id=3D"O=
+peratedBySection"><tr><td class=3D"SegCol1">Operated by</td><td class=3D"Se=
+gCol2"><span class=3D"OperAirline"><Operated>british airways</Operated></sp=
+an></td><td class=3D"SegCol3">&nbsp;</td><td class=3D"SegCol4">&nbsp;</td><=
+/tr></span><span id=3D"DepartureTerminalSection"><tr><td class=3D"SegCol1">=
+Departure Terminal</td><td class=3D"SegCol2"><DTerm>Terminal 1</DTerm></td>=
+<td class=3D"SegCol3">&nbsp;</td><td class=3D"SegCol4">&nbsp;</td></tr></sp=
+an><span id=3D"ArrivalTerminalSection"><tr><td class=3D"SegCol1">Arrival Te=
+rminal</td><td class=3D"SegCol2"><ATerm>Terminal 1</ATerm></td><td class=
+=3D"SegCol3">&nbsp;</td><td class=3D"SegCol4">&nbsp;</td></tr></span><span id=
+=3D"SeatSection"></span><span id=3D"ClassSection"><tr><td class=3D"SegCol1">Cl=
+ass</td><td class=3D"SegCol2"><Class>Economy (Y)</Class></td><td class=3D"S=
+egCol3">&nbsp;</td><td class=3D"SegCol4">&nbsp;</td></tr></span><span id=
+=3D"SpecialRequests"></span><tr><Remarks></Remarks></tr><tr><td class=3D"SegCo=
+l1" colspan=3D"4">&nbsp;</td></tr></table></td></tr></table>=0D=0A</body></=
+html>
+
+CLASS:PUBLIC
+END:VEVENT
+END:VCALENDAR

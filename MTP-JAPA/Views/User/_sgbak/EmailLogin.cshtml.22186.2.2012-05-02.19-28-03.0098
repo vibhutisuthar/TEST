@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "EmailLogin";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+}
+<div class="emaillogin">
+    @using (Html.BeginForm("EmailLogin", "User", FormMethod.Post, new { id = "frmEmailLogin", name = "frmEmailLogin" }))
+    {   
+        <label for="email">
+            Email Address:</label>
+        @Html.TextBox("email", null, new { @maxlength = "24", id = "txtEmail" })
+        <label for="password">
+            Password:</label>
+@*@Html.PasswordFor(t => t.Password, new { id = "txtPassWord", @maxlength = "24" })*@
+        <input type="password" name="password" size="24" id="password"/>
+        <input type="submit" id="btnSubmit" name="btnSubmit" title="btnSubmit" value="GO" />
+
+    }
+</div>

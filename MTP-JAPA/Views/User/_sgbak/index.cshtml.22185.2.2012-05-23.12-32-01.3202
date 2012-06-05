@@ -1,0 +1,207 @@
+﻿@{
+    ViewBag.Title = "index";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+}
+<div class="booking_search active" id="divBooking_Search">
+    @using (Html.BeginForm("index", "User", FormMethod.Post, new { id = "frmIndex", name = "frmIndex" }))
+    {
+        <div id="country_select">
+            <label for="country">
+                Country:</label>
+            <select name="country" size="1" id="CountryList" style="color: #585858;">
+                <option value="AU">Australia</option>
+            </select>
+        </div>
+        <label for="surname">
+            Surname:</label>
+        @Html.TextBox("surname", null, new { @maxlength = "24", id = "txtSurname", name = "surname", title = "Surname", @Value = "Surname" })
+        <div id="RadioDiv">
+            <input type="radio" name="radioValue" value="Booking Reference" id="tbBookingReference"
+                checked="checked" />
+            <label class="radio" for="booking_reference">
+                Booking Reference</label><br />
+            <input type="radio" name="radioValue" value="Invoice Number" id="tbInvoiceNumber" />
+            <label class="radio" for="invoice_number">
+                Invoice Number</label><br />
+            <input type="radio" name="radioValue" value="Ticket Number" id="tbTicketNumber" />
+            <label class="radio" for="ticket_number">
+                Ticket Number</label><br />
+        </div>
+        @Html.TextBox("reference_number", "Booking Reference", new { @maxlength = "24", id = "txtValue", value = "Booking Reference", title = "Booking Reference" })
+        <input type="submit" id="btnSubmit" name="btnSubmit" title="btnSubmit" value="GO" />
+
+    }
+</div>
+<div class="email_login" id="divemail_login">
+    @using (Html.BeginForm("EmailLogin", "User", FormMethod.Post, new { id = "frmEmailLogin", name = "frmEmailLogin" }))
+    {   
+        <label for="email">
+            Email Address:</label>
+        @Html.TextBox("email", null, new { @maxlength = "100", id = "txtEmail", title = "Email Address", @Value = "Email Address" })
+        <label for="password">
+            Password:</label>
+@*@Html.PasswordFor(t => t.Password, new { id = "txtPassWord", @maxlength = "24" })*@
+        <input type="password" name="password" size="24" id="password" title="password" />
+        <input type="submit" id="btnSubmit" name="btnSubmit" title="btnSubmit" value="GO" />
+    }
+    <div id="form_footer_detail" class="form_footer">
+        <a class="btn" href="/User/Register">Register</a> <a class="btn" href="/User/ResetPassword">
+            Reset password</a>
+    </div>
+</div>
+<script type="text/javascript" language="javascript">
+
+    $(document).ready(function () {
+
+
+        //remove the href from li a, if the page is booking search or login
+
+
+
+        var pParaVal = getParameterByName('p');
+        if (pParaVal == '' || pParaVal.toLowerCase() == 'search') {
+            $('#liBookingLogin').addClass('here');
+            $('#liEmailLogin').removeClass('here');
+
+            $('#divBooking_Search').addClass('active');
+            $('#divemail_login').removeClass('active');
+        }
+        else {
+            $('#liBookingLogin').removeClass('here');
+            $('#liEmailLogin').addClass('here');
+
+            $('#divBooking_Search').removeClass('active');
+            $('#divemail_login').addClass('active');
+        }
+
+        ///Div hide/show login - 
+        if ($('#divBooking_Search').length > 0) {
+            $('#liBookingLogin').click(function () {
+                $('#liBookingLogin').addClass('here');
+                $('#liEmailLogin').removeClass('here');
+
+
+                $('#divBooking_Search').addClass('active');
+                $('#divemail_login').removeClass('active');
+            });
+            $('#liEmailLogin').click(function () {
+                $('#liBookingLogin').removeClass('here');
+                $('#liEmailLogin').addClass('here');
+
+                $('#divemail_login').addClass('active');
+                $('#divBooking_Search').removeClass('active');
+            });
+        }
+        else if ($('#divemail_login').length > 0) {
+
+
+            $('#liBookingLogin').click(function () {
+
+                $('#liBookingLogin').addClass('here');
+                $('#liEmailLogin').removeClass('here');
+
+                $('#divBooking_Search').addClass('active');
+                $('#divemail_login').removeClass('active');
+            });
+            $('#liEmailLogin').click(function () {
+
+                $('#liBookingLogin').removeClass('here');
+                $('#liEmailLogin').addClass('here');
+
+
+                $('#divemail_login').addClass('active');
+                $('#divBooking_Search').removeClass('active');
+            });
+        }
+
+        ///Div show/hide logic over.
+
+        $('#RadioDiv input').click(function () {
+            var textvalue = $("#RadioDiv input:radio:checked").val();
+            var textboxValue = $("#txtValue").val();
+            if (textboxValue == "Booking Reference" || textboxValue == "Invoice Number" || textboxValue == "Ticket Number" || textboxValue == "") {
+                $("#txtValue").val(textvalue);
+                $("#txtValue").attr('title', textvalue);
+            }
+        });
+
+        $("input[id*='txtValue']").focus(function () {
+            $tb = $(this);
+            if ($tb.val() == this.title) {
+                $tb.val("");
+            }
+        });
+
+        $("input[id*='txtValue']").blur(function () {
+            $tb = $(this);
+            if ($tb.val() == "") {
+                $tb.val($("#RadioDiv input:radio:checked").val());
+            }
+        });
+
+
+        $("input[id*='txtSurname']").focus(function () {
+            $ts = $(this);
+            if ($ts.val() == this.title) {
+                $ts.val("");
+            }
+        });
+
+        $("input[id*='txtSurname']").blur(function () {
+            $ts = $(this);
+            if ($ts.val() == "") {
+                $ts.val("Surname");
+            }
+        });
+
+
+
+        //       Email login page script
+
+        $("input[id*='txtEmail']").focus(function () {
+            $tb = $(this);
+            if ($tb.val() == this.title) {
+                $tb.val("");
+            }
+        });
+
+        $("input[id*='txtEmail']").blur(function () {
+            $tb = $(this);
+            if ($tb.val() == "") {
+                $tb.val("Email Address");
+            }
+        });
+
+
+        $("input[id*='password']").focus(function () {
+            $ts = $(this);
+            if ($ts.val() == this.title) {
+                $ts.val("");
+            }
+        });
+
+        $("input[id*='password']").blur(function () {
+            $ts = $(this);
+            if ($ts.val() == "") {
+                $ts.val("password");
+            }
+        });
+
+        //       Email login page script
+
+
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(window.location.search);
+            if (results == null)
+                return "";
+            else
+                return decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+
+    })
+</script>

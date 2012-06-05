@@ -1,0 +1,217 @@
+.outline {
+	display: none !important;
+	}
+.computer {
+	display: none !important;
+	}
+
+.eticket {
+	padding: 10px 0 40pt 0;
+	background-color: #ffffff;
+	font-family: arial, sans-serif;
+	}
+
+
+.eticket h1,
+.eticket h2,
+.eticket h3,
+.eticket h4,
+.eticket h5,
+.eticket h6,
+.eticket p,
+.eticket ul,
+.eticket ol {
+	margin: 0 0 1pt 0;
+	}
+.eticket div.label h1,
+.eticket div.label h2,
+.eticket div.label h3,
+.eticket div.label h4,
+.eticket div.label h5,
+.eticket div.label h6,
+.eticket div.label p,
+.eticket div.label span {
+	display: inline-block;
+	}
+.eticket div.label span,
+.eticket p.tax span {
+	font-size: 85%;
+	}
+.eticket > #print_wrapper > header {
+	display: block;
+	}
+.eticket > #print_wrapper > header img {
+	margin: 9px 0 12px 28px; /*	margin: 6px 0 12px 55px; to align logo with p.i3 */
+	}
+.eticket > #print_wrapper > header > p.i3,
+.eticket > #print_wrapper > header > p.datestamp {
+	padding-left: 60px;
+	color: #888888;
+	}
+.eticket > #print_wrapper > header > p.i3 time,
+.eticket > #print_wrapper > header > p.datestamp time {
+	white-space: nowrap;
+	}
+
+
+
+
+
+.eticket #booking_information {
+	clear: both;
+	padding: 20px 0 0 60px;
+	}
+.eticket #booking_information.minimised {
+	background: url(../graphics/icon_expand.gif) no-repeat 15px bottom;
+	}
+.eticket #booking_information.maximised {
+	background: url(../graphics/icon_collapse.gif) no-repeat 15px bottom;
+	}
+.eticket #booking_reference {
+	border-bottom: 1px solid #247CBC;
+	}
+.eticket #booking_reference h1 {
+	display: inline-block;
+	width: 30%;
+	margin: 0;
+	font-size: 85%;
+	font-weight: normal;
+	color: #888888;
+	}
+.eticket #booking_reference p.reference {
+	display: inline-block;
+	margin: 0;
+	font-size: 2.5em;
+	letter-spacing: .8pt;
+	color: #247cbc;
+	}
+.eticket #booking_reference2 {
+	display: none;
+	}
+
+.eticket #travellers {
+	margin-top: 10px;
+	}
+.eticket #travellers div.label > span {
+	display: inline-block;
+	margin: 3pt 0 3pt 0;
+	font-weight: normal;
+	color: #888888;
+	}
+.eticket #travellers h2.passenger_name {
+	display: block;
+	margin: 0;
+	font-weight: normal;
+	color: #000000;
+	}
+.eticket #travellers h2.passenger_name span {
+	font-size: 1.5em;
+	}
+.eticket #travellers h2.passenger_name .name_surname {
+	text-transform: uppercase;
+	}
+
+
+
+
+
+.eticket #booking_itinerary_summary {
+	padding: 20px 0 0 60px;
+	}
+.eticket #booking_itinerary_summary h1 {
+	padding: 5px 0;
+	border-bottom: 1px dashed #dddddd;
+	}
+.eticket #booking_itinerary_summary .flight {
+	padding: 5px 0;
+	border-bottom: 1px dashed #dddddd;
+	}
+
+.eticket #booking_itinerary_summary span {
+	display: inline-block;
+	}
+.eticket #booking_itinerary_summary .carrier {
+	width: 9%;
+	}
+.eticket #booking_itinerary_summary .flight_number {
+	width: 20%;
+	}
+.eticket #booking_itinerary_summary .dep_date {
+	width: 60%;
+	}
+.eticket #booking_itinerary_summary .dep_city {
+	width: 30%;
+	}
+.eticket #booking_itinerary_summary .arr_city {
+	width: 30%;
+	}
+.eticket #booking_itinerary_summary .dep_time {
+	width: 30%;
+	}
+
+
+.eticket #eticket_receipt {
+	padding: 20px 0 0 0;
+	width: 100%;
+	overflow: hidden;
+	}
+.eticket #eticket_receipt h1 {
+	padding: 5px 0 0 60px;
+	}
+.eticket #eticket_receipt p.advice {
+	padding: 5px 0 0 60px;
+	font-weight: bold;
+	}
+.eticket #eticket_details {
+	margin: 20px 0;
+	padding: 5px;
+	border-top: 2px solid #247cbc;
+	border-bottom: 2px solid #247cbc;
+	}
+.eticket #eticket_details table {
+	margin: 10px 0;
+	}
+.eticket #eticket_details table tr th {
+	text-align: left;
+	font-size: 85%;
+	width: 55px;
+	}
+
+#fare {
+	margin: 10px 0;
+	}
+
+
+.eticket #eticket_details .inline {
+	display: inline-block;
+	margin-right: 15px;
+	}
+.eticket #eticket_details .label span,
+.eticket #eticket_details .tax span {
+	display: inline-block;
+	margin-right: 5px;
+	color: #888888;
+	}
+.eticket #eticket_details .label p,
+.eticket #eticket_details .label span.data {
+	display: inline-block;
+    width: auto;
+    margin: 0;
+	}
+.eticket #breakdown .breakdown_seg {
+	margin-bottom: 15px;
+	}
+.eticket #breakdown .breakdown_seg span {
+	margin: 0;
+	width: 55px;
+	}
+.eticket #eticket_details .ref {
+    margin: 10px 0 5px 55px;
+	}
+
+.eticket #conditions {
+	margin: 0 10px 0 60px;
+	}
+.eticket #conditions p {
+	margin-top: 10px;
+	}

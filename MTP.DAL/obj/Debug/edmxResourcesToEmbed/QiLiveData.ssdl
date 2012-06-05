@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qilive_dataModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="qilive_dataModelStoreContainer">
+    <EntitySet Name="passenger" EntityType="qilive_dataModel.Store.passenger" store:Type="Tables" Schema="qilive_data" />
+    <EntitySet Name="utid" EntityType="qilive_dataModel.Store.utid" store:Type="Tables" Schema="qilive_data" />
+    <EntitySet Name="xml_booking" EntityType="qilive_dataModel.Store.xml_booking" store:Type="Tables" Schema="qilive_data" />
+    <AssociationSet Name="fk_passenger_utid" Association="qilive_dataModel.Store.fk_passenger_utid">
+      <End Role="utid" EntitySet="utid" />
+      <End Role="passenger" EntitySet="passenger" />
+    </AssociationSet>
+    <AssociationSet Name="fk_xml_booking_utid" Association="qilive_dataModel.Store.fk_xml_booking_utid">
+      <End Role="utid" EntitySet="utid" />
+      <End Role="xml_booking" EntitySet="xml_booking" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="passenger">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="utid_id" Type="int" Nullable="false" />
+    <Property Name="first_name" Type="varchar" Nullable="false" MaxLength="96" />
+    <Property Name="last_name" Type="varchar" Nullable="false" MaxLength="128" />
+    <Property Name="title" Type="varchar" Nullable="false" MaxLength="16" />
+    <Property Name="email" Type="varchar" MaxLength="320" />
+    <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="utid">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="gds" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="booking_date" Type="datetime" Nullable="false" />
+    <Property Name="ubid" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="first_sighted" Type="datetime" Nullable="false" />
+    <Property Name="utid" Type="varchar" Nullable="false" MaxLength="160" />
+    <Property Name="status" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="source" Type="varchar" Nullable="false" MaxLength="16" />
+    <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="region" Type="varchar" MaxLength="8" />
+    <Property Name="market" Type="varchar" MaxLength="8" />
+    <Property Name="formname" Type="varchar" MaxLength="64" />
+    <Property Name="company" Type="varchar" MaxLength="64" />
+    <Property Name="team" Type="varchar" MaxLength="64" />
+    <Property Name="notes" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="xml_booking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="utid_id" Type="int" Nullable="false" />
+    <Property Name="entry_date" Type="datetime" Nullable="false" />
+    <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="phase" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="xml" Type="longtext" Nullable="false" />
+    <Property Name="notes" Type="varchar" MaxLength="1024" />
+    <Property Name="pdf_file" Type="longblob" />
+  </EntityType>
+  <Association Name="fk_passenger_utid">
+    <End Role="utid" Type="qilive_dataModel.Store.utid" Multiplicity="1" />
+    <End Role="passenger" Type="qilive_dataModel.Store.passenger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utid">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="passenger">
+        <PropertyRef Name="utid_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_xml_booking_utid">
+    <End Role="utid" Type="qilive_dataModel.Store.utid" Multiplicity="1" />
+    <End Role="xml_booking" Type="qilive_dataModel.Store.xml_booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utid">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="xml_booking">
+        <PropertyRef Name="utid_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetBookingByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="qilive_data">
+    <Parameter Name="email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetItineraryDataBySurnameAndRLOC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="qilive_data">
+    <Parameter Name="p_RLOC" Type="varchar" Mode="In" />
+    <Parameter Name="p_lastname" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

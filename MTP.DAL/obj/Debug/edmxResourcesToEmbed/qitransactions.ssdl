@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qitransactionsModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="qitransactionsModelStoreContainer">
+    <EntitySet Name="mailrecords" EntityType="qitransactionsModel.Store.mailrecords" store:Type="Tables" Schema="qitransactions" />
+    <EntitySet Name="qicalendar" EntityType="qitransactionsModel.Store.qicalendar" store:Type="Tables" Schema="qitransactions" />
+    <EntitySet Name="qicalevents" EntityType="qitransactionsModel.Store.qicalevents" store:Type="Tables" Schema="qitransactions" />
+  </EntityContainer>
+  <EntityType Name="mailrecords">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RLOC" Type="varchar" MaxLength="7" />
+    <Property Name="Subject" Type="varchar" MaxLength="500" />
+    <Property Name="FromName" Type="varchar" MaxLength="150" />
+    <Property Name="SenderName" Type="varchar" MaxLength="50" />
+    <Property Name="ToName" Type="varchar" MaxLength="150" />
+    <Property Name="Received" Type="datetime" />
+    <Property Name="DeliveryTime" Type="varchar" MaxLength="20" />
+    <Property Name="Contents" Type="varchar" MaxLength="30" />
+    <Property Name="Agent" Type="varchar" MaxLength="50" />
+    <Property Name="Method" Type="varchar" MaxLength="10" />
+    <Property Name="Processor" Type="int" />
+    <Property Name="ProcessorName" Type="varchar" MaxLength="30" />
+    <Property Name="FormName" Type="varchar" MaxLength="30" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="PreprocStatus" Type="int" />
+    <Property Name="TicketNumber" Type="varchar" MaxLength="20" />
+    <Property Name="DocumentNumber" Type="varchar" MaxLength="20" />
+    <Property Name="OrderNumber" Type="varchar" MaxLength="100" />
+    <Property Name="CustomerReference" Type="varchar" MaxLength="20" />
+    <Property Name="Processed" Type="int" Nullable="false" />
+    <Property Name="Company" Type="varchar" MaxLength="65" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="ItinType" Type="int" Nullable="false" />
+    <Property Name="time_stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="TripRequest" Type="varchar" MaxLength="20" />
+    <Property Name="FileName" Type="varchar" MaxLength="255" />
+    <Property Name="Pseudo" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="Team" Type="varchar" MaxLength="65" />
+    <Property Name="BounceEmailId" Type="int" />
+  </EntityType>
+  <EntityType Name="qicalendar">
+    <Key>
+      <PropertyRef Name="GDS" />
+      <PropertyRef Name="RLoc" />
+    </Key>
+    <Property Name="GDS" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="RLoc" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="PaxName" Type="varchar" MaxLength="100" />
+    <Property Name="Language" Type="char" MaxLength="2" />
+    <Property Name="FileLocation" Type="varchar" MaxLength="255" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="qicalevents">
+    <Key>
+      <PropertyRef Name="GDS" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="PaxName" />
+      <PropertyRef Name="SegNumber" />
+    </Key>
+    <Property Name="GDS" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="PaxName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SegNumber" Type="int" Nullable="false" />
+    <Property Name="SegType" Type="varchar" MaxLength="10" />
+    <Property Name="DTStart" Type="varchar" MaxLength="20" />
+    <Property Name="DTEnd" Type="varchar" MaxLength="20" />
+    <Property Name="DCreated" Type="varchar" MaxLength="20" />
+    <Property Name="UID" Type="varchar" MaxLength="255" />
+    <Property Name="Subject" Type="varchar" MaxLength="255" />
+    <Property Name="Location" Type="varchar" MaxLength="255" />
+    <Property Name="Description" Type="varchar" MaxLength="2000" />
+    <Property Name="AltDescription" Type="varchar" MaxLength="8000" />
+    <Property Name="EventText" Type="varchar" MaxLength="10000" />
+    <Property Name="Stamp" Type="timestamp" Precision="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'qitransactions.tb_emailaddress' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'qitransactions.tb_history_cost' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+</Schema>

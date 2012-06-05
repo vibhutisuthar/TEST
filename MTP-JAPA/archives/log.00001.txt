@@ -1,0 +1,134 @@
+2012-02-17 16:42:02.8705 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 16:42:02.9485 TravelPlans Fixing HTML
+2012-02-17 16:42:13.9281 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 16:42:13.9281 TravelPlans Fixing HTML
+2012-02-17 16:42:27.9331 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 16:42:27.9331 TravelPlans Fixing HTML
+2012-02-17 16:42:38.7099 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 16:42:38.7099 TravelPlans Fixing HTML
+2012-02-17 16:44:54.1784 TravelPlans Itinerary: Mailrecords found : 1
+2012-02-17 16:44:54.1940 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-02-17 16:44:54.2096 TravelPlans CreateDisplayFile debug point 01
+2012-02-17 16:44:54.2096 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 16:44:57.0505 TravelPlans File copied
+2012-02-17 16:44:57.0505 TravelPlans Decrypting file
+2012-02-17 16:44:57.0505 TravelPlans FileDecrypt: Debug point 01
+2012-02-17 16:44:57.0661 TravelPlans FileDecrypt: Debug point 02
+2012-02-17 16:44:57.0661 TravelPlans Decrypt : c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.doc
+2012-02-17 16:44:57.9402 TravelPlans Decrypted : 
+2012-02-17 16:44:57.9402 TravelPlans Decrypted file
+2012-02-17 16:44:57.9402 TravelPlans Deleted c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 16:44:57.9402 TravelPlans Returning
+2012-02-17 16:44:57.9558 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 16:44:57.9558 TravelPlans Fixing HTML
+2012-02-17 16:45:20.2152 TravelPlans Itinerary: Mailrecords found : 1
+2012-02-17 16:45:20.2152 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-02-17 16:45:20.2152 TravelPlans CreateDisplayFile debug point 01
+2012-02-17 16:45:20.2152 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 16:45:23.3370 TravelPlans File copied
+2012-02-17 16:45:23.3370 TravelPlans Decrypting file
+2012-02-17 16:45:23.3370 TravelPlans FileDecrypt: Debug point 01
+2012-02-17 16:45:23.3370 TravelPlans FileDecrypt: Debug point 02
+2012-02-17 16:45:23.3526 TravelPlans Decrypt : c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.doc
+2012-02-17 16:45:23.9145 TravelPlans Decrypted : 
+2012-02-17 16:45:23.9145 TravelPlans Decrypted file
+2012-02-17 16:45:23.9145 TravelPlans Deleted c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 16:45:23.9145 TravelPlans Returning
+2012-02-17 16:45:23.9302 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 16:45:23.9302 TravelPlans Fixing HTML
+2012-02-17 16:46:10.8362 TravelPlans Itinerary: Mailrecords found : 1
+2012-02-17 16:46:10.8362 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-02-17 16:46:10.8362 TravelPlans CreateDisplayFile debug point 01
+2012-02-17 16:46:10.8362 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 16:46:13.6770 TravelPlans File copied
+2012-02-17 16:46:13.6770 TravelPlans Decrypting file
+2012-02-17 16:46:13.6770 TravelPlans FileDecrypt: Debug point 01
+2012-02-17 16:46:13.6770 TravelPlans FileDecrypt: Debug point 02
+2012-02-17 16:46:13.6926 TravelPlans Decrypt : c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.doc
+2012-02-17 16:46:14.3794 TravelPlans Decrypted : 
+2012-02-17 16:46:14.3794 TravelPlans Decrypted file
+2012-02-17 16:46:14.3794 TravelPlans Deleted c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 16:46:14.3950 TravelPlans Returning
+2012-02-17 16:46:14.4731 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 16:46:14.4731 TravelPlans Fixing HTML
+2012-02-17 16:47:02.5498 TravelPlans Itinerary: Mailrecords found : 1
+2012-02-17 16:47:02.5498 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-02-17 16:47:02.5498 TravelPlans CreateDisplayFile debug point 01
+2012-02-17 16:47:02.5498 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 16:47:06.2335 TravelPlans File copied
+2012-02-17 16:47:06.2335 TravelPlans Decrypting file
+2012-02-17 16:47:06.2335 TravelPlans FileDecrypt: Debug point 01
+2012-02-17 16:47:06.2491 TravelPlans FileDecrypt: Debug point 02
+2012-02-17 16:47:06.2491 TravelPlans Decrypt : c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.doc
+2012-02-17 16:47:06.8110 TravelPlans Decrypted : 
+2012-02-17 16:47:06.8110 TravelPlans Decrypted file
+2012-02-17 16:47:06.8110 TravelPlans Deleted c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 16:47:06.8110 TravelPlans Returning
+2012-02-17 16:47:06.8266 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 16:47:06.8266 TravelPlans Fixing HTML
+2012-02-17 17:34:17.7127 TravelPlans Itinerary: Mailrecords found : 1
+2012-02-17 17:34:17.7596 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-02-17 17:34:17.7596 TravelPlans CreateDisplayFile debug point 01
+2012-02-17 17:34:17.7596 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 17:34:20.3208 TravelPlans File copied
+2012-02-17 17:34:20.3208 TravelPlans Decrypting file
+2012-02-17 17:34:20.3208 TravelPlans FileDecrypt: Debug point 01
+2012-02-17 17:34:20.3364 TravelPlans FileDecrypt: Debug point 02
+2012-02-17 17:34:20.3364 TravelPlans Decrypt : c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.doc
+2012-02-17 17:34:20.9767 TravelPlans Decrypted : 
+2012-02-17 17:34:20.9767 TravelPlans Decrypted file
+2012-02-17 17:34:20.9767 TravelPlans Deleted c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 17:34:20.9767 TravelPlans Returning
+2012-02-17 17:34:20.9923 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 17:34:21.0079 TravelPlans Fixing HTML
+2012-02-17 17:35:00.8169 TravelPlans Retrieving \\203.19.215.74\FILESTORE\QIETKS\FEB2012\NTYGTD.PDF
+2012-02-17 17:52:48.7184 TravelPlans Itinerary: Mailrecords found : 1
+2012-02-17 17:52:48.7340 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-02-17 17:52:48.7340 TravelPlans CreateDisplayFile debug point 01
+2012-02-17 17:52:48.7340 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 17:52:53.3532 TravelPlans File copied
+2012-02-17 17:52:53.3532 TravelPlans Decrypting file
+2012-02-17 17:52:53.3688 TravelPlans FileDecrypt: Debug point 01
+2012-02-17 17:52:53.3688 TravelPlans FileDecrypt: Debug point 02
+2012-02-17 17:52:53.3688 TravelPlans Decrypt : c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.doc
+2012-02-17 17:52:54.2427 TravelPlans Decrypted : 
+2012-02-17 17:52:54.2427 TravelPlans Decrypted file
+2012-02-17 17:52:54.2427 TravelPlans Deleted c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 17:52:54.2427 TravelPlans Returning
+2012-02-17 17:52:54.2583 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 17:52:54.2739 TravelPlans Fixing HTML
+2012-02-17 17:59:19.0514 TravelPlans Itinerary: Mailrecords found : 1
+2012-02-17 17:59:19.0670 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-02-17 17:59:19.0670 TravelPlans CreateDisplayFile debug point 01
+2012-02-17 17:59:19.0670 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 17:59:21.9336 TravelPlans File copied
+2012-02-17 17:59:21.9336 TravelPlans Decrypting file
+2012-02-17 17:59:21.9336 TravelPlans FileDecrypt: Debug point 01
+2012-02-17 17:59:21.9502 TravelPlans FileDecrypt: Debug point 02
+2012-02-17 17:59:21.9502 TravelPlans Decrypt : c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.doc
+2012-02-17 17:59:22.9133 TravelPlans Decrypted : 
+2012-02-17 17:59:22.9133 TravelPlans Decrypted file
+2012-02-17 17:59:22.9133 TravelPlans Deleted c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 17:59:22.9133 TravelPlans Returning
+2012-02-17 17:59:22.9913 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 17:59:22.9913 TravelPlans Fixing HTML
+2012-02-17 18:02:13.2744 TravelPlans Itinerary: Mailrecords found : 1
+2012-02-17 18:02:13.2744 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-02-17 18:02:13.2744 TravelPlans CreateDisplayFile debug point 01
+2012-02-17 18:02:13.2744 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 18:02:18.3177 TravelPlans File copied
+2012-02-17 18:02:18.3177 TravelPlans Decrypting file
+2012-02-17 18:02:18.3177 TravelPlans FileDecrypt: Debug point 01
+2012-02-17 18:02:18.3177 TravelPlans FileDecrypt: Debug point 02
+2012-02-17 18:02:18.3177 TravelPlans Decrypt : c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.doc
+2012-02-17 18:02:19.3013 TravelPlans Decrypted : 
+2012-02-17 18:02:19.3013 TravelPlans Decrypted file
+2012-02-17 18:02:19.3013 TravelPlans Deleted c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt
+2012-02-17 18:02:19.3013 TravelPlans Returning
+2012-02-17 18:02:19.4419 TravelPlans Retrieving c:\temp\idbj3kmjrbvvyzbdjzhgihvb.htm
+2012-02-17 18:02:19.4419 TravelPlans Fixing HTML
+2012-02-17 18:54:21.6159 TravelPlans Itin: No FileName provided
+2012-02-17 18:54:50.0814 TravelPlans Itinerary: Mailrecords found : 1
+2012-02-17 18:54:50.0814 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-02-17 18:54:50.0814 TravelPlans CreateDisplayFile debug point 01
+2012-02-17 18:54:50.0814 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\idbj3kmjrbvvyzbdjzhgihvb.txt

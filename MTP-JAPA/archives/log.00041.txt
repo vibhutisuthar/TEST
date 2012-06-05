@@ -1,0 +1,122 @@
+2012-04-20 12:29:50.6317 TravelPlans Debug Point 3
+2012-04-20 12:29:53.3297 TravelPlans Debug Point 5
+2012-04-20 12:33:25.0261 TravelPlans Enter : debug point 1
+2012-04-20 12:33:25.2214 TravelPlans Enter : debug point 2
+2012-04-20 12:33:25.2214 TravelPlans Starting Search Threads
+2012-04-20 12:33:25.2693 TravelPlans Disk Search Invoice started
+2012-04-20 12:33:25.2693 TravelPlans Disk Search Invoice in way
+2012-04-20 12:33:25.2693 TravelPlans Disk Search Itinerary finished
+2012-04-20 12:33:25.2800 TravelPlans Disk Search Invoice finished
+2012-04-20 12:33:25.3005 TravelPlans Surname Check started
+2012-04-20 12:33:25.3005 TravelPlans m_RLOC : JKJXQ5
+2012-04-20 12:33:25.3005 TravelPlans m_RLOC : JKJXQ5
+2012-04-20 12:33:25.3005 TravelPlans ending Search Threads
+2012-04-20 12:33:25.3513 TravelPlans Trip Summary Finished
+2012-04-20 12:33:35.3731 TravelPlans No records found in mailrecords table matching criteria
+2012-04-20 12:33:35.3731 TravelPlans Enter : debug point 3
+2012-04-20 12:33:35.3731 TravelPlans Invoices in database / found on disk Database records DS was null
+2012-04-20 12:33:35.4317 TravelPlans Surname Check Finished
+2012-04-20 12:33:51.0391 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 12:33:51.0391 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 12:33:52.1279 TravelPlans Debug Point 2
+2012-04-20 12:34:05.9444 GalileoDecoder Address Details Company: IBMSG
+2012-04-20 12:34:05.9444 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 12:34:05.9444 GalileoDecoder Address Details Team: 
+2012-04-20 12:34:16.6996 GalileoDecoder Address DSN: American Express Travel (S) Pte Ltd<br/>60 Alexandra Terrace<br/>The Comtech 08-06 Lobby B<br/>Singapore 118502<br/>Telephone Intl +44 203 3645717 Local  800 1205636<br/>Reg No 199300971E<br/>
+2012-04-20 12:34:45.4927 TravelPlans Debug Point 3
+2012-04-20 12:34:45.4927 TravelPlans Debug Point 5
+2012-04-20 12:35:15.4907 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 12:35:18.2728 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 12:35:27.9069 TravelPlans Debug Point 2
+2012-04-20 12:35:50.1604 GalileoDecoder Address Details Company: IBMSG
+2012-04-20 12:35:50.1604 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 12:35:50.1604 GalileoDecoder Address Details Team: 
+2012-04-20 12:36:01.5718 GalileoDecoder Address DSN: American Express Travel (S) Pte Ltd<br/>60 Alexandra Terrace<br/>The Comtech 08-06 Lobby B<br/>Singapore 118502<br/>Telephone Intl +44 203 3645717 Local  800 1205636<br/>Reg No 199300971E<br/>
+2012-04-20 12:36:29.2761 TravelPlans Debug Point 3
+2012-04-20 12:37:38.7160 TravelPlans Debug Point 5
+2012-04-20 12:38:00.5876 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 12:38:07.9162 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 12:38:58.5644 TravelPlans Debug Point 2
+2012-04-20 12:39:22.3265 GalileoDecoder Address Details Company: IBMSG
+2012-04-20 12:39:22.3265 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 12:39:22.3265 GalileoDecoder Address Details Team: 
+2012-04-20 12:39:33.8863 GalileoDecoder Address DSN: American Express Travel (S) Pte Ltd<br/>60 Alexandra Terrace<br/>The Comtech 08-06 Lobby B<br/>Singapore 118502<br/>Telephone Intl +44 203 3645717 Local  800 1205636<br/>Reg No 199300971E<br/>
+2012-04-20 12:41:17.5057 TravelPlans Debug Point 3
+2012-04-20 12:41:18.9382 TravelPlans Debug Point 5
+2012-04-20 12:42:47.0449 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 12:42:50.0388 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 12:42:52.7164 TravelPlans Debug Point 2
+2012-04-20 12:43:09.3549 GalileoDecoder Address Details Company: IBMSG
+2012-04-20 12:43:09.3549 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 12:43:09.3549 GalileoDecoder Address Details Team: 
+2012-04-20 12:43:18.3524 GalileoDecoder Address DSN: American Express Travel (S) Pte Ltd<br/>60 Alexandra Terrace<br/>The Comtech 08-06 Lobby B<br/>Singapore 118502<br/>Telephone Intl +44 203 3645717 Local  800 1205636<br/>Reg No 199300971E<br/>
+2012-04-20 12:43:43.0579 TravelPlans Debug Point 3
+2012-04-20 12:43:53.7955 TravelPlans Debug Point 5
+2012-04-20 12:45:02.3477 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 12:45:05.4686 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 12:45:17.5518 TravelPlans Debug Point 2
+2012-04-20 12:45:48.6768 GalileoDecoder Address Details Company: IBMSG
+2012-04-20 12:45:48.6768 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 12:45:48.6768 GalileoDecoder Address Details Team: 
+2012-04-20 12:46:01.1154 GalileoDecoder Address DSN: American Express Travel (S) Pte Ltd<br/>60 Alexandra Terrace<br/>The Comtech 08-06 Lobby B<br/>Singapore 118502<br/>Telephone Intl +44 203 3645717 Local  800 1205636<br/>Reg No 199300971E<br/>
+2012-04-20 12:47:15.0795 TravelPlans Debug Point 3
+2012-04-20 12:47:16.1575 TravelPlans Debug Point 5
+2012-04-20 12:47:34.8526 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 12:47:37.1991 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 12:47:43.1870 TravelPlans Debug Point 2
+2012-04-20 12:48:01.0043 GalileoDecoder Address Details Company: 
+2012-04-20 12:48:01.0043 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 12:48:01.0043 GalileoDecoder Address Details Team: 
+2012-04-20 12:48:10.0115 GalileoDecoder Didn't Find, trying Address Details Company: 
+2012-04-20 12:48:10.0115 GalileoDecoder Didn't Find, trying Address Details Formname: AXQIITNONLINE
+2012-04-20 12:48:10.0115 GalileoDecoder Didn't Find, trying Address Details Team: 
+2012-04-20 12:48:19.0939 GalileoDecoder Didn't Find, trying Address Details Company: <blank>
+2012-04-20 12:48:19.0959 GalileoDecoder Didn't Find, trying Address Details Formname: AXQIITNONLINE
+2012-04-20 12:48:19.0959 GalileoDecoder Didn't Find, trying Address Details Team: 
+2012-04-20 12:48:28.3560 GalileoDecoder Address DSN: American Express International Inc.<br/>233 Collins Street<br/>Melbourne VIC Australia 3000<br/>Email:  servicecentre-melbourne@aexp.com<br/>Telephone: +61 3 9633 6333<br/>Facsimile: +61 3 9633 6301<br/>ABN No 15 000 618 208 	 AFS No 237996<br/>
+2012-04-20 12:49:10.0731 TravelPlans Debug Point 3
+2012-04-20 12:49:11.0525 TravelPlans Debug Point 4 : 
+2012-04-20 12:49:40.7625 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 12:49:46.2700 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 12:49:48.5853 TravelPlans Debug Point 2
+2012-04-20 12:49:59.2047 GalileoDecoder Address Details Company: IBMSG
+2012-04-20 12:49:59.2047 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 12:49:59.2184 GalileoDecoder Address Details Team: 
+2012-04-20 12:50:11.1082 GalileoDecoder Address DSN: American Express Travel (S) Pte Ltd<br/>60 Alexandra Terrace<br/>The Comtech 08-06 Lobby B<br/>Singapore 118502<br/>Telephone Intl +44 203 3645717 Local  800 1205636<br/>Reg No 199300971E<br/>
+2012-04-20 12:50:35.7424 TravelPlans Debug Point 3
+2012-04-20 12:50:44.1989 TravelPlans Debug Point 5
+2012-04-20 12:52:12.5311 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 12:52:14.4763 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 12:52:16.4850 TravelPlans Debug Point 2
+2012-04-20 12:52:28.8162 GalileoDecoder Address Details Company: IBMSG
+2012-04-20 12:52:28.8162 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 12:52:28.8162 GalileoDecoder Address Details Team: 
+2012-04-20 12:52:38.6652 GalileoDecoder Address DSN: American Express Travel (S) Pte Ltd<br/>60 Alexandra Terrace<br/>The Comtech 08-06 Lobby B<br/>Singapore 118502<br/>Telephone Intl +44 203 3645717 Local  800 1205636<br/>Reg No 199300971E<br/>
+2012-04-20 12:53:04.6616 TravelPlans Debug Point 3
+2012-04-20 12:53:19.6069 TravelPlans Debug Point 5
+2012-04-20 12:57:47.4579 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 12:57:50.6189 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 12:57:52.7027 TravelPlans Debug Point 2
+2012-04-20 12:58:08.8237 GalileoDecoder Address Details Company: IBMSG
+2012-04-20 12:58:08.8237 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 12:58:08.8237 GalileoDecoder Address Details Team: 
+2012-04-20 12:58:17.5273 GalileoDecoder Address DSN: American Express Travel (S) Pte Ltd<br/>60 Alexandra Terrace<br/>The Comtech 08-06 Lobby B<br/>Singapore 118502<br/>Telephone Intl +44 203 3645717 Local  800 1205636<br/>Reg No 199300971E<br/>
+2012-04-20 13:02:09.8161 TravelPlans Debug Point 3
+2012-04-20 13:02:10.5329 TravelPlans Debug Point 5
+2012-04-20 13:59:47.3495 TravelPlans Itinerary: Mailrecords found : 1
+2012-04-20 13:59:47.5194 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-04-20 13:59:47.5194 TravelPlans CreateDisplayFile debug point 01
+2012-04-20 13:59:47.6220 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 13:59:52.8814 TravelPlans File copied
+2012-04-20 13:59:53.0152 TravelPlans Decrypting file
+2012-04-20 13:59:53.0152 TravelPlans FileDecrypt: Debug point 01
+2012-04-20 13:59:53.6177 TravelPlans FileDecrypt: Debug point 02
+2012-04-20 13:59:53.7944 TravelPlans Decrypt : c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt to c:\temp\jpuwvempdrb4m5eq2jel5uxp.doc
+2012-04-20 13:59:56.1664 TravelPlans Decrypted : 
+2012-04-20 13:59:56.1664 TravelPlans Decrypted file
+2012-04-20 13:59:56.1664 TravelPlans Deleted c:\temp\jpuwvempdrb4m5eq2jel5uxp.txt
+2012-04-20 13:59:56.1664 TravelPlans Returning
+2012-04-20 13:59:56.4036 TravelPlans Retrieving c:\temp\jpuwvempdrb4m5eq2jel5uxp.htm
+2012-04-20 13:59:56.4036 TravelPlans Fixing HTML
+2012-04-20 14:00:22.0700 TravelPlans Enter : debug point 1
+2012-04-20 14:00:22.1969 TravelPlans Enter : debug point 2

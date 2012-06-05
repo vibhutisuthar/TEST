@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "DownloadToCalendar";
+    //Layout = "~/Views/Shared/StoredItin.cshtml";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+}
+@{
+    bool bPrintViewBag = Convert.ToBoolean(ViewBag.bPrint);    
+}
+@using (Html.BeginForm("DownloadToCalendar", "Calendar", FormMethod.Post, new { id = "frmDownloadToCalendar", name = "frmDownloadToCalendar" }))
+{    
+    @*<div class="ItinContent" id="ItinContent" enableviewstate="false">
+    </div>
+    <table width="100%">
+        <tr>
+            <td>
+                <span class="ItinPrint">
+                    @if (bPrintViewBag)
+                    {
+                        Response.Write("Printed " + DateTime.Now.ToString());
+                    }
+                    else { Response.Write("&nbsp;"); }
+                </span>
+            </td>
+            <td align="right">
+                <img id="Img1" src="~/images/AmexFooter.gif" border="0" alt="footer logo" width="250"
+                    height="37" />
+            </td>
+        </tr>
+    </table>    *@
+}

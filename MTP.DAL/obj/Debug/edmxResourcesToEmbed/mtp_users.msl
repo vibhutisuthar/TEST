@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mtp_usersModelStoreContainer" CdmEntityContainer="mtpUsersEntities">
+    <EntitySetMapping Name="LoginUsers">
+      <EntityTypeMapping TypeName="mtp_usersModel.LoginUser">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="encodestring" ColumnName="encodestring" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="emailaddress" ColumnName="emailaddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="last_login" ColumnName="last_login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

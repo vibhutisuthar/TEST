@@ -1,0 +1,81 @@
+﻿@*@{
+    ViewBag.Title = "Itin";
+    Layout = "~/Views/Shared/StoredItin.cshtml";
+}
+@{
+    bool bPrintViewBag = Convert.ToBoolean(ViewBag.bPrint);    
+}
+@using (Html.BeginForm("Itin", "Itinerary", FormMethod.Post, new { id = "frmItin", name = "frmItin" }))
+{
+    <div class="ItinContent test" id="ItinContent">
+        @Html.Raw(@ViewBag.ItinContent)
+    </div>
+    <table width="100%" style="text-align: right; margin-left: 455px; background-color: #ffcc00; display: none;">
+        <tr>
+            <td>
+                <span class="ItinPrint">
+                    @if (bPrintViewBag)
+                    {
+                        // string strPrint = "printed" + DateTime.Now.ToString();
+                        //Response.Write("Printed " + DateTime.Now.ToString());
+                        //@strPrint 
+                    }
+                    else
+                    {
+                        //string strPrint = "";
+                        //@strPrint
+                        Response.Write("&nbsp;");
+                    }
+                </span>
+            </td>
+            <td align="right" style="text-align: right">
+                <img src="@Url.Content("~/Content/images/AmexFooter.gif")"  border="0" alt="footer logo" width="250"
+                    height="37"/>
+            </td>
+        </tr>
+    </table>
+}
+
+*@
+@{
+    ViewBag.Title = "Itin";
+    //Layout = "~/Views/Shared/StoredItin.cshtml";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+}
+@{
+    bool bPrintViewBag = Convert.ToBoolean(ViewBag.bPrint);
+    ViewBag.Printed = "Printed " + DateTime.Now.ToString();
+    ViewBag.Empty = "";
+}
+<div class="itinerary">
+    @using (Html.BeginForm("Itin", "Itinerary", FormMethod.Post, new { id = "frmItin", name = "frmItin" }))
+    {         
+        <br />
+        <div class="ItinContent" id="ItinContent" enableviewstate="false">
+            @Html.Raw(@ViewBag.ItinContent)
+        </div>
+        <table width="100%" style="text-align: right; margin-left: 455px">
+            <tr>
+                <td>
+                    <span class="ItinPrint">
+                        @if (bPrintViewBag)
+                        {
+                            //@ViewBag.Printed
+                            Response.Write("<span class='ms_pre_doctype'></span>");
+                            //Response.Write("Printed " + DateTime.Now.ToString());
+                        }
+                        else
+                        {
+                            //@ViewBag.Empty
+                            Response.Write("<span class='ms_pre_doctype'></span>");
+                        }
+                    </span>
+                </td>
+                <td align="right" style="text-align: right">
+                    <img src="@Url.Content("~/Content/images/AmexFooter.gif")"  border="0" alt="footer logo" width="250"
+                    height="37"/>
+                </td>   
+            </tr>
+        </table>         
+    }
+</div>

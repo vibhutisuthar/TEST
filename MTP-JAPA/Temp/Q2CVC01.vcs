@@ -1,0 +1,62 @@
+BEGIN:VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+DCREATED: 20120420T061424Z
+DTSTART: 20121105T090500Z
+DTEND: 20121105T141000Z
+PRIORITY: 0
+SUMMARY: 05Nov SQ 212 Dep SYD 09:05 T1 to SIN 14:10
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Travel DetailsMonday=A005 Nov 2012=
+=A0=A0Flight InformationAirlineSingapore AirlinesConfirmed=A0FlightSQ 212Flyin=
+g Time08Hrs 05MinsOriginsydney (SYD)No Of StopsNon-StopDestinationsingapore=
+ (SIN)=A0=A0Departing09:05MealsMealArriving14:10=A0/=A005 Nov 2012AircraftB=
+oeing 777-300=A0Departure TerminalTerminal 1=A0=A0ClassEconomy (Y)=A0=A0Spe=
+cial RequestsSEGMENT RELATED REMARK=A0=A0
+
+LOCATION:Booking Reference: Q2CVC0
+X-ALT-DESC;FMTTYPE=text/html;ENCODING=QUOTED-PRINTABLE:<html><head><title><=
+/title></head><body>=0D=0A<table class=3D"SegmentTable" ID=3D"Table1" borde=
+r=3D"0" xmlns=3D"http://www.w3.org/1999/xhtml"><span id=3D"DateLine"><tr><t=
+d class=3D"headerCol1"><p><span class=3D"AmexSegment">Travel Details</span>=
+</p></td><td class=3D"headerCol2"><span class=3D"Date"><Day>Monday</Day>&nb=
+sp;<Date>05 Nov 2012</Date></span></td></tr></span><tr><td class=3D"SegCol1=
+">&nbsp;</td><td align=3D"right">&nbsp;<Calendar /></td></tr><tr><td class=
+=3D"FlightInfo" colspan=3D"2"><b>Flight Information</b></td></tr><tr><td colsp=
+an=3D"2"><table class=3D"SubSegment" ID=3D"Table2"><tr><td class=3D"SegCol1=
+">Airline</td><td class=3D"SegCol2"><span class=3D"Airline"><Airline>Singap=
+ore Airlines</Airline></span></td><td class=3D"SegCol3"><span class=3D"stat=
+us"><Status>Confirmed</Status></span></td><td class=3D"SegCol4">&nbsp;</td>=
+</tr><tr><td class=3D"SegCol1">Flight</td><td class=3D"SegCol2"><span class=
+=3D"FlightNumber"><FlightNumber>SQ 212</FlightNumber></span></td><td class=
+=3D"SegCol3">Flying Time</td><td class=3D"SegCol4"><Duration>08Hrs 05Mins</Dur=
+ation></td></tr><tr><td class=3D"SegCol1">Origin</td><td class=3D"SegCol2">=
+<span class=3D"City"><Departs>sydney (SYD)</Departs></span></td><td class=
+=3D"SegCol3">No Of Stops</td><td class=3D"SegCol4"><Stops>Non-Stop</Stops></td=
+></tr><tr><td class=3D"SegCol1">Destination</td><td class=3D"SegCol2"><span=
+ class=3D"City"><Arrive>singapore (SIN)</Arrive></span></td><span id=3D"Tra=
+nsitSection"><td class=3D"SegCol3">&nbsp;</td><td class=3D"SegCol4">&nbsp;<=
+/td></span></tr><tr><td class=3D"SegCol1" valign=3D"top">Departing</td><td =
+class=3D"SegCol2" valign=3D"top"><DepTime>09:05</DepTime></td><span id=3D"M=
+ealSection"><td class=3D"SegCol3" valign=3D"top">Meals</td><td class=3D"Seg=
+Col4" valign=3D"top"><Meals>Meal</Meals></td></span></tr><tr><td class=3D"S=
+egCol1" valign=3D"top">Arriving</td><td class=3D"SegCol2" valign=3D"top"><A=
+rrTime>14:10</ArrTime>&nbsp;/&nbsp;<ADate>05 Nov 2012</ADate></td><span id=
+=3D"EquipmentSection"><td class=3D"SegCol3" valign=3D"top">Aircraft</td><td cl=
+ass=3D"SegCol4" valign=3D"top"><Equip>Boeing 777-300</Equip></td></span></t=
+r><tr><td class=3D"SegCol1" colspan=3D"4">&nbsp;</td></tr><span id=3D"Opera=
+tedBySection"></span><span id=3D"DepartureTerminalSection"><tr><td class=
+=3D"SegCol1">Departure Terminal</td><td class=3D"SegCol2"><DTerm>Terminal 1</D=
+Term></td><td class=3D"SegCol3">&nbsp;</td><td class=3D"SegCol4">&nbsp;</td=
+></tr></span><span id=3D"ArrivalTerminalSection"></span><span id=3D"SeatSec=
+tion"></span><span id=3D"ClassSection"><tr><td class=3D"SegCol1">Class</td>=
+<td class=3D"SegCol2"><Class>Economy (Y)</Class></td><td class=3D"SegCol3">=
+&nbsp;</td><td class=3D"SegCol4">&nbsp;</td></tr></span><span id=3D"Special=
+Requests"><tr><td class=3D"SegCol1" valign=3D"top">Special Requests</td><td=
+ class=3D"SegCol2" colspan=3D"3" valign=3D"top"><SSR /><Service></Service><=
+/td></tr></span><tr><Remarks><tr><td colspan=3D"4">SEGMENT RELATED REMARK</=
+td><td>&nbsp;</td></tr></Remarks></tr><tr><td class=3D"SegCol1" colspan=3D"=
+4">&nbsp;</td></tr></table></td></tr></table>=0D=0A</body></html>
+
+CLASS:PUBLIC
+END:VEVENT
+END:VCALENDAR

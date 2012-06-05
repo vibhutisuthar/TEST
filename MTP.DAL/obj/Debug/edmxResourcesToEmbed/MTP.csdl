@@ -1,0 +1,861 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="wozModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="wozEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="companies" EntityType="wozModel.company" />
+    <EntitySet Name="consultants" EntityType="wozModel.consultant" />
+    <EntitySet Name="costcentres" EntityType="wozModel.costcentre" />
+    <EntitySet Name="countries" EntityType="wozModel.country" />
+    <EntitySet Name="countries_old" EntityType="wozModel.countries_old" />
+    <EntitySet Name="dktables" EntityType="wozModel.dktable" />
+    <EntitySet Name="dktable_old" EntityType="wozModel.dktable_old" />
+    <EntitySet Name="emailaddresses" EntityType="wozModel.emailaddress" />
+    <EntitySet Name="etickets" EntityType="wozModel.eticket" />
+    <EntitySet Name="etickettests" EntityType="wozModel.etickettest" />
+    <EntitySet Name="gmaxes" EntityType="wozModel.gmax" />
+    <EntitySet Name="gmaxlogs" EntityType="wozModel.gmaxlog" />
+    <EntitySet Name="jobnumbers" EntityType="wozModel.jobnumber" />
+    <EntitySet Name="mailinglists" EntityType="wozModel.mailinglist" />
+    <EntitySet Name="mailrecords" EntityType="wozModel.mailrecord" />
+    <EntitySet Name="optouts" EntityType="wozModel.optout" />
+    <EntitySet Name="premailrecords" EntityType="wozModel.premailrecord" />
+    <EntitySet Name="processorcountries" EntityType="wozModel.processorcountry" />
+    <EntitySet Name="processornames" EntityType="wozModel.processorname" />
+    <EntitySet Name="qisegments" EntityType="wozModel.qisegment" />
+    <EntitySet Name="queueforwardlogs" EntityType="wozModel.queueforwardlog" />
+    <EntitySet Name="queueforwardlog_deleted" EntityType="wozModel.queueforwardlog_deleted" />
+    <EntitySet Name="rates" EntityType="wozModel.rate" />
+    <EntitySet Name="rloccomps" EntityType="wozModel.rloccomp" />
+    <EntitySet Name="rlocs" EntityType="wozModel.rloc" />
+    <EntitySet Name="roles" EntityType="wozModel.role" />
+    <EntitySet Name="segments" EntityType="wozModel.segment" />
+    <EntitySet Name="segmentformats" EntityType="wozModel.segmentformat" />
+    <EntitySet Name="sessionsearches" EntityType="wozModel.sessionsearch" />
+    <EntitySet Name="sgetickets" EntityType="wozModel.sgeticket" />
+    <EntitySet Name="tb_emailaddress" EntityType="wozModel.tb_emailaddress" />
+    <EntitySet Name="tb_header" EntityType="wozModel.tb_header" />
+    <EntitySet Name="tb_history" EntityType="wozModel.tb_history" />
+    <EntitySet Name="tb_history_cost" EntityType="wozModel.tb_history_cost" />
+    <EntitySet Name="tb_history_header" EntityType="wozModel.tb_history_header" />
+    <EntitySet Name="tb_history_item" EntityType="wozModel.tb_history_item" />
+    <EntitySet Name="tb_history_types" EntityType="wozModel.tb_history_types" />
+    <EntitySet Name="tb_passenger" EntityType="wozModel.tb_passenger" />
+    <EntitySet Name="tb_pnr_segment" EntityType="wozModel.tb_pnr_segment" />
+    <EntitySet Name="tb_ticket" EntityType="wozModel.tb_ticket" />
+    <EntitySet Name="tb_ticket_fop" EntityType="wozModel.tb_ticket_fop" />
+    <EntitySet Name="tb_ticket_pnr" EntityType="wozModel.tb_ticket_pnr" />
+    <EntitySet Name="tb_ticket_segment" EntityType="wozModel.tb_ticket_segment" />
+    <EntitySet Name="tb_ticket_text" EntityType="wozModel.tb_ticket_text" />
+    <EntitySet Name="tb_ticket_textdata" EntityType="wozModel.tb_ticket_textdata" />
+    <EntitySet Name="tddts" EntityType="wozModel.tddt" />
+    <EntitySet Name="tickets" EntityType="wozModel.ticket" />
+    <EntitySet Name="toursegmentexceptions" EntityType="wozModel.toursegmentexception" />
+    <EntitySet Name="users" EntityType="wozModel.user" />
+  </EntityContainer>
+  <EntityType Name="company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" Nullable="false" />
+    <Property Name="CompanyCode" Type="String" Nullable="false" />
+    <Property Name="ReturnEmailAddress" Type="String" />
+    <Property Name="ProcessDataFlag" Type="Int32" Nullable="false" />
+    <Property Name="D2C" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="consultant">
+    <Key>
+      <PropertyRef Name="WEB_PROFILE" />
+      <PropertyRef Name="BRANCH_CODE" />
+      <PropertyRef Name="CONSULTANT_CODE" />
+    </Key>
+    <Property Name="WEB_PROFILE" Type="String" Nullable="false" />
+    <Property Name="BRANCH_CODE" Type="String" Nullable="false" />
+    <Property Name="CONSULTANT_CODE" Type="String" Nullable="false" />
+    <Property Name="FAMILY_NAME" Type="String" />
+    <Property Name="GIVEN_NAME" Type="String" />
+    <Property Name="TITLE" Type="String" />
+    <Property Name="CONSULTANT_QUEUE_NUMBER" Type="String" />
+    <Property Name="PHONE_NUMBER" Type="String" />
+    <Property Name="FAX_NUMBER" Type="String" />
+    <Property Name="EMAIL_ADDRESS" Type="String" />
+    <Property Name="STATUS_OK" Type="SByte" />
+  </EntityType>
+  <EntityType Name="costcentre">
+    <Key>
+      <PropertyRef Name="CostCentreName" />
+      <PropertyRef Name="CostCentre1" />
+    </Key>
+    <Property Name="CostCentreName" Type="String" Nullable="false" />
+    <Property Name="CostCentre1" Type="String" Nullable="false" />
+    <Property Name="PCC" Type="String" />
+    <Property Name="PCCType" Type="String" />
+    <Property Name="Business" Type="String" />
+    <Property Name="Company" Type="String" />
+    <Property Name="GDS" Type="String" />
+    <Property Name="BranchCode" Type="String" />
+    <Property Name="CountryCode" Type="String" />
+    <Property Name="GST" Type="String" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="CountryName" />
+      <PropertyRef Name="CountryCode" />
+    </Key>
+    <Property Name="CountryName" Type="String" Nullable="false" />
+    <Property Name="CountryCode" Type="String" Nullable="false" />
+    <Property Name="Malaria" Type="Int64" />
+    <Property Name="Region" Type="String" />
+    <Property Name="TLCC" Type="String" />
+    <Property Name="TDCC" Type="String" />
+    <Property Name="DESCRIPTION" Type="String" />
+    <Property Name="StateCode" Type="String" />
+  </EntityType>
+  <EntityType Name="countries_old">
+    <Key>
+      <PropertyRef Name="CountryName" />
+      <PropertyRef Name="CountryCode" />
+    </Key>
+    <Property Name="CountryName" Type="String" Nullable="false" />
+    <Property Name="CountryCode" Type="String" Nullable="false" />
+    <Property Name="Malaria" Type="Int64" />
+    <Property Name="Region" Type="String" />
+    <Property Name="TLCC" Type="String" />
+    <Property Name="TDCC" Type="String" />
+    <Property Name="DESCRIPTION" Type="String" />
+    <Property Name="StateCode" Type="String" />
+  </EntityType>
+  <EntityType Name="dktable">
+    <Key>
+      <PropertyRef Name="DKNumber" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="TMR_ID" />
+      <PropertyRef Name="Stamp" />
+    </Key>
+    <Property Name="DKNumber" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="TMR_ID" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="dktable_old">
+    <Key>
+      <PropertyRef Name="DKNumber" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="TMR_ID" />
+      <PropertyRef Name="Stamp" />
+    </Key>
+    <Property Name="DKNumber" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="TMR_ID" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="emailaddress">
+    <Key>
+      <PropertyRef Name="CostCentre" />
+      <PropertyRef Name="EmailAddress1" />
+    </Key>
+    <Property Name="CostCentre" Type="String" Nullable="false" />
+    <Property Name="BranchName" Type="String" />
+    <Property Name="EmailAddress1" Type="String" Nullable="false" />
+    <Property Name="Password" Type="String" />
+    <Property Name="Security" Type="Int32" />
+    <Property Name="LastLogin" Type="DateTime" />
+    <Property Name="LastTransaction" Type="DateTime" />
+    <Property Name="Time_Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eticket">
+    <Key>
+      <PropertyRef Name="WebProfile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WebProfile" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDate" Type="DateTime" Nullable="false" />
+    <Property Name="TicketNumber" Type="String" Nullable="false" />
+    <Property Name="Location" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+    <Property Name="Processed" Type="Int64" Nullable="false" />
+    <Property Name="Company" Type="String" Nullable="false" />
+    <Property Name="Team" Type="String" Nullable="false" />
+    <Property Name="ProcessTime" Type="DateTime" Nullable="false" />
+    <Property Name="RetryCount" Type="Int64" Nullable="false" />
+    <Property Name="ProcessorName" Type="String" />
+    <Property Name="Surname" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="etickettest">
+    <Key>
+      <PropertyRef Name="WebProfile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WebProfile" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDate" Type="DateTime" Nullable="false" />
+    <Property Name="TicketNumber" Type="String" Nullable="false" />
+    <Property Name="Location" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+    <Property Name="Processed" Type="Int64" Nullable="false" />
+    <Property Name="Company" Type="String" Nullable="false" />
+    <Property Name="Team" Type="String" Nullable="false" />
+    <Property Name="ProcessTime" Type="DateTime" Nullable="false" />
+    <Property Name="RetryCount" Type="Int64" Nullable="false" />
+    <Property Name="ProcessorName" Type="String" />
+    <Property Name="Surname" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gmax">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="DateRun" Type="DateTime" Nullable="false" />
+    <Property Name="SiftDate" Type="DateTime" Nullable="false" />
+    <Property Name="FileName" Type="String" Nullable="false" />
+    <Property Name="FileSize" Type="Int64" Nullable="false" />
+    <Property Name="Transactions" Type="Int64" Nullable="false" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="Successful" Type="Int64" Nullable="false" />
+    <Property Name="Sent" Type="Int64" Nullable="false" />
+    <Property Name="CreditNotes" Type="Int64" Nullable="false" />
+    <Property Name="Errors" Type="Int64" Nullable="false" />
+    <Property Name="Notes" Type="String" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="gmaxlog">
+    <Key>
+      <PropertyRef Name="BatchName" />
+      <PropertyRef Name="DateRun" />
+    </Key>
+    <Property Name="BatchName" Type="String" Nullable="false" />
+    <Property Name="ID" Type="String" Nullable="false" />
+    <Property Name="DateRun" Type="DateTime" Nullable="false" />
+    <Property Name="SiftDate" Type="DateTime" Nullable="false" />
+    <Property Name="FileName" Type="String" Nullable="false" />
+    <Property Name="FileSize" Type="Int64" Nullable="false" />
+    <Property Name="Transactions" Type="Int64" Nullable="false" />
+    <Property Name="Queued" Type="Int64" Nullable="false" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="Successful" Type="Int64" Nullable="false" />
+    <Property Name="Invoices" Type="Int64" Nullable="false" />
+    <Property Name="CreditNotes" Type="Int64" Nullable="false" />
+    <Property Name="Errors" Type="Int64" Nullable="false" />
+    <Property Name="Notes" Type="String" />
+    <Property Name="SenttoCRS" Type="Int32" Nullable="false" />
+    <Property Name="SequenceNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="jobnumber">
+    <Key>
+      <PropertyRef Name="JobNumber1" />
+    </Key>
+    <Property Name="JobNumber1" Type="String" Nullable="false" />
+    <Property Name="nStatus" Type="Int32" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mailinglist">
+    <Key>
+      <PropertyRef Name="EmailAddress" />
+    </Key>
+    <Property Name="EmailAddress" Type="String" Nullable="false" />
+    <Property Name="BlockSending" Type="Int32" />
+    <Property Name="ChangeDate" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="mailrecord">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RLOC" Type="String" />
+    <Property Name="Subject" Type="String" />
+    <Property Name="FromName" Type="String" />
+    <Property Name="SenderName" Type="String" />
+    <Property Name="ToName" Type="String" />
+    <Property Name="Received" Type="DateTime" />
+    <Property Name="DeliveryTime" Type="String" />
+    <Property Name="Contents" Type="String" />
+    <Property Name="Agent" Type="String" />
+    <Property Name="Method" Type="String" />
+    <Property Name="Processor" Type="Int32" />
+    <Property Name="ProcessorName" Type="String" />
+    <Property Name="FormName" Type="String" />
+    <Property Name="Created" Type="DateTime" />
+    <Property Name="PreprocStatus" Type="Int32" />
+    <Property Name="TicketNumber" Type="String" />
+    <Property Name="DocumentNumber" Type="String" />
+    <Property Name="OrderNumber" Type="String" />
+    <Property Name="CustomerReference" Type="String" />
+    <Property Name="Processed" Type="Int32" Nullable="false" />
+    <Property Name="Company" Type="String" />
+    <Property Name="Category" Type="String" />
+    <Property Name="ItinType" Type="Int32" Nullable="false" />
+    <Property Name="time_stamp" Type="DateTime" Nullable="false" />
+    <Property Name="TripRequest" Type="String" />
+    <Property Name="FileName" Type="String" />
+    <Property Name="Pseudo" Type="String" Nullable="false" />
+    <Property Name="Team" Type="String" />
+    <Property Name="BounceEmailID" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="optout">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" Nullable="false" />
+    <Property Name="Code" Type="String" />
+    <Property Name="DateCode" Type="String" />
+    <Property Name="space" Type="String" />
+    <Property Name="txt" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="premailrecord">
+    <Key>
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="Surname" />
+    </Key>
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="Surname" Type="String" Nullable="false" />
+    <Property Name="Company" Type="String" />
+    <Property Name="Team" Type="String" />
+    <Property Name="GDS" Type="String" />
+    <Property Name="Email" Type="String" />
+    <Property Name="IVMail" Type="String" />
+    <Property Name="ReplyEmail" Type="String" />
+    <Property Name="CompanyName" Type="String" />
+    <Property Name="Address1" Type="String" />
+    <Property Name="Address2" Type="String" />
+    <Property Name="CityStatePostCode" Type="String" />
+    <Property Name="Country" Type="String" />
+    <Property Name="DKNumber" Type="String" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+    <Property Name="AirlineLoc1" Type="String" />
+    <Property Name="AirlineLoc2" Type="String" />
+  </EntityType>
+  <EntityType Name="processorcountry">
+    <Key>
+      <PropertyRef Name="ProcessorName" />
+    </Key>
+    <Property Name="ProcessorName" Type="String" Nullable="false" />
+    <Property Name="Country" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="processorname">
+    <Key>
+      <PropertyRef Name="ProcessorName1" />
+    </Key>
+    <Property Name="ProcessorName1" Type="String" Nullable="false" />
+    <Property Name="Country" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="qisegment">
+    <Key>
+      <PropertyRef Name="GDS" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="SegmentNumber" />
+    </Key>
+    <Property Name="GDS" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="SegmentNumber" Type="Int64" Nullable="false" />
+    <Property Name="FileLocation" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="queueforwardlog">
+    <Key>
+      <PropertyRef Name="RLOC" />
+    </Key>
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="QueueKey" Type="String" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+    <Property Name="ProcessorSummaryName" Type="String" Nullable="false" />
+    <Property Name="ErrorMessage" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="queueforwardlog_deleted">
+    <Key>
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="Stamp" />
+      <PropertyRef Name="ProcessorSummaryName" />
+      <PropertyRef Name="ErrorMessage" />
+    </Key>
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="QueueKey" Type="String" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+    <Property Name="ProcessorSummaryName" Type="String" Nullable="false" />
+    <Property Name="ErrorMessage" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" />
+    <Property Name="Rate1" Type="String" />
+    <Property Name="value" Type="Int32" />
+    <Property Name="Admin" Type="String" />
+  </EntityType>
+  <EntityType Name="rloccomp">
+    <Key>
+      <PropertyRef Name="rlocid" />
+    </Key>
+    <Property Name="rlocid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rloc" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rloc">
+    <Key>
+      <PropertyRef Name="RLOC1" />
+    </Key>
+    <Property Name="RLOC1" Type="String" Nullable="false" />
+    <Property Name="Processed" Type="Int64" Nullable="false" />
+    <Property Name="PSEUDO" Type="String" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="User" />
+      <PropertyRef Name="Role1" />
+    </Key>
+    <Property Name="User" Type="String" Nullable="false" />
+    <Property Name="Role1" Type="String" Nullable="false" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="segment">
+    <Key>
+      <PropertyRef Name="CRS" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="Lang" />
+      <PropertyRef Name="SegNum" />
+    </Key>
+    <Property Name="CRS" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="Lang" Type="String" Nullable="false" />
+    <Property Name="SegNum" Type="String" Nullable="false" />
+    <Property Name="SegmentSequence" Type="Int32" Nullable="false" />
+    <Property Name="Supplier" Type="String" />
+    <Property Name="FltNo" Type="String" />
+    <Property Name="Status" Type="String" />
+    <Property Name="DateDep" Type="DateTime" />
+    <Property Name="DepCity" Type="String" />
+    <Property Name="DateArr" Type="DateTime" />
+    <Property Name="ArrCity" Type="String" />
+    <Property Name="CabinClass" Type="String" />
+    <Property Name="SegmentType" Type="String" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="segmentformat">
+    <Key>
+      <PropertyRef Name="CRS" />
+      <PropertyRef Name="TokenType" />
+      <PropertyRef Name="Lang" />
+      <PropertyRef Name="token" />
+    </Key>
+    <Property Name="CRS" Type="String" Nullable="false" />
+    <Property Name="TokenType" Type="String" Nullable="false" />
+    <Property Name="Lang" Type="String" Nullable="false" />
+    <Property Name="token" Type="String" Nullable="false" />
+    <Property Name="Header" Type="String" Nullable="false" />
+    <Property Name="CodeSnip" Type="String" />
+    <Property Name="HasData" Type="Boolean" Nullable="false" />
+    <Property Name="User" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sessionsearch">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SessionID" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" />
+    <Property Name="Subject" Type="String" />
+    <Property Name="FromName" Type="String" />
+    <Property Name="SenderName" Type="String" />
+    <Property Name="ToName" Type="String" />
+    <Property Name="Received" Type="DateTime" />
+    <Property Name="DeliveryTime" Type="String" />
+    <Property Name="Contents" Type="String" />
+    <Property Name="Agent" Type="String" />
+    <Property Name="Method" Type="String" />
+    <Property Name="Created" Type="DateTime" />
+    <Property Name="Time_Stamp" Type="DateTime" Nullable="false" />
+    <Property Name="Processor" Type="Int32" />
+    <Property Name="ProcessorName" Type="String" />
+    <Property Name="FormName" Type="String" />
+    <Property Name="PreprocStatus" Type="Int32" />
+    <Property Name="TicketNumber" Type="String" />
+    <Property Name="DocumentNumber" Type="String" />
+    <Property Name="OrderNumber" Type="String" />
+    <Property Name="TripRequest" Type="String" />
+    <Property Name="Company" Type="String" />
+    <Property Name="Category" Type="String" />
+    <Property Name="ItinType" Type="Int32" />
+    <Property Name="CustomerReference" Type="String" />
+    <Property Name="FileName" Type="String" />
+    <Property Name="nID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="sgeticket">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+    </Key>
+    <Property Name="TicketNumber" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Date" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_emailaddress">
+    <Key>
+      <PropertyRef Name="Profile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+      <PropertyRef Name="Stamp" />
+    </Key>
+    <Property Name="Profile" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="CreationDate" Type="String" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_header">
+    <Key>
+      <PropertyRef Name="Profile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+    </Key>
+    <Property Name="Profile" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="CreationDate" Type="String" Nullable="false" />
+    <Property Name="PaxName" Type="String" Nullable="false" />
+    <Property Name="Pseudo" Type="String" Nullable="false" />
+    <Property Name="ParsedDate" Type="DateTime" />
+    <Property Name="ScheduleDate" Type="DateTime" />
+    <Property Name="DepartureDate" Type="DateTime" />
+    <Property Name="ReturnDate" Type="DateTime" />
+    <Property Name="ItinSummary" Type="String" Nullable="false" />
+    <Property Name="Parsed" Type="Int32" />
+    <Property Name="CostCentre" Type="String" Nullable="false" />
+    <Property Name="TotalUnitCost" Type="Double" />
+    <Property Name="AgentSign" Type="String" />
+    <Property Name="CompanyCode" Type="String" Nullable="false" />
+    <Property Name="DepartmentCode" Type="String" Nullable="false" />
+    <Property Name="Amount" Type="Double" />
+    <Property Name="FareBasis" Type="String" />
+    <Property Name="ClientNumber" Type="String" />
+    <Property Name="Supplier" Type="String" />
+    <Property Name="PurchaseOrder" Type="String" />
+    <Property Name="RefNo" Type="String" />
+    <Property Name="ProductCode" Type="String" />
+    <Property Name="NoOfPax" Type="Int32" />
+    <Property Name="EmailTo" Type="String" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="Domestic" Type="Boolean" />
+    <Property Name="SegmentCount" Type="Int32" />
+    <Property Name="Email" Type="String" />
+    <Property Name="EmailCount" Type="Int32" />
+    <Property Name="StatusEmail" Type="String" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_history">
+    <Key>
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="HistoryDate" />
+    </Key>
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="CreationDate" Type="String" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="HistoryDate" Type="DateTime" Nullable="false" />
+    <Property Name="ReceivedBy" Type="String" />
+    <Property Name="ChangedBy" Type="String" />
+    <Property Name="NumberItems" Type="Int32" />
+    <Property Name="Cost" Type="Double" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_history_cost">
+    <Key>
+      <PropertyRef Name="CompanyCode" />
+      <PropertyRef Name="HistoryCode" />
+      <PropertyRef Name="Cost" />
+      <PropertyRef Name="Stamp" />
+    </Key>
+    <Property Name="CompanyCode" Type="String" Nullable="false" />
+    <Property Name="HistoryCode" Type="String" Nullable="false" />
+    <Property Name="Cost" Type="Double" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_history_header">
+    <Key>
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+    </Key>
+    <Property Name="Profile" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="CreationDate" Type="String" Nullable="false" />
+    <Property Name="PaxName" Type="String" />
+    <Property Name="Pseudo" Type="String" />
+    <Property Name="ParsedDate" Type="DateTime" />
+    <Property Name="ScheduleDate" Type="DateTime" />
+    <Property Name="Parsed" Type="Int32" />
+    <Property Name="CostCentre" Type="String" />
+    <Property Name="TotalUnitCost" Type="Double" />
+    <Property Name="AgentSign" Type="String" />
+    <Property Name="CompanyCode" Type="String" />
+    <Property Name="DepartureDate" Type="DateTime" />
+    <Property Name="ItinSummary" Type="String" />
+    <Property Name="DepartmentCode" Type="String" />
+    <Property Name="Domestic" Type="Boolean" />
+    <Property Name="ReturnDate" Type="DateTime" />
+    <Property Name="NoOfPax" Type="Int32" Nullable="false" />
+    <Property Name="TKT_Date" Type="DateTime" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="TICKETED" Type="Int32" Nullable="false" />
+    <Property Name="SegmentCount" Type="Int32" Nullable="false" />
+    <Property Name="AirSegmentCount" Type="Int32" Nullable="false" />
+    <Property Name="HotelSegmentCount" Type="Int32" Nullable="false" />
+    <Property Name="CarSegmentCount" Type="Int32" Nullable="false" />
+    <Property Name="GDS" Type="String" />
+    <Property Name="Email" Type="String" />
+    <Property Name="Fax" Type="String" />
+    <Property Name="Phone" Type="String" />
+    <Property Name="BookerEmail" Type="String" />
+    <Property Name="TKTIssued" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="String" />
+    <Property Name="ClientNumber" Type="String" />
+    <Property Name="FareBasis" Type="String" />
+    <Property Name="PurchaseOrder" Type="String" />
+    <Property Name="RefNo" Type="String" />
+    <Property Name="Supplier" Type="String" />
+    <Property Name="Sent" Type="Int32" Nullable="false" />
+    <Property Name="DepartureCity" Type="String" />
+    <Property Name="DestinationCity" Type="String" />
+    <Property Name="AirlineSummary" Type="String" />
+    <Property Name="EmailSent" Type="String" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+    <Property Name="Online" Type="String" />
+    <Property Name="Touch" Type="String" />
+    <Property Name="G3" Type="String" Nullable="false" />
+    <Property Name="Team" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_history_item">
+    <Key>
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+      <PropertyRef Name="HistoryDate" />
+      <PropertyRef Name="HistoryID" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="CreationDate" Type="String" Nullable="false" />
+    <Property Name="HistoryDate" Type="DateTime" Nullable="false" />
+    <Property Name="HistoryID" Type="Int64" Nullable="false" />
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HistoryType" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="Data" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_history_types">
+    <Key>
+      <PropertyRef Name="HistoryType" />
+    </Key>
+    <Property Name="HistoryType" Type="String" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Nullable="false" />
+    <Property Name="Use" Type="Int32" Nullable="false" />
+    <Property Name="description" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_passenger">
+    <Key>
+      <PropertyRef Name="Profile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+      <PropertyRef Name="PaxNum" />
+    </Key>
+    <Property Name="Profile" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="CreationDate" Type="String" Nullable="false" />
+    <Property Name="PaxNum" Type="Int32" Nullable="false" />
+    <Property Name="PaxName" Type="String" />
+  </EntityType>
+  <EntityType Name="tb_pnr_segment">
+    <Key>
+      <PropertyRef Name="Profile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+      <PropertyRef Name="SegNum" />
+    </Key>
+    <Property Name="Profile" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="CreationDate" Type="String" Nullable="false" />
+    <Property Name="SegNum" Type="String" Nullable="false" />
+    <Property Name="SegmentSequence" Type="Int32" Nullable="false" />
+    <Property Name="Supplier" Type="String" />
+    <Property Name="NoOfPax" Type="String" />
+    <Property Name="FltNo" Type="String" />
+    <Property Name="Status" Type="String" />
+    <Property Name="DateDep" Type="DateTime" />
+    <Property Name="DepCity" Type="String" />
+    <Property Name="DateArr" Type="DateTime" />
+    <Property Name="ArrCity" Type="String" />
+    <Property Name="CabinClass" Type="String" />
+    <Property Name="SegmentType" Type="String" />
+    <Property Name="CityCode" Type="String" />
+    <Property Name="Rate" Type="Decimal" />
+    <Property Name="Currency" Type="String" />
+    <Property Name="VendorName" Type="String" />
+    <Property Name="VoucherCurrency" Type="String" Nullable="false" />
+    <Property Name="VoucherRate" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_ticket">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+    </Key>
+    <Property Name="TicketNumber" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="CreationDate" Type="String" />
+    <Property Name="TicketType" Type="String" />
+    <Property Name="Amount" Type="Double" />
+    <Property Name="Currency" Type="String" />
+    <Property Name="TKTDate" Type="DateTime" />
+    <Property Name="ETKTCarrier" Type="String" />
+    <Property Name="FreeFlow" Type="String" />
+    <Property Name="IATANo" Type="String" />
+    <Property Name="Pseudo" Type="String" />
+    <Property Name="TravelAgentID" Type="String" />
+    <Property Name="PassengerName" Type="String" />
+    <Property Name="PassengerType" Type="String" />
+    <Property Name="PassengerAge" Type="String" />
+    <Property Name="ConjunctedTicketNo" Type="String" />
+    <Property Name="TKTStatus" Type="Int64" />
+    <Property Name="FareConstruction" Type="String" />
+    <Property Name="TKTData" Type="String" />
+    <Property Name="Commission" Type="Int32" Nullable="false" />
+    <Property Name="Airline" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_ticket_fop">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="TicketNumber" Type="String" Nullable="false" />
+    <Property Name="ID" Type="String" Nullable="false" />
+    <Property Name="Type" Type="String" Nullable="false" />
+    <Property Name="Currency" Type="String" Nullable="false" />
+    <Property Name="Amount" Type="String" Nullable="false" />
+    <Property Name="ExpDate" Type="String" Nullable="false" />
+    <Property Name="Vendor" Type="String" Nullable="false" />
+    <Property Name="AccountNumber" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_ticket_pnr">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+    </Key>
+    <Property Name="TicketNumber" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="CreationDate" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_ticket_segment">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+      <PropertyRef Name="SegmentNumber" />
+    </Key>
+    <Property Name="TicketNumber" Type="String" Nullable="false" />
+    <Property Name="SegmentNumber" Type="Int32" Nullable="false" />
+    <Property Name="CouponStatus" Type="String" Nullable="false" />
+    <Property Name="Vendor" Type="String" Nullable="false" />
+    <Property Name="FlightNumber" Type="String" Nullable="false" />
+    <Property Name="Cabin" Type="String" Nullable="false" />
+    <Property Name="SegDate" Type="DateTime" Nullable="false" />
+    <Property Name="StartAirport" Type="String" Nullable="false" />
+    <Property Name="EndAirport" Type="String" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" />
+    <Property Name="FareBasis" Type="String" Nullable="false" />
+    <Property Name="CouponNumber" Type="Int32" Nullable="false" />
+    <Property Name="Currency" Type="String" Nullable="false" />
+    <Property Name="Fare" Type="Double" Nullable="false" />
+    <Property Name="Allowance" Type="String" Nullable="false" />
+    <Property Name="AllowanceType" Type="String" Nullable="false" />
+    <Property Name="NotValidBefore" Type="DateTime" Nullable="false" />
+    <Property Name="NotValidAfter" Type="DateTime" Nullable="false" />
+    <Property Name="StopOverIndicator" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_ticket_text">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+      <PropertyRef Name="RefNo" />
+    </Key>
+    <Property Name="TicketNumber" Type="String" Nullable="false" />
+    <Property Name="TextType" Type="String" Nullable="false" />
+    <Property Name="InfoType" Type="String" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" />
+    <Property Name="RefNo" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_ticket_textdata">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+      <PropertyRef Name="TextNumber" />
+      <PropertyRef Name="RefNumber" />
+    </Key>
+    <Property Name="TicketNumber" Type="String" Nullable="false" />
+    <Property Name="TextNumber" Type="Int32" Nullable="false" />
+    <Property Name="Text" Type="String" Nullable="false" />
+    <Property Name="RefNumber" Type="String" Nullable="false" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tddt">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="FirstSight" Type="DateTime" />
+    <Property Name="SmartMailProc" Type="DateTime" />
+    <Property Name="QIServerSight" Type="DateTime" />
+    <Property Name="QIServerMail" Type="DateTime" />
+    <Property Name="Stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ticket">
+    <Key>
+      <PropertyRef Name="WebProfile" />
+      <PropertyRef Name="TripID" />
+      <PropertyRef Name="TicketNumber" />
+    </Key>
+    <Property Name="WebProfile" Type="String" Nullable="false" />
+    <Property Name="TripID" Type="String" Nullable="false" />
+    <Property Name="TicketNumber" Type="String" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" />
+    <Property Name="Tax" Type="String" />
+    <Property Name="GST" Type="String" />
+    <Property Name="BookingReference" Type="String" />
+    <Property Name="PlatingCarrier" Type="String" />
+    <Property Name="DomInt" Type="String" />
+    <Property Name="DRCR" Type="String" />
+    <Property Name="SalesType" Type="String" />
+    <Property Name="OriginalTicketNumber" Type="String" />
+    <Property Name="ExchangeTicketNumber" Type="String" />
+    <Property Name="ConjuctiionTicket" Type="String" />
+    <Property Name="PaxName" Type="String" />
+    <Property Name="Commission" Type="String" />
+  </EntityType>
+  <EntityType Name="toursegmentexception">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="AccessCode" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="user1" />
+    </Key>
+    <Property Name="user1" Type="String" Nullable="false" />
+    <Property Name="passcode" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Surname" Type="String" Nullable="false" />
+    <Property Name="security" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+</Schema>

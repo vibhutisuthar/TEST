@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="wozModelStoreContainer" CdmEntityContainer="wozEntities">
+    <EntitySetMapping Name="companies">
+      <EntityTypeMapping TypeName="wozModel.company">
+        <MappingFragment StoreEntitySet="company">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+          <ScalarProperty Name="ReturnEmailAddress" ColumnName="ReturnEmailAddress" />
+          <ScalarProperty Name="ProcessDataFlag" ColumnName="ProcessDataFlag" />
+          <ScalarProperty Name="D2C" ColumnName="D2C" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="consultants">
+      <EntityTypeMapping TypeName="wozModel.consultant">
+        <MappingFragment StoreEntitySet="consultant">
+          <ScalarProperty Name="WEB_PROFILE" ColumnName="WEB_PROFILE" />
+          <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
+          <ScalarProperty Name="CONSULTANT_CODE" ColumnName="CONSULTANT_CODE" />
+          <ScalarProperty Name="FAMILY_NAME" ColumnName="FAMILY_NAME" />
+          <ScalarProperty Name="GIVEN_NAME" ColumnName="GIVEN_NAME" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="CONSULTANT_QUEUE_NUMBER" ColumnName="CONSULTANT_QUEUE_NUMBER" />
+          <ScalarProperty Name="PHONE_NUMBER" ColumnName="PHONE_NUMBER" />
+          <ScalarProperty Name="FAX_NUMBER" ColumnName="FAX_NUMBER" />
+          <ScalarProperty Name="EMAIL_ADDRESS" ColumnName="EMAIL_ADDRESS" />
+          <ScalarProperty Name="STATUS_OK" ColumnName="STATUS_OK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="costcentres">
+      <EntityTypeMapping TypeName="wozModel.costcentre">
+        <MappingFragment StoreEntitySet="costcentre">
+          <ScalarProperty Name="CostCentreName" ColumnName="CostCentreName" />
+          <ScalarProperty Name="CostCentre1" ColumnName="CostCentre" />
+          <ScalarProperty Name="PCC" ColumnName="PCC" />
+          <ScalarProperty Name="PCCType" ColumnName="PCCType" />
+          <ScalarProperty Name="Business" ColumnName="Business" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="GDS" ColumnName="GDS" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="GST" ColumnName="GST" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="countries">
+      <EntityTypeMapping TypeName="wozModel.country">
+        <MappingFragment StoreEntitySet="countries">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="Malaria" ColumnName="Malaria" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="TLCC" ColumnName="TLCC" />
+          <ScalarProperty Name="TDCC" ColumnName="TDCC" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="countries_old">
+      <EntityTypeMapping TypeName="wozModel.countries_old">
+        <MappingFragment StoreEntitySet="countries_old">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="Malaria" ColumnName="Malaria" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="TLCC" ColumnName="TLCC" />
+          <ScalarProperty Name="TDCC" ColumnName="TDCC" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dktables">
+      <EntityTypeMapping TypeName="wozModel.dktable">
+        <MappingFragment StoreEntitySet="dktable">
+          <ScalarProperty Name="DKNumber" ColumnName="DKNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TMR_ID" ColumnName="TMR_ID" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dktable_old">
+      <EntityTypeMapping TypeName="wozModel.dktable_old">
+        <MappingFragment StoreEntitySet="dktable_old">
+          <ScalarProperty Name="DKNumber" ColumnName="DKNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TMR_ID" ColumnName="TMR_ID" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emailaddresses">
+      <EntityTypeMapping TypeName="wozModel.emailaddress">
+        <MappingFragment StoreEntitySet="emailaddresses">
+          <ScalarProperty Name="CostCentre" ColumnName="CostCentre" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="EmailAddress1" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Security" ColumnName="Security" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="LastTransaction" ColumnName="LastTransaction" />
+          <ScalarProperty Name="Time_Stamp" ColumnName="Time_Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="etickets">
+      <EntityTypeMapping TypeName="wozModel.eticket">
+        <MappingFragment StoreEntitySet="eticket">
+          <ScalarProperty Name="WebProfile" ColumnName="WebProfile" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="ProcessTime" ColumnName="ProcessTime" />
+          <ScalarProperty Name="RetryCount" ColumnName="RetryCount" />
+          <ScalarProperty Name="ProcessorName" ColumnName="ProcessorName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="etickettests">
+      <EntityTypeMapping TypeName="wozModel.etickettest">
+        <MappingFragment StoreEntitySet="etickettest">
+          <ScalarProperty Name="WebProfile" ColumnName="WebProfile" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="ProcessTime" ColumnName="ProcessTime" />
+          <ScalarProperty Name="RetryCount" ColumnName="RetryCount" />
+          <ScalarProperty Name="ProcessorName" ColumnName="ProcessorName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gmaxes">
+      <EntityTypeMapping TypeName="wozModel.gmax">
+        <MappingFragment StoreEntitySet="gmax">
+          <ScalarProperty Name="DateRun" ColumnName="DateRun" />
+          <ScalarProperty Name="SiftDate" ColumnName="SiftDate" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="Transactions" ColumnName="Transactions" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="Successful" ColumnName="Successful" />
+          <ScalarProperty Name="Sent" ColumnName="Sent" />
+          <ScalarProperty Name="CreditNotes" ColumnName="CreditNotes" />
+          <ScalarProperty Name="Errors" ColumnName="Errors" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gmaxlogs">
+      <EntityTypeMapping TypeName="wozModel.gmaxlog">
+        <MappingFragment StoreEntitySet="gmaxlog">
+          <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateRun" ColumnName="DateRun" />
+          <ScalarProperty Name="SiftDate" ColumnName="SiftDate" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="Transactions" ColumnName="Transactions" />
+          <ScalarProperty Name="Queued" ColumnName="Queued" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="Successful" ColumnName="Successful" />
+          <ScalarProperty Name="Invoices" ColumnName="Invoices" />
+          <ScalarProperty Name="CreditNotes" ColumnName="CreditNotes" />
+          <ScalarProperty Name="Errors" ColumnName="Errors" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="SenttoCRS" ColumnName="SenttoCRS" />
+          <ScalarProperty Name="SequenceNumber" ColumnName="SequenceNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jobnumbers">
+      <EntityTypeMapping TypeName="wozModel.jobnumber">
+        <MappingFragment StoreEntitySet="jobnumber">
+          <ScalarProperty Name="JobNumber1" ColumnName="JobNumber" />
+          <ScalarProperty Name="nStatus" ColumnName="nStatus" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mailinglists">
+      <EntityTypeMapping TypeName="wozModel.mailinglist">
+        <MappingFragment StoreEntitySet="mailinglist">
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="BlockSending" ColumnName="BlockSending" />
+          <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mailrecords">
+      <EntityTypeMapping TypeName="wozModel.mailrecord">
+        <MappingFragment StoreEntitySet="mailrecords">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="FromName" ColumnName="FromName" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="ToName" ColumnName="ToName" />
+          <ScalarProperty Name="Received" ColumnName="Received" />
+          <ScalarProperty Name="DeliveryTime" ColumnName="DeliveryTime" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Processor" ColumnName="Processor" />
+          <ScalarProperty Name="ProcessorName" ColumnName="ProcessorName" />
+          <ScalarProperty Name="FormName" ColumnName="FormName" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="PreprocStatus" ColumnName="PreprocStatus" />
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="CustomerReference" ColumnName="CustomerReference" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="ItinType" ColumnName="ItinType" />
+          <ScalarProperty Name="time_stamp" ColumnName="time_stamp" />
+          <ScalarProperty Name="TripRequest" ColumnName="TripRequest" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Pseudo" ColumnName="Pseudo" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="BounceEmailID" ColumnName="BounceEmailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="optouts">
+      <EntityTypeMapping TypeName="wozModel.optout">
+        <MappingFragment StoreEntitySet="optout">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="DateCode" ColumnName="DateCode" />
+          <ScalarProperty Name="space" ColumnName="space" />
+          <ScalarProperty Name="txt" ColumnName="txt" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="premailrecords">
+      <EntityTypeMapping TypeName="wozModel.premailrecord">
+        <MappingFragment StoreEntitySet="premailrecords">
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="GDS" ColumnName="GDS" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IVMail" ColumnName="IVMail" />
+          <ScalarProperty Name="ReplyEmail" ColumnName="ReplyEmail" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="CityStatePostCode" ColumnName="CityStatePostCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="DKNumber" ColumnName="DKNumber" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          <ScalarProperty Name="AirlineLoc1" ColumnName="AirlineLoc1" />
+          <ScalarProperty Name="AirlineLoc2" ColumnName="AirlineLoc2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="processorcountries">
+      <EntityTypeMapping TypeName="wozModel.processorcountry">
+        <MappingFragment StoreEntitySet="processorcountry">
+          <ScalarProperty Name="ProcessorName" ColumnName="ProcessorName" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="processornames">
+      <EntityTypeMapping TypeName="wozModel.processorname">
+        <MappingFragment StoreEntitySet="processorname">
+          <ScalarProperty Name="ProcessorName1" ColumnName="ProcessorName" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="qisegments">
+      <EntityTypeMapping TypeName="wozModel.qisegment">
+        <MappingFragment StoreEntitySet="qisegments">
+          <ScalarProperty Name="GDS" ColumnName="GDS" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="SegmentNumber" ColumnName="SegmentNumber" />
+          <ScalarProperty Name="FileLocation" ColumnName="FileLocation" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="queueforwardlogs">
+      <EntityTypeMapping TypeName="wozModel.queueforwardlog">
+        <MappingFragment StoreEntitySet="queueforwardlog">
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="QueueKey" ColumnName="QueueKey" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          <ScalarProperty Name="ProcessorSummaryName" ColumnName="ProcessorSummaryName" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="queueforwardlog_deleted">
+      <EntityTypeMapping TypeName="wozModel.queueforwardlog_deleted">
+        <MappingFragment StoreEntitySet="queueforwardlog_deleted">
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="QueueKey" ColumnName="QueueKey" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          <ScalarProperty Name="ProcessorSummaryName" ColumnName="ProcessorSummaryName" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rates">
+      <EntityTypeMapping TypeName="wozModel.rate">
+        <MappingFragment StoreEntitySet="rates">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Rate1" ColumnName="Rate" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="Admin" ColumnName="Admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rloccomps">
+      <EntityTypeMapping TypeName="wozModel.rloccomp">
+        <MappingFragment StoreEntitySet="rloccomp">
+          <ScalarProperty Name="rlocid" ColumnName="rlocid" />
+          <ScalarProperty Name="rloc" ColumnName="rloc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rlocs">
+      <EntityTypeMapping TypeName="wozModel.rloc">
+        <MappingFragment StoreEntitySet="rlocs">
+          <ScalarProperty Name="RLOC1" ColumnName="RLOC" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="PSEUDO" ColumnName="PSEUDO" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="wozModel.role">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Role1" ColumnName="Role" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="segments">
+      <EntityTypeMapping TypeName="wozModel.segment">
+        <MappingFragment StoreEntitySet="segment">
+          <ScalarProperty Name="CRS" ColumnName="CRS" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="Lang" ColumnName="Lang" />
+          <ScalarProperty Name="SegNum" ColumnName="SegNum" />
+          <ScalarProperty Name="SegmentSequence" ColumnName="SegmentSequence" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="FltNo" ColumnName="FltNo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateDep" ColumnName="DateDep" />
+          <ScalarProperty Name="DepCity" ColumnName="DepCity" />
+          <ScalarProperty Name="DateArr" ColumnName="DateArr" />
+          <ScalarProperty Name="ArrCity" ColumnName="ArrCity" />
+          <ScalarProperty Name="CabinClass" ColumnName="CabinClass" />
+          <ScalarProperty Name="SegmentType" ColumnName="SegmentType" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="segmentformats">
+      <EntityTypeMapping TypeName="wozModel.segmentformat">
+        <MappingFragment StoreEntitySet="segmentformat">
+          <ScalarProperty Name="CRS" ColumnName="CRS" />
+          <ScalarProperty Name="TokenType" ColumnName="TokenType" />
+          <ScalarProperty Name="Lang" ColumnName="Lang" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="CodeSnip" ColumnName="CodeSnip" />
+          <ScalarProperty Name="HasData" ColumnName="HasData" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sessionsearches">
+      <EntityTypeMapping TypeName="wozModel.sessionsearch">
+        <MappingFragment StoreEntitySet="sessionsearch">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="FromName" ColumnName="FromName" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="ToName" ColumnName="ToName" />
+          <ScalarProperty Name="Received" ColumnName="Received" />
+          <ScalarProperty Name="DeliveryTime" ColumnName="DeliveryTime" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Time_Stamp" ColumnName="Time_Stamp" />
+          <ScalarProperty Name="Processor" ColumnName="Processor" />
+          <ScalarProperty Name="ProcessorName" ColumnName="ProcessorName" />
+          <ScalarProperty Name="FormName" ColumnName="FormName" />
+          <ScalarProperty Name="PreprocStatus" ColumnName="PreprocStatus" />
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="TripRequest" ColumnName="TripRequest" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="ItinType" ColumnName="ItinType" />
+          <ScalarProperty Name="CustomerReference" ColumnName="CustomerReference" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="nID" ColumnName="nID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sgetickets">
+      <EntityTypeMapping TypeName="wozModel.sgeticket">
+        <MappingFragment StoreEntitySet="sgeticket">
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_emailaddress">
+      <EntityTypeMapping TypeName="wozModel.tb_emailaddress">
+        <MappingFragment StoreEntitySet="tb_emailaddress">
+          <ScalarProperty Name="Profile" ColumnName="Profile" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_header">
+      <EntityTypeMapping TypeName="wozModel.tb_header">
+        <MappingFragment StoreEntitySet="tb_header">
+          <ScalarProperty Name="Profile" ColumnName="Profile" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="PaxName" ColumnName="PaxName" />
+          <ScalarProperty Name="Pseudo" ColumnName="Pseudo" />
+          <ScalarProperty Name="ParsedDate" ColumnName="ParsedDate" />
+          <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+          <ScalarProperty Name="DepartureDate" ColumnName="DepartureDate" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+          <ScalarProperty Name="ItinSummary" ColumnName="ItinSummary" />
+          <ScalarProperty Name="Parsed" ColumnName="Parsed" />
+          <ScalarProperty Name="CostCentre" ColumnName="CostCentre" />
+          <ScalarProperty Name="TotalUnitCost" ColumnName="TotalUnitCost" />
+          <ScalarProperty Name="AgentSign" ColumnName="AgentSign" />
+          <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+          <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="FareBasis" ColumnName="FareBasis" />
+          <ScalarProperty Name="ClientNumber" ColumnName="ClientNumber" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="PurchaseOrder" ColumnName="PurchaseOrder" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="NoOfPax" ColumnName="NoOfPax" />
+          <ScalarProperty Name="EmailTo" ColumnName="EmailTo" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Domestic" ColumnName="Domestic" />
+          <ScalarProperty Name="SegmentCount" ColumnName="SegmentCount" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailCount" ColumnName="EmailCount" />
+          <ScalarProperty Name="StatusEmail" ColumnName="StatusEmail" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_history">
+      <EntityTypeMapping TypeName="wozModel.tb_history">
+        <MappingFragment StoreEntitySet="tb_history">
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HistoryDate" ColumnName="HistoryDate" />
+          <ScalarProperty Name="ReceivedBy" ColumnName="ReceivedBy" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="NumberItems" ColumnName="NumberItems" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_history_cost">
+      <EntityTypeMapping TypeName="wozModel.tb_history_cost">
+        <MappingFragment StoreEntitySet="tb_history_cost">
+          <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+          <ScalarProperty Name="HistoryCode" ColumnName="HistoryCode" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_history_header">
+      <EntityTypeMapping TypeName="wozModel.tb_history_header">
+        <MappingFragment StoreEntitySet="tb_history_header">
+          <ScalarProperty Name="Profile" ColumnName="Profile" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="PaxName" ColumnName="PaxName" />
+          <ScalarProperty Name="Pseudo" ColumnName="Pseudo" />
+          <ScalarProperty Name="ParsedDate" ColumnName="ParsedDate" />
+          <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+          <ScalarProperty Name="Parsed" ColumnName="Parsed" />
+          <ScalarProperty Name="CostCentre" ColumnName="CostCentre" />
+          <ScalarProperty Name="TotalUnitCost" ColumnName="TotalUnitCost" />
+          <ScalarProperty Name="AgentSign" ColumnName="AgentSign" />
+          <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+          <ScalarProperty Name="DepartureDate" ColumnName="DepartureDate" />
+          <ScalarProperty Name="ItinSummary" ColumnName="ItinSummary" />
+          <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+          <ScalarProperty Name="Domestic" ColumnName="Domestic" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+          <ScalarProperty Name="NoOfPax" ColumnName="NoOfPax" />
+          <ScalarProperty Name="TKT_Date" ColumnName="TKT_Date" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="TICKETED" ColumnName="TICKETED" />
+          <ScalarProperty Name="SegmentCount" ColumnName="SegmentCount" />
+          <ScalarProperty Name="AirSegmentCount" ColumnName="AirSegmentCount" />
+          <ScalarProperty Name="HotelSegmentCount" ColumnName="HotelSegmentCount" />
+          <ScalarProperty Name="CarSegmentCount" ColumnName="CarSegmentCount" />
+          <ScalarProperty Name="GDS" ColumnName="GDS" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="BookerEmail" ColumnName="BookerEmail" />
+          <ScalarProperty Name="TKTIssued" ColumnName="TKTIssued" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ClientNumber" ColumnName="ClientNumber" />
+          <ScalarProperty Name="FareBasis" ColumnName="FareBasis" />
+          <ScalarProperty Name="PurchaseOrder" ColumnName="PurchaseOrder" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="Sent" ColumnName="Sent" />
+          <ScalarProperty Name="DepartureCity" ColumnName="DepartureCity" />
+          <ScalarProperty Name="DestinationCity" ColumnName="DestinationCity" />
+          <ScalarProperty Name="AirlineSummary" ColumnName="AirlineSummary" />
+          <ScalarProperty Name="EmailSent" ColumnName="EmailSent" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          <ScalarProperty Name="Online" ColumnName="Online" />
+          <ScalarProperty Name="Touch" ColumnName="Touch" />
+          <ScalarProperty Name="G3" ColumnName="G3" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_history_item">
+      <EntityTypeMapping TypeName="wozModel.tb_history_item">
+        <MappingFragment StoreEntitySet="tb_history_item">
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="HistoryDate" ColumnName="HistoryDate" />
+          <ScalarProperty Name="HistoryID" ColumnName="HistoryID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HistoryType" ColumnName="HistoryType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_history_types">
+      <EntityTypeMapping TypeName="wozModel.tb_history_types">
+        <MappingFragment StoreEntitySet="tb_history_types">
+          <ScalarProperty Name="HistoryType" ColumnName="HistoryType" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="Use" ColumnName="Use" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_passenger">
+      <EntityTypeMapping TypeName="wozModel.tb_passenger">
+        <MappingFragment StoreEntitySet="tb_passenger">
+          <ScalarProperty Name="Profile" ColumnName="Profile" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="PaxNum" ColumnName="PaxNum" />
+          <ScalarProperty Name="PaxName" ColumnName="PaxName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_pnr_segment">
+      <EntityTypeMapping TypeName="wozModel.tb_pnr_segment">
+        <MappingFragment StoreEntitySet="tb_pnr_segment">
+          <ScalarProperty Name="Profile" ColumnName="Profile" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="SegNum" ColumnName="SegNum" />
+          <ScalarProperty Name="SegmentSequence" ColumnName="SegmentSequence" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="NoOfPax" ColumnName="NoOfPax" />
+          <ScalarProperty Name="FltNo" ColumnName="FltNo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateDep" ColumnName="DateDep" />
+          <ScalarProperty Name="DepCity" ColumnName="DepCity" />
+          <ScalarProperty Name="DateArr" ColumnName="DateArr" />
+          <ScalarProperty Name="ArrCity" ColumnName="ArrCity" />
+          <ScalarProperty Name="CabinClass" ColumnName="CabinClass" />
+          <ScalarProperty Name="SegmentType" ColumnName="SegmentType" />
+          <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+          <ScalarProperty Name="VoucherCurrency" ColumnName="VoucherCurrency" />
+          <ScalarProperty Name="VoucherRate" ColumnName="VoucherRate" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ticket">
+      <EntityTypeMapping TypeName="wozModel.tb_ticket">
+        <MappingFragment StoreEntitySet="tb_ticket">
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="TicketType" ColumnName="TicketType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="TKTDate" ColumnName="TKTDate" />
+          <ScalarProperty Name="ETKTCarrier" ColumnName="ETKTCarrier" />
+          <ScalarProperty Name="FreeFlow" ColumnName="FreeFlow" />
+          <ScalarProperty Name="IATANo" ColumnName="IATANo" />
+          <ScalarProperty Name="Pseudo" ColumnName="Pseudo" />
+          <ScalarProperty Name="TravelAgentID" ColumnName="TravelAgentID" />
+          <ScalarProperty Name="PassengerName" ColumnName="PassengerName" />
+          <ScalarProperty Name="PassengerType" ColumnName="PassengerType" />
+          <ScalarProperty Name="PassengerAge" ColumnName="PassengerAge" />
+          <ScalarProperty Name="ConjunctedTicketNo" ColumnName="ConjunctedTicketNo" />
+          <ScalarProperty Name="TKTStatus" ColumnName="TKTStatus" />
+          <ScalarProperty Name="FareConstruction" ColumnName="FareConstruction" />
+          <ScalarProperty Name="TKTData" ColumnName="TKTData" />
+          <ScalarProperty Name="Commission" ColumnName="Commission" />
+          <ScalarProperty Name="Airline" ColumnName="Airline" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ticket_fop">
+      <EntityTypeMapping TypeName="wozModel.tb_ticket_fop">
+        <MappingFragment StoreEntitySet="tb_ticket_fop">
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ticket_pnr">
+      <EntityTypeMapping TypeName="wozModel.tb_ticket_pnr">
+        <MappingFragment StoreEntitySet="tb_ticket_pnr">
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ticket_segment">
+      <EntityTypeMapping TypeName="wozModel.tb_ticket_segment">
+        <MappingFragment StoreEntitySet="tb_ticket_segment">
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="SegmentNumber" ColumnName="SegmentNumber" />
+          <ScalarProperty Name="CouponStatus" ColumnName="CouponStatus" />
+          <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+          <ScalarProperty Name="FlightNumber" ColumnName="FlightNumber" />
+          <ScalarProperty Name="Cabin" ColumnName="Cabin" />
+          <ScalarProperty Name="SegDate" ColumnName="SegDate" />
+          <ScalarProperty Name="StartAirport" ColumnName="StartAirport" />
+          <ScalarProperty Name="EndAirport" ColumnName="EndAirport" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FareBasis" ColumnName="FareBasis" />
+          <ScalarProperty Name="CouponNumber" ColumnName="CouponNumber" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Fare" ColumnName="Fare" />
+          <ScalarProperty Name="Allowance" ColumnName="Allowance" />
+          <ScalarProperty Name="AllowanceType" ColumnName="AllowanceType" />
+          <ScalarProperty Name="NotValidBefore" ColumnName="NotValidBefore" />
+          <ScalarProperty Name="NotValidAfter" ColumnName="NotValidAfter" />
+          <ScalarProperty Name="StopOverIndicator" ColumnName="StopOverIndicator" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ticket_text">
+      <EntityTypeMapping TypeName="wozModel.tb_ticket_text">
+        <MappingFragment StoreEntitySet="tb_ticket_text">
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="TextType" ColumnName="TextType" />
+          <ScalarProperty Name="InfoType" ColumnName="InfoType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ticket_textdata">
+      <EntityTypeMapping TypeName="wozModel.tb_ticket_textdata">
+        <MappingFragment StoreEntitySet="tb_ticket_textdata">
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="TextNumber" ColumnName="TextNumber" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="RefNumber" ColumnName="RefNumber" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tddts">
+      <EntityTypeMapping TypeName="wozModel.tddt">
+        <MappingFragment StoreEntitySet="tddt">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="FirstSight" ColumnName="FirstSight" />
+          <ScalarProperty Name="SmartMailProc" ColumnName="SmartMailProc" />
+          <ScalarProperty Name="QIServerSight" ColumnName="QIServerSight" />
+          <ScalarProperty Name="QIServerMail" ColumnName="QIServerMail" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tickets">
+      <EntityTypeMapping TypeName="wozModel.ticket">
+        <MappingFragment StoreEntitySet="ticket">
+          <ScalarProperty Name="WebProfile" ColumnName="WebProfile" />
+          <ScalarProperty Name="TripID" ColumnName="TripID" />
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="GST" ColumnName="GST" />
+          <ScalarProperty Name="BookingReference" ColumnName="BookingReference" />
+          <ScalarProperty Name="PlatingCarrier" ColumnName="PlatingCarrier" />
+          <ScalarProperty Name="DomInt" ColumnName="DomInt" />
+          <ScalarProperty Name="DRCR" ColumnName="DRCR" />
+          <ScalarProperty Name="SalesType" ColumnName="SalesType" />
+          <ScalarProperty Name="OriginalTicketNumber" ColumnName="OriginalTicketNumber" />
+          <ScalarProperty Name="ExchangeTicketNumber" ColumnName="ExchangeTicketNumber" />
+          <ScalarProperty Name="ConjuctiionTicket" ColumnName="ConjuctiionTicket" />
+          <ScalarProperty Name="PaxName" ColumnName="PaxName" />
+          <ScalarProperty Name="Commission" ColumnName="Commission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="toursegmentexceptions">
+      <EntityTypeMapping TypeName="wozModel.toursegmentexception">
+        <MappingFragment StoreEntitySet="toursegmentexception">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="AccessCode" ColumnName="AccessCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="wozModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="user1" ColumnName="user" />
+          <ScalarProperty Name="passcode" ColumnName="passcode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="security" ColumnName="security" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

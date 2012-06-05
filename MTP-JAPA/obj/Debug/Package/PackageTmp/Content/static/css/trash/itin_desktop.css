@@ -1,0 +1,657 @@
+.outline {
+	display: none !important;
+	}
+.mobile {
+	display: none !important;
+	}
+
+.QiLiveitinerary {
+	max-width: 934px;
+	padding: 0 25px;
+	background-color: #ffffff;
+	background-image: none;
+	}
+.QiLiveitinerary h1,
+.QiLiveitinerary h2,
+.QiLiveitinerary h3,
+.QiLiveitinerary h4,
+.QiLiveitinerary h5,
+.QiLiveitinerary h6,
+.QiLiveitinerary p,
+.QiLiveitinerary ul,
+.QiLiveitinerary ol {
+	margin: 0 0 1pt 0;
+	font-size: 1em;
+	font-weight: normal;
+	}
+.QiLiveitinerary div.label h1,
+.QiLiveitinerary div.label h2,
+.QiLiveitinerary div.label h3,
+.QiLiveitinerary div.label h4,
+.QiLiveitinerary div.label h5,
+.QiLiveitinerary div.label h6,
+.QiLiveitinerary div.label p,
+.QiLiveitinerary div.label span {
+	display: inline-block;
+	}
+.QiLiveitinerary > #print_wrapper > header {
+	display: block;
+	padding: 15px 0 0 0;
+	}
+.QiLiveitinerary > #print_wrapper > header img {
+	display: block;
+	float: left;
+	margin: 0;
+	}
+.QiLiveitinerary > #print_wrapper > header > p.datestamp {
+	float: right;
+	margin: 5pt 0 0 0;
+	padding: 0;
+	width: 585px;
+	text-align: right;
+	line-height: 1.3em;
+	color: #000000;
+	}
+.QiLiveitinerary > #print_wrapper > header > p.datestamp time {
+	white-space: nowrap;
+	}
+
+
+.QiLiveitinerary > #print_wrapper > footer {
+	display: none;
+	}
+
+
+.QiLiveitinerary #booking_information {
+	position: relative;
+	clear: left;
+	padding: 20px 0 0 0;
+	background-image: none;
+	}
+.QiLiveitinerary #booking_reference {
+	display: none;
+	}
+.QiLiveitinerary #booking_reference h1 {
+	display: inline-block;
+	width: 30%;
+	margin: 0;
+	font-weight: normal;
+	color: #000000;
+	}
+.QiLiveitinerary #booking_reference p.reference {
+	display: inline-block;
+	margin: 0;
+	font-size: 2.5em;
+	letter-spacing: .8pt;
+	color: #247cbc;
+	}
+.QiLiveitinerary #booking_reference2 {
+	display: block;
+	margin: 0;
+	padding: 0 0 20px 0;
+	width: 290px;
+	border: none;
+	}
+.QiLiveitinerary #booking_reference2 span {
+	display: inline-block;
+	width: 170px;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color:  #000000;
+	}
+.QiLiveitinerary #booking_reference2 p.reference {
+	display: inline-block;
+	font-size: 1.2em !important;
+	vertical-align: baseline;
+	font-weight: bold;
+	color: #247cbc;
+	}
+.QiLiveitinerary #travellers {
+	float: left;
+	margin-top: 0;
+	width: 630px;
+	padding: 7pt 0 7pt 0;
+	letter-spacing: .8pt;
+	}
+.QiLiveitinerary #travellers div.label > span {
+	display: inline-block;
+	float: left;
+	width: 290px;
+	margin: 0 0 1pt 0;
+	font-weight: normal;
+	padding: 0;
+	font-size: 18pt;
+	color: #000000;
+	}
+.QiLiveitinerary #travellers h2.passenger_name {
+	display: block;
+	margin: 0 0 0 290px;
+	font-weight: normal;
+	font-size: 18pt !important;
+	color: #000000;
+	}
+.QiLiveitinerary #travellers h2.passenger_name span {
+	font-size: 18pt !important;
+	}
+.QiLiveitinerary #travellers h2.passenger_name .name_surname {
+	text-transform: uppercase;
+	}
+
+
+
+.QiLiveitinerary #passenger_contact_details {
+	clear: left;
+	display: block;
+	float: left;
+	width: 564px;
+	margin: 0;
+	padding: 7pt 0;
+	}
+.QiLiveitinerary #passenger_contact_details h1 {
+	margin: 0 100px 6pt 0;
+	font-weight: bold;
+	border-bottom: 1px solid #999999;
+	}
+.QiLiveitinerary #passenger_contact_details h1 a {
+	display: block;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	line-height: 1.6em;
+	text-decoration: none;
+	background-color: transparent;
+	color: #000000;
+	}
+.QiLiveitinerary #passenger_contact_details div.label {
+	clear: left;
+	margin: 0 0 1pt 0;
+	padding: 0;
+	}
+.QiLiveitinerary #passenger_contact_details div.label > span {
+	display: inline-block;
+	width: auto;
+	margin: 0;
+	text-align: left;
+	color: #000000;
+	}
+
+/*
+Inserts preliminary character to enhance appearance of alignment..
+.QiLiveitinerary #passenger_contact_details div.label > p:before {
+	padding-right: 10px;
+	content: "-";
+	color: #000000;
+	}
+*/
+
+
+
+.QiLiveitinerary #agent_details {
+	display: block;
+	float: left;
+	width: 370px;
+	margin: 0;
+	padding: 7pt 0;
+	}
+.QiLiveitinerary #agent_details h1 {
+	margin: 0 0 6pt 0;
+	font-weight: bold;
+	border-bottom: 1px solid #999999;
+	}
+.QiLiveitinerary #agent_details h1 a {
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	line-height: 1.6em;
+	color: #000000;
+	}
+.QiLiveitinerary #agent_details p {
+	clear: left;
+	}
+.QiLiveitinerary #agent_details div.label {
+	clear: left;
+	margin: 0 0 1pt 0;
+	padding: 0;
+	}
+.QiLiveitinerary #agent_details div.label > span {
+	display: inline-block;
+	float: left;
+	width: auto;
+	margin: 0;
+	color: #000000;
+	}
+.QiLiveitinerary #agent_details div.label > p {
+	margin-bottom: 1pt;
+	}
+
+/*
+Inserts preliminary character to enhance appearance of alignment..
+.QiLiveitinerary #agent_details div.label > p:before {
+	padding-right: 10px;
+	content: "-";
+	color: #000000;
+	}
+*/
+
+
+
+.QiLiveitinerary section#priority_remarks {
+	clear: left;
+	padding: 20px 0 0 0;
+	position: relative;
+	color: #247cbc;
+	}
+
+
+
+
+
+.QiLiveitinerary #ad_wrapper {
+	clear: left;
+	position: relative;
+	}
+.QiLiveitinerary #segments {
+	margin: 20px 0 0 0;
+	}
+.QiLiveitinerary #segments > h1 {
+	display: none;
+	}
+
+.QiLiveitinerary section.date {
+	margin: 40px 0 0 0;
+	}
+.QiLiveitinerary section.date > h1 {
+	float: left;
+	width: 564px;
+	margin: 0;
+	padding: 0;
+	height: 2em;
+	line-height: 2em;
+	font-size: 12pt;
+	line-height: 15pt;
+	text-align: right;
+	color: #247cbc;
+	background-color: transparent;
+	}
+.QiLiveitinerary section.date > h1 span {
+	display: block;
+	float: left;
+	width: 170px;
+	margin: 0;
+	text-align: left;
+	font-weight: bold;
+	font-size: 15pt;
+	line-height: 12pt;
+	text-align: left;
+	color: #247cbc;
+	}
+
+
+
+
+.QiLiveitinerary article.segment {
+	clear: left;
+	margin-bottom: 40px;
+	padding: 0;
+	background-image: none !important;
+	border: none;
+	}
+.QiLiveitinerary article.segment:after {
+	content: "."; 
+	display: block; 
+	height: 0;
+	font-size: 1pt; 
+	clear: both; 
+	visibility: hidden;
+	}
+.QiLiveitinerary article.segment > h1 {
+	display: block;
+	clear: left;
+	margin: 0 0 6pt 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 12pt;
+	line-height: 1.6em;
+	color: #000000;
+	background-image: none;
+	border-bottom: 1px solid #999999;
+	}
+
+
+
+
+
+.QiLiveitinerary article.segment div {
+	margin: 0 0 1pt 0;
+	clear: left;
+	}
+.QiLiveitinerary article.segment div.label span {
+	display: inline-block;
+	width: 170px;
+	min-width: 170px;
+	}
+.QiLiveitinerary article.segment div.label p,
+.QiLiveitinerary article.segment div.label span.data {
+	display: inline-block;
+    width: auto;
+    margin: 0;
+	}
+
+
+
+
+
+/* .seg_main */
+.QiLiveitinerary article.segment .seg_main {
+	width: 564px;
+	float: left;
+	}
+.QiLiveitinerary article.segment .seg_main header {
+	width: 564px;
+	}
+.QiLiveitinerary article.segment .seg_main header h2 span,
+.QiLiveitinerary article.segment .seg_main header h3 span {
+	display: inline-block;
+	width: 170px;
+	min-width: 170px;
+	}
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_main header h2.label span,
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_main header h3.label span {
+	width: 154px;
+	min-width: 154px;
+	}
+.QiLiveitinerary article.segment .seg_main header h2 span.data,
+.QiLiveitinerary article.segment .seg_main header h3 span.data {
+	display: inline-block;
+    width: auto;
+    margin: 0;
+	font-weight: bold;
+	}
+
+.QiLiveitinerary article.segment .seg_main .secondary {
+	width: 100%;
+	clear: left;
+	}
+
+
+
+
+
+/* seg_details */
+.QiLiveitinerary article.segment .seg_details {
+	float: left;
+	clear: none;
+	width: 370px;
+	margin-bottom: 3pt;
+	padding: 0;
+	}
+.QiLiveitinerary article.segment .seg_details h4 {
+	display: none;
+	}
+/* right column width */
+.QiLiveitinerary article.segment .seg_details div.label span {
+	width: 140px;
+	}
+.QiLiveitinerary article.segment div.seg_details div.status p {
+	font-weight: bold;
+	}
+.QiLiveitinerary article.segment div.seg_details div.status span {
+	display: none;
+	}
+
+
+
+
+
+
+
+
+
+/* flight segment */
+.QiLiveitinerary article.flight {
+	background-image: none;
+	}
+.QiLiveitinerary article.flight header p.flight_number {
+	display: none;
+	}
+.QiLiveitinerary article.flight div.dep_terminal2,
+.QiLiveitinerary article.flight div.arr_city2,
+.QiLiveitinerary article.flight div.arr_time2,
+.QiLiveitinerary article.flight div.arr_terminal2,
+.QiLiveitinerary article.flight div.status2 {
+	display: none;
+	}
+
+
+
+
+/* hotel segment */
+.QiLiveitinerary article.hotel {
+	background-image: none;
+	}
+.QiLiveitinerary article.hotel .checkin, .QiLiveitinerary article.hotel .checkout {
+	float: none;
+	width: auto;
+	margin: 0;
+	}
+.QiLiveitinerary article.hotel .hotel_details {
+	clear: left;
+	}
+.QiLiveitinerary article.segment .hotel_details div.label span {
+	display: inline-block;
+	width: 49%;
+	margin: 0;
+	padding-left: 0;
+	color: #000000;
+	}
+.QiLiveitinerary article.segment div.seg_notes,
+.QiLiveitinerary article.hotel .seg_contact {
+	clear: both;
+	padding: 0;
+	margin: 0;
+	}
+.QiLiveitinerary article.hotel .checkin,
+.QiLiveitinerary article.hotel .checkout {
+	float: none;
+	width: auto;
+	margin: 0;
+	}
+
+
+
+
+/* car segment */
+.QiLiveitinerary article.car {
+	background-image: none;
+	}
+.QiLiveitinerary article.car .seg_notes div {
+	display: inline;
+	width: auto;
+	margin-left: 0;
+	}
+.QiLiveitinerary article.car .seg_notes div.label {
+	display: block;
+	}
+.QiLiveitinerary article.car .seg_notes div.label span {
+	width: 170px;
+	margin: 0;
+	}
+
+
+
+.QiLiveitinerary article.rail,
+.QiLiveitinerary article.misc,
+.QiLiveitinerary article.open {
+	min-height: 50px;
+	background-image: none;
+	}
+.QiLiveitinerary article.rail header,
+.QiLiveitinerary article.misc header,
+.QiLiveitinerary article.open header {
+	clear: left;
+	background-image: none;
+	}
+.QiLiveitinerary article.rail header h3,
+.QiLiveitinerary article.misc header h3,
+.QiLiveitinerary article.open header h3 {
+	margin: 0 0 20px 0;
+	}
+
+
+
+
+/* rail segment */
+.QiLiveitinerary article.rail {
+	background: url(../graphics/icon_rail.gif) no-repeat 15px 15px;
+	}
+
+/* misc segment */
+.QiLiveitinerary article.misc {
+	background: url(../graphics/icon_misc.gif) no-repeat 15px 15px;
+	}
+
+/* open segment */
+.QiLiveitinerary article.open {
+	background: url(../graphics/icon_open.gif) no-repeat 15px 15px;
+	}
+
+
+
+
+.QiLiveitinerary #airline_record {
+	margin: 0;
+	}
+.QiLiveitinerary #airline_record h1 {
+	display: block;
+	margin: 18pt 0 6pt 0;
+	padding-bottom: 3pt;
+	font-size: 1.2em;
+	border-bottom: 1px solid #999999;
+	}
+.QiLiveitinerary #airline_record div.label {
+	font-weight: bold;
+	letter-spacing: .8pt;
+	}	
+.QiLiveitinerary #airline_record div.label span {
+	display: inline-block;
+   margin-right: 0;
+	width: 170px;
+	font-weight: normal;
+	letter-spacing: normal;
+	color: #000000;
+	}
+
+
+
+
+.QiLiveitinerary #compliance {
+	margin-left: 0;
+	padding-bottom: 5px;
+	}
+.QiLiveitinerary #compliance h1 {
+	margin: 30pt 0 6pt 0;
+	padding-bottom: 3pt;
+	font-size: 1.2em;
+	border-bottom: 1px solid #999999;
+	}
+.QiLiveitinerary #compliance h2 {
+	margin: 9pt 0 0 0;
+	font-size: 1.0em;
+	}
+.QiLiveitinerary #compliance p,
+.QiLiveitinerary #compliance ul,
+.QiLiveitinerary #compliance ol {
+	display: block;
+	}
+.QiLiveitinerary #compliance ul {
+	margin-left: 0;
+	padding-left: .8em;
+	list-style-image: url(../graphics/bullet.gif);
+	}
+.QiLiveitinerary #compliance p,
+.QiLiveitinerary #airline_record p,
+.QiLiveitinerary #compliance ul li,
+.QiLiveitinerary #airline_record ul li {
+	margin: 0 0 6pt 0;
+	line-height: 1.5em;
+	}
+.QiLiveitinerary #compliance article ol,
+.QiLiveitinerary #airline_record article ol {
+	padding-left: 1.8em;
+	}
+
+
+
+
+.QiLiveitinerary a,
+.QiLiveitinerary a visited {
+	color: #247cbc;
+	}
+.QiLiveitinerary > footer img {
+	float: right;
+	}
+.QiLiveitinerary > footer p {
+	float: left;
+	margin: 10pt 0 0 0;
+	}
+ul#help_toc {
+	position: absolute;
+	top: 0;
+	left: 0;
+	}
+
+
+/* advertisements */
+#ad_column {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 160px;
+	min-height: 160px;
+	padding-top: 20px;
+	background: white;
+	}
+#ad_column img {
+	display: block;
+	margin: 0 auto 10px auto;
+	float: right;
+	clear: right;
+	}
+#ad_column2 {
+	display: none;
+	}
+
+.QiLiveitinerary #ad_wrapper #segments {
+	margin-right: 170px;
+	}
+.QiLiveitinerary #booking_information.ads #booking_reference2 span,
+.QiLiveitinerary #ad_wrapper #segments section.date > h1 span,
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_main header h2.label span,
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_main div.label span,
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_notes div.label span,
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_contact div.label span,
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_notes div.label span,
+.QiLiveitinerary #ad_wrapper #segments article.car .seg_notes div.label span,
+.QiLiveitinerary #ad_wrapper #segments #airline_record div.label span {
+	width: 154px;
+	min-width: 154px;
+	}
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_main header h2.label span {
+	width: auto;
+	}
+.QiLiveitinerary #booking_information.ads #passenger_contact_details,
+.QiLiveitinerary #ad_wrapper #segments section.date > h1,
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_main,
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_main header {
+	width: 454px;
+	}
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_details {
+	width: 310px;
+	}
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_notes,
+.QiLiveitinerary #ad_wrapper #segments article.segment .seg_contact {
+	margin-right: 170px;
+	}

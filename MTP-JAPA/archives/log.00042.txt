@@ -1,0 +1,125 @@
+2012-04-20 14:00:22.1969 TravelPlans Starting Search Threads
+2012-04-20 14:00:22.3405 TravelPlans m_RLOC : OFQMOG
+2012-04-20 14:00:22.3405 TravelPlans ending Search Threads
+2012-04-20 14:00:22.4069 TravelPlans Surname Check started
+2012-04-20 14:00:22.4069 TravelPlans m_RLOC : OFQMOG
+2012-04-20 14:00:22.4069 TravelPlans Disk Search Invoice started
+2012-04-20 14:00:22.4069 TravelPlans Disk Search Invoice in way
+2012-04-20 14:00:22.4147 TravelPlans Disk Search Itinerary finished
+2012-04-20 14:00:22.4469 TravelPlans Trip Summary Finished
+2012-04-20 14:00:22.4918 TravelPlans Disk Search Invoice finished
+2012-04-20 14:00:23.5542 TravelPlans Mailrecords found : 6
+2012-04-20 14:00:23.5562 TravelPlans Records found for Invoice in DB: 1
+2012-04-20 14:00:23.5562 TravelPlans Enter : debug point 3
+2012-04-20 14:00:23.5562 TravelPlans DbRecs : 1
+2012-04-20 14:00:23.6294 TravelPlans Surname Check Finished
+2012-04-20 14:00:23.7564 TravelPlans Enter : debug point 4
+2012-04-20 14:00:23.7564 TravelPlans m_RLOC : OFQMOG
+2012-04-20 14:00:28.2649 TravelPlans Retrieving \\203.19.215.74\FILESTORE\QIETKS\OCT2011\OFQMOG.PDF
+2012-04-20 14:01:06.5691 TravelPlans Enter : debug point 1
+2012-04-20 14:01:06.5691 TravelPlans Enter : debug point 2
+2012-04-20 14:01:06.5691 TravelPlans Starting Search Threads
+2012-04-20 14:01:06.5867 TravelPlans Disk Search Invoice started
+2012-04-20 14:01:06.5867 TravelPlans Disk Search Invoice in way
+2012-04-20 14:01:06.5867 TravelPlans Disk Search Invoice finished
+2012-04-20 14:01:06.5993 TravelPlans m_RLOC : JKJXQ5
+2012-04-20 14:01:06.5993 TravelPlans ending Search Threads
+2012-04-20 14:01:06.5993 TravelPlans Disk Search Itinerary finished
+2012-04-20 14:01:06.5993 TravelPlans Surname Check started
+2012-04-20 14:01:06.6150 TravelPlans m_RLOC : JKJXQ5
+2012-04-20 14:01:06.6472 TravelPlans Trip Summary Finished
+2012-04-20 14:01:08.1334 TravelPlans No records found in mailrecords table matching criteria
+2012-04-20 14:01:08.1334 TravelPlans Enter : debug point 3
+2012-04-20 14:01:08.1334 TravelPlans Invoices in database / found on disk Database records DS was null
+2012-04-20 14:01:08.1520 TravelPlans Surname Check Finished
+2012-04-20 14:01:21.7146 TravelPlans Itinerary: Mailrecords found : 10
+2012-04-20 14:01:21.7146 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 14:01:22.8512 TravelPlans Debug Point 2
+2012-04-20 14:01:34.8798 GalileoDecoder Address Details Company: IBMSG
+2012-04-20 14:01:34.8798 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 14:01:34.8798 GalileoDecoder Address Details Team: 
+2012-04-20 14:01:43.2386 GalileoDecoder Address DSN: American Express Travel (S) Pte Ltd<br/>60 Alexandra Terrace<br/>The Comtech 08-06 Lobby B<br/>Singapore 118502<br/>Telephone Intl +44 203 3645717 Local  800 1205636<br/>Reg No 199300971E<br/>
+2012-04-20 14:02:10.2632 TravelPlans Debug Point 3
+2012-04-20 14:02:10.2632 TravelPlans Debug Point 5
+2012-04-20 14:02:42.6030 TravelPlans Itinerary: Mailrecords found : 10
+2012-04-20 14:03:01.9660 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 14:03:11.4273 TravelPlans Debug Point 2
+2012-04-20 14:03:29.4564 GalileoDecoder Address Details Company: IBMSG
+2012-04-20 14:03:29.4564 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 14:03:29.4564 GalileoDecoder Address Details Team: 
+2012-04-20 14:03:39.5007 GalileoDecoder Address DSN: American Express Travel (S) Pte Ltd<br/>60 Alexandra Terrace<br/>The Comtech 08-06 Lobby B<br/>Singapore 118502<br/>Telephone Intl +44 203 3645717 Local  800 1205636<br/>Reg No 199300971E<br/>
+2012-04-20 14:04:03.2384 TravelPlans Debug Point 3
+2012-04-20 14:04:10.0222 TravelPlans Debug Point 5
+2012-04-20 14:04:58.5972 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 14:05:01.0179 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 14:05:02.9036 TravelPlans Debug Point 2
+2012-04-20 14:05:13.9712 GalileoDecoder Address Details Company: IBMSG
+2012-04-20 14:05:13.9712 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 14:05:13.9741 GalileoDecoder Address Details Team: 
+2012-04-20 14:05:23.0722 GalileoDecoder Address DSN: American Express Travel (S) Pte Ltd<br/>60 Alexandra Terrace<br/>The Comtech 08-06 Lobby B<br/>Singapore 118502<br/>Telephone Intl +44 203 3645717 Local  800 1205636<br/>Reg No 199300971E<br/>
+2012-04-20 14:05:46.8588 TravelPlans Debug Point 3
+2012-04-20 14:05:52.8720 TravelPlans Debug Point 5
+2012-04-20 14:07:53.1729 TravelPlans Itinerary: Mailrecords found : 10
+2012-04-20 14:07:56.4022 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 14:07:59.1081 TravelPlans Debug Point 2
+2012-04-20 14:08:10.4960 GalileoDecoder Address Details Company: CREDITSUISSESG
+2012-04-20 14:08:10.4960 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 14:08:10.4960 GalileoDecoder Address Details Team: CREDITSUISSESG
+2012-04-20 14:08:19.2982 GalileoDecoder Didn't Find, trying Address Details Company: CREDITSUISSESG
+2012-04-20 14:08:19.2982 GalileoDecoder Didn't Find, trying Address Details Formname: AXQIITNONLINE
+2012-04-20 14:08:19.2982 GalileoDecoder Didn't Find, trying Address Details Team: CREDITSUISSESG
+2012-04-20 14:08:30.1159 GalileoDecoder Didn't Find, trying Address Details Company: <blank>
+2012-04-20 14:08:30.1178 GalileoDecoder Didn't Find, trying Address Details Formname: AXQIITNONLINE
+2012-04-20 14:08:30.1178 GalileoDecoder Didn't Find, trying Address Details Team: CREDITSUISSESG
+2012-04-20 14:08:38.3722 GalileoDecoder Didn't Find, trying Address Details Company: <blank> 
+2012-04-20 14:08:38.3722 GalileoDecoder Didn't Find, trying Address Details Formname: AXQIITNONLINEAUD
+2012-04-20 14:08:38.3722 GalileoDecoder Didn't Find, trying Address Details Team: <blank>
+2012-04-20 14:08:46.7984 GalileoDecoder Address DSN: American Express International Inc.<br/>233 Collins Street<br/>Melbourne VIC Australia 3000<br/>Email:  servicecentre-melbourne@aexp.com<br/>Telephone: +61 3 9633 6333<br/>Facsimile: +61 3 9633 6301<br/>ABN No 15 000 618 208 	 AFS No 237996<br/>
+2012-04-20 14:09:09.3917 TravelPlans Debug Point 3
+2012-04-20 14:09:14.4177 TravelPlans Debug Point 5
+2012-04-20 14:09:57.2500 TravelPlans Enter : debug point 1
+2012-04-20 14:09:57.3915 TravelPlans Enter : debug point 2
+2012-04-20 14:09:57.3935 TravelPlans Starting Search Threads
+2012-04-20 14:09:57.3935 TravelPlans Disk Search Invoice started
+2012-04-20 14:09:57.3935 TravelPlans Disk Search Invoice in way
+2012-04-20 14:09:57.4609 TravelPlans m_RLOC : Q2CVC0
+2012-04-20 14:09:57.4882 TravelPlans ending Search Threads
+2012-04-20 14:09:57.4882 TravelPlans Surname Check started
+2012-04-20 14:09:57.4882 TravelPlans m_RLOC : Q2CVC0
+2012-04-20 14:09:57.5097 TravelPlans Disk Search Invoice finished
+2012-04-20 14:09:57.5331 TravelPlans Trip Summary Finished
+2012-04-20 14:09:57.5351 TravelPlans Disk Search Itinerary finished
+2012-04-20 14:09:58.8475 TravelPlans Mailrecords found : 46
+2012-04-20 14:09:58.8475 TravelPlans Records found for Invoice in DB: zero
+2012-04-20 14:09:58.8475 TravelPlans Enter : debug point 3
+2012-04-20 14:09:58.8475 TravelPlans Invoices in database / found on disk Database records DS was null
+2012-04-20 14:09:58.8475 TravelPlans Surname Check Finished
+2012-04-20 14:10:14.9910 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 14:10:16.8561 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 14:10:19.2241 TravelPlans Debug Point 2
+2012-04-20 14:10:27.2471 GalileoDecoder Address Details Company: CREDITSUISSESG
+2012-04-20 14:10:27.2471 GalileoDecoder Address Details Formname: AXQIITNONLINE
+2012-04-20 14:10:27.2471 GalileoDecoder Address Details Team: CREDITSUISSESG
+2012-04-20 14:10:35.7143 GalileoDecoder Didn't Find, trying Address Details Company: CREDITSUISSESG
+2012-04-20 14:10:35.7143 GalileoDecoder Didn't Find, trying Address Details Formname: AXQIITNONLINE
+2012-04-20 14:10:35.7143 GalileoDecoder Didn't Find, trying Address Details Team: CREDITSUISSESG
+2012-04-20 14:10:44.1268 GalileoDecoder Didn't Find, trying Address Details Company: <blank>
+2012-04-20 14:10:44.1268 GalileoDecoder Didn't Find, trying Address Details Formname: AXQIITNONLINE
+2012-04-20 14:10:44.1268 GalileoDecoder Didn't Find, trying Address Details Team: CREDITSUISSESG
+2012-04-20 14:10:52.4925 GalileoDecoder Didn't Find, trying Address Details Company: <blank> 
+2012-04-20 14:10:52.4925 GalileoDecoder Didn't Find, trying Address Details Formname: AXQIITNONLINEAUD
+2012-04-20 14:10:52.4925 GalileoDecoder Didn't Find, trying Address Details Team: <blank>
+2012-04-20 14:11:02.5495 GalileoDecoder Address DSN: American Express International Inc.<br/>233 Collins Street<br/>Melbourne VIC Australia 3000<br/>Email:  servicecentre-melbourne@aexp.com<br/>Telephone: +61 3 9633 6333<br/>Facsimile: +61 3 9633 6301<br/>ABN No 15 000 618 208 	 AFS No 237996<br/>
+2012-04-20 14:11:24.8791 TravelPlans Debug Point 3
+2012-04-20 14:11:32.6335 TravelPlans Debug Point 5
+2012-04-20 14:12:31.2713 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 14:12:33.4421 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 14:12:35.5172 TravelPlans Debug Point 2
+2012-04-20 14:12:42.7286 GalileoDecoder Error in PNR Retrieve for RLOC Q8VRTL
+2012-04-20 14:12:42.7286 GalileoDecoder <Errors xmlns="http://ns.galileo.com"><Text>NO AGREEMENT EXISTS FOR AGENCY -  4YR</Text></Errors>
+2012-04-20 14:12:42.7286 TravelPlans Debug Point 3
+2012-04-20 14:12:43.7100 TravelPlans Debug Point 4 : We are unable to display your reservation.<BR>Please either check out our HINTS section for assistance<BR>Or contact your Travel Agent/Provider for further reservation details.<br>Thank You
+2012-04-20 14:13:16.3329 TravelPlans Itinerary: No records found in mailrecords table matching criteria
+2012-04-20 14:13:17.9246 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-20 14:13:19.6159 TravelPlans Debug Point 2
+2012-04-20 14:13:26.8117 GalileoDecoder Error in PNR Retrieve for RLOC Q8VLKK

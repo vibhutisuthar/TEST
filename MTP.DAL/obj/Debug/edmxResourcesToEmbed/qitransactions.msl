@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="qitransactionsModelStoreContainer" CdmEntityContainer="qitransactionsEntities">
+    <EntitySetMapping Name="qicalevents">
+      <EntityTypeMapping TypeName="qitransactionsModel.qicalevent">
+        <MappingFragment StoreEntitySet="qicalevents">
+          <ScalarProperty Name="GDS" ColumnName="GDS" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="PaxName" ColumnName="PaxName" />
+          <ScalarProperty Name="SegNumber" ColumnName="SegNumber" />
+          <ScalarProperty Name="SegType" ColumnName="SegType" />
+          <ScalarProperty Name="DTStart" ColumnName="DTStart" />
+          <ScalarProperty Name="DTEnd" ColumnName="DTEnd" />
+          <ScalarProperty Name="DCreated" ColumnName="DCreated" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AltDescription" ColumnName="AltDescription" />
+          <ScalarProperty Name="EventText" ColumnName="EventText" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="qicalendars">
+      <EntityTypeMapping TypeName="qitransactionsModel.qicalendar">
+        <MappingFragment StoreEntitySet="qicalendar">
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          <ScalarProperty Name="FileLocation" ColumnName="FileLocation" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="PaxName" ColumnName="PaxName" />
+          <ScalarProperty Name="RLoc" ColumnName="RLoc" />
+          <ScalarProperty Name="GDS" ColumnName="GDS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="qimailrecords">
+      <EntityTypeMapping TypeName="qitransactionsModel.qimailrecord">
+        <MappingFragment StoreEntitySet="mailrecords">
+          <ScalarProperty Name="BounceEmailId" ColumnName="BounceEmailId" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="Pseudo" ColumnName="Pseudo" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="TripRequest" ColumnName="TripRequest" />
+          <ScalarProperty Name="time_stamp" ColumnName="time_stamp" />
+          <ScalarProperty Name="ItinType" ColumnName="ItinType" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="CustomerReference" ColumnName="CustomerReference" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="PreprocStatus" ColumnName="PreprocStatus" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="FormName" ColumnName="FormName" />
+          <ScalarProperty Name="ProcessorName" ColumnName="ProcessorName" />
+          <ScalarProperty Name="Processor" ColumnName="Processor" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="DeliveryTime" ColumnName="DeliveryTime" />
+          <ScalarProperty Name="Received" ColumnName="Received" />
+          <ScalarProperty Name="ToName" ColumnName="ToName" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="FromName" ColumnName="FromName" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

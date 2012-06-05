@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="qilive_onlineModelStoreContainer" CdmEntityContainer="qilive_onlineEntities">
+    <EntitySetMapping Name="addresses">
+      <EntityTypeMapping TypeName="qilive_onlineModel.address">
+        <MappingFragment StoreEntitySet="address">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="address_code" ColumnName="address_code" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="address3" ColumnName="address3" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="postcode" ColumnName="postcode" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+          <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+          <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+          <ScalarProperty Name="deployment" ColumnName="deployment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="associations">
+      <EntityTypeMapping TypeName="qilive_onlineModel.association">
+        <MappingFragment StoreEntitySet="association">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="form_name" ColumnName="form_name" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="team_name" ColumnName="team_name" />
+          <ScalarProperty Name="address_code" ColumnName="address_code" />
+          <ScalarProperty Name="contact_code" ColumnName="contact_code" />
+          <ScalarProperty Name="pageasset_code" ColumnName="pageasset_code" />
+          <ScalarProperty Name="module_code" ColumnName="module_code" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+          <ScalarProperty Name="layout_code" ColumnName="layout_code" />
+          <ScalarProperty Name="transcode_code" ColumnName="transcode_code" />
+          <ScalarProperty Name="email_code" ColumnName="email_code" />
+          <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+          <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+          <ScalarProperty Name="deployment" ColumnName="deployment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contacts">
+      <EntityTypeMapping TypeName="qilive_onlineModel.contact">
+        <MappingFragment StoreEntitySet="contact">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="contact_code" ColumnName="contact_code" />
+          <ScalarProperty Name="contact_type" ColumnName="contact_type" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+          <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+          <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+          <ScalarProperty Name="deployment" ColumnName="deployment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emails">
+      <EntityTypeMapping TypeName="qilive_onlineModel.email">
+        <MappingFragment StoreEntitySet="email">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email_code" ColumnName="email_code" />
+          <ScalarProperty Name="email_type" ColumnName="email_type" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="from_address" ColumnName="from_address" />
+          <ScalarProperty Name="from_name" ColumnName="from_name" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="bcc" ColumnName="bcc" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+          <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+          <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+          <ScalarProperty Name="deployment" ColumnName="deployment" />
+          <ScalarProperty Name="txt_xslt_file" ColumnName="txt_xslt_file" />
+          <ScalarProperty Name="html_xslt_file" ColumnName="html_xslt_file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histories">
+      <EntityTypeMapping TypeName="qilive_onlineModel.history">
+        <MappingFragment StoreEntitySet="history">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="table" ColumnName="table" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+          <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+          <ScalarProperty Name="deployment" ColumnName="deployment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="layouts">
+      <EntityTypeMapping TypeName="qilive_onlineModel.layout">
+        <MappingFragment StoreEntitySet="layout">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="layout_code" ColumnName="layout_code" />
+          <ScalarProperty Name="layout_type" ColumnName="layout_type" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="rel" ColumnName="rel" />
+          <ScalarProperty Name="media" ColumnName="media" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+          <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+          <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+          <ScalarProperty Name="deployment" ColumnName="deployment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="modules">
+      <EntityTypeMapping TypeName="qilive_onlineModel.module">
+        <MappingFragment StoreEntitySet="module">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="module_code" ColumnName="module_code" />
+          <ScalarProperty Name="module_type" ColumnName="module_type" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="module_name" ColumnName="module_name" />
+          <ScalarProperty Name="post_validation" ColumnName="post_validation" />
+          <ScalarProperty Name="post_validation_folder" ColumnName="post_validation_folder" />
+          <ScalarProperty Name="log_level" ColumnName="log_level" />
+          <ScalarProperty Name="log_file" ColumnName="log_file" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+          <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+          <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+          <ScalarProperty Name="deployment" ColumnName="deployment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pageassets">
+      <EntityTypeMapping TypeName="qilive_onlineModel.pageasset">
+        <MappingFragment StoreEntitySet="pageasset">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="page_code" ColumnName="page_code" />
+          <ScalarProperty Name="page_type" ColumnName="page_type" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="insert_point" ColumnName="insert_point" />
+          <ScalarProperty Name="insert_element" ColumnName="insert_element" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+          <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+          <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+          <ScalarProperty Name="deployment" ColumnName="deployment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="qilive_onlineModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_code" ColumnName="product_code" />
+          <ScalarProperty Name="product_type" ColumnName="product_type" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="insert_point" ColumnName="insert_point" />
+          <ScalarProperty Name="insert_element" ColumnName="insert_element" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+          <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+          <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+          <ScalarProperty Name="deployment" ColumnName="deployment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transcodes">
+      <EntityTypeMapping TypeName="qilive_onlineModel.transcode">
+        <MappingFragment StoreEntitySet="transcode">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="transcode_code" ColumnName="transcode_code" />
+          <ScalarProperty Name="transcode_type" ColumnName="transcode_type" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="xslt_file" ColumnName="xslt_file" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="access_criteria" ColumnName="access_criteria" />
+          <ScalarProperty Name="owner_market" ColumnName="owner_market" />
+          <ScalarProperty Name="owner_region" ColumnName="owner_region" />
+          <ScalarProperty Name="deployment" ColumnName="deployment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

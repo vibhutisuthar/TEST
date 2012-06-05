@@ -1,0 +1,117 @@
+﻿@{
+    ViewBag.Title = "Download";
+    //Layout = "~/Views/Shared/StoredItin.cshtml";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+    
+}
+<div class="d2c">
+    @using (Html.BeginForm("Download", "Calendar", FormMethod.Post, new { id = "frmDownload", name = "frmDownload", style = "margin: 0 0 0 40px;" }))
+    {
+        @*<script src="@Url.Content("~/Scripts/jquery.dataTables.min.js")" type="text/javascript"></script>*@
+
+        <div class="ItinContent" id="ItinContent" style="width: 850px;">
+            <br clear="all" />
+            <table class="dnlContent" width="100%">
+                <tr>
+                    <td>
+                        <label id="MyHeading" class="labelH">
+                            Add Itinerary to Calendar</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="Label2" class="labelb">
+                            There are 2 options for downloading information to your calendar
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="Label4" class="labelb">
+                            1. Download individual events into your primary calendar
+                        </label>
+                        <label id="Label3" class="labelb">
+                            2. Download the complete itinerary to your calendar*</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-bottom: 20px; padding-top: 20px; width: 100%">
+                        <table id="CtlResCalEvents" class="display">
+                            <thead>
+                                <tr>
+                                    <th colspan="1">
+                                        <label id="Label3" class="labelb" style="text-align: left !important;">
+                                            1. Please select event for download to your primary calendar</label>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (System.Data.DataRow row in Model.Rows)
+                                { 
+                                    <tr>
+                                        @foreach (System.Data.DataColumn col in Model.Columns)
+                                        {
+                                            if (col.ColumnName == "Subject")
+                                            {
+                                            <td style="width: 75%; color: #585858 !important;">
+                                                @row[col.ColumnName]
+                                            </td>
+                                            <td style="width: 25%;">
+                                                <a href='@row["url"]' class="link">Download</a>
+                                            </td>
+                                            }
+                                        }
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label id="Label6" class="labelb">
+                            2. Download complete calendar file</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="display">
+                            <tr>
+                                <td>
+                                    <label id="Label7" class="labelb" style="font-weight: normal !important">
+                                        Complete Calendar File*</label>
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("DownloadToCalendar", "Calendar")" class="link">Download</a>
+                                    <br />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="small">
+                        <label id="Link14" class="label">
+                            *For Outlook users: This functionality may create a second calendar which will not
+                            synchronize to your mobile device</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    }
+</div>
+@*<div id="nod2c" class="ItinContent" visible="false">
+        <br clear="all" />
+        <table class="dnlContent">
+            <tr>
+                <td>
+                    <asp:label id="LNOD2C" class="dnlContent" text="<%$ Resources:resource, d2c2 %>"></asp:label>
+                </td>
+            </tr>
+        </table>
+    </div>*@

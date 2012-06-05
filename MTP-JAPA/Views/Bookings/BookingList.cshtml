@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "BookingList";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+}
+@{
+    List<MTP.DTO.BookingModel> lstBookingModel = null;
+    if (ViewBag.LoginEmailAddress != null)
+    {
+        string strEmailAddress = Convert.ToString(ViewBag.LoginEmailAddress);
+        MTP.BAL.BookingDataBAL objBookingDataBAL = new MTP.BAL.BookingDataBAL();
+        lstBookingModel = objBookingDataBAL.GetBookingByEmail(strEmailAddress);
+    }        
+}
+<div class="mybookings">
+    @using (Html.BeginForm("BookingList", "Bookings", FormMethod.Post, new { id = "frmBookingList", name = "frmBookingList" }))
+    {
+        <h1>
+            My Bookings</h1>
+        <div class="login_admin">
+            <h2>
+                My Account</h2>
+            <ul>
+                <li><a href="/User/ChangePassword">Change Password</a></li>
+                <li><a href="/User/Index">Logout</a></li>
+            </ul>
+        </div> 
+        <ul id="mybookings_list">
+            @if (lstBookingModel != null && lstBookingModel.Count > 0)
+            {
+                foreach (var BookingModel in lstBookingModel)
+                {
+
+                    //string link = "/QiLiveItinerary/QiLiveItineraryView?R=" + BookingModel.RLOC + "&S=" + @BookingModel.last_name;
+                    string link = "/Itinerary/ItineraryView?R=" + BookingModel.RLOC + "&S=" + @BookingModel.last_name;
+                    
+                <text>
+                <li><span class="pnr"><a href="@link">
+                    @BookingModel.RLOC</a></span> <span class="booking_date">
+                        @BookingModel.booking_date</span></li>
+                @*<a href="/QiLiveItinerary/QiLiveItineraryView?R=JKJXQ5&S=KINGSTON"> @BookingModel.booking_date</a></span>*@
+                </text> 
+                }
+            }
+            else
+            { 
+                <li>No record found.</li>
+            }
+        </ul> 
+        
+    }
+</div>

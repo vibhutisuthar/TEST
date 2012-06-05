@@ -1,0 +1,462 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using NLog;
+using NLog.Config;
+using System.Xml;
+using System.Data;
+using System.Reflection;
+using System.IO;
+using WOZCRYPTOLib;
+using mshtml;
+using System.Text;
+using System.Xml.XPath;
+using System.Xml.Xsl;
+using MTP.BAL;
+using MTP.DTO;
+using System.Web.Configuration;
+//using System.Web.Mail;
+using System.Net.Mail;
+using System.Net;
+using System.Text.RegularExpressions;
+using System.Web.Mvc;
+using Recaptcha;
+
+
+namespace MTP_JAPA.Helpers
+{
+    public class Common
+    {
+        public string m_LastError = "";
+        public static class RetrieveType
+        {
+            public const string BookingReference = "Booking Reference";
+            public const string InvoiceNumber = "INV";
+            public const string TicketNumber = "TKT";
+        }
+
+        public enum MailType
+        {
+            ConfirmRegistration = 1,
+            RequestResetPassword = 2,
+            ResetPassword = 3
+
+        }
+
+        #region Properties
+
+        protected string GetFormName(string CountryCode)
+        {
+            string Code = WebConfigurationManager.AppSettings[CountryCode.ToUpper()];
+
+            if (Code == null || Code.Length == 0)
+                return "";
+
+            return Code;
+        }
+
+        #endregion
+
+        #region Helper Methods
+
+        #region E-mail Management
+
+        /// <summary>
+        /// MailSubject
+        /// </summary>
+        /// <returns></returns>
+        public static string GetMailSubject(MailType objMailType)
+        {
+            string strSubject = "";
+            switch (objMailType)
+            {
+                case MailType.ConfirmRegistration:
+                    strSubject = "Please confirm your registration with MyTravelPlans from American Express Business Travel";
+                    break;
+
+                case MailType.RequestResetPassword:
+                    strSubject = "Confirmation: resetting your password for MyTravelPlans from American Express Business Travel";
+                    break;
+
+                case MailType.ResetPassword:
+                    strSubject = "New Password for My Travel Plans";
+                    break;
+
+                default:
+                    strSubject = "";
+                    break;
+            }
+
+            if (strSubject == null || strSubject.Length == 0)
+                return "";
+
+            return strSubject;
+        }
+
+        /// <summary>
+        /// MailBody
+        /// </summary>
+        /// <param name="CountryCode"></param>
+        /// <returns></returns>
+        public static string GetMailBody(MailType objMailType)
+        {
+            string strMailBody = "";
+            switch (objMailType)
+            {
+                case MailType.ConfirmRegistration:
+                    strMailBody = "<html><body> Dear Traveller,<br /><br /> We have received a registration request using this email address.<br /><br />If you wish to proceed with this registration, please confirm your approval by clicking this link:https://mytravelplans.com.au/...<br /><br /> If the request was not placed by yourself, or you do not wish to proceed for any reason, please simply disregard this message, and the registration will not be activated.<br /><br />MyTravel Plans is the complete travel documentation service from American Express Business Travel.https://mytravelplans.com.au/ <br /><br /> If you have any questions, please contact us: feedback@mytravelplans.com.au <br /><br /> Regards,<br />TravelBytes</body></html>";
+                    break;
+
+                case MailType.RequestResetPassword:
+                    strMailBody = "<html><body>Dear Traveller,<br /><br />We have received a request to reset your login password for MyTravelPlans.<br /><br /><br /><br />If you wish to proceed with the resetting of your password, please confirm your approval by clicking this link:https://mytravelplans.com.au/... <br /><br />If the request was not placed by yourself, or you do not wish to proceed with this change for any reason, please simply disregard this message, and the change will not be activated.<br /><br />MyTravel Plans is the complete travel documentation service from American Express Business Travel.https://mytravelplans.com.au/<br /><br />If you have any questions, please contact us: feedback@mytravelplans.com.au <br /><br />Regards,<br />TravelBytes<br /><br /></body></html>";
+                    break;
+
+                case MailType.ResetPassword:
+                    strMailBody = "<html><body> Dear Traveller,<br /><br />As requested, your login password for My Travel Plans has been reset.<br /><br />Here are your new login details:<br /><br />Email address: greg@travelbytes.biz<br />New password: ppkkj<br /><br />Please login with this new password to view all of your bookings with American Express Business Travel.<br />https://mytravelplans.com.au/User/EmailLogin <br /><br />You may change the password to something of your choosing at any time.<br />- log in with the new password provided above<br />- click the Change Password link on the My Bookings page<br />- enter your details as indicated<br /><br />Regards,<br />TravelBytes</body></html>";
+                    break;
+
+                default:
+                    strMailBody = "";
+                    break;
+            }
+
+            if (strMailBody == null || strMailBody.Length == 0)
+                return "";
+
+            return strMailBody;
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="FromEmailID"></param>
+        /// <param name="ToEmailID"></param>
+        /// <param name="CCEmailID"></param>
+        /// <param name="BCCEmailID"></param>
+        /// <param name="subject"></param>
+        /// <param name="MailBody"></param>
+        /// <param name="IsBodyHtml"></param>
+        /// <returns></returns>
+        public static bool SendEmail(string FromEmailID, string ToEmailID, string CCEmailID, string BCCEmailID, string subject, string MailBody, Boolean IsBodyHtml)
+        {
+            try
+            {
+                MailMessage myMail = new MailMessage();
+                myMail.To.Add(ToEmailID);
+                if (CCEmailID != null && CCEmailID != "")
+                {
+                    myMail.CC.Add(CCEmailID);
+                }
+                myMail.From = new MailAddress(FromEmailID);
+                myMail.Subject = subject;
+                myMail.IsBodyHtml = IsBodyHtml;
+                myMail.Body = MailBody;
+                try
+                {
+                    SmtpClient smtp = new SmtpClient();
+                    // smtp.Host = settings.Smtp.Network.Host; //"silvermail.silvertouch.com";
+                    //smtp.Port = settings.Smtp.Network.Port; //25;
+                    //System.Net.NetworkCredential cdata = new System.Net.NetworkCredential(settings.Smtp.Network.UserName, settings.Smtp.Network.Password); //("niraj.oza@silvertouch.com", "IBM@@123");
+                    //smtp.Credentials = cdata;
+                    smtp.Send(myMail);
+                    smtp = null;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+        /// <summary>
+        /// isEmail
+        /// </summary>
+        /// <param name="inputEmail"></param>
+        /// <returns></returns>
+        public static bool ValidateEmailAddress(string inputEmail)
+        {
+            if (!string.IsNullOrEmpty(inputEmail))
+            {
+                string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+                      @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+                      @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+                Regex re = new Regex(strRegex);
+                if (re.IsMatch(inputEmail))
+                    return (true);
+                else
+                    return (false);
+
+            }
+            else
+            {
+                return (false);
+            }
+        }
+
+        #endregion
+
+        /// <summary>
+        /// CheckFileType
+        /// </summary>
+        /// <param name="FileName"></param>
+        /// <returns></returns>
+        public static int CheckFileType(string FileName)
+        {
+            int rv = 0;
+            try
+            {
+                // Create an instance of StreamReader to read from a file.
+                // The using statement also closes the StreamReader.
+                using (StreamReader sr = new StreamReader(FileName))
+                {
+                    // Read and display lines from the file until the end of 
+                    // the file is reached.
+                    char[] buffer;
+                    buffer = new char[100];
+                    string Header = sr.ReadLine();
+
+                    if (Header == null)
+                        return rv;
+
+                    if (Header.StartsWith("%PDF"))
+                        rv = 0x20;
+                    else if (Header.StartsWith(@"\rtf"))
+                        rv = 4;
+                    else if (Header.IndexOf("<html") != -1)
+                        rv = 6;
+
+                }
+            }
+            catch (Exception e)
+            {
+                // Let the user know what went wrong.
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+                return rv;
+            }
+            return rv;
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="FileName"></param>
+        /// <param name="logger"></param>
+        /// <returns></returns>
+        public static string ReadFileFromDisk(string FileName, ref Logger logger)
+        {
+
+            string Data = "";
+            try
+            {
+                using (FileStream fs = new FileStream(FileName, FileMode.Open, FileAccess.Read))
+                {
+                    // use the BCL to load the part in a byte[] buffer
+                    byte[] bufferWorkbookPart = new BinaryReader(fs).ReadBytes((int)fs.Length);
+
+                    // use our BIFF12 reader
+                    // ByteConverter con = new ByteConverter();
+                    Data = System.Text.Encoding.GetEncoding("windows-1252").GetString(bufferWorkbookPart);
+
+                }
+            }
+            catch (FileNotFoundException e)
+            {
+                logger.Error("ReadFileFromDisk FNF Exception: " + e.Message);
+                System.Diagnostics.Trace.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                logger.Error("ReadFileFromDisk Exception: " + e.Message);
+                System.Diagnostics.Trace.WriteLine(e.Message);
+            }
+
+            return Data;
+
+
+        }
+
+        /// <summary>
+        /// ListToDataTable
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        public static DataTable ListToDataTable<T>(List<T> list)
+        {
+            DataTable dt = new DataTable();
+            foreach (PropertyInfo info in typeof(T).GetProperties())
+            {
+                Type propType = info.PropertyType;
+                if (info.PropertyType == typeof(System.Nullable<int>))
+                {
+                    propType = Nullable.GetUnderlyingType(info.PropertyType);
+                    dt.Columns.Add(new DataColumn(info.Name, propType));
+                }
+                else if (info.PropertyType == typeof(System.Nullable<DateTime>))
+                {
+                    propType = Nullable.GetUnderlyingType(info.PropertyType);
+                    dt.Columns.Add(new DataColumn(info.Name, propType));
+                }
+                else
+                {
+                    dt.Columns.Add(new DataColumn(info.Name, info.PropertyType));
+                }
+            }
+            foreach (T t in list)
+            {
+                DataRow row = dt.NewRow();
+                foreach (PropertyInfo info in typeof(T).GetProperties())
+                {
+                    if (info.GetValue(t, null) != null)
+                    {
+                        row[info.Name] = info.GetValue(t, null);
+                    }
+                    else
+                    {
+                        row[info.Name] = 0;
+                    }
+                }
+                dt.Rows.Add(row);
+            }
+            return dt;
+        }
+
+        /// <summary>
+        /// Get HTML From XML and XSL
+        /// </summary>
+        ///<param name="xsltPath">XSL File Path</param>
+        ///<param name="xml">XML String</param>
+        /// <returns>HTML Output</returns>
+        public static string GetHtml(string xsltPath, string xml)
+        {
+            try
+            {
+                MemoryStream stream = new MemoryStream(ASCIIEncoding.Default.GetBytes(xml));
+                XPathDocument document = new XPathDocument(stream);
+                StringWriter writer = new StringWriter();
+                XslCompiledTransform transform = new XslCompiledTransform();
+                transform.Load(xsltPath);
+                transform.Transform(document, null, writer);
+                return writer.ToString();
+            }
+            catch (Exception ex)
+            {
+                return "";
+            }
+        }
+
+        ///// <summary>
+        ///// GetQiCompanyData
+        ///// </summary>
+        ///// <returns></returns>
+        //public static List<QiCompanyModel> GetQiCompanyData(string strCompany, string strFormName, string strCountryCode)
+        //{
+        //    QiCompanyBAL qiCompanyBAL = new QiCompanyBAL();
+        //    List<QiCompanyModel> qiCompanyList = null;
+        //    try
+        //    {
+        //        qiCompanyList = qiCompanyBAL.GetCompanyData(strCompany, strFormName, strCountryCode);
+        //    }
+        //    finally
+        //    {
+        //        qiCompanyBAL = null;
+        //    }
+        //    return qiCompanyList;
+        //}
+
+        ///// <summary>
+        ///// SetVisibilityTabs
+        ///// </summary>
+        ///// <param name="strRLOC"></param>
+        ///// <param name="strFormName"></param>
+        ///// <returns></returns>
+        //public bool SetVisibilityTabs(string strRLOC, string strFormName, string strCountryCode,string strTab)
+        //{
+        //    ///string strCountryCode = "AU";
+        //    MailRecordsBAL objMailRecordsBAL = new MailRecordsBAL();
+        //    List<MailRecordsModel> lstMailRecords = new List<MailRecordsModel>();
+        //    List<QiCompanyModel> lstQiCompanyModel = new List<QiCompanyModel>();
+        //    lstMailRecords = objMailRecordsBAL.GetCompanyDeatils(strRLOC, strFormName);
+        //    if (lstMailRecords != null)
+        //    {
+        //        foreach (MailRecordsModel obj in lstMailRecords)
+        //        {
+        //            string Company = obj.Company;
+        //            string FormName = obj.FormName;
+        //            lstQiCompanyModel = GetQiCompanyData(Company, FormName, strCountryCode);
+        //            foreach (QiCompanyModel objQiCompanyModel in lstQiCompanyModel)
+        //            {
+        //                //Need to work
+        //            }
+
+        //        }
+
+        //    }
+        //    return false;
+        //}
+
+        /// <summary>
+        /// GetRandomPasswordUsingGUID
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public static string GetRandomPasswordUsingGUID(int length)
+        {
+            //Get the GUID
+            string guidResult = System.Guid.NewGuid().ToString();
+
+            //Remove the hyphens
+            guidResult = guidResult.Replace("-", string.Empty);
+
+            //Make sure length is valid
+            if (length <= 0 || length > guidResult.Length)
+            {
+                throw new ArgumentException("Length must be between 1 and " + guidResult.Length);
+            }
+
+            //Return the first length bytes
+            return guidResult.Substring(0, length);
+        }
+
+        /// <summary>
+        /// RandomString
+        /// </summary>
+        /// <param name="size"></param>
+        /// <param name="lowerCase"></param>
+        /// <returns></returns>
+        public static string RandomString(int size, bool lowerCase)
+        {
+            StringBuilder builder = new StringBuilder();
+            Random random = new Random();
+            char ch = '\0';
+            for (int i = 0; i <= size - 1; i++)
+            {
+                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
+                builder.Append(ch);
+            }
+            if (lowerCase)
+            {
+                return (builder.ToString().ToLower());
+            }
+            return builder.ToString();
+        }
+
+
+
+        #endregion
+
+    }
+ 
+
+ 
+}

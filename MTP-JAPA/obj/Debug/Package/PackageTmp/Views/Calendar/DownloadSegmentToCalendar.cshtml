@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Download-Segment-to-Calendar";
+    //Layout = "~/Views/Shared/StoredItin.cshtml";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+}
+
+<h2>Download-Segment-to-Calendar</h2>
+
+  <div class="ItinContent" id="ItinContent" enableviewstate="false">
+    </div>
+    <table width="100%">
+        <tr>
+            <td><span class="ItinPrint">
+                @*<%
+                    if (bPrint)
+                    {
+                        Response.Write("Printed " + DateTime.Now.ToString());
+                    }
+                    else
+                    {
+                        Response.Write("&nbsp;");
+                    } 
+                %>*@
+                </span>
+            </td>
+            <td align="right">
+                <img id="Img1" src="~/images/AmexFooter.gif" runat="server" border="0" alt="footer logo" width="250" height="37" /></td>
+        </tr>
+    </table>

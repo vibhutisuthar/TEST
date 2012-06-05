@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qilive_dataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="qilivedataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="passengers" EntityType="qilive_dataModel.passenger" />
+    <EntitySet Name="utids" EntityType="qilive_dataModel.utid" />
+    <EntitySet Name="xml_booking" EntityType="qilive_dataModel.xml_booking" />
+    <AssociationSet Name="fk_passenger_utid" Association="qilive_dataModel.fk_passenger_utid">
+      <End Role="utid" EntitySet="utids" />
+      <End Role="passenger" EntitySet="passengers" />
+    </AssociationSet>
+    <AssociationSet Name="fk_xml_booking_utid" Association="qilive_dataModel.fk_xml_booking_utid">
+      <End Role="utid" EntitySet="utids" />
+      <End Role="xml_booking" EntitySet="xml_booking" />
+    </AssociationSet>
+    <FunctionImport Name="GetItineraryDataBySurnameAndRLOC" ReturnType="Collection(qilive_dataModel.GetItineraryDataBySurnameAndRLOC_Result)">
+      <Parameter Name="p_RLOC" Mode="In" Type="String" />
+      <Parameter Name="p_lastname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetBookingByEmail" ReturnType="Collection(qilive_dataModel.GetBookingByEmail_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="passenger">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="utid_id" Type="Int32" Nullable="false" />
+    <Property Name="first_name" Type="String" Nullable="false" />
+    <Property Name="last_name" Type="String" Nullable="false" />
+    <Property Name="title" Type="String" Nullable="false" />
+    <Property Name="email" Type="String" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="utid" Relationship="qilive_dataModel.fk_passenger_utid" FromRole="passenger" ToRole="utid" />
+  </EntityType>
+  <EntityType Name="utid">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="gds" Type="String" Nullable="false" />
+    <Property Name="RLOC" Type="String" Nullable="false" />
+    <Property Name="booking_date" Type="DateTime" Nullable="false" />
+    <Property Name="ubid" Type="String" Nullable="false" />
+    <Property Name="first_sighted" Type="DateTime" Nullable="false" />
+    <Property Name="utid1" Type="String" Nullable="false" />
+    <Property Name="status" Type="String" Nullable="false" />
+    <Property Name="source" Type="String" Nullable="false" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="region" Type="String" />
+    <Property Name="market" Type="String" />
+    <Property Name="formname" Type="String" />
+    <Property Name="company" Type="String" />
+    <Property Name="team" Type="String" />
+    <Property Name="notes" Type="String" />
+    <NavigationProperty Name="passengers" Relationship="qilive_dataModel.fk_passenger_utid" FromRole="utid" ToRole="passenger" />
+    <NavigationProperty Name="xml_booking" Relationship="qilive_dataModel.fk_xml_booking_utid" FromRole="utid" ToRole="xml_booking" />
+  </EntityType>
+  <EntityType Name="xml_booking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="utid_id" Type="Int32" Nullable="false" />
+    <Property Name="entry_date" Type="DateTime" Nullable="false" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" />
+    <Property Name="phase" Type="String" Nullable="false" />
+    <Property Name="xml" Type="String" Nullable="false" />
+    <Property Name="notes" Type="String" />
+    <Property Name="pdf_file" Type="Binary" />
+    <NavigationProperty Name="utid" Relationship="qilive_dataModel.fk_xml_booking_utid" FromRole="xml_booking" ToRole="utid" />
+  </EntityType>
+  <Association Name="fk_passenger_utid">
+    <End Role="utid" Type="qilive_dataModel.utid" Multiplicity="1" />
+    <End Role="passenger" Type="qilive_dataModel.passenger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utid">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="passenger">
+        <PropertyRef Name="utid_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_xml_booking_utid">
+    <End Role="utid" Type="qilive_dataModel.utid" Multiplicity="1" />
+    <End Role="xml_booking" Type="qilive_dataModel.xml_booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utid">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="xml_booking">
+        <PropertyRef Name="utid_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="GetItineraryDataBySurnameAndRLOC_Result" />
+  <ComplexType Name="ComplexType1" />
+  <ComplexType Name="GetBookingByEmail_Result" />
+</Schema>

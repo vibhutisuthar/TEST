@@ -1,0 +1,8 @@
+D:\Projects\TravelBytes\MTP-New-MVC\MTP-JAPA\MTP.DAL\bin\Debug\MTP.DAL.dll.config
+D:\Projects\TravelBytes\MTP-New-MVC\MTP-JAPA\MTP.DAL\bin\Debug\MTP.DAL.dll
+D:\Projects\TravelBytes\MTP-New-MVC\MTP-JAPA\MTP.DAL\bin\Debug\MTP.DAL.pdb
+D:\Projects\TravelBytes\MTP-New-MVC\MTP-JAPA\MTP.DAL\bin\Debug\MTP.DTO.dll
+D:\Projects\TravelBytes\MTP-New-MVC\MTP-JAPA\MTP.DAL\bin\Debug\MTP.DTO.pdb
+D:\Projects\TravelBytes\MTP-New-MVC\MTP-JAPA\MTP.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\TravelBytes\MTP-New-MVC\MTP-JAPA\MTP.DAL\obj\Debug\MTP.DAL.dll
+D:\Projects\TravelBytes\MTP-New-MVC\MTP-JAPA\MTP.DAL\obj\Debug\MTP.DAL.pdb

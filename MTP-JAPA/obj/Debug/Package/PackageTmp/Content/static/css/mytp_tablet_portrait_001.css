@@ -1,0 +1,605 @@
+
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: arial, sans-serif;
+	background-color: #000000;
+	}
+
+iframe {
+	position: absolute;
+	}
+/* mytravelplans header */
+body > header {
+	position: relative;
+	max-width: 984px;
+	height: 125px;
+	padding: 0;
+	margin: 0 9px;
+	background: url(../graphics/mtp_header_bg.jpg) no-repeat 0 0;
+	border-top: 9px solid #000000;
+	}
+body > header img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: none;
+	}
+body > header select {
+	position: absolute;
+	top: 30px;
+	right: 10px;
+	}
+body > header a#menu {
+	display: none;
+	}
+body > header h1 {
+	display: none;
+	}
+body > header h2 {
+	display: block;
+	max-width: 984px;
+	height: 30px;
+	padding: 0 0 0 8px;
+	margin: 95px auto 0 auto;
+	font-weight: normal;
+	line-height: 28px;
+	color: #ffffff;
+	background-color: #247cbc;
+	border-left: 246px solid #b5b8b7;
+	}
+body > header h2 em {
+	color: #9bc3e2;
+	}
+
+
+
+/* mytravelplans footer */
+body > footer {
+	position: relative;
+	max-width: 984px;
+	padding: 0;
+	margin: 0 9px 20px 9px;
+	color: #bbccdd;
+	background-color: #2f3C44;
+	}
+body > footer a#travelbytes {
+	float: left;
+	display: block;
+	padding: 20px 15px;
+	width: 216px;
+	height: 40px;
+	line-height: 50px;
+	text-align: right;
+	font-size: 8pt;
+	text-decoration: none;
+	vertical-align: top;
+	color: #8899aa;
+	}
+body > footer a#travelbytes img {
+	border: none;
+	}
+body > footer p {
+	margin: 0 0 0 246px;
+	padding: 5px 5px 10px 10px;
+	font-size: 10pt;
+	background-color: #687c88;
+	}
+body > footer p#footer_links {
+	margin: 0 0 0 246px;
+	padding: 0 5px 0 0;
+	font-size: 10pt;
+	text-align: right;
+	color: #26313a;
+	}
+body > footer p#footer_links a {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	margin-left: 10px;
+	padding-top: 5px;
+	line-height: inherit;
+	text-decoration: none;
+	color: #26313a;
+	background-image: none;
+	}
+
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, form, a.btn {
+	font-size: 1em;
+	}
+#base {
+	position: relative;
+	margin: 0 9px;
+	padding: 0;
+	min-height: 424px;
+	background-color: #dce1e5;
+	}
+#base ul.tabs {
+	margin: 0;
+	padding: 5px 0 0 0;
+	width: auto !important;
+	font-size: 90%;
+	list-style-type: none;
+	background-color: #88a0b0;
+/*	border-left: 246px solid #cccccc; */
+	}
+#base ul.tabs li {
+	display: inline-block;
+	width: auto;
+	}
+#base ul.tabs li a {
+	display: block;
+	padding: 8px 7px 6px 7px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	background-color: #d0d8de;
+	border: none;
+	}
+#base ul.tabs li.here a {
+	background-color: #ffffff;
+	}
+#base ul.tabs li#liBookingLogin a {
+	width: 120px;
+	}
+#base ul.tabs li#liEmailLogin a {
+	width: 94px;
+	}
+
+
+#base form {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	}
+form:after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size: 1pt;
+	clear: both;
+	visibility: hidden;
+	}
+form h1 {
+	margin: 40px 0 10px 0;
+	font-size: 1.2em;
+	color: #247cbc;
+	}
+label,
+input[type="text"],
+input[type="password"],
+select {
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 6px 0;
+	font-size: 1em;
+	}
+label {
+	margin: 20px 0 0 0;
+	color: #585858;
+	}
+input[type="text"],
+input[type="password"] {
+	color: #777777;
+	border: 1px solid #b2c2d2;
+	width: 96%;
+	margin-bottom: 20px;
+	padding: 6px 2%;
+	}
+label.radio {
+	display: inline-block;
+	margin-top: 0;
+	width: auto;
+	}
+.form_footer {
+	padding: 20px 0;
+	margin: 0;
+	color: #585858;
+	border-top: 1px dashed #92a2b2;
+	}
+.form_footer p,
+.form_footer a.btn,
+.form_footer a.sample {
+	display: block;
+	margin: 10px 0 0 0;
+	width: 238px;
+	}
+
+a.btn,
+input[type="submit"] {
+	clear: both;
+	display: block;
+	margin-top: 20px;
+	padding: 4px 8px !important;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff !important;
+	background-color: #247cbc !important;
+	border: 1px solid #b2c2d2 !important;
+	cursor: pointer;
+	-webkit-appearance: none;
+	}
+input[type="submit"] {
+	float: right;
+	margin: 20px 0 30px 0;
+	padding: 5px 8px;
+	font-size: 1.2em;
+	}
+a {
+	color: #247cbc;
+	}
+a.sample {
+	display: block;
+	margin-top: 20px;
+	padding: 4px;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #92a2b2;
+	border: 1px solid #b2c2d2;
+	}
+
+
+table.dnlContent {
+	margin-bottom: 20px;
+	}
+table.dnlContent .label {
+	font-size: 10pt;
+	font-weight: normal;
+	width: 450px;
+	margin: 1px 0 0 !important;
+	padding: 1px 0 0 !important;
+	font-weight: bold;
+	font-size: 15px !important;
+	color: #585858 !important;
+	}
+table.dnlContent .labelb {
+	font-size: 10pt; /*font-weight: bold;*/
+	width: 550px !important;
+	margin: 1px 0 0 !important;
+	padding: 1px 0 0 !important;
+	font-weight: bold;
+	font-size: 15px !important;
+	color: #585858 !important;
+	}
+table.dnlContent .labelH {
+	font-weight: bold;
+	font-size: large !important;
+	margin: 1px 0 10px !important;
+	padding: 1px 0 0 !important;
+	color: #585858 !important;
+	}
+table.dnlContent .small {
+	font-size: 10px;
+	}
+table.dnlContent a.link {
+	color: #0066cc;
+	font-size: 10pt;
+	font-weight: normal;
+	width: 50px;
+	}
+
+table.dnlContent tr td {
+	width: 500px;
+	}
+
+.InvoiceSummaryHeader {
+	text-align: left;
+	padding: 0 20px 0 0;
+	font-weight: bold;
+	color: #247CBC;
+	border: none;
+	border-bottom: 1px solid #cccccc;
+	}
+
+.InvoiceHeading {
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 10px;
+	color: #585858;
+	}
+.InvoiceText {
+	color: #585858;
+	}
+.InvoiceSummary {
+	width: auto;
+	text-align: left;
+	margin-top: 10px;
+	padding: 0 20px 0 0;
+	color: #585858;
+	background-color: #ffffff;
+	font-weight: 500;
+	border: none !important;
+	}
+
+a.InvoiceSummary:link {
+	color: #000000;
+	}
+a.InvoiceSummary:hover {
+	color: #000000;
+	}
+
+.notegrey {
+	width: 800px;
+	font-size: 11px !important;
+	color: #585858;
+	font-family: Arial;
+	text-align: left;
+	line-height: normal;
+	}
+
+.ItinPrint {
+	font-size: 1px;
+	}
+
+.bluebackground {
+	background-color: #247CBC;
+	color: #ffffff;
+	border: none;
+	background-position: left center;
+	vertical-align: middle;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+a.bluebackground:hover {
+	/*background-color: #000000;*/
+	text-decoration: underline;
+	}
+
+
+
+
+/* Login / registration pages */
+#base div.booking_search,
+#base div.email_login,
+#base div.register,
+#base div.registration_confirmation,
+#base div.enter_new_password,
+#base div.reset_password,
+#base div.new_password_confirmed,
+#base div.reset_password_confirmation,
+#base div.change_password {
+	padding: 10px 0 0 286px;
+	min-height: 414px;
+	background: url(../graphics/base_bg.jpg) no-repeat left bottom #e4e8ec;
+	overflow: hidden;
+	}
+#base div.booking_search form,
+#base div.email_login form,
+#base div.register form,
+#base div.registration_confirmation form,
+#base div.enter_new_password form,
+#base div.reset_password form,
+#base div.new_password_confirmed form,
+#base div.change_password form,
+#base div.booking_search #status_message,
+#base div.email_login #status_message,
+#base div.register #status_message,
+#base div.registration_confirmation #status_message,
+#base div.enter_new_password #status_message,
+#base div.renew_password #status_message,
+#base div.new_password_confirmed #status_message,
+#base div.change_password #status_message {
+	width: 256px;
+	}
+#base #status_message p {
+	margin: 0;
+	}
+
+	
+/* Home page */
+#base div.booking_search {
+	min-height: 414px;
+	display:none;
+	}
+
+#base div.booking_search #country_select {
+	position: absolute;
+	visibility: hidden;
+	}
+
+div.email_login {
+	min-height: 300px;
+	display:none;
+	}
+
+.active{
+	display:block !important;
+	}
+
+
+
+
+
+
+/* Renew Password page */
+#base div.renew_password {
+	min-height: 300px;
+	}
+
+
+/* My Bookings page */
+div.mybookings {
+	position: relative;
+	padding: 10px 50px 20px 246px;
+	min-height: 395px;
+	text-align: left;
+	background-color: #ffffff;
+	}
+ul#mybookings_list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	border-top: 1px dashed #889ca8;
+	}
+ul#mybookings_list li {
+	border-bottom: 1px dashed #889ca8;
+	}
+ul#mybookings_list li a {
+	display: inline-block;
+	padding: 8px;
+	width: 100px;
+	text-decoration: none;
+	letter-spacing: .9pt;
+	}
+ul#mybookings_list li .booking_date {
+	display: inline-block;
+	padding: 8px;
+	width: 200px;
+	text-align: right;
+	font-style: italic;
+	color: #483c48;
+	}
+
+
+
+
+
+#base div.invoice {
+	padding: 10px 50px 20px 246px;
+	min-height: 357px;
+	background-color: #ffffff;
+	}
+#base div.invoice h1 {
+	margin: 12pt 0 12pt 0;
+	font-size: 1.2em;
+	}
+#base div.invoice table {
+	margin: 5px 0 10px 0;
+	}
+#base div.invoice h2 {
+	margin: 12pt 0 3pt 0;
+	}
+#base div.invoice p {
+	margin: 0 0 9pt 0;
+	}
+#base div.invoice table img {
+	display: none;
+	}
+
+
+/* eTicketView */
+#base div.eticketview {
+	padding: 10px 50px 20px 246px;
+	min-height: 357px;
+	background-color: #ffffff;
+	}
+#base div.eticketview form {
+	margin: 0;
+	width: 500px;
+	}
+#base div.eticketview form h1 {
+	margin: 12pt 0 12pt 0;
+	font-size: 1.2em;
+	color: #000000;
+	}
+
+
+
+/* Help page */
+#base div.help {
+	position: relative;
+	padding: 10px 50px 20px 0;
+	min-height: 357px;
+	background-color: #ffffff;
+	}
+#base div.help ul#help_toc {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 246px;
+	overflow: hidden;
+	position: absolute;
+	top: 75px;
+	left: 0;
+	}
+#base div.help ul#help_toc li a {
+	display: block;
+	padding: 4px 0 4px 8px;
+	text-decoration: none;
+	}
+#base div.help #help_content {
+	margin-left: 246px;
+	padding: 0;
+	}
+#base div.help #base div.help #help_content h1 {
+	margin: 12pt 0 12pt 0;
+	font-size: 1.2em;
+	}
+#base div.help #help_content h2 {
+	margin: 18pt 0 6pt 0;
+	font-size: 1.2em;
+	color: #247cbc;
+	}
+#base div.help #help_content h3 {
+	margin-bottom: 6pt;
+	}
+#base div.help #help_content p {
+	margin-top: 6pt;
+	}
+
+
+/* Privacy page */
+#base div.privacy {
+	position: relative;
+	padding: 10px 50px 20px 248px;
+	min-height: 357px;
+	background-color: #ffffff;
+	}
+#base div.privacy h3 {
+	margin-bottom: 0;
+	}
+#base div.privacy p {
+	margin-top: 0;
+	}
+
+/* D2C page */
+#base div.d2c {
+	position: relative;
+	padding: 40px 50px 20px 20px;
+	min-height: 364px;
+	text-align: left;
+	background-color: #ffffff;
+	}
+
+
+
+/* Message page */
+#base div.message {
+	position: relative;
+	padding: 40px 50px 20px 246px;
+	min-height: 364px;
+	text-align: left;
+	background-color: #ffffff;
+	}
+#base div.message #centre {
+	text-align: left;
+	}
+
+/* Error page */
+#base div.error {
+	position: relative;
+	padding: 40px 50px 20px 246px;
+	min-height: 364px;
+	text-align: left;
+	background-color: #ffffff;
+	}
+#base div.error #centre {
+	text-align: left;
+	}
+
+
+
+/* Itinerary for old Word-based booking */
+div.itinerary {
+	padding: 0 0 0 25px;
+	background-color: #ffffff;
+	}

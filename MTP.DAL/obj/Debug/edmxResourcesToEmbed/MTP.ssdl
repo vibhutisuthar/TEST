@@ -1,0 +1,913 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="wozModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="wozModelStoreContainer">
+    <EntitySet Name="company" EntityType="wozModel.Store.company" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="consultant" EntityType="wozModel.Store.consultant" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="costcentre" EntityType="wozModel.Store.costcentre" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="countries" EntityType="wozModel.Store.countries" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="countries_old" EntityType="wozModel.Store.countries_old" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="dktable" EntityType="wozModel.Store.dktable" store:Type="Tables" store:Schema="woz" store:Name="dktable">
+      <DefiningQuery>SELECT
+      `dktable`.`DKNumber`, 
+      `dktable`.`Description`, 
+      `dktable`.`TMR_ID`, 
+      `dktable`.`Stamp`
+      FROM `dktable` AS `dktable`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="dktable_old" EntityType="wozModel.Store.dktable_old" store:Type="Tables" store:Schema="woz" store:Name="dktable_old">
+      <DefiningQuery>SELECT
+      `dktable_old`.`DKNumber`, 
+      `dktable_old`.`Description`, 
+      `dktable_old`.`TMR_ID`, 
+      `dktable_old`.`Stamp`
+      FROM `dktable_old` AS `dktable_old`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="emailaddresses" EntityType="wozModel.Store.emailaddresses" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="eticket" EntityType="wozModel.Store.eticket" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="etickettest" EntityType="wozModel.Store.etickettest" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="gmax" EntityType="wozModel.Store.gmax" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="gmaxlog" EntityType="wozModel.Store.gmaxlog" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="jobnumber" EntityType="wozModel.Store.jobnumber" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="mailinglist" EntityType="wozModel.Store.mailinglist" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="mailrecords" EntityType="wozModel.Store.mailrecords" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="optout" EntityType="wozModel.Store.optout" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="premailrecords" EntityType="wozModel.Store.premailrecords" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="processorcountry" EntityType="wozModel.Store.processorcountry" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="processorname" EntityType="wozModel.Store.processorname" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="qisegments" EntityType="wozModel.Store.qisegments" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="queueforwardlog" EntityType="wozModel.Store.queueforwardlog" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="queueforwardlog_deleted" EntityType="wozModel.Store.queueforwardlog_deleted" store:Type="Tables" store:Schema="woz" store:Name="queueforwardlog_deleted">
+      <DefiningQuery>SELECT
+      `queueforwardlog_deleted`.`RLOC`, 
+      `queueforwardlog_deleted`.`QueueKey`, 
+      `queueforwardlog_deleted`.`Stamp`, 
+      `queueforwardlog_deleted`.`ProcessorSummaryName`, 
+      `queueforwardlog_deleted`.`ErrorMessage`
+      FROM `queueforwardlog_deleted` AS `queueforwardlog_deleted`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="rates" EntityType="wozModel.Store.rates" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="rloccomp" EntityType="wozModel.Store.rloccomp" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="rlocs" EntityType="wozModel.Store.rlocs" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="roles" EntityType="wozModel.Store.roles" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="segment" EntityType="wozModel.Store.segment" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="segmentformat" EntityType="wozModel.Store.segmentformat" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="sessionsearch" EntityType="wozModel.Store.sessionsearch" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="sgeticket" EntityType="wozModel.Store.sgeticket" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_emailaddress" EntityType="wozModel.Store.tb_emailaddress" store:Type="Tables" store:Schema="woz" store:Name="tb_emailaddress">
+      <DefiningQuery>SELECT
+      `tb_emailaddress`.`Profile`, 
+      `tb_emailaddress`.`RLOC`, 
+      `tb_emailaddress`.`CreationDate`, 
+      `tb_emailaddress`.`EmailAddress`, 
+      `tb_emailaddress`.`Stamp`
+      FROM `tb_emailaddress` AS `tb_emailaddress`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tb_header" EntityType="wozModel.Store.tb_header" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_history" EntityType="wozModel.Store.tb_history" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_history_cost" EntityType="wozModel.Store.tb_history_cost" store:Type="Tables" store:Schema="woz" store:Name="tb_history_cost">
+      <DefiningQuery>SELECT
+      `tb_history_cost`.`CompanyCode`, 
+      `tb_history_cost`.`HistoryCode`, 
+      `tb_history_cost`.`Cost`, 
+      `tb_history_cost`.`Stamp`
+      FROM `tb_history_cost` AS `tb_history_cost`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tb_history_header" EntityType="wozModel.Store.tb_history_header" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_history_item" EntityType="wozModel.Store.tb_history_item" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_history_types" EntityType="wozModel.Store.tb_history_types" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_passenger" EntityType="wozModel.Store.tb_passenger" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_pnr_segment" EntityType="wozModel.Store.tb_pnr_segment" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_ticket" EntityType="wozModel.Store.tb_ticket" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_ticket_fop" EntityType="wozModel.Store.tb_ticket_fop" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_ticket_pnr" EntityType="wozModel.Store.tb_ticket_pnr" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_ticket_segment" EntityType="wozModel.Store.tb_ticket_segment" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_ticket_text" EntityType="wozModel.Store.tb_ticket_text" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tb_ticket_textdata" EntityType="wozModel.Store.tb_ticket_textdata" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="tddt" EntityType="wozModel.Store.tddt" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="ticket" EntityType="wozModel.Store.ticket" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="toursegmentexception" EntityType="wozModel.Store.toursegmentexception" store:Type="Tables" Schema="woz" />
+    <EntitySet Name="users" EntityType="wozModel.Store.users" store:Type="Tables" Schema="woz" />
+  </EntityContainer>
+  <EntityType Name="company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ReturnEmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="ProcessDataFlag" Type="int" Nullable="false" />
+    <Property Name="D2C" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="consultant">
+    <Key>
+      <PropertyRef Name="WEB_PROFILE" />
+      <PropertyRef Name="BRANCH_CODE" />
+      <PropertyRef Name="CONSULTANT_CODE" />
+    </Key>
+    <Property Name="WEB_PROFILE" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="BRANCH_CODE" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="CONSULTANT_CODE" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="FAMILY_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="GIVEN_NAME" Type="varchar" MaxLength="20" />
+    <Property Name="TITLE" Type="varchar" MaxLength="10" />
+    <Property Name="CONSULTANT_QUEUE_NUMBER" Type="char" MaxLength="2" />
+    <Property Name="PHONE_NUMBER" Type="varchar" MaxLength="20" />
+    <Property Name="FAX_NUMBER" Type="varchar" MaxLength="20" />
+    <Property Name="EMAIL_ADDRESS" Type="varchar" MaxLength="50" />
+    <Property Name="STATUS_OK" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="costcentre">
+    <Key>
+      <PropertyRef Name="CostCentreName" />
+      <PropertyRef Name="CostCentre" />
+    </Key>
+    <Property Name="CostCentreName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CostCentre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PCC" Type="varchar" MaxLength="50" />
+    <Property Name="PCCType" Type="varchar" MaxLength="50" />
+    <Property Name="Business" Type="varchar" MaxLength="50" />
+    <Property Name="Company" Type="varchar" MaxLength="50" />
+    <Property Name="GDS" Type="varchar" MaxLength="10" />
+    <Property Name="BranchCode" Type="varchar" MaxLength="20" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="10" />
+    <Property Name="GST" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="countries">
+    <Key>
+      <PropertyRef Name="CountryName" />
+      <PropertyRef Name="CountryCode" />
+    </Key>
+    <Property Name="CountryName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CountryCode" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="Malaria" Type="uint" />
+    <Property Name="Region" Type="char" MaxLength="3" />
+    <Property Name="TLCC" Type="char" MaxLength="4" />
+    <Property Name="TDCC" Type="char" MaxLength="4" />
+    <Property Name="DESCRIPTION" Type="varchar" MaxLength="255" />
+    <Property Name="StateCode" Type="char" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="countries_old">
+    <Key>
+      <PropertyRef Name="CountryName" />
+      <PropertyRef Name="CountryCode" />
+    </Key>
+    <Property Name="CountryName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CountryCode" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="Malaria" Type="uint" />
+    <Property Name="Region" Type="char" MaxLength="3" />
+    <Property Name="TLCC" Type="char" MaxLength="4" />
+    <Property Name="TDCC" Type="char" MaxLength="4" />
+    <Property Name="DESCRIPTION" Type="varchar" MaxLength="255" />
+    <Property Name="StateCode" Type="char" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'woz.dktable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="dktable">
+    <Key>
+      <PropertyRef Name="DKNumber" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="TMR_ID" />
+      <PropertyRef Name="Stamp" />
+    </Key>
+    <Property Name="DKNumber" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TMR_ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'woz.dktable_old' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="dktable_old">
+    <Key>
+      <PropertyRef Name="DKNumber" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="TMR_ID" />
+      <PropertyRef Name="Stamp" />
+    </Key>
+    <Property Name="DKNumber" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TMR_ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="emailaddresses">
+    <Key>
+      <PropertyRef Name="CostCentre" />
+      <PropertyRef Name="EmailAddress" />
+    </Key>
+    <Property Name="CostCentre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="BranchName" Type="varchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="100" />
+    <Property Name="Security" Type="int" />
+    <Property Name="LastLogin" Type="date" />
+    <Property Name="LastTransaction" Type="date" />
+    <Property Name="Time_Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="eticket">
+    <Key>
+      <PropertyRef Name="WebProfile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WebProfile" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+    <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Location" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="Processed" Type="uint" Nullable="false" />
+    <Property Name="Company" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Team" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProcessTime" Type="datetime" Nullable="false" />
+    <Property Name="RetryCount" Type="uint" Nullable="false" />
+    <Property Name="ProcessorName" Type="varchar" MaxLength="45" />
+    <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="etickettest">
+    <Key>
+      <PropertyRef Name="WebProfile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WebProfile" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+    <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Location" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="Processed" Type="uint" Nullable="false" />
+    <Property Name="Company" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Team" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProcessTime" Type="datetime" Nullable="false" />
+    <Property Name="RetryCount" Type="uint" Nullable="false" />
+    <Property Name="ProcessorName" Type="varchar" MaxLength="45" />
+    <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="gmax">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="DateRun" Type="datetime" Nullable="false" />
+    <Property Name="SiftDate" Type="datetime" Nullable="false" />
+    <Property Name="FileName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="FileSize" Type="uint" Nullable="false" />
+    <Property Name="Transactions" Type="uint" Nullable="false" />
+    <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="Successful" Type="uint" Nullable="false" />
+    <Property Name="Sent" Type="uint" Nullable="false" />
+    <Property Name="CreditNotes" Type="uint" Nullable="false" />
+    <Property Name="Errors" Type="uint" Nullable="false" />
+    <Property Name="Notes" Type="varchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="gmaxlog">
+    <Key>
+      <PropertyRef Name="BatchName" />
+      <PropertyRef Name="DateRun" />
+    </Key>
+    <Property Name="BatchName" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="ID" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="DateRun" Type="datetime" Nullable="false" />
+    <Property Name="SiftDate" Type="datetime" Nullable="false" />
+    <Property Name="FileName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="FileSize" Type="uint" Nullable="false" />
+    <Property Name="Transactions" Type="uint" Nullable="false" />
+    <Property Name="Queued" Type="uint" Nullable="false" />
+    <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="Successful" Type="uint" Nullable="false" />
+    <Property Name="Invoices" Type="uint" Nullable="false" />
+    <Property Name="CreditNotes" Type="uint" Nullable="false" />
+    <Property Name="Errors" Type="uint" Nullable="false" />
+    <Property Name="Notes" Type="varchar" MaxLength="255" />
+    <Property Name="SenttoCRS" Type="int" Nullable="false" />
+    <Property Name="SequenceNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="jobnumber">
+    <Key>
+      <PropertyRef Name="JobNumber" />
+    </Key>
+    <Property Name="JobNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="nStatus" Type="int" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="mailinglist">
+    <Key>
+      <PropertyRef Name="EmailAddress" />
+    </Key>
+    <Property Name="EmailAddress" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="BlockSending" Type="int" />
+    <Property Name="ChangeDate" Type="date" />
+  </EntityType>
+  <EntityType Name="mailrecords">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RLOC" Type="varchar" MaxLength="7" />
+    <Property Name="Subject" Type="varchar" MaxLength="100" />
+    <Property Name="FromName" Type="varchar" MaxLength="50" />
+    <Property Name="SenderName" Type="varchar" MaxLength="50" />
+    <Property Name="ToName" Type="varchar" MaxLength="100" />
+    <Property Name="Received" Type="datetime" />
+    <Property Name="DeliveryTime" Type="varchar" MaxLength="20" />
+    <Property Name="Contents" Type="varchar" MaxLength="30" />
+    <Property Name="Agent" Type="varchar" MaxLength="50" />
+    <Property Name="Method" Type="varchar" MaxLength="10" />
+    <Property Name="Processor" Type="int" />
+    <Property Name="ProcessorName" Type="varchar" MaxLength="30" />
+    <Property Name="FormName" Type="varchar" MaxLength="30" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="PreprocStatus" Type="int" />
+    <Property Name="TicketNumber" Type="varchar" MaxLength="20" />
+    <Property Name="DocumentNumber" Type="varchar" MaxLength="20" />
+    <Property Name="OrderNumber" Type="varchar" MaxLength="100" />
+    <Property Name="CustomerReference" Type="varchar" MaxLength="20" />
+    <Property Name="Processed" Type="int" Nullable="false" />
+    <Property Name="Company" Type="varchar" MaxLength="65" />
+    <Property Name="Category" Type="varchar" MaxLength="20" />
+    <Property Name="ItinType" Type="int" Nullable="false" />
+    <Property Name="time_stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="TripRequest" Type="varchar" MaxLength="20" />
+    <Property Name="FileName" Type="varchar" MaxLength="255" />
+    <Property Name="Pseudo" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="Team" Type="varchar" MaxLength="65" />
+    <Property Name="BounceEmailID" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="optout">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="254" />
+    <Property Name="Code" Type="varchar" MaxLength="31" />
+    <Property Name="DateCode" Type="varchar" MaxLength="21" />
+    <Property Name="space" Type="char" MaxLength="1" />
+    <Property Name="txt" Type="varchar" MaxLength="2" />
+    <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="premailrecords">
+    <Key>
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="Surname" />
+    </Key>
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Company" Type="varchar" MaxLength="45" />
+    <Property Name="Team" Type="varchar" MaxLength="45" />
+    <Property Name="GDS" Type="varchar" MaxLength="5" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="IVMail" Type="varchar" MaxLength="255" />
+    <Property Name="ReplyEmail" Type="varchar" MaxLength="45" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="45" />
+    <Property Name="Address1" Type="varchar" MaxLength="45" />
+    <Property Name="Address2" Type="varchar" MaxLength="45" />
+    <Property Name="CityStatePostCode" Type="varchar" MaxLength="45" />
+    <Property Name="Country" Type="varchar" MaxLength="45" />
+    <Property Name="DKNumber" Type="varchar" MaxLength="45" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="AirlineLoc1" Type="varchar" MaxLength="45" />
+    <Property Name="AirlineLoc2" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="processorcountry">
+    <Key>
+      <PropertyRef Name="ProcessorName" />
+    </Key>
+    <Property Name="ProcessorName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Country" Type="varchar" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="processorname">
+    <Key>
+      <PropertyRef Name="ProcessorName" />
+    </Key>
+    <Property Name="ProcessorName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Country" Type="varchar" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="qisegments">
+    <Key>
+      <PropertyRef Name="GDS" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="SegmentNumber" />
+    </Key>
+    <Property Name="GDS" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="SegmentNumber" Type="uint" Nullable="false" />
+    <Property Name="FileLocation" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="queueforwardlog">
+    <Key>
+      <PropertyRef Name="RLOC" />
+    </Key>
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="QueueKey" Type="varchar" MaxLength="45" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="ProcessorSummaryName" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="ErrorMessage" Type="varchar" Nullable="false" MaxLength="80" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'woz.queueforwardlog_deleted' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="queueforwardlog_deleted">
+    <Key>
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="Stamp" />
+      <PropertyRef Name="ProcessorSummaryName" />
+      <PropertyRef Name="ErrorMessage" />
+    </Key>
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="QueueKey" Type="varchar" MaxLength="45" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="ProcessorSummaryName" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="ErrorMessage" Type="varchar" Nullable="false" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="rates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="decimal" Nullable="false" Precision="6" />
+    <Property Name="Rate" Type="char" MaxLength="30" />
+    <Property Name="value" Type="int" />
+    <Property Name="Admin" Type="char" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="rloccomp">
+    <Key>
+      <PropertyRef Name="rlocid" />
+    </Key>
+    <Property Name="rlocid" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="rloc" Type="varchar" Nullable="false" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="rlocs">
+    <Key>
+      <PropertyRef Name="RLOC" />
+    </Key>
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Processed" Type="uint" Nullable="false" />
+    <Property Name="PSEUDO" Type="varchar" MaxLength="10" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="User" />
+      <PropertyRef Name="Role" />
+    </Key>
+    <Property Name="User" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Role" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="segment">
+    <Key>
+      <PropertyRef Name="CRS" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="Lang" />
+      <PropertyRef Name="SegNum" />
+    </Key>
+    <Property Name="CRS" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Lang" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="SegNum" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="SegmentSequence" Type="int" Nullable="false" />
+    <Property Name="Supplier" Type="varchar" MaxLength="50" />
+    <Property Name="FltNo" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="char" MaxLength="50" />
+    <Property Name="DateDep" Type="datetime" />
+    <Property Name="DepCity" Type="varchar" MaxLength="50" />
+    <Property Name="DateArr" Type="datetime" />
+    <Property Name="ArrCity" Type="varchar" MaxLength="50" />
+    <Property Name="CabinClass" Type="varchar" MaxLength="20" />
+    <Property Name="SegmentType" Type="varchar" MaxLength="10" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="segmentformat">
+    <Key>
+      <PropertyRef Name="CRS" />
+      <PropertyRef Name="TokenType" />
+      <PropertyRef Name="Lang" />
+      <PropertyRef Name="token" />
+    </Key>
+    <Property Name="CRS" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="TokenType" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Lang" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="token" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Header" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="CodeSnip" Type="varchar" MaxLength="45" />
+    <Property Name="HasData" Type="bool" Nullable="false" />
+    <Property Name="User" Type="varchar" MaxLength="50" />
+    <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="sessionsearch">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SessionID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="RLOC" Type="varchar" MaxLength="7" />
+    <Property Name="Subject" Type="varchar" MaxLength="255" />
+    <Property Name="FromName" Type="varchar" MaxLength="50" />
+    <Property Name="SenderName" Type="varchar" MaxLength="50" />
+    <Property Name="ToName" Type="varchar" MaxLength="100" />
+    <Property Name="Received" Type="datetime" />
+    <Property Name="DeliveryTime" Type="varchar" MaxLength="20" />
+    <Property Name="Contents" Type="varchar" MaxLength="30" />
+    <Property Name="Agent" Type="varchar" MaxLength="50" />
+    <Property Name="Method" Type="varchar" MaxLength="10" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Time_Stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="Processor" Type="int" />
+    <Property Name="ProcessorName" Type="varchar" MaxLength="30" />
+    <Property Name="FormName" Type="varchar" MaxLength="30" />
+    <Property Name="PreprocStatus" Type="int" />
+    <Property Name="TicketNumber" Type="varchar" MaxLength="20" />
+    <Property Name="DocumentNumber" Type="varchar" MaxLength="20" />
+    <Property Name="OrderNumber" Type="varchar" MaxLength="20" />
+    <Property Name="TripRequest" Type="varchar" MaxLength="20" />
+    <Property Name="Company" Type="varchar" MaxLength="100" />
+    <Property Name="Category" Type="varchar" MaxLength="100" />
+    <Property Name="ItinType" Type="int" />
+    <Property Name="CustomerReference" Type="varchar" MaxLength="20" />
+    <Property Name="FileName" Type="varchar" MaxLength="255" />
+    <Property Name="nID" Type="uint" />
+  </EntityType>
+  <EntityType Name="sgeticket">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+    </Key>
+    <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Date" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'woz.tb_emailaddress' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tb_emailaddress">
+    <Key>
+      <PropertyRef Name="Profile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+      <PropertyRef Name="Stamp" />
+    </Key>
+    <Property Name="Profile" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tb_header">
+    <Key>
+      <PropertyRef Name="Profile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+    </Key>
+    <Property Name="Profile" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="PaxName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Pseudo" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="ParsedDate" Type="datetime" />
+    <Property Name="ScheduleDate" Type="datetime" />
+    <Property Name="DepartureDate" Type="datetime" />
+    <Property Name="ReturnDate" Type="datetime" />
+    <Property Name="ItinSummary" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Parsed" Type="int" />
+    <Property Name="CostCentre" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TotalUnitCost" Type="double" />
+    <Property Name="AgentSign" Type="varchar" MaxLength="20" />
+    <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DepartmentCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Amount" Type="double" />
+    <Property Name="FareBasis" Type="varchar" MaxLength="20" />
+    <Property Name="ClientNumber" Type="varchar" MaxLength="20" />
+    <Property Name="Supplier" Type="varchar" MaxLength="20" />
+    <Property Name="PurchaseOrder" Type="varchar" MaxLength="20" />
+    <Property Name="RefNo" Type="varchar" MaxLength="20" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="20" />
+    <Property Name="NoOfPax" Type="int" />
+    <Property Name="EmailTo" Type="varchar" MaxLength="20" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="Domestic" Type="bool" />
+    <Property Name="SegmentCount" Type="int" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="EmailCount" Type="int" />
+    <Property Name="StatusEmail" Type="varchar" MaxLength="100" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tb_history">
+    <Key>
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="HistoryDate" />
+    </Key>
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="HistoryDate" Type="datetime" Nullable="false" />
+    <Property Name="ReceivedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ChangedBy" Type="varchar" MaxLength="50" />
+    <Property Name="NumberItems" Type="int" />
+    <Property Name="Cost" Type="double" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'woz.tb_history_cost' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tb_history_cost">
+    <Key>
+      <PropertyRef Name="CompanyCode" />
+      <PropertyRef Name="HistoryCode" />
+      <PropertyRef Name="Cost" />
+      <PropertyRef Name="Stamp" />
+    </Key>
+    <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="HistoryCode" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Cost" Type="double" Nullable="false" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tb_history_header">
+    <Key>
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+    </Key>
+    <Property Name="Profile" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="PaxName" Type="varchar" MaxLength="50" />
+    <Property Name="Pseudo" Type="varchar" MaxLength="10" />
+    <Property Name="ParsedDate" Type="datetime" />
+    <Property Name="ScheduleDate" Type="datetime" />
+    <Property Name="Parsed" Type="int" />
+    <Property Name="CostCentre" Type="varchar" MaxLength="20" />
+    <Property Name="TotalUnitCost" Type="double" />
+    <Property Name="AgentSign" Type="varchar" MaxLength="20" />
+    <Property Name="CompanyCode" Type="varchar" MaxLength="50" />
+    <Property Name="DepartureDate" Type="datetime" />
+    <Property Name="ItinSummary" Type="varchar" MaxLength="100" />
+    <Property Name="DepartmentCode" Type="varchar" MaxLength="20" />
+    <Property Name="Domestic" Type="bool" />
+    <Property Name="ReturnDate" Type="datetime" />
+    <Property Name="NoOfPax" Type="int" Nullable="false" />
+    <Property Name="TKT_Date" Type="datetime" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="TICKETED" Type="int" Nullable="false" />
+    <Property Name="SegmentCount" Type="int" Nullable="false" />
+    <Property Name="AirSegmentCount" Type="int" Nullable="false" />
+    <Property Name="HotelSegmentCount" Type="int" Nullable="false" />
+    <Property Name="CarSegmentCount" Type="int" Nullable="false" />
+    <Property Name="GDS" Type="varchar" MaxLength="5" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="20" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="BookerEmail" Type="varchar" MaxLength="50" />
+    <Property Name="TKTIssued" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="varchar" MaxLength="12" />
+    <Property Name="ClientNumber" Type="varchar" MaxLength="30" />
+    <Property Name="FareBasis" Type="varchar" MaxLength="10" />
+    <Property Name="PurchaseOrder" Type="varchar" MaxLength="30" />
+    <Property Name="RefNo" Type="varchar" MaxLength="20" />
+    <Property Name="Supplier" Type="varchar" MaxLength="30" />
+    <Property Name="Sent" Type="int" Nullable="false" />
+    <Property Name="DepartureCity" Type="varchar" MaxLength="4" />
+    <Property Name="DestinationCity" Type="varchar" MaxLength="4" />
+    <Property Name="AirlineSummary" Type="varchar" MaxLength="50" />
+    <Property Name="EmailSent" Type="char" MaxLength="1" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="Online" Type="char" MaxLength="1" />
+    <Property Name="Touch" Type="char" MaxLength="1" />
+    <Property Name="G3" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="Team" Type="varchar" Nullable="false" MaxLength="65" />
+  </EntityType>
+  <EntityType Name="tb_history_item">
+    <Key>
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+      <PropertyRef Name="HistoryDate" />
+      <PropertyRef Name="HistoryID" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="HistoryDate" Type="datetime" Nullable="false" />
+    <Property Name="HistoryID" Type="uint" Nullable="false" />
+    <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HistoryType" Type="varchar" MaxLength="10" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="Data" Type="varchar" MaxLength="100" />
+    <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tb_history_types">
+    <Key>
+      <PropertyRef Name="HistoryType" />
+    </Key>
+    <Property Name="HistoryType" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="amount" Type="decimal" Nullable="false" />
+    <Property Name="Use" Type="int" Nullable="false" />
+    <Property Name="description" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tb_passenger">
+    <Key>
+      <PropertyRef Name="Profile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+      <PropertyRef Name="PaxNum" />
+    </Key>
+    <Property Name="Profile" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="PaxNum" Type="int" Nullable="false" />
+    <Property Name="PaxName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tb_pnr_segment">
+    <Key>
+      <PropertyRef Name="Profile" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+      <PropertyRef Name="SegNum" />
+    </Key>
+    <Property Name="Profile" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SegNum" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="SegmentSequence" Type="int" Nullable="false" />
+    <Property Name="Supplier" Type="varchar" MaxLength="10" />
+    <Property Name="NoOfPax" Type="char" MaxLength="2" />
+    <Property Name="FltNo" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="char" MaxLength="2" />
+    <Property Name="DateDep" Type="datetime" />
+    <Property Name="DepCity" Type="char" MaxLength="3" />
+    <Property Name="DateArr" Type="datetime" />
+    <Property Name="ArrCity" Type="char" MaxLength="3" />
+    <Property Name="CabinClass" Type="varchar" MaxLength="5" />
+    <Property Name="SegmentType" Type="varchar" MaxLength="10" />
+    <Property Name="CityCode" Type="varchar" MaxLength="5" />
+    <Property Name="Rate" Type="decimal" />
+    <Property Name="Currency" Type="varchar" MaxLength="5" />
+    <Property Name="VendorName" Type="varchar" MaxLength="50" />
+    <Property Name="VoucherCurrency" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="VoucherRate" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tb_ticket">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+    </Key>
+    <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="CreationDate" Type="varchar" MaxLength="12" />
+    <Property Name="TicketType" Type="varchar" MaxLength="10" />
+    <Property Name="Amount" Type="double" />
+    <Property Name="Currency" Type="varchar" MaxLength="4" />
+    <Property Name="TKTDate" Type="datetime" />
+    <Property Name="ETKTCarrier" Type="varchar" MaxLength="12" />
+    <Property Name="FreeFlow" Type="varchar" MaxLength="99" />
+    <Property Name="IATANo" Type="varchar" MaxLength="12" />
+    <Property Name="Pseudo" Type="varchar" MaxLength="10" />
+    <Property Name="TravelAgentID" Type="varchar" MaxLength="10" />
+    <Property Name="PassengerName" Type="varchar" MaxLength="50" />
+    <Property Name="PassengerType" Type="varchar" MaxLength="12" />
+    <Property Name="PassengerAge" Type="varchar" MaxLength="10" />
+    <Property Name="ConjunctedTicketNo" Type="varchar" MaxLength="20" />
+    <Property Name="TKTStatus" Type="uint" />
+    <Property Name="FareConstruction" Type="varchar" MaxLength="100" />
+    <Property Name="TKTData" Type="mediumtext" />
+    <Property Name="Commission" Type="int" Nullable="false" />
+    <Property Name="Airline" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tb_ticket_fop">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ID" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Type" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Currency" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Amount" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="ExpDate" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Vendor" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="AccountNumber" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tb_ticket_pnr">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+      <PropertyRef Name="RLOC" />
+      <PropertyRef Name="CreationDate" />
+    </Key>
+    <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="CreationDate" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tb_ticket_segment">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+      <PropertyRef Name="SegmentNumber" />
+    </Key>
+    <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SegmentNumber" Type="int" Nullable="false" />
+    <Property Name="CouponStatus" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Vendor" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="FlightNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Cabin" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="SegDate" Type="datetime" Nullable="false" />
+    <Property Name="StartAirport" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="EndAirport" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="FareBasis" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="CouponNumber" Type="int" Nullable="false" />
+    <Property Name="Currency" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Fare" Type="double" Nullable="false" />
+    <Property Name="Allowance" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="AllowanceType" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="NotValidBefore" Type="date" Nullable="false" />
+    <Property Name="NotValidAfter" Type="date" Nullable="false" />
+    <Property Name="StopOverIndicator" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tb_ticket_text">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+      <PropertyRef Name="RefNo" />
+    </Key>
+    <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TextType" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="InfoType" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="RefNo" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tb_ticket_textdata">
+    <Key>
+      <PropertyRef Name="TicketNumber" />
+      <PropertyRef Name="TextNumber" />
+      <PropertyRef Name="RefNumber" />
+    </Key>
+    <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TextNumber" Type="int" Nullable="false" />
+    <Property Name="Text" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="RefNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tddt">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="RLOC" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="FirstSight" Type="datetime" />
+    <Property Name="SmartMailProc" Type="datetime" />
+    <Property Name="QIServerSight" Type="datetime" />
+    <Property Name="QIServerMail" Type="datetime" />
+    <Property Name="Stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="ticket">
+    <Key>
+      <PropertyRef Name="WebProfile" />
+      <PropertyRef Name="TripID" />
+      <PropertyRef Name="TicketNumber" />
+    </Key>
+    <Property Name="WebProfile" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TripID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TicketNumber" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Amount" Type="decimal" Scale="2" />
+    <Property Name="Tax" Type="varchar" MaxLength="20" />
+    <Property Name="GST" Type="char" MaxLength="3" />
+    <Property Name="BookingReference" Type="varchar" MaxLength="10" />
+    <Property Name="PlatingCarrier" Type="varchar" MaxLength="20" />
+    <Property Name="DomInt" Type="char" MaxLength="3" />
+    <Property Name="DRCR" Type="char" MaxLength="3" />
+    <Property Name="SalesType" Type="varchar" MaxLength="8" />
+    <Property Name="OriginalTicketNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ExchangeTicketNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ConjuctiionTicket" Type="varchar" MaxLength="20" />
+    <Property Name="PaxName" Type="varchar" MaxLength="20" />
+    <Property Name="Commission" Type="char" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="toursegmentexception">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="AccessCode" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="user" />
+    </Key>
+    <Property Name="user" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="passcode" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="security" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="stamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+}
+@using MTP_JAPA.Helpers
+<div class="register">
+  <h1>Register</h1>
+  <script type="text/javascript">
+    var RecaptchaOptions = {
+      theme : 'white'
+    };
+  </script>
+@using (Html.BeginForm("Register", "User", FormMethod.Post, new { id = "frmRegister", name = "frmRegister", style="width:318px;" }))
+{
+
+   @* <label for="username">
+        User name:</label>
+    @Html.TextBox("username", "", new { @maxlength = "24", id = "txtUserName" })*@
+    <label for="email">
+        Email address:</label>
+    @Html.TextBox("email", "", new { @maxlength = "100", id = "txtEmail" })
+    <label for="password">
+        Password <em>(minimum 6 characters)</em>:</label>
+    <input type="password" name="password" size="24" />
+    <label for="password2">
+        Confirm password:</label>
+    <input type="password" name="confirmpassword" size="24" />
+    @*<label class="editor-label">Enter the characters you see</label>
+            <label class="captcha">
+                @Html.Generate()
+            </label>
+            <span class="field-validation-error">@ViewBag.CaptchaError</span>*@
+    <script type="text/javascript"
+     src="http://www.google.com/recaptcha/api/challenge?k=6LdlbNESAAAAALtKoeah840s3cll8VsYjTBcUgmw">
+  </script>
+  <noscript>
+     <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LdlbNESAAAAALtKoeah840s3cll8VsYjTBcUgmw"
+         height="300" width="500" frameborder="0"></iframe><br>
+     <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+     </textarea>
+     <input type="hidden" name="recaptcha_response_field" value="manual_challenge"/>
+  </noscript>
+    <input type="submit" id="btnSubmit" name="btnSubmit" title="btnSubmit" value="GO" />
+}
+</div>

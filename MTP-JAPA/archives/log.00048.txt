@@ -1,0 +1,140 @@
+2012-04-25 16:35:32.2115 TravelPlans Disk Search Itinerary finished
+2012-04-25 16:35:32.2144 TravelPlans Surname Check started
+2012-04-25 16:35:32.2144 TravelPlans ending Search Threads
+2012-04-25 16:35:32.3570 TravelPlans m_RLOC : OFQMOG
+2012-04-25 16:35:32.2691 TravelPlans Trip Summary Finished
+2012-04-25 16:35:34.3100 TravelPlans Mailrecords found : 6
+2012-04-25 16:35:34.3100 TravelPlans Records found for Invoice in DB: 1
+2012-04-25 16:35:34.3100 TravelPlans Enter : debug point 3
+2012-04-25 16:35:34.3246 TravelPlans DbRecs : 1
+2012-04-25 16:35:34.3246 TravelPlans Surname Check Finished
+2012-04-25 16:35:34.3930 TravelPlans Enter : debug point 4
+2012-04-25 16:35:34.3930 TravelPlans m_RLOC : OFQMOG
+2012-04-25 16:35:39.4405 TravelPlans Retrieving \\203.19.215.74\FILESTORE\QIETKS\OCT2011\OFQMOG.PDF
+2012-04-25 18:50:53.7805 TravelPlans Itinerary: Mailrecords found : 1
+2012-04-25 18:50:53.9514 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-04-25 18:50:53.9622 TravelPlans CreateDisplayFile debug point 01
+2012-04-25 18:50:54.4943 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 18:50:59.9813 TravelPlans File copied
+2012-04-25 18:51:00.0340 TravelPlans Decrypting file
+2012-04-25 18:51:00.0340 TravelPlans FileDecrypt: Debug point 01
+2012-04-25 18:51:00.6170 TravelPlans FileDecrypt: Debug point 02
+2012-04-25 18:51:00.6483 TravelPlans Decrypt : c:\temp\bwvs3l0b44i3teuqfdmgydos.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.doc
+2012-04-25 18:51:01.9021 TravelPlans Decrypted : 
+2012-04-25 18:51:01.9021 TravelPlans Decrypted file
+2012-04-25 18:51:01.9021 TravelPlans Deleted c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 18:51:01.9021 TravelPlans Returning
+2012-04-25 18:51:01.9734 TravelPlans Retrieving c:\temp\bwvs3l0b44i3teuqfdmgydos.htm
+2012-04-25 18:51:01.9782 TravelPlans Fixing HTML
+2012-04-25 20:49:45.6291 TravelPlans Enter : debug point 1
+2012-04-25 20:49:45.8527 TravelPlans Enter : debug point 2
+2012-04-25 20:49:45.8527 TravelPlans Starting Search Threads
+2012-04-25 20:49:45.8606 TravelPlans m_RLOC : Q2CVC0
+2012-04-25 20:49:45.8606 TravelPlans ending Search Threads
+2012-04-25 20:49:45.8947 TravelPlans Surname Check started
+2012-04-25 20:49:45.8947 TravelPlans Disk Search Invoice started
+2012-04-25 20:49:45.8947 TravelPlans Disk Search Invoice in way
+2012-04-25 20:49:45.8947 TravelPlans m_RLOC : Q2CVC0
+2012-04-25 20:49:45.9133 TravelPlans Disk Search Invoice finished
+2012-04-25 20:49:45.9524 TravelPlans Disk Search Itinerary finished
+2012-04-25 20:49:45.9777 TravelPlans Trip Summary Finished
+2012-04-25 20:49:54.1499 TravelPlans Mailrecords found : 46
+2012-04-25 20:49:54.1499 TravelPlans Records found for Invoice in DB: zero
+2012-04-25 20:49:54.1499 TravelPlans Enter : debug point 3
+2012-04-25 20:49:54.1538 TravelPlans Invoices in database / found on disk Database records DS was null
+2012-04-25 20:49:54.1714 TravelPlans Surname Check Finished
+2012-04-25 20:56:36.2074 TravelPlans Itinerary: Mailrecords found : 1
+2012-04-25 20:56:36.2474 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-04-25 20:56:36.2904 TravelPlans CreateDisplayFile debug point 01
+2012-04-25 20:56:36.4681 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 20:56:42.9107 TravelPlans File copied
+2012-04-25 20:56:42.9615 TravelPlans Decrypting file
+2012-04-25 20:56:43.0299 TravelPlans FileDecrypt: Debug point 01
+2012-04-25 20:56:43.5563 TravelPlans FileDecrypt: Debug point 02
+2012-04-25 20:56:43.6334 TravelPlans Decrypt : c:\temp\bwvs3l0b44i3teuqfdmgydos.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.doc
+2012-04-25 20:56:44.7028 TravelPlans Decrypted : 
+2012-04-25 20:56:44.7028 TravelPlans Decrypted file
+2012-04-25 20:56:44.7028 TravelPlans Deleted c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 20:56:44.7028 TravelPlans Returning
+2012-04-25 20:56:44.7546 TravelPlans Retrieving c:\temp\bwvs3l0b44i3teuqfdmgydos.htm
+2012-04-25 20:56:44.7546 TravelPlans Fixing HTML
+2012-04-25 20:56:55.1163 TravelPlans Enter : debug point 1
+2012-04-25 20:56:55.1231 TravelPlans Enter : debug point 2
+2012-04-25 20:56:55.1231 TravelPlans Starting Search Threads
+2012-04-25 20:56:55.1231 TravelPlans Disk Search Invoice started
+2012-04-25 20:56:55.1231 TravelPlans Disk Search Invoice in way
+2012-04-25 20:56:55.1231 TravelPlans Disk Search Invoice finished
+2012-04-25 20:56:55.1388 TravelPlans Disk Search Itinerary finished
+2012-04-25 20:56:55.1388 TravelPlans Surname Check started
+2012-04-25 20:56:55.1388 TravelPlans m_RLOC : OFQMOG
+2012-04-25 20:56:55.1388 TravelPlans Trip Summary Finished
+2012-04-25 20:56:55.1544 TravelPlans m_RLOC : OFQMOG
+2012-04-25 20:56:55.1544 TravelPlans ending Search Threads
+2012-04-25 20:56:56.1036 TravelPlans Mailrecords found : 6
+2012-04-25 20:56:56.1036 TravelPlans Records found for Invoice in DB: 1
+2012-04-25 20:56:56.1036 TravelPlans Surname Check Finished
+2012-04-25 20:56:56.1085 TravelPlans Enter : debug point 3
+2012-04-25 20:56:56.1085 TravelPlans DbRecs : 1
+2012-04-25 20:56:56.2111 TravelPlans Enter : debug point 4
+2012-04-25 20:56:56.2111 TravelPlans m_RLOC : OFQMOG
+2012-04-25 20:56:59.6204 TravelPlans Retrieving \\203.19.215.74\FILESTORE\QIETKS\OCT2011\OFQMOG.PDF
+2012-04-25 20:57:31.6968 TravelPlans Itinerary: Mailrecords found : 1
+2012-04-25 20:57:31.6968 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-04-25 20:57:31.6968 TravelPlans CreateDisplayFile debug point 01
+2012-04-25 20:57:31.7056 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 20:57:38.9022 TravelPlans File copied
+2012-04-25 20:57:38.9197 TravelPlans Decrypting file
+2012-04-25 20:57:38.9227 TravelPlans FileDecrypt: Debug point 01
+2012-04-25 20:57:38.9227 TravelPlans FileDecrypt: Debug point 02
+2012-04-25 20:57:38.9383 TravelPlans Decrypt : c:\temp\bwvs3l0b44i3teuqfdmgydos.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.doc
+2012-04-25 20:57:40.2792 TravelPlans Decrypted : 
+2012-04-25 20:57:40.2792 TravelPlans Decrypted file
+2012-04-25 20:57:40.2831 TravelPlans Deleted c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 20:57:40.2831 TravelPlans Returning
+2012-04-25 20:57:40.4354 TravelPlans Retrieving c:\temp\bwvs3l0b44i3teuqfdmgydos.htm
+2012-04-25 20:57:40.4374 TravelPlans Fixing HTML
+2012-04-25 21:10:28.9401 TravelPlans Itinerary: Mailrecords found : 1
+2012-04-25 21:10:29.0944 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-04-25 21:10:29.0944 TravelPlans CreateDisplayFile debug point 01
+2012-04-25 21:10:29.3375 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 21:10:35.9325 TravelPlans File copied
+2012-04-25 21:10:35.9325 TravelPlans Decrypting file
+2012-04-25 21:10:35.9364 TravelPlans FileDecrypt: Debug point 01
+2012-04-25 21:10:36.1357 TravelPlans FileDecrypt: Debug point 02
+2012-04-25 21:10:36.1425 TravelPlans Decrypt : c:\temp\bwvs3l0b44i3teuqfdmgydos.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.doc
+2012-04-25 21:10:39.1592 TravelPlans Decrypted : 
+2012-04-25 21:10:39.1592 TravelPlans Decrypted file
+2012-04-25 21:10:39.1592 TravelPlans Deleted c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 21:10:39.1592 TravelPlans Returning
+2012-04-25 21:10:39.6465 TravelPlans Retrieving c:\temp\bwvs3l0b44i3teuqfdmgydos.htm
+2012-04-25 21:10:39.6465 TravelPlans Fixing HTML
+2012-04-25 21:34:43.0787 TravelPlans Itinerary: Mailrecords found : 1
+2012-04-25 21:34:43.1177 TravelPlans Live Retrievel Start - Debug Point 1
+2012-04-25 21:34:44.3852 TravelPlans Debug Point 2
+2012-04-25 21:34:54.7479 TBUtils Can't continue
+<AgencyPNRBFDisplay_7_5 xmlns=""><PNRBFRetrieve><ErrorCode>0001</ErrorCode><ErrText><Err>B 000001</Err><KlrInErr /><InsertedTextAry></InsertedTextAry><Text>INVALID RECORD LOCATOR</Text></ErrText></PNRBFRetrieve></AgencyPNRBFDisplay_7_5>
+2012-04-25 21:34:57.4567 GalileoDecoder Error in PNR Retrieve for RLOC OFQMOG
+2012-04-25 21:34:57.4567 GalileoDecoder <Errors xmlns="http://ns.galileo.com"><Text>INVALID RECORD LOCATOR</Text></Errors>
+2012-04-25 21:34:57.4567 TravelPlans Debug Point 3
+2012-04-25 21:34:57.4567 TravelPlans Debug Point 4 : We are unable to display your reservation.<BR>Please either check out our HINTS section for assistance<BR>Or contact your Travel Agent/Provider for further reservation details.<br>Thank You
+2012-04-25 21:51:45.9005 TravelPlans Itinerary: Mailrecords found : 1
+2012-04-25 21:51:46.0079 TravelPlans Retrieving \\203.19.215.74\FILESTORE\ITINERARIES\OCT\O\F\Q\M\O\OFQMOG.TXT
+2012-04-25 21:51:46.0079 TravelPlans CreateDisplayFile debug point 01
+2012-04-25 21:51:46.1847 TravelPlans Copying \\203.19.215.74\filestore\itineraries\oct\o\f\q\m\o\ofqmog.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 21:51:53.5160 TravelPlans File copied
+2012-04-25 21:51:53.5190 TravelPlans Decrypting file
+2012-04-25 21:51:53.5190 TravelPlans FileDecrypt: Debug point 01
+2012-04-25 21:51:53.8940 TravelPlans FileDecrypt: Debug point 02
+2012-04-25 21:51:53.9281 TravelPlans Decrypt : c:\temp\bwvs3l0b44i3teuqfdmgydos.txt to c:\temp\bwvs3l0b44i3teuqfdmgydos.doc
+2012-04-25 21:51:57.2378 TravelPlans Decrypted : 
+2012-04-25 21:51:57.2378 TravelPlans Decrypted file
+2012-04-25 21:51:57.2378 TravelPlans Deleted c:\temp\bwvs3l0b44i3teuqfdmgydos.txt
+2012-04-25 21:51:57.2378 TravelPlans Returning
+2012-04-25 21:51:58.1060 TravelPlans Retrieving c:\temp\bwvs3l0b44i3teuqfdmgydos.htm
+2012-04-25 21:51:58.1129 TravelPlans Fixing HTML
+2012-04-25 21:52:06.5771 TravelPlans Enter : debug point 1
+2012-04-25 21:52:06.8974 TravelPlans Enter : debug point 2
+2012-04-25 21:52:06.8974 TravelPlans Starting Search Threads
+2012-04-25 21:52:06.9540 TravelPlans Disk Search Invoice started
+2012-04-25 21:52:06.9599 TravelPlans Disk Search Invoice in way
+2012-04-25 21:52:06.9599 TravelPlans m_RLOC : OFQMOG

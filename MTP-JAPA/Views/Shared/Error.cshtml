@@ -1,0 +1,20 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/Shared/MyTP.cshtml";
+}
+<div class="error">
+    <div class="padding">
+        &nbsp;</div>
+    @*<div class="padding">
+        &nbsp;</div>*@
+    <div id="centre" align="center">
+        <div id="Results" @*class="Error" align="left" runat="server" style="width: 500px" name="Results"*@ >
+            @ViewBag.Results
+        </div>
+    </div>
+    @*<div id="Div1" align="center" runat="server">
+    </div>*@
+    <br />
+    <br />
+</div>

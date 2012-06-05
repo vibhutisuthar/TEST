@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="qilive_dataModelStoreContainer" CdmEntityContainer="qilivedataEntities">
+    <EntitySetMapping Name="passengers">
+      <EntityTypeMapping TypeName="qilive_dataModel.passenger">
+        <MappingFragment StoreEntitySet="passenger">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="utid_id" ColumnName="utid_id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="utids">
+      <EntityTypeMapping TypeName="qilive_dataModel.utid">
+        <MappingFragment StoreEntitySet="utid">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="gds" ColumnName="gds" />
+          <ScalarProperty Name="RLOC" ColumnName="RLOC" />
+          <ScalarProperty Name="booking_date" ColumnName="booking_date" />
+          <ScalarProperty Name="ubid" ColumnName="ubid" />
+          <ScalarProperty Name="first_sighted" ColumnName="first_sighted" />
+          <ScalarProperty Name="utid1" ColumnName="utid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="market" ColumnName="market" />
+          <ScalarProperty Name="formname" ColumnName="formname" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="team" ColumnName="team" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xml_booking">
+      <EntityTypeMapping TypeName="qilive_dataModel.xml_booking">
+        <MappingFragment StoreEntitySet="xml_booking">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="utid_id" ColumnName="utid_id" />
+          <ScalarProperty Name="entry_date" ColumnName="entry_date" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="phase" ColumnName="phase" />
+          <ScalarProperty Name="xml" ColumnName="xml" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="pdf_file" ColumnName="pdf_file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetItineraryDataBySurnameAndRLOC" FunctionName="qilive_dataModel.Store.GetItineraryDataBySurnameAndRLOC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qilive_dataModel.GetItineraryDataBySurnameAndRLOC_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetBookingByEmail" FunctionName="qilive_dataModel.Store.GetBookingByEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qilive_dataModel.GetBookingByEmail_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
